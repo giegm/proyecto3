@@ -1,0 +1,739 @@
+<?php
+require_once("../modelo/clasedecensos/class_listar_censos.php");
+//nos traemos la libreria de ezpdf
+require_once("../modelo/ezpdf/src/Cezpdf.php");
+$tra= new Censos();
+//creamos la instancia de la class ezpdf
+//el (a3) significa el zoom que se le dara a la fuente, tamaño.
+$pdf = new Cezpdf('A4');
+/*luego elegimos la fuente de la libreria ezpdf con la que vamos a trabajar llamando a su metodo que contiene estas fuentes selectFont*/
+$pdf->selectFont('fonts/Times-Bold.afm');
+//ahora generamos la metadata del PDF
+$datacreator = array
+(
+	'Title'=>'Reporte PDF',
+	'Author'=>'Sistema C.C. Madre Tierra',
+	'Subject'=>'Reporte de Censo',
+	'Creator'=>'madretierracc@gmail.com',
+	'Producer'=>'http://www.madretierracc.com'
+);
+/*AHORA llamamos al metodo que guarda esta metadata en el archivo PDF a crear*/
+$pdf->addInfo($datacreator);
+
+$pdf->ezText("<b>Datos Generales del Censo Familiar</b>\n",16);
+
+/**********************PRIMERA PARTE: DATOS GENERALES DEL JEFE DE FAMILIA**************************/
+
+/*************DATOS PERSONALES Y CONTACTO*************/
+
+/*creamos un bucle para que por medio de el insertemos la data de nuestra tabla de base de datos que ira a la tabla del PDF*/
+
+
+$reg=$tra->obten_datos_censo($_GET["id"]);
+
+for($i=0;$i<sizeof($reg);$i++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data[]=array
+	(
+		"Ci"=>$reg[$i]["CI"],
+		"Nombre"=>$reg[$i]["NOMBRE"],
+		"Apellido"=>$reg[$i]["APELLIDO"],
+		"Fecha Nac"=>$reg[$i]["F_NAC"],
+		"Edad"=>$reg[$i]["EDAD"]
+
+	);
+	$data_dos[]=array
+	(
+		"tc"=>$reg[$i]["TLF_CEL"],
+		"th"=>$reg[$i]["TLF_HAB"],
+		"to"=>$reg[$i]["TLF_OFI"],
+		"email"=>$reg[$i]["EMAIL"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles=array
+	(
+			"Ci"=>"Cedula",
+			"Nombre"=>"Nombre",
+			"Apellido"=>"Apellido",
+			"Fecha Nac"=>"Fecha de Nacimiento",
+			"Edad"=>"Edad"
+		);
+	$titles_dos=array
+	(
+			"tc"=>"Telefono celular",
+			"th"=>"telefono habitacion",
+			"to"=>"telefono oficina",
+			"email"=>"correo electronico"
+		);
+
+	//$pdf->ezText("Mi Primer Archivo PDF en PHP para intercambiosvirtuales.");
+
+	$options = array(
+		'shadeCol'=>array(0.8,0.8,0.8),//COLOR DE LAS CELDAS
+		'xOrientation'=>'center',//PARA QUE EL REPORTE APAREZCA CENTRADO
+		'width'=>550,//ANCHO DE TABLA
+
+	);
+
+
+ /*A partir de aqui comenzamos a estructurar, construir nuestro PDF con las informacion ya guardada en las variables de arriba*/
+//llamamos al metodo para agregar un titulo dentro del PDF
+//el numero 16 corresponde al tamaño de la fuente
+//$pdf->ezText("<b>Datos personales</b>\n",14);
+/*llamamos a otro metodo que se encarga de construir una tabla dentro del documento PDF y le pasamos las variables que hemos declarado arriba*/
+
+
+
+/*************************************DATOS DE RELACION Y SALUD***************************************/
+
+$reg=$tra->obten_datos_censo_dos($_GET["id"]);
+
+for($a=0;$a<sizeof($reg);$a++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_cuatro[]=array
+	(
+		"emb"=>$reg[$a]["EMBARAZO"],
+		"cne"=>$reg[$a]["CNE"],
+		"sex"=>$reg[$a]["SEXO"],
+		"edocivil"=>$reg[$a]["EDOCIVIL"]
+
+	);
+	$data_cinco[]=array
+	(
+		"disc"=>$reg[$a]["DISCAPACIDAD"],
+		"tpdisc"=>$reg[$a]["TIPO_DISCAPACIDAD"],
+		"pens"=>$reg[$a]["PENSIONADO"],
+		"inst"=>$reg[$a]["INSTITUCION"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_cuatro=array
+	(
+			"emb"=>"embarazo",
+			"cne"=>"cne",
+			"sex"=>"sexo",
+			"edocivil"=>"estado civil"
+		);
+	$titles_cinco=array
+	(
+			"disc"=>"discapacidad",
+			"tpdisc"=>"tipo discapacidad",
+			"pens"=>"pensionado",
+			"inst"=>"institucion"
+		);
+
+	//$pdf->ezText("Mi Primer Archivo PDF en PHP para intercambiosvirtuales.");
+
+
+
+
+/*************************************DATOS DE FINANZAS Y ACADEMICOS***************************************/
+
+$reg=$tra->obten_datos_censo_tres($_GET["id"]);
+
+for($b=0;$b<sizeof($reg);$b++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_seis[]=array
+	(
+		"tra"=>$reg[$b]["TRABAJA"],
+		"ting"=>$reg[$b]["TIPO_INGRESO"],
+		"ingmens"=>$reg[$b]["INGRESO_MENSUAL"]
+
+	);
+	$data_siete[]=array
+	(
+		"prof"=>$reg[$b]["PROFESION"],
+		"nivprof"=>$reg[$b]["NIV_INSTRUCCION"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_seis=array
+	(
+			"tra"=>"trabaja",
+			"ting"=>"tipo ingreso",
+			"ingmens"=>"ingreso mensual"
+		);
+	$titles_siete=array
+	(
+			"prof"=>"profesion",
+			"nivprof"=>"nivel de instruccion"
+		);
+
+	//$pdf->ezText("Mi Primer Archivo PDF en PHP para intercambiosvirtuales.");
+
+
+
+
+/*************************************DATOS DE FAMILIARES FAMILIAR ACADEMICO***************************************/
+
+$reg=$tra->obten_datos_censo_cuatro($_GET["id"]);
+
+for($c=0;$c<sizeof($reg);$c++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_ocho[]=array
+	(
+		"namesf"=>$reg[$c]["NOMBRES_F"],
+		"cif"=>$reg[$c]["CEDULA_F"],
+		"fnacf"=>$reg[$c]["FECHANAC_F"],
+		"edadf"=>$reg[$c]["EDAD_F"]
+
+	);
+	$data_nueve[]=array
+	(
+		"ginst"=>$reg[$c]["GRADO_INSTRUCCION_F"],
+		"proff"=>$reg[$c]["PROFESION_F"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_ocho=array
+	(
+		"namesf"=>"Nombre y Apellido",
+		"cif"=>"cedula",
+		"fnacf"=>"fecha de nacimiento",
+		"edadf"=>"edad"
+		);
+	$titles_nueve=array
+	(
+		"ginst"=>"grado instruccion",
+		"proff"=>"profesion"
+		);
+
+
+
+
+
+
+/*************************************DATOS FAMILIAR FINANZAS Y FAMILIAR RELACION***************************************/
+
+$reg=$tra->obten_datos_censo_cinco($_GET["id"]);
+
+for($d=0;$d<sizeof($reg);$d++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_diez[]=array
+	(
+		"ingmnsf"=>$reg[$d]["INGMENSUAL_F"],
+		"parf"=>$reg[$d]["PARENTESCO_F"],
+		"cnef"=>$reg[$d]["CNE_F"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_diez=array
+	(
+		"ingmnsf"=>"Ingreso mensual",
+		"parf"=>"Parentesco",
+		"cnef"=>"CNE"
+		);
+
+
+
+
+/*************************************DATOS FAMILIAR SALUD Y SITUACION ECONOMICA***************************************/
+
+$reg=$tra->obten_datos_censo_seis($_GET["id"]);
+
+for($e=0;$e<sizeof($reg);$e++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_once[]=array
+	(
+		"embf"=>$reg[$e]["EMBARAZO_F"],
+		"discf"=>$reg[$e]["DISCAPACIDAD_F"],
+		"pensf"=>$reg[$e]["PENSIONADO_F"],
+		"dondtra"=>$reg[$e]["DONDE_TRABAJA"],
+		"preguno"=>$reg[$e]["PREGUNTA_UNO"],
+		"ingfam"=>$reg[$e]["ING_FAMILIAR"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_once=array
+	(
+		"embf"=>"embarazo",
+		"discf"=>"discapacidad",
+		"pensf"=>"pensionado",
+		"dondtra"=>"donde trabaja",
+		"preguno"=>"Realiza algun tipo de actividad economica en su vivienda",
+		"ingfam"=>"ingreso familiar"
+
+		);
+
+
+
+
+/*************************************DATOS FAMILIAR SALUD Y SITUACION ECONOMICA***************************************/
+
+$reg=$tra->obten_datos_censo_siete($_GET["id"]);
+
+for($f=0;$f<sizeof($reg);$f++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_doce[]=array
+	(
+		"condt"=>$reg[$f]["COND_TERRENO"],
+		"formt"=>$reg[$f]["FORMA_TENENCIA"],
+		"ocv"=>$reg[$f]["OCV"],
+		"terpro"=>$reg[$f]["TERRENO_PROPIO"],
+		"sivih"=>$reg[$f]["SIVIH"],
+		"constsivih"=>$reg[$f]["CONSTANCIA_SIVIH"],
+		"lph"=>$reg[$f]["COTIZA_LPH"],
+		"saluvv"=>$reg[$f]["SALUBRIDAD_VIVIENDA"]
+
+	);
+	$data_trece[]=array
+	(
+		"tpv"=>$reg[$f]["TIPO_VIVIENDA"],
+		"hab"=>$reg[$f]["HABITACIONES"],
+		"nunhab"=>$reg[$f]["NUM_HABITACIONES"],
+		"tpard"=>$reg[$f]["TIPO_PAREDES"],
+		"ttech"=>$reg[$f]["TIPO_TECHO"],
+		"ensvv"=>$reg[$f]["ENSERES_VIVIENDA"],
+		"roed"=>$reg[$f]["INSECTOS_ROEDORES"],
+		"anim"=>$reg[$f]["ANIMALES_DOMESTICOS"]
+
+	);
+	$data_catorce[]=array
+	(
+		"tpayu"=>$reg[$f]["TIPO_AYUDA"],
+		"descr"=>$reg[$f]["DESCRIPCION"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_doce=array
+	(
+		"condt"=>"condicion del terreno",
+		"formt"=>"forma de tenencia",
+		"ocv"=>"OCV",
+		"terpro"=>"terreno propio",
+		"sivih"=>"SIVIH",
+		"constsivih"=>"constancia",
+		"lph"=>"L.P.H.",
+		"saluvv"=>"salubridad vivienda"
+
+		);
+	$titles_trece=array
+	(
+		"tpv"=>"tipo de vivienda",
+		"hab"=>"habitaciones",
+		"nunhab"=>"n° de habitaciones",
+		"tpard"=>"tipo de paredes",
+		"ttech"=>"tipo de techo",
+		"ensvv"=>"enseres",
+		"roed"=>"plagas",
+		"anim"=>"animales"
+
+		);
+	$titles_catorce=array
+	(
+		"tpayu"=>"tipo de ayuda",
+		"descr"=>"descripcion"
+
+		);
+
+
+
+
+/*************************************DATOS AYUDA VIVIENDA***************************************/
+
+$reg=$tra->obten_datos_censo_ocho($_GET["id"]);
+
+for($f=0;$f<sizeof($reg);$f++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_quince[]=array
+	(
+		"persenfr"=>$reg[$f]["PERSONA_ENFERMEDAD"],
+		"otraenfr"=>$reg[$f]["OTRA_ENFERMEDAD"],
+		"ayuenfr"=>$reg[$f]["AYUDA_ENFERMOS"],
+		"tipoayu"=>$reg[$f]["TIPO_AYUDA"],
+		"situaexc"=>$reg[$f]["SITUACION_EXCLUSION"],
+		"cantexc"=>$reg[$f]["CANTIDAD_EXCLUSION"]
+
+	);
+
+	$data_dieciseis[]=array
+	(
+		"aguasb"=>$reg[$f]["AGUAS_BLANCAS"],
+		"med"=>$reg[$f]["MEDIDOR"],
+		"aguaserv"=>$reg[$f]["AGUAS_SERVIDAS"],
+		"gas"=>$reg[$f]["GAS"],
+		"sistelec"=>$reg[$f]["SISTEMA_ELECTRICO"],
+		"bombaho"=>$reg[$f]["BOMBILLOS_AHORRADORES"],
+		"recolbas"=>$reg[$f]["RECOL_BASURA"],
+		"tlfon"=>$reg[$f]["TELEFONIA"],
+		"trasnp"=>$reg[$f]["TRANSPORTE"],
+		"tipoinf"=>$reg[$f]["TIPO_INFORMACION"],
+		"servcom"=>$reg[$f]["SERV_COMUNALES"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_quince=array
+	(
+		"persenfr"=>"Personas enfermas",
+		"otraenfr"=>"otra enfermedad",
+		"ayuenfr"=>"ayuda para enfermos",
+		"tipoayu"=>"tipo de ayuda",
+		"situaexc"=>"personas en exclusion",
+		"cantexc"=>"n° de personas en exclusion"
+
+		);
+
+	$titles_dieciseis=array
+	(
+		"aguasb"=>"aguas blancas",
+		"med"=>"medidor",
+		"aguaserv"=>"aguas servidas",
+		"gas"=>"gas",
+		"sistelec"=>"sistemas electrico",
+		"bombaho"=>"bombillos ahorradores",
+		"recolbas"=>"recoleccion de basura",
+		"tlfon"=>"telefonia",
+		"trasnp"=>"transporte",
+		"tipoinf"=>"tipo de informacion",
+		"servcom"=>"servicios comunales"
+
+		);
+
+//$pdf->ezText("\n\n<b>Detalles de Salud</b>\n",14);
+
+	/*******************************DATOS DETALLE DE SERVICIOS Y SERV ELECTRICO**********************************/
+
+$reg=$tra->obten_datos_censo_nueve($_GET["id"]);
+
+for($g=0;$g<sizeof($reg);$g++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_diecisiete[]=array
+	(
+		"tanq"=>$reg[$g]["TANQUE"],
+		"tanqlts"=>$reg[$g]["TANQUE_LITROS"],
+		"pipts"=>$reg[$g]["PIPOTES"],
+		"cantppts"=>$reg[$g]["CANT_PIPOTES"],
+		"provgas"=>$reg[$g]["PROVEEDOR_GAS"],
+		"cantcil"=>$reg[$g]["CANT_CILINDROS_GAS"],
+		"durgas"=>$reg[$g]["DURACION_GAS"],
+		"precgas"=>$reg[$g]["PRECIO_GAS"]
+
+	);
+
+	$data_dieciocho[]=array
+	(
+		"medid"=>$reg[$g]["MEDIDOR"],
+		"bombnecs"=>$reg[$g]["BOMBILLOS_NECESITA"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_diecisiete=array
+	(
+		"tanq"=>"Posee tanque",
+		"tanqlts"=>"n° litros",
+		"pipts"=>"Posee pipotes",
+		"cantppts"=>"n° de pipotes",
+		"provgas"=>"proveedor de gas",
+		"cantcil"=>"n° cilindros",
+		"durgas"=>"duracion gas",
+		"precgas"=>"precio del gas"
+
+		);
+
+	$titles_dieciocho=array
+	(
+		"medid"=>"Posee medidor",
+		"bombnecs"=>"Cantidad de bombillos necesarios"
+
+		);
+
+//$pdf->ezText("\n\n<b>Detalles de Salud</b>\n",14);
+
+/*****************PARTICIPACION COMUNITARIA Y PREGUNTAS PART COMUNITARIA*************************/
+
+$reg=$tra->obten_datos_censo_diez($_GET["id"]);
+
+for($z=0;$z<sizeof($reg);$z++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_dienueve[]=array
+	(
+		"orgcomn"=>$reg[$z]["ORG_COMUNITARIA"],
+		"descripc"=>$reg[$z]["DESCRIPCION"],
+		"partc"=>$reg[$z]["PARTICIPA"],
+		"partcf"=>$reg[$z]["PARTICIPA_FAMILIAR"],
+		"miscomn"=>$reg[$z]["MISIONES_COMUNIDAD"],
+		"otramis"=>$reg[$z]["OTRA_MISION"]
+
+	);
+
+	$data_veinte[]=array
+	(
+		"puno"=>$reg[$z]["P_UNO"],
+		"pdos"=>$reg[$z]["P_DOS"],
+		"ptres"=>$reg[$z]["P_TRES"],
+		"pcuatro"=>$reg[$z]["P_CUATRO"]
+
+	);
+	$data_veintiuno[]=array
+	(
+		"pcinco"=>$reg[$z]["P_CINCO"],
+		"pseis"=>$reg[$z]["P_SEIS"],
+		"psiete"=>$reg[$z]["P_SIETE"],
+		"pocho"=>$reg[$z]["P_OCHO"]
+
+	);
+	$data_veintidos[]=array
+	(
+		"pnueve"=>$reg[$z]["P_NUEVE"],
+		"pdiez"=>$reg[$z]["P_DIEZ"],
+		"ponce"=>$reg[$z]["P_ONCE"],
+		"pdoce"=>$reg[$z]["P_DOCE"]
+
+	);
+	$data_ventitres[]=array
+	(
+		"pcatorce"=>$reg[$z]["P_CATORCE"],
+		"pquince"=>$reg[$z]["P_QUINCE"],
+		"otraarea"=>$reg[$z]["OTRA_AREA"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_diecinueve=array
+	(
+		"orgcomn"=>"Organización comunitaria",
+		"descripc"=>"Descripcion",
+		"partc"=>"Participa",
+		"partcf"=>"Participan algun familiar",
+		"miscomn"=>"Misiones",
+		"otramis"=>"Otra misión"
+
+	);
+
+	$titles_veinte=array
+	(
+		"puno"=>"puno",
+		"pdos"=>"pdos",
+		"ptres"=>"ptres",
+		"pcuatro"=>"pcuatro"
+
+	);
+	$titles_veintiuno=array
+	(
+		"pcinco"=>"pcinco",
+		"pseis"=>"pseis",
+		"psiete"=>"psiete",
+		"pocho"=>"pocho"
+
+	);
+	$titles_veintidos=array
+	(
+		"pnueve"=>"pnueve",
+		"pdiez"=>"pdiez",
+		"ponce"=>"ponce",
+		"pdoce"=>"pdoce"
+
+	);
+	$titles_veintitres=array
+	(
+		"pcatorce"=>"pcatorce",
+		"pquince"=>"pquince",
+		"otraarea"=>"otra area"
+
+	);
+
+//$pdf->ezText("\n\n<b>Detalles de Salud</b>\n",14);
+
+
+
+
+$pdf->ezTable($data,$titles,"Datos del jefe de familia",$options);
+$pdf->ezTable($data_dos,$titles_dos,'',$options);
+
+$pdf->ezTable($data_cuatro,$titles_cuatro,'',$options);
+$pdf->ezTable($data_cinco,$titles_cinco,'',$options);
+
+$pdf->ezTable($data_seis,$titles_seis,'',$options);
+$pdf->ezTable($data_siete,$titles_siete,'',$options);
+
+$pdf->ezText("\n");
+
+$pdf->ezTable($data_ocho,$titles_ocho,"Datos de Familiares",$options);
+$pdf->ezTable($data_nueve,$titles_nueve,'',$options);
+$pdf->ezTable($data_diez,$titles_diez,'',$options);
+$pdf->ezTable($data_once,$titles_once,'',$options);
+
+$pdf->ezText("\n");
+
+$pdf->ezTable($data_doce,$titles_doce,"Datos de Vivienda",$options);
+$pdf->ezTable($data_trece,$titles_trece,'',$options);
+$pdf->ezTable($data_catorce,$titles_catorce,'',$options);
+
+$pdf->ezText("\n");
+
+$pdf->ezTable($data_quince,$titles_quince,"Datos de Salud",$options);
+$pdf->ezTable($data_dieciseis,$titles_dieciseis,"Detalles de Servicios",$options);
+
+$pdf->ezNewPage();
+
+
+/*****************PARTICIPACION COMUNITARIA Y PREGUNTAS PART COMUNITARIA*************************/
+/*
+$reg=$tra->obten_datos_censo_diez($_GET["id"]);
+
+for($z=0;$z<sizeof($reg);$z++){
+	//este array corresponde a las filas que se llenaran en la tabla
+	$data_dienueve[]=array
+	(
+		"orgcomn"=>$reg[$z]["ORG_COMUNITARIA"],
+		"descripc"=>$reg[$z]["DESCRIPCION"],
+		"partc"=>$reg[$z]["PARTICIPA"],
+		"partcf"=>$reg[$z]["PARTICIPA_FAMILIAR"],
+		"miscomn"=>$reg[$z]["MISIONES_COMUNIDAD"],
+		"otramis"=>$reg[$z]["OTRA_MISION"]
+
+	);
+
+	$data_veinte[]=array
+	(
+		"puno"=>$reg[$z]["P_UNO"],
+		"pdos"=>$reg[$z]["P_DOS"],
+		"ptres"=>$reg[$z]["P_TRES"],
+		"pcuatro"=>$reg[$z]["BP_CUATRO"]
+
+	);
+	$data_veintiuno[]=array
+	(
+		"pcinco"=>$reg[$z]["P_CINCO"],
+		"pseis"=>$reg[$z]["P_SEIS"],
+		"psiete"=>$reg[$z]["P_SIETE"],
+		"pocho"=>$reg[$z]["P_OCHO"]
+
+	);
+	$data_veintidos[]=array
+	(
+		"pnueve"=>$reg[$z]["P_NUEVE"],
+		"pdiez"=>$reg[$z]["P_DIEZ"],
+		"ponce"=>$reg[$z]["P_ONCE"],
+		"pdoce"=>$reg[$z]["P_DOCE"]
+
+	);
+	$data_ventitres[]=array
+	(
+		"pcatorce"=>$reg[$z]["P_CATORCE"],
+		"pquince"=>$reg[$z]["P_QUINCE"],
+		"otraarea"=>$reg[$z]["OTRA_AREA"]
+
+	);
+
+	}//fin del bucle for
+	//este array corresponde a la cabecera de la tabla que se creara
+	$titles_diecinueve=array
+	(
+		"orgcomn"=>"Organización comunitaria",
+		"descripc"=>"Descripcion",
+		"partc"=>"Participa",
+		"partcf"=>"Participan algun familiar",
+		"miscomn"=>"Misiones",
+		"otramis"=>"Otra misión"
+
+	);
+
+	$titles_veinte=array
+	(
+		"puno"=>"puno",
+		"pdos"=>"pdos",
+		"ptres"=>"ptres",
+		"pcuatro"=>"pcuatro"
+
+	);
+	$titles_veintiuno=array
+	(
+		"pcinco"=>"pcinco",
+		"pseis"=>"pseis",
+		"psiete"=>"psiete",
+		"pocho"=>"pocho"
+
+	);
+	$titles_veintidos=array
+	(
+		"pnueve"=>"pnueve",
+		"pdiez"=>"pdiez",
+		"ponce"=>"ponce",
+		"pdoce"=>"pdoce"
+
+	);
+	$titles_veintitres=array
+	(
+		"pcatorce"=>"pcatorce",
+		"pquince"=>"pquince",
+		"otraarea"=>"otra area"
+
+	);
+
+//$pdf->ezText("\n\n<b>Detalles de Salud</b>\n",14);
+$pdf->ezTable($data_dieciseis,$titles_dieciseis,"Detalles de Servicios",$options);
+$pdf->ezTable($data_diecisiete,$titles_diecisiete,'',$options);
+$pdf->ezTable($data_dieciocho,$titles_dieciocho,'',$options);
+$pdf->ezTable($data_diecinueve,$titles_diecinueve,'',$options);
+$pdf->ezTable($data_veinte,$titles_veinte,'',$options);
+$pdf->ezTable($data_veintiuno,$titles_veintiuno,'',$options);
+$pdf->ezTable($data_veintidos,$titles_veintidos,'',$options);
+$pdf->ezTable($data_veintitres,$titles_veintitres,'',$options);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+////creamos un nuevo array en el que pondremos un borde=1
+///y las cabeceras de la tabla las pondremos ocultas
+unset ($opciones_tabla);
+
+//// mostrar las lineas
+$opciones_tabla['showlines']=1;
+
+//// mostrar las cabeceras
+$opciones_tabla['showHeadings']=0;
+
+//// lineas sombreadas
+$opciones_tabla['shaded']= 1;
+
+//// tamaño letra del texto
+$opciones_tabla['fontSize']= 10;
+
+//// color del texto
+$opciones_tabla['textCol'] = array(1,0,0);
+
+//// tamaño de las cabeceras (texto)
+$opciones_tabla['titleFontSize'] = 12;
+
+//// margen interno de las celdas
+$opciones_tabla['rowGap'] = 3;
+$opciones_tabla['colGap'] = 3;
+
+$pdf->ezTable($datos, "Tabla de precios",$opciones_tabla);
+$pdf->ezTable($datos, "Tabla de precios",$opciones_tabla);
+
+
+$pdf->ezStream();
+	
+?>

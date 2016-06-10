@@ -1,0 +1,24 @@
+/*DISEÑOS PARA EL REPORTE PDF*/
+#primer_titulo{
+	text-align: center;
+}
+.div_uno
+{
+	border:1px solid black;
+}
+.div_uno p
+{
+	padding: 5px;
+}
+.div_table table tr th{
+	border: 1px solid black;
+}
+.div_table table tr td{
+	border: 1px solid black;
+}
+.div_table table tr th{
+	padding: 5px;
+}
+.div_table table tr td{
+	padding: 5px;
+}

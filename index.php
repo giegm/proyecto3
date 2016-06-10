@@ -53,8 +53,8 @@
                 <div class="features">
                     <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-                            <a href="#" class="btn btn-danger btn-lg active" role="button">Sistema de Censo Demográfico y Socioeconómico</a><br><br>
-                            <a href="#" class="btn btn-danger btn-lg active" role="button">Sistema de Emisión de Actas</a>
+                            <a href="censo/ingreso.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;" class="btn btn-danger btn-lg active" role="button">Sistema de Censo Demográfico y Socioeconómico</a><br><br>
+                            <a href="actas/index.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;" class="btn btn-danger btn-lg active" role="button">Sistema de Emisión de Actas</a>
                         </div>
                     </div><!--/.col-md-4-->
     

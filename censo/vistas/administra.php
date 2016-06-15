@@ -11,7 +11,7 @@ if(isset($_SESSION["sesion_usuario"]) and isset($_SESSION["sesion_perfil"]))
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Sistema de Control de Censo Demográfico y Socieconómico</title>
+		<title>Sistema de Control de Censo Demográfico y Socieconómico|Inicio</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">

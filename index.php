@@ -44,29 +44,23 @@
 
 	<section id="feature" >
         <div class="container">
-           <div class="center wow fadeInDown">
-                <h2>Features</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-
             <div class="row">
-                <div class="features">
+                <div class="features">  
                     <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <a href="censo/ingreso.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;" class="btn btn-danger btn-lg active" role="button">Sistema de Censo Demográfico y Socioeconómico</a><br><br>
-                            <a href="actas/index.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;" class="btn btn-danger btn-lg active" role="button">Sistema de Emisión de Actas</a>
-                        </div>
+                        <a href="censo/ingreso.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;"><div class="feature-wrap">
+                            <i class="fa fa-users"></i>
+                            <h2>Sistema de Censo Demográfico y Socioeconómico</h2>
+                            <h3></h3>
+                        </div></a>
                     </div><!--/.col-md-4-->
-    
 
                     <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-cloud-download"></i>
-                            <h2>Easy to customize</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
-                
+                        <a href="actas/index.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;"><div class="feature-wrap">
+                            <i class="fa fa-file-pdf-o"></i>
+                            <h2>Sistema de Emisión de Actas</h2>
+                            <h3></h3>
+                        </div></a>
+                    </div>
                    <!--/.col-md-4-->
                 </div><!--/.services-->
             </div><!--/.row-->    

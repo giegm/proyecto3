@@ -6,7 +6,7 @@ if(isset($_SESSION["sesion_usuario"])){
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>C.C. Madre Tierra</title>
+		<title>Sistema de Control de Censo Demográfico y Socieconómico|Soporte</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,7 @@ if(isset($_SESSION["sesion_usuario"])){
 		<link rel="stylesheet" href="../diseño/css/bootstrap.css">
 		<link rel="stylesheet" href="../diseño/iconos/css/font-awesome.css">
 		<link rel="stylesheet" href="../diseño/selectstyles/dist/css/bootstrap-select.css">
+		<link rel="shortcut icon" href="../img/ccsantaines.ico">
 	</head>
 <body>
 <?php include("../includes/navbaradmin.php"); ?>
@@ -38,10 +39,6 @@ if(isset($_SESSION["sesion_usuario"])){
 		<div class="col-md-10 col-admin-central">
 			
 			<h1 class="page-header pageheader-general">Soporte Tecnico</h1>
-
-			<?php
-				include("../includes/operacionesadmin.php");
-			?>
 			<br/>
 			<div class="col-md-12 well">
 			<div class="panel panel-danger">
@@ -49,8 +46,7 @@ if(isset($_SESSION["sesion_usuario"])){
 						<h3 class="panel-title">Contactanos para dudas</h3>
 				  </div>
 				  <div class="panel-body">
-						Para cualquier duda o inquietud puedes comunicarte con el personal de soporte
-				   a traves de los correos <b>cesareadefilipos@gmail.com / beomleon13@hotmail.com / andrescampos2192@gmail.com</b>
+						
 				  </div>
 			</div>
 			

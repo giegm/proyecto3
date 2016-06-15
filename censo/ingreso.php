@@ -96,10 +96,7 @@ else
 				
 						<button type="submit" class="btn btn-default btn-block" id="btn-login-submit" name="loginbtn">Ingresar</button>
 			
-					</div>
-
-					<p class="">Visitar Pagina web &nbsp;<i class="fa fa-hand-o-right"></i>&nbsp;<a href="../index.php">Aqui</a></p>
-				
+					</div>				
 			</form>
 
 		</div>

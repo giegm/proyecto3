@@ -15,7 +15,7 @@ if(isset($_SESSION["sesion_usuario"]) && $_SESSION["sesion_perfil"]){
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>C.C. Madre Tierra</title>
+		<title>Sistema de Control de Censo Demográfico y Socieconómico</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +25,7 @@ if(isset($_SESSION["sesion_usuario"]) && $_SESSION["sesion_perfil"]){
 		<link rel="stylesheet" href="../diseño/selectstyles/dist/css/bootstrap-select.css">
    		<script src="../js/valida_creacion_perfil.js" type="text/javascript"></script>
    		<script src="../js/funciones.js" type="text/javascript"></script>
+   		<link rel="shortcut icon" href="../img/ccsantaines.ico">
 	</head>
 <body>
 <?php include("../includes/navbaradmin.php"); ?>
@@ -49,10 +50,6 @@ if(isset($_SESSION["sesion_usuario"]) && $_SESSION["sesion_perfil"]){
 		<div class="col-md-10 col-admin-central">
 			
 			<h1 class="page-header pageheader-general">Vista General de Perfiles</h1>
-
-			<?php
-				include("../includes/operacionesadmin.php");
-			?>
 			<br/>
 			<div class="col-md-12 well">
 			<?php 

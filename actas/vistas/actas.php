@@ -39,7 +39,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../proyecto3/ingreso.php">Sistema de Censo demográfico y Socioeconómico</a></li>			
+            <li><a href="../proyecto3/ingreso.php"><br>Sistema de Censo demográfico y Socioeconómico</br></a></li>			
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -47,99 +47,112 @@
    
 	<div id="header">
 		<div class="container">	
-		 <center><h2>Sistema de Emisión de Actas</h2></center><br><br>
+		 <center><h2><b>Sistema de Emisión de Actas</b></h2></center><br><br>
 			<div class="row">				
-				<div class="col-lg-4">
+				<div class="col-lg-4 col-lg-offset-2">
+					<div class="btn-group">
+						  <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   Carta de Residencia <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a><strong>REQUISITOS</strong></a></li>
+						    <li><a>Copia de cedula de identidad</a></li>						    
+						    <li><a href="#">SOLICITAR</a></li>
+						  </ul>
+					</div>
+					<div class="btn-group">
+						  <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   Carta de Residencia <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a><strong>REQUISITOS</strong></a></li>
+						    <li><a>Copia de cedula de identidad</a></li>						   
+						    <li><a href="#">SOLICITAR</a></li>
+						  </ul>
+					</div>
+					<div class="btn-group">
+						  <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   Carta de Residencia <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a><strong>REQUISITOS</strong></a></li>
+						    <li><a>Copia de cedula de identidad</a></li>						    
+						    <li><a href="#">SOLICITAR</a></li>
+						  </ul>
+					</div>
+					<div class="btn-group">
+						  <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   Carta de Residencia <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a><strong>REQUISITOS</strong></a></li>
+						    <li><a>Copia de cedula de identidad</a></li>						    
+						    <li><a href="#">SOLICITAR</a></li>
+						  </ul>
+					</div>
 					<div class="btn-group">
 						  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						   Carta de Residencia <span class="caret"></span>
 						  </button>
 						  <ul class="dropdown-menu">
 						    <li><a><strong>REQUISITOS</strong></a></li>
-						    <li><a>Copia de cedula de identidad</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a>Copia de ....</a></li>
+						    <li><a>Copia de cedula de identidad</a></li>						    
 						    <li><a href="#">SOLICITAR</a></li>
 						  </ul>
 					</div>
-
-				</div>
-				<div class="col-lg-4">
 					<div class="btn-group">
-						  <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						   Carta de Residencia <span class="caret"></span>
 						  </button>
 						  <ul class="dropdown-menu">
 						    <li><a><strong>REQUISITOS</strong></a></li>
-						    <li><a>Copia de cedula de identidad</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a href="#">SOLICITAR</a></li>
-						  </ul>
-					</div>
-
-				</div>
-				<div class="col-lg-4">
-					<div class="btn-group">
-						  <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						   Carta de Residencia <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu">
-						    <li><a><strong>REQUISITOS</strong></a></li>
-						    <li><a>Copia de cedula de identidad</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a href="#">SOLICITAR</a></li>
-						  </ul>
-					</div>
-
-				</div><br><br><br><br>
-
-				<div class="col-lg-4">
-					<div class="btn-group">
-						  <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						   Carta de Residencia <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu">
-						    <li><a><strong>REQUISITOS</strong></a></li>
-						    <li><a>Copia de cedula de identidad</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a href="#">SOLICITAR</a></li>
-						  </ul>
-					</div>
-
-				</div>
-
-				<div class="col-lg-4">
-					<div class="btn-group">
-						  <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						   Carta de Residencia <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu">
-						    <li><a><strong>REQUISITOS</strong></a></li>
-						    <li><a>Copia de cedula de identidad</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a href="#">SOLICITAR</a></li>
-						  </ul>
-					</div>
-
-				</div>
-
-				<div class="col-lg-4">
-					<div class="btn-group">
-						  <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						   Carta de Residencia <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu">
-						    <li><a><strong>REQUISITOS</strong></a></li>
-						    <li><a>Copia de cedula de identidad</a></li>
-						    <li><a>Copia de ....</a></li>
-						    <li><a>Copia de ....</a></li>
+						    <li><a>Copia de cedula de identidad</a></li>						   
 						    <li><a href="#"><u>SOLICITAR</u></a></li>
 						  </ul>
 					</div>
+					<div class="btn-group">
+						  <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   Carta de Residencia <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a><strong>REQUISITOS</strong></a></li>
+						    <li><a>Copia de cedula de identidad</a></li>						    
+						    <li><a href="#">SOLICITAR</a></li>
+						  </ul>
+					</div>
+					<div class="btn-group">
+						  <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   Carta de Residencia <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a><strong>REQUISITOS</strong></a></li>
+						    <li><a>Copia de cedula de identidad</a></li>						   
+						    <li><a href="#"><u>SOLICITAR</u></a></li>
+						  </ul>
+					</div>
+
+				</div>
+
+				<div class="col-lg-4 col-lg-offset-2">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					  <ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  </ol>					
+					  <!-- slides -->
+					  <div class="carousel-inner">
+						<div class="item active">
+						  <img src="assets/img/slide1.png" alt="">
+						</div>
+						<div class="item">
+						  <img src="assets/img/slide2.png" alt="">
+						</div>
+						<div class="item">
+						  <img src="assets/img/slide3.png" alt="">
+						</div>
+					  </div>
+					</div>					
 
 				</div>
 

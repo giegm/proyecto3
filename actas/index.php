@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/img/logo_.ico">
+    <link rel="shortcut icon" href="vistas/img/logo_.ico">
 
     <title>C.C. "Santa Inés"</title>
 
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-	<link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="vistas/css/bootstrap.css" rel="stylesheet">
+	<link href="vistas/css/bootstrap-theme.css" rel="stylesheet">
 
     <!-- siimple style -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="vistas/css/style.css" rel="stylesheet">
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -49,14 +49,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
-					<h1>Sistema de Emisión de Actas</h1>
+					<h1><b>Sistema de Emisión de Actas</b></h1>
 					<h2 class="subtitle">Necesita estar censado para solicitar cualquier tipo de acta.</h2>
-					<form class="form-inline signup" role="form">
+
+				
+					<form action="controlador/procesa_censados.php" method="POST" class="form-inline signup" role="form">
 					  <div class="form-group">
 					    <input type="text" class="form-control" id="numero" placeholder="Número de cedula" min="6" max="9">
 					  </div>
 					  <button type="submit" class="btn btn-theme">Ingresar</button>
-					</form>					
+					</form>				
 				</div>
 				<div class="col-lg-4 col-lg-offset-2">
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -68,13 +70,13 @@
 					  <!-- slides -->
 					  <div class="carousel-inner">
 						<div class="item active">
-						  <img src="assets/img/slide1.png" alt="">
+						  <img src="vistas/img/slide1.png" alt="">
 						</div>
 						<div class="item">
-						  <img src="assets/img/slide2.png" alt="">
+						  <img src="vistas/img/slide2.png" alt="">
 						</div>
 						<div class="item">
-						  <img src="assets/img/slide3.png" alt="">
+						  <img src="vistas/img/slide3.png" alt="">
 						</div>
 					  </div>
 					</div>		
@@ -99,6 +101,6 @@
 	</div>
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="vistas/js/bootstrap.min.js"></script>
   </body>
 </html>

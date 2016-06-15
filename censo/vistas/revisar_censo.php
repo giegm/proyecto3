@@ -146,26 +146,9 @@ en la tabla del listado que viene via GET conteniendo el ID_JEFE*/
 						
 				</form>
 			</div>
-
-		
-				
-
-	
-
-
-
 	</section>
-  
-
-		
 	</div><!-- fin fila principal -->
-
 </div><!-- final del contenedor general -->
-
-
-
-
-
 <script src="../diseño/js/jquery-1.11.2.min.js"></script> 
 <script src = "../diseño/js/bootstrap.min.js"></script>
 <script src="../diseño/selectstyles/dist/js/bootstrap-select.js"></script>

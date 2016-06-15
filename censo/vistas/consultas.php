@@ -1,7 +1,5 @@
 <?php 
 require_once("../modelo/clasedelogin/class_login.php");
-require_once("../modelo/clasesdeconsulta/class_mayor_a_sesenta.php");
-require_once("../modelo/clasesdeconsulta/class_mayor_de_edad.php");
 if(isset($_SESSION["sesion_usuario"])){
 //print_r($_SESSION);
 ?>

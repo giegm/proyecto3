@@ -10,8 +10,8 @@ $tra=new Censos();
 
 <style>
 	body{
-		font-family: Arial, Helvetica, Verdana;
-		font-size: 15px;
+		font-family: "Times New Roman", Georgia, Serif
+		font-size: 12px;
 	}
 	.contendor-general-reporte{
 		
@@ -38,24 +38,24 @@ $tra=new Censos();
 		border: 1px solid black;
 		width: 30%;
 		float: right;
-		margin-top: -72px;
+		margin-top: -30px;
 	}
 	.div_uno p
 	{
-		padding: 5px;
+		padding: 1px;
 	}
 	.div_uno_derecha p
 	{
-		padding: 5px;
+		padding: 1px;
 	}
 	.div_table table, tr, th{
 		border: 1px solid black;
-		padding: 5px;
+		padding: 1px;
 		border-collapse: collapse;
 	}
 	.div_table table, tr, td{
 		border: 1px solid black;
-		padding: 5px;
+		padding: 1px;
 		border-collapse: collapse;
 	}
 	#tdes-datos-cc{
@@ -78,38 +78,19 @@ $tra=new Censos();
 </style>
 </head>
 <body>
-<div class="header-pdf">
-	<center><img id="imagen.header-pdf" src="../img/imagen.jpg" alt=""></center>	
-</div>
+	<img id="imagen.header-pdf" src="../img/logo.png" width="100" height="100" alt="">	
+	<h2 id='primer_titulo'>Censo Demográfico y Socioeconómico</h2>
+	<center>Consejo comunal "Santa Inés"</center>
+
 	<div class="contendor-general-reporte">
-	<h2 id='primer_titulo'>Estudio Demografico y Socioeconomico</h2>
 	<hr>
-	<div class='div_uno'>
-	<table id="tables-censo">
-	<tr>
-		<td id="td-div-uno"><p>Consejo comunal: Madre tierra</p>
-		<p></p>
-		</td>
-		<td id="td-medio-div-uno">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-		<td id="td-div-uno"><p>N° Planilla: 002152000545412 </p>
+		<p>N° Planilla: 002152000545412 </p>
 		<p>Fecha: 2015/05/20</p>
-		</td>
-	</tr>
-	</table>
 	</div>
-	<br/>
 	<div class="div_contenido_censo">
-	<h2 id="titulos-de-tablas">Ubicación Geográfica de la Comunidad</h2>
+	<h3 id="titulos-de-tablas">Ubicación Geográfica de la Comunidad</h3>
 	<hr>
-	<br/>
+	
 	<table id="tables-censo">
 		<thead>
 			<tr>
@@ -120,8 +101,8 @@ $tra=new Censos();
 			</tr>
 		</thead>
 	</table>
-	<br/>
-	<h2 id="titulos-de-tablas">Datos del jefe de familia</h2>
+	
+	<h3 id="titulos-de-tablas">Datos del jefe de familia</h3>
 	<hr>
 	</div>
 	<div class='div_table'>
@@ -149,7 +130,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<h3 id="titulos-de-tablas">Datos de contacto</h3>
 	<table id="tables-censo">
 		<thead>
@@ -169,7 +150,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<?php
 	 $reg=$tra->obten_datos_censo_dos($_GET["id"]); 
 	?>
@@ -192,7 +173,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/><br/><br/><br/>
+	
 	<h3 id="titulos-de-tablas">Datos de salud</h3>
 	<table id="tables-censo">
 		<thead>
@@ -212,7 +193,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<p>
 	<?php
 	 $reg=$tra->obten_datos_censo_tres($_GET["id"]); 
@@ -234,7 +215,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<h3 id="titulos-de-tablas">Datos de academicos</h3>
 	<table id="tables-censo">
 		<thead>
@@ -250,9 +231,9 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
-	<br/>
-	<h2 id="titulos-de-tablas">Datos generales de los miembros de la familia</h2>
+	
+	
+	<h3 id="titulos-de-tablas">Datos generales de los miembros de la familia</h3>
 	<hr>
 
 	<?php
@@ -277,7 +258,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<h3 id="titulos-de-tablas">Datos academicos</h3>
 	<table id="tables-censo">
 		<thead>
@@ -293,7 +274,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/><br/><br/><br/><br/><br/>
+	
 	<?php
 	 $reg=$tra->obten_datos_censo_cinco($_GET["id"]); 
 	?>
@@ -314,7 +295,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<?php
 	 $reg=$tra->obten_datos_censo_seis($_GET["id"]); 
 	?>
@@ -336,10 +317,10 @@ $tra=new Censos();
 		</tbody>
 	</table>
 
-	<br/><br/>
+	
 
 	<p>
-	<h2 id="titulos-de-tablas">Datos generales del censo</h2>
+	<h3 id="titulos-de-tablas">Datos generales del censo</h3>
 	<hr>
 	<?php
 	 $reg=$tra->obten_datos_censo_seis($_GET["id"]); 
@@ -363,7 +344,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<?php
 	 $reg=$tra->obten_datos_censo_siete($_GET["id"]); 
 	 /*************DATOS SITUACION VIVIENDA Y DETALLES VIVIENDA**************/
@@ -441,7 +422,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/><br/><br/><br/><br/>
+	
 	<table id="tables-censo">
 	<thead>
 			<tr>
@@ -456,7 +437,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<?php
 	 $reg=$tra->obten_datos_censo_ocho($_GET["id"]); 
 /*************DATOS CONDICIONES SALUD Y SITUACION SERVICIOS*************/
@@ -537,7 +518,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<h3 id="titulos-de-tablas">Detalles de servicios y servicio electrico</h3>
 	<table id="tables-censo">
 	<?php
@@ -585,7 +566,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/>
+	
 	<h3 id="titulos-de-tablas">Participación comunitaria</h3>
 	<table id="tables-censo">
 	<?php
@@ -626,7 +607,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	<br/><br/><br/>
+	
 		<table id="tables-censo">
 		<thead>
 			<tr>

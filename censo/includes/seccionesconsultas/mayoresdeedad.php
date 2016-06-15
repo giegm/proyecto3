@@ -1,6 +1,3 @@
-  <?php 
-require_once("../modelo/clasesdeconsulta/class_mayor_de_edad.php");
-   ?>
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">

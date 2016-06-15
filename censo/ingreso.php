@@ -26,9 +26,8 @@ else
 	<center><h3>Consejo Comunal</h3><img src="../images/logo.png" width="70" height="70" class="img-rounded"></center>
 	<center><h4>"Santa Inés"</h4></center>	
 	<div class="row">
-		
+	
 		<div class="col-xs-12 well" id="col-form-login">
-
 		<?php 
 		if($_SERVER["REQUEST_METHOD"]=='GET'){//SI EXISTE ALGUN ENVIO VIA GET ENTONCES
 			if(isset($_GET["err"]) and $_GET["err"]==1){

@@ -4,7 +4,7 @@ class jefesfamilia{
 private $red;
 
 public function get_ultimo_id_jefe_familiar(){
-	$conx= mysqli_connect("localhost","root","greidy100","mydb") or die ("problemas con la conexión");  
+	$conx= mysqli_connect("localhost","root","12345","mydb") or die ("problemas con la conexión");  
 	$convert=$conx->query("SET NAMES 'utf8'");
 
 	$sql = "SELECT MAX(ID_DATAPERSONAL) AS ultimoid FROM datos_personales";

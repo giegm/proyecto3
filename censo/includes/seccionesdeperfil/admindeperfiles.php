@@ -1,7 +1,12 @@
+<?php
+/*CONTROL DE CONTENIDO PARA LOS USUARIOS LOGUEADOS*/
+/*CASO 1:ADMINISTRADOR*/
+  if($_SESSION["sesion_perfil"]==1){
+?>
 <!--CONTENIDO-->
     <ul class="nav nav-pills">
-      <li class="active"><a data-toggle="pill" href="#perfil">Administración de perfiles</a></li>
-      <li><a data-toggle="pill" href="#adminperfil">Creación de Perfiles</a></li>
+      <li class="active"><a data-toggle="pill" href="#perfil">Administración de usuarios</a></li>
+      <li><a data-toggle="pill" href="#adminperfil">Crear Usuario</a></li>
     </ul>
 
 <div class="tab-content"><!--CONTENEDOR DE LOS TABS-->
@@ -52,8 +57,8 @@
         <label class="control-label col-md-2"></label>
       
       <div class="col-md-8">
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Modificar Datos</button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updatepass" data-whatever="@getbootstrap">Actualizar Contraseña</button>
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Modificar Datos</button>
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#updatepass" data-whatever="@getbootstrap">Actualizar Contraseña</button>
       </div>
       </div>
 
@@ -123,8 +128,8 @@
       <div class="form-group">
         <label class="control-label col-md-4"></label>
         <div class="col-md-8">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-      <input type="button" value="Guardar datos" name="envio" class="btn btn-success" onClick="Modifica_datos_perfil();">
+          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
+      <input type="button" value="Guardar datos" name="envio" class="btn btn-success btn-sm" onClick="Modifica_datos_perfil();">
         </div>
       </div>
       <!--cuadro de errores js-->
@@ -229,13 +234,10 @@
   <table class="table table-hover">
   <thead>
       <tr>
+      <th>Estado</th>
       <th>Usuario</th>
       <th>Cedula</th>
-      <th>Contraseña</th>
-      <th>Rol de Usuario</th>
-      <th>Estado</th>
-      <th>Operación 1</th>
-      <th>Operación 2</th>
+      <th>Tipo de usuario</th>
       </tr>
   </thead>
   <tbody>
@@ -244,39 +246,38 @@
       for($i=0;$i<sizeof($datados);$i++){
       ?>
         <tr>
-          <td><?php echo $datados[$i]["USERADMIN"]; ?></td>
-          <td><?php echo $datados[$i]["CEDULA"]; ?></td>
-          <td><?php echo $datados[$i]["PASSADMINDOS"]; ?></td>
-          <td><?php echo $datados[$i]["PERFIL"]; ?></td>
           <td><?php
           $edoperfil=$datados[$i]["ID_EDO_PERFIL"];
           $descrip=$datados[$i]["ESTADO"];
           if($edoperfil==1){ 
           ?>
-          <input type="button" name="" value="<?php echo $descrip; ?>" class="btn btn-success">
+          <input type="button" name="" value="<?php echo $descrip; ?>" class="btn btn-success btn-sm">
           <?php
           }else if($edoperfil==2){
           ?>
-          <input type="button" name="" value="<?php echo $descrip; ?>" class="btn btn-warning">
+          <input type="button" name="" value="<?php echo $descrip; ?>" class="btn btn-default btn-sm">
           <?php
           }else{
 
           } 
-          ?>  
+          ?>
+          <td><?php echo $datados[$i]["USERADMIN"]; ?></td>
+          <td><?php echo $datados[$i]["CEDULA"]; ?></td>
+          <td><?php echo $datados[$i]["PERFIL"]; ?></td>
           <?php
           if($datados[$i]["ID_PERFIL"]==1){
             ?>
             </td>
-            <td><a class="btn btn-primary" href="" title="" disabled="disabled">Modificar datos</a></td>
+            <td><a class="btn btn-default btn-sm" href="" title="" disabled="disabled"><i class="fa fa-trash-o">&nbsp;</i>Modificar datos</a></td>
             <td>
-            <a type="button" name="eliminar" href="javascript:void(0);" onclick="" class="btn btn-danger" disabled="disabled">Eliminar</a>
+            <a type="button" name="eliminar" href="javascript:void(0);" onclick="" class="btn btn-default btn-sm" disabled="disabled"><i class="fa fa-trash-o">&nbsp;</i>Eliminar</a>
             <?php
           }else{
             ?>
             </td>
-            <td><a class="btn btn-primary" href="?perfil=<?php echo $_SESSION["sesion_perfil"];?>&mod=<?php echo $datados[$i]['ID_PERFIL']; ?>" title="">Modificar datos</a></td>
+            <td><a class="btn btn-primary btn-sm" href="?perfil=<?php echo $_SESSION["sesion_perfil"];?>&mod=<?php echo $datados[$i]['ID_PERFIL']; ?>" title=""><i class="fa fa-pencil-square-o">&nbsp;</i>Modificar datos</a></td>
             <td>
-            <a type="button" name="eliminar" href="javascript:void(0);" onclick="eliminar_user('../controlador/elimina_user.php?id_user=<?php echo $datados[$i]["ID_LOGIN"]; ?>');" class="btn btn-danger">Eliminar</a>
+            <a type="button" name="eliminar" href="javascript:void(0);" onclick="eliminar_user('../controlador/elimina_user.php?id_user=<?php echo $datados[$i]["ID_LOGIN"]; ?>');" class="btn btn-danger btn-sm"><i class="fa fa-trash-o">&nbsp;</i>Eliminar</a>
             <?php
             }//fin del else 
            ?>
@@ -408,8 +409,8 @@ if(isset($_GET["mod"])){
         <label class="control-label col-md-2"></label>
       
       <div class="col-md-8">
-        <button type="button" class="btn btn-danger" onClick="window.location='?perfil=<?php echo $_SESSION["sesion_perfil"]; ?>'">Cancelar</button>
-        <input type="button" class="btn btn-primary" onClick="Modifica_datos_perfil_seleccionado();" value="Guardar datos">
+        <button type="button" class="btn btn-danger btn-sm" onClick="window.location='?perfil=<?php echo $_SESSION["sesion_perfil"]; ?>'">Cancelar</button>
+        <input type="button" class="btn btn-primary btn-sm" onClick="Modifica_datos_perfil_seleccionado();" value="Guardar datos">
       </div>
       </div>
 
@@ -447,12 +448,12 @@ if(isset($_GET["mod"])){
       <div class="panel-body">
         <form action="../controlador/crearperfil.php" method="POST" name="form">
         <div class="form-group">
-          <label for="">Nombre y apellido</label>
+          <label for="">Usuario</label>
           <input type="text" name="nombre" class="form-control" placeholder="">
         </div>
 
         <div class="form-group">
-          <label for="">DNI</label>
+          <label for="">Cédula</label>
           <input type="number" name="cedula" class="form-control" placeholder="cedula de identidad">
         </div>  
 
@@ -490,3 +491,120 @@ if(isset($_GET["mod"])){
 
 
 </div><!--FINAL DEL CONTENEDOR DE LOS TABS-->
+<?php
+ }
+?>
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////////-->
+<!--///////////////////////USUARIO OPERADOR/////////////////////////////////////////////-->
+
+
+<?php
+/*CONTROL DE CONTENIDO PARA LOS USUARIOS LOGUEADOS*/
+/*CASO 2: OPERADOR*/
+  if($_SESSION["sesion_perfil"]==2){
+?>
+<!--CONTENIDO-->
+<div class="tab-content"><!--CONTENEDOR DE LOS TABS-->
+  <div id="perfil" class="tab-pane fade in active">
+    <br/>
+  <!--INICIO DEL PANEL-->
+    <div class="panel panel-danger">
+      <div class="panel-heading" role="tab" id="headingdatosperfil">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseuno" aria-expanded="false" aria-controls="collapseuno"> <span class="" style="float:right"><i class="fa fa-sort"></i></span>
+              Datos del perfil
+          </a>
+        </h4>
+      </div>
+      <div id="collapseuno" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingdatosperfil">
+        <div class="panel-body">
+          <form action="" method="POST" class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="control-label col-md-2">Usuario:</label>
+              <div class="col-md-4">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["USERADMIN"] ?>">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Cedula de identidad:</label>
+              <div class="col-md-4">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["CEDULA"] ?>">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Perfil de Usuario:</label>
+              <div class="col-md-4">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["PERFIL"] ?>">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2"></label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div><!--FINAL DEL SEGUNDO TAB QUE PRESENTA EL REGISTRO DE NUEVOS USUARIOS-->
+</div><!--FINAL DEL CONTENEDOR DE LOS TABS-->
+<?php
+ }
+?>
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////////-->
+<!--///////////////////////USUARIO PUBLICADOR/////////////////////////////////////////////-->
+
+
+<?php
+/*CONTROL DE CONTENIDO PARA LOS USUARIOS LOGUEADOS*/
+/*CASO 2: OPERADOR*/
+  if($_SESSION["sesion_perfil"]==3){
+?>
+<!--CONTENIDO-->
+<div class="tab-content"><!--CONTENEDOR DE LOS TABS-->
+  <div id="perfil" class="tab-pane fade in active">
+    <br/>
+  <!--INICIO DEL PANEL-->
+    <div class="panel panel-danger">
+      <div class="panel-heading" role="tab" id="headingdatosperfil">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseuno" aria-expanded="false" aria-controls="collapseuno"> <span class="" style="float:right"><i class="fa fa-sort"></i></span>
+              Datos del perfil
+          </a>
+        </h4>
+      </div>
+      <div id="collapseuno" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingdatosperfil">
+        <div class="panel-body">
+          <form action="" method="POST" class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="control-label col-md-2">Usuario:</label>
+              <div class="col-md-4">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["USERADMIN"] ?>">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Cedula de identidad:</label>
+              <div class="col-md-4">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["CEDULA"] ?>">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Perfil de Usuario:</label>
+              <div class="col-md-4">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["PERFIL"] ?>">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2"></label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div><!--FINAL DEL SEGUNDO TAB QUE PRESENTA EL REGISTRO DE NUEVOS USUARIOS-->
+</div><!--FINAL DEL CONTENEDOR DE LOS TABS-->
+<?php
+ }
+?>

@@ -31,7 +31,7 @@
 
        <?php 
       /*CONTROL DE CONTENIDO PARA LOS USUARIOS LOGUEADOS*/
-      /*CASO 2: USUARIO PUBLICADOR*/
+      /*CASO 2: USUARIO OPERADOR*/
       if($_SESSION["sesion_perfil"]==2)
         {
         ?>
@@ -45,7 +45,7 @@
 
        <?php
       /*CONTROL DE CONTENIDO PARA LOS USUARIOS LOGUEADOS*/
-      /*CASO 3: USUARIO CONSULTOR*/
+      /*CASO 3: USUARIO PUBLICADOR*/
       if($_SESSION["sesion_perfil"]==3)
         {
         ?>

@@ -29,23 +29,23 @@
 				?>
 
 				<?php
-				/*CASO 2: USUARIO PUBLICADOR*/
+				/*CASO 2: USUARIO OPERADOR*/
 				if($_SESSION["sesion_perfil"]==2){
 				?>
 				<li role="presentation"><a href="../vistas/administra.php"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Inicio&nbsp;&nbsp;</a></li>
-				<li role="presentation"><a href="../vistas/noticias.php"><img src="../img/iconos/noticias.png">&nbsp;&nbsp;Noticias Web</a></li>
-				<li role="presentation"><a href="../vistas/listado_de_noticias.php"><img src="../img/iconos/noticias.png">&nbsp;&nbsp;Listado de Noticias</a></li>
-				<?php
+				<li role="presentation"><a href="../vistas/censarfamilia.php"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Censar Familias</a></li>
+				<li role="presentation"><a href="../vistas/consultas.php"><i class="fa fa-book"></i>&nbsp;&nbsp;Consultas&nbsp;&nbsp;&nbsp;</a></li>
+				<li role="presentation"><a href="../vistas/listadocensos.php"><img src="../img/iconos/listado2.png">&nbsp;&nbsp;Listado de Censos</a></li>				<?php
 				}
 				?>
 
 				<?php
-				/*CASO 3: USUARIO CONSULTOR*/
+				/*CASO 3: USUARIO PUBLICADOR*/
 				if($_SESSION["sesion_perfil"]==3){
 				?>
-				<li role="presentation"><a href="../vistas/administra.php"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Inicio&nbsp;&nbsp;</a></li>				
-				<li role="presentation"><a href="../vistas/consultas.php"><i class="fa fa-book"></i>&nbsp;&nbsp;Consultas&nbsp;&nbsp;&nbsp;</a></li>
-				<li role="presentation"><a href="../vistas/listadocensos.php"><img src="../img/iconos/listado2.png">&nbsp;&nbsp;Listado de Censos</a></li>
+				<li role="presentation"><a href="../vistas/administra.php"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Inicio&nbsp;&nbsp;</a></li>
+				<li role="presentation"><a href="../vistas/noticias.php"><img src="../img/iconos/noticias.png">&nbsp;&nbsp;Noticias Web</a></li>		
+				<li role="presentation"><a href="../vistas/listado_de_noticias.php"><img src="../img/iconos/noticias.png">&nbsp;&nbsp;Listado de noticias</a></li>
 				<?php
 				}
 				?>

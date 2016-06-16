@@ -72,7 +72,7 @@ public function update_perfil_seleccionado($id_perfsel){
 	//variables que traen los datos del perfil a modificar
 	$user=$_POST["newname"];
 	$ced=$_POST["newced"];
-	$clave=$_POST["newpass"];
+	$clave=md5($_POST["newpass"]);
 	$roluser=$_POST["newrol"];
 	$edoper=$_POST["newestado_user"];
 	$clavemd=md5($_POST["newpass"]);

@@ -14,7 +14,7 @@ class Crea_perfil{
 	//para encriptar clave
 	$clavex=md5($pass);
 	
-		$sql="INSERT INTO datos_login(USERADMIN,CEDULA,PASSADMIN,PASSADMINDOS,ID_PERFIL,ID_EDO_PERFIL) VALUES('$names','$dni','$clavex','$pass','$rol',1)";
+		$sql="INSERT INTO datos_login(USERADMIN,CEDULA,PASSADMIN,PASSADMINDOS,ID_PERFIL,ID_EDO_PERFIL) VALUES('$names','$dni','$clavex','$clavex','$rol',1)";
 		if(mysqli_query(Conecta::conx(),$sql)){
 			echo "<script type='text/javascript'>alert('usuario creado con éxito.'); window.location='../vistas/administra.php?perfil=1';</script>";
 		}else{

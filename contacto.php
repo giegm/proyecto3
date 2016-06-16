@@ -7,8 +7,8 @@
 	 <?php 
      require_once('header.php'); ?>
 		
-	<div class="map">
-		<iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Kuningan,+Jakarta+Capital+Region,+Indonesia&amp;aq=3&amp;oq=kuningan+&amp;sll=37.0625,-95.677068&amp;sspn=37.410045,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Kuningan&amp;t=m&amp;z=14&amp;ll=-6.238824,106.830177&amp;output=embed">
+	<div class="map"> <!-- http://es.map-generator.org/-->
+		<iframe src="http://www.map-generator.org/c58014dc-fc5d-4fc2-8659-2cfc3158dc1c/iframe-map.aspx" scrolling="no" width="2000px" height="600px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
 		</iframe>
 	</div>
 	
@@ -20,35 +20,37 @@
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+               
+                <form action="enviar-form.php" id="main-contact-form" class="contact-form" name="contact-form" method="post" onsubmit="return validar(this);">
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
                             <label>Nombre y Apellido *</label>
-                            <input type="text" name="name" class="form-control" required="required">
+                            <input type="text" name="nombre" class="form-control" required="required" onblur="revisar(this);">
                         </div>
                         <div class="form-group">
                             <label>Correo Electronico *</label>
-                            <input type="email" name="email" class="form-control" required="required">
+                            <input type="email" name="email" class="form-control" required="required" onblur="revisar(this); revisaremail(this);">
                         </div>
                         <div class="form-group">
                             <label>Teléfono</label>
-                            <input type="number" class="form-control">
+                            <input type="number" name="telefono" class="form-control">
                         </div>                                            
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
                             <label>Motivo del Mensaje *</label>
-                            <input type="text" name="subject" class="form-control" required="required">
+                            <input type="text" name="asunto" class="form-control" required="required" maxlength="15" onblur="revisar(this);">
                         </div>
                         <div class="form-group">
                             <label>Mensaje *</label>
-                            <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
+                            <textarea name="mensaje" id="message" required="required" class="form-control" rows="8" cols="50" onblur="revisar(this);"></textarea>
                         </div>                        
-                        <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Enviar Mensaje</button>
+                        <div class="form-group">                           
+                            <input class="btn btn-primary" type="submit" value="Enviar Mensaje"/>
                         </div>
                     </div>
-                </form> 
+                </form>
+               
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#contact-page-->

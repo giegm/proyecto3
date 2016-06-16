@@ -116,8 +116,8 @@
                         <div class="skill">
                             <a href=""><h3 class="bg-primary">Emisión de Actas</h3></a>
                             <a href=""><h3 class="bg-info">Carta de Solteria</h3></a>
-                            <a href=""><h3 class="bg-warning">Carta de Buena Conducta</h3></a>
-                            <a href=""><h3 class="bg-danger">Carta de Concubinato</h3></a> 
+                            <a href=""><h3 class="bg-warning">Carta de Tickets Estudiantiles</h3></a>
+                            <a href=""><h3 class="bg-danger">Carta de Mudanza</h3></a> 
                         </div>
                     </div><!--/.col-md-4-->                      
     

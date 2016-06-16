@@ -313,6 +313,35 @@
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#middle-->
+
+    <div class="clients-area center wow fadeInDown">
+                <h2>Misión y Visión</h2>
+                <p class="lead">La comuna "Explosión del Poder Popular" junto con el consejo comunal "Santa Inés"<br>a través del ministerio popular de las comunas establecen su misión y visión. </p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 wow fadeInDown">
+                    <div class="clients-comments text-center">                       
+                        <h2><b>Misión</b></h2>
+                        <h4>Promover y consolidar la democracia participativa y protagónica, mediante la promoción y el fortalecimiento de todos
+                         aquellos programas y proyectos comunitarios que propicien el ejercicio de la corresponsabilidad social en la gestión pública, para el fortalecimiento de las potencialidades y resolver los problemas de la comunidad.</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeInDown">
+                    <div class="clients-comments text-center">
+                        <img src="images/client2.png" class="img-circle" alt="">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
+                        <h4><span>-John Doe /</span>  Director of corlate.com</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeInDown">
+                    <div class="clients-comments text-center">                        
+                        <h2><b>Visión</b></h2>
+                        <h4>Obtener de todos los proyectos y programas desarrollados por el Consejo Comunal y de la comunidad en General presentados los
+                         beneficios esperados por los mismos, y que generen la transformación de las personas que habitan la comunidad y de la infraestructura que nos rodea, para aumentar el avanza y satisfacer todas las necesidades de todos, específicamente en la poligonal por ser nuestro rango de acción, sin menos cabo de los avances de los otros consejos comunales del Sector que logremos beneficiar con nuestras propuestas, garantizando el bienestar integral procurando un desenvolvimiento sobre el desarrollo social, manteniendo la igualdad de condiciones que ejercen cada ciudadano en el Sector.</h4>
+                    </div>
+                </div>
+            </div>
 	
 	<?php 
      require_once('footer.php'); ?>

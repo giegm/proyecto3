@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$_SESSION['tiempo']=time();
 if(isset($_SESSION["sesion_usuario"]) and isset($_SESSION["sesion_perfil"]))
 {
 	header('location:vistas/administra.php');

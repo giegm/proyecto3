@@ -171,7 +171,7 @@
         <label class="control-label col-md-4">Contraseña actual:</label>
       
       <div class="col-md-4">
-        <input type="password" class="form-control" name="claveactualp" value="">
+        <input type="password" class="form-control" name="claveactualp" value="" maxlength="15">
       </div>
       </div>
 
@@ -179,7 +179,7 @@
         <label class="control-label col-md-4">Nueva Contraseña:</label>
       
       <div class="col-md-4">
-        <input type="password" class="form-control" name="clavenew" value="">
+        <input type="password" class="form-control" name="clavenew" value="" maxlength="15">
       </div>
       </div>
 
@@ -187,7 +187,7 @@
         <label class="control-label col-md-4">Confirmar Contraseña:</label>
       
       <div class="col-md-4">
-        <input type="password" class="form-control" name="clavenew2" value="">
+        <input type="password" class="form-control" name="clavenew2" value="" maxlength="15">
       </div>
       </div>
 
@@ -454,7 +454,7 @@ if(isset($_GET["mod"])){
 
         <div class="form-group">
           <label for="">Cédula</label>
-          <input type="number" name="cedula" class="form-control" placeholder="cedula de identidad">
+          <input type="text" name="cedula" class="form-control" placeholder="cedula de identidad" maxlength="8" min="6">
         </div>  
 
          <div class="form-group">

@@ -3,32 +3,36 @@ function Valida_perfil(){
 	var form=document.form;
 
 	if(form.nombre.value==0){
-		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Indica un nombre para el nuevo usuario.&nbsp;&nbsp;&times;</strong></p>";
+		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Debe introducir un nombre para el nuevo usuario.&nbsp;&nbsp;&times;</strong></p>";
 		form.nombre.value=" ";
 		form.nombre.focus();
 		return false;
 	}
 
 	if(form.cedula.value==0){
-		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Indica una cedula para el nuevo usuario.&nbsp;&nbsp;&times;</strong></p>";
+		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Debe introducir la cedula del usuario.&nbsp;&nbsp;&times;</strong></p>";
 		form.cedula.value=" ";
 		form.cedula.focus();
 		return false;
 	}
 
 	if(form.password.value==0){
-		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Indica una contraseña para el nuevo usuario.&nbsp;&nbsp;&times;</strong></p>";
+		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Debe introducir una contraseña para el nuevo usuario.&nbsp;&nbsp;&times;</strong></p>";
 		form.password.value=" ";
 		form.password.focus();
 		return false;
 	}
-
+	if(form.password.value!=form.password2.value){
+		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas son diferentes.&nbsp;&nbsp;&times;</strong></p>";
+		return false;
+	}
 	if(form.tipo_rol.value==0){
-		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Indica un tipo de rol para el nuevo usuario.&nbsp;&nbsp;&times;</strong></p>";
+		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Debe indicar el tipo de usuario.&nbsp;&nbsp;&times;</strong></p>";
 		form.tipo_rol.value=" ";
 		form.tipo_rol.focus();
 		return false;
 	}
+
 
 	form.submit();
 }

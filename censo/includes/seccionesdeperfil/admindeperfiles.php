@@ -460,22 +460,24 @@ if(isset($_GET["mod"])){
          <div class="form-group">
           <label for="">Contraseña</label>
           <input type="password" name="password" class="form-control" placeholder="maximo 15 caracteres" maxlength="15">
+          <label for="">Confirmar Contraseña</label>
+          <input type="password" name="password2" class="form-control" placeholder="maximo 15 caracteres" maxlength="15">
         </div>
 
          <div class="form-group">
-          <label for="">Rol del usuario</label>
+          <label for="">Tipo de usuario</label>
           <label class="radio-inline">
           <input type="radio" name="tipo_rol" id="inlineRadio1" value="1" checked=""> Administrar
           </label>
           <label class="radio-inline">
-          <input type="radio" name="tipo_rol" id="inlineRadio2" value="2"> Publicar 
+          <input type="radio" name="tipo_rol" id="inlineRadio2" value="2"> Operador 
           </label>
           <label class="radio-inline">
-          <input type="radio" name="tipo_rol" id="inlineRadio3" value="3"> Consultar
+          <input type="radio" name="tipo_rol" id="inlineRadio3" value="3"> Publicador
           </label>
         </div>
 
-        <input type="button" value="Guardar datos"name="envio" class="btn btn-success" onClick="Valida_perfil();">
+        <input type="button" value="Guardar datos"name="envio" class="btn btn-success" onClick="Valida_perfil(); contraseña();">
 
         </form>
       </div>

@@ -25,6 +25,7 @@ if(isset($_SESSION["sesion_usuario"]) && $_SESSION["sesion_perfil"]){
 		<link rel="stylesheet" href="../diseño/selectstyles/dist/css/bootstrap-select.css">
    		<script src="../js/valida_creacion_perfil.js" type="text/javascript"></script>
    		<script src="../js/funciones.js" type="text/javascript"></script>
+   		<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
    		<link rel="shortcut icon" href="../img/ccsantaines.ico">
 	</head>
 <body>

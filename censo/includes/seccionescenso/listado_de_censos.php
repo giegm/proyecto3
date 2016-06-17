@@ -49,10 +49,6 @@ if(isset($_SESSION["sesion_usuario"])){
 			
 			<h1 class="page-header">Listado de censos</h1>
 
-			<?php
-				include("../includes/operacionesadmin.php");
-			?>
-
 			<div class="col-md-12 well">
 
 <!--TABLA DE CENSOS-->

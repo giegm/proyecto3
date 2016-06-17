@@ -15,7 +15,6 @@ function Valida_perfil(){
 		form.cedula.focus();
 		return false;
 	}
-
 	if(form.password.value==0){
 		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Debe introducir una contraseña para el nuevo usuario.&nbsp;&nbsp;&times;</strong></p>";
 		form.password.value=" ";
@@ -32,8 +31,39 @@ function Valida_perfil(){
 		form.tipo_rol.focus();
 		return false;
 	}
-
-
+    if(form.password.value == form.nombre.value) {
+		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe ser diferente del nombre de usuario.&nbsp;&nbsp;&times;</strong></p>";
+        form.password.focus();
+        return false;
+      }
+    re = /[0-9]/;
+    if(!re.test(form.password.value)) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos un número (0-9).&nbsp;&nbsp;&times;</strong></p>";
+        form.password.focus();
+        return false;
+      }
+    re = /[a-z]/;
+    if(!re.test(form.password.value)) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos una letra minuscula [a-z].&nbsp;&nbsp;&times;</strong></p>";
+        form.password.focus();
+        return false;
+      }
+    re = /[A-Z]/;
+    if(!re.test(form.password.value)) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos una letra mayuscula [A-Z].&nbsp;&nbsp;&times;</strong></p>";
+        form.password.focus();
+        return false;
+	}
+	if(form.password.value.length < 6) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos 6 letras.&nbsp;&nbsp;&times;</strong></p>";
+        form.password.focus();
+        return false;
+      }
+	if(form.password.value.length < 15) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos 15 letras.&nbsp;&nbsp;&times;</strong></p>";
+        form.password.focus();
+        return false;
+      }
 	form.submit();
 }
 

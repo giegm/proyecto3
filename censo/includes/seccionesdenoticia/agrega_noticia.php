@@ -64,7 +64,6 @@
           <div class="form-group">
             <div class="col-sm-10 col-md-8">
               <input type="button" class="btn btn-success" onclick="Validar_Noticia();" value="Cargar Noticia">
-              
               <input type="button" class="btn btn-primary" onclick="Limpiar_Form();" value="Limpiar Formulario">
               <input type="button" class="btn btn-danger" onclick="window.location='../vistas/administra.php';" value="Volver">
             </div>

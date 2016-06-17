@@ -59,9 +59,7 @@
                         <li><a href="#"><i class="fa fa-long-arrow-left"></i>Página Anterior</a></li>
                         <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
+                        <li><a href="#">3</a></li>                        
                         <li><a href="#">Siguiente Página<i class="fa fa-long-arrow-right"></i></a></li>
                     </ul><!--/.pagination-->
                 </div><!--/.col-md-8-->
@@ -96,23 +94,10 @@
                                 
                             </div>
                         </div>                     
-                    </div><!--/.recent comments-->                     
+                    </div><!--/.recent comments-->            
 
-                     				
-    				<div class="widget archieve">
-                        <h3>Archieve</h3>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <ul class="blog_archieve">
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> December 2015 <span class="pull-right">(97)</span></a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> November 2015 <span class="pull-right">(32)</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> October 2015 <span class="pull-right">(19)</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> September 2015 <span class="pull-right">(08)</a></li>
-                                </ul>
-                            </div>
-                        </div>                     
-                    </div><!--/.archieve-->
-    				
+                     
+    				    				
                     <div class="widget tags">
                         <h3>Tag Cloud</h3>
                         <ul class="tag-cloud">

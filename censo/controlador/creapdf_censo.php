@@ -344,7 +344,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<?php
 	 $reg=$tra->obten_datos_censo_siete($_GET["id"]); 
 	 /*************DATOS SITUACION VIVIENDA Y DETALLES VIVIENDA**************/
@@ -422,7 +422,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/><br/><br/><br/><br/>
 	<table id="tables-censo">
 	<thead>
 			<tr>
@@ -437,7 +437,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<?php
 	 $reg=$tra->obten_datos_censo_ocho($_GET["id"]); 
 /*************DATOS CONDICIONES SALUD Y SITUACION SERVICIOS*************/
@@ -518,7 +518,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<h3 id="titulos-de-tablas">Detalles de servicios y servicio electrico</h3>
 	<table id="tables-censo">
 	<?php
@@ -566,7 +566,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<h3 id="titulos-de-tablas">Participación comunitaria</h3>
 	<table id="tables-censo">
 	<?php
@@ -607,7 +607,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/><br/><br/>
 		<table id="tables-censo">
 		<thead>
 			<tr>

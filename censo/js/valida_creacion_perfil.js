@@ -139,8 +139,41 @@ function Modifica_claves_perfil(){
 		formu2.clavenew2.value="";
 		formu2.clavenew2.focus();
 		return false;
-
 	}
+	re = /[0-9]/;
+    if(!re.test(formu2.clavenew.value)) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos un número (0-9).&nbsp;&nbsp;&times;</strong></p>";
+        formu2.clavenew.focus();
+        return false;
+      }
+    re = /[a-z]/;
+    if(!re.test(formu2.clavenew.value)) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos una letra minuscula [a-z].&nbsp;&nbsp;&times;</strong></p>";
+        formu2.clavenew.focus();
+        return false;
+      }
+     re = /[!-?]/;
+    if(!re.test(formu2.clavenew.value)) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos una letra minuscula [a-z].&nbsp;&nbsp;&times;</strong></p>";
+        formu2.clavenew.focus();
+        return false;
+      }
+    re = /[A-Z]/;
+    if(!re.test(formu2.clavenew.value)) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos una letra mayuscula [A-Z].&nbsp;&nbsp;&times;</strong></p>";
+        formu2.clavenew.focus();
+        return false;
+	}
+	if(formu2.clavenew.value.length < 6) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos 6 letras.&nbsp;&nbsp;&times;</strong></p>";
+        formu2.clavenew.focus();
+        return false;
+      }
+	if(formu2.clavenew.value.length > 15) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos 15 letras.&nbsp;&nbsp;&times;</strong></p>";
+        formu2.clavenew.focus();
+        return false;
+      }
 	if(formu2.clavenew.value != formu2.clavenew2.value)
 	{
 		alert('Las contraseñas no coinciden.');

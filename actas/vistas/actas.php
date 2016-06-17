@@ -38,11 +38,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Consejo Comunal "Santa Inés"</a>
+          <a class="navbar-brand" href="../index.php">Consejo Comunal "Santa Inés"</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../proyecto3/ingreso.php"><br>Sistema de Censo demográfico y Socioeconómico</br></a></li>			
+            <li><a href="../../censo/ingreso.php"><br>Sistema de Censo demográfico y Socioeconómico</br></a></li>			
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -54,12 +54,12 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/portfolio/recent/item1.png" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta1.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a> </h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="../../images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">REQUISITOS</a> </h3>
+                                <p>*Copia de la cedula de identidad</p>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -67,12 +67,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/portfolio/recent/item2.png" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta2.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="../../images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">REQUISITOS</a></h3>
+                                <p>*Copia de la cedula de identidad</p>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -80,11 +80,11 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/portfolio/recent/item3.png" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta3.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <h3><a href="#">REQUISITOS </a></h3>
+                                <p>*Copia de la cedula de identidad</p>
                                 <a class="preview" href="../../images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
@@ -93,25 +93,25 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/portfolio/recent/item4.png" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta4.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">MultiPurpose theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="../../images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">REQUISITOS </a></h3>
+                                <p>*Copia de la cedula de identidad</p>
+                                <a class="preview" href="#"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
-                </div>   
+                </div><br><br><br><br><br><br><br><br><br>  
                 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/portfolio/recent/item5.png" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta5.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="../../images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">REQUISITOS</a></h3>
+                                <p>*Copia de la cedula de identidad</p>
+                                <a class="preview" href="#"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -119,12 +119,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/portfolio/recent/item6.png" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta5.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="../../images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">REQUISITOS </a></h3>
+                                <p>*Copia de la cedula de identidad</p>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -132,12 +132,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/portfolio/recent/item7.png" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta5.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="../../images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">REQUISITOS </a></h3>
+                                <p>*Copia de la cedula de identidad</p>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -145,12 +145,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/portfolio/recent/item8.png" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta5.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="../../images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">REQUISITOS </a></h3>
+                                <p>*Copia de la cedula de identidad</p>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>

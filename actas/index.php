@@ -39,7 +39,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../proyecto3/ingreso.php">Sistema de Censo demográfico y Socioeconómico</a></li>			
+            <li><a href="../censo/ingreso.php">Sistema de Censo demográfico y Socioeconómico</a></li>			
           </ul>
         </div><!--/.nav-collapse -->
       </div>

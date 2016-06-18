@@ -15,11 +15,6 @@ function Valida_perfil(){
 		form.cedula.focus();
 		return false;
 	}
-  	re = /[0-9]/;
-    if(!re.test(form.cedula.value)) {
-    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>La cedula debe contener solo números.&nbsp;&nbsp;&times;</strong></p>";
-        form.password.focus();
-        return false;
     re = /[A-Z]/;
     if(re.test(form.cedula.value)) {
     	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>La cedula debe contener solo números.&nbsp;&nbsp;&times;</strong></p>";
@@ -28,6 +23,11 @@ function Valida_perfil(){
     }
     if(form.cedula.value.length < 6) {
     	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>La cedula debe contener al menos 6 números.&nbsp;&nbsp;&times;</strong></p>";
+        form.password.focus();
+        return false;
+    }
+    if(form.cedula.value.length > 8) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>La cedula debe contener maximo 8 números.&nbsp;&nbsp;&times;</strong></p>";
         form.password.focus();
         return false;
     }

@@ -21,7 +21,7 @@
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
                
-                <form action="enviar-form.php" id="main-contact-form" class="contact-form" name="contact-form" method="post" onsubmit="return validar(this);">
+                <form action="contacto2.php" id="main-contact-form" class="contact-form" name="contact-form" method="post">
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
                             <label>Nombre y Apellido *</label>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <label>Mensaje *</label>
-                            <textarea name="mensaje" id="message" required="required" class="form-control" rows="8" cols="50" onblur="revisar(this);"></textarea>
+                            <textarea name="mensaje" id="message" required="required" class="form-control" maxlength="100" rows="8" cols="50" onblur="revisar(this);"></textarea>
                         </div>                        
                         <div class="form-group">                           
                             <input class="btn btn-primary" type="submit" value="Enviar Mensaje"/>

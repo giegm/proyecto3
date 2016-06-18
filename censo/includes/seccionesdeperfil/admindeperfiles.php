@@ -325,7 +325,7 @@ if(isset($_GET["mod"])){
         <label class="control-label col-md-2">Cedula de identidad:</label>
       
       <div class="col-md-4">
-        <input type="text" class="form-control" name="newced" maxlength="8"> value="<?php echo $perfil[0]["CEDULA"]; ?>">
+        <input type="text" class="form-control" name="newced" maxlength="8" value="<?php echo $perfil[0]["CEDULA"]; ?>">
       </div>
       </div>
 
@@ -333,7 +333,7 @@ if(isset($_GET["mod"])){
         <label class="control-label col-md-2">Contraseña:</label>
       
       <div class="col-md-4">
-        <input type="text" class="form-control" name="newpass" value="<?php echo $perfil[0]["PASSADMINDOS"]; ?>">
+        <input type="text" class="form-control" name="newpass" maxlength="15" value="<?php echo $perfil[0]["PASSADMINDOS"]; ?>">
       </div>
       </div>
 
@@ -454,7 +454,7 @@ if(isset($_GET["mod"])){
 
         <div class="form-group">
           <label for="">Cédula</label>
-          <input type="number" name="cedula" class="form-control" placeholder="cedula de identidad" maxlength="8">
+          <input type="text" name="cedula" class="form-control" placeholder="cedula de identidad" maxlength="8">
         </div>  
 
          <div class="form-group">

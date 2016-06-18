@@ -5,7 +5,7 @@
 @$asunto = addslashes($_POST['asunto']);
 @$mensaje = addslashes($_POST['mensaje']);
 
-$to="girlcarolay1804@gmail.com";//MODIFICAR POR EL C.C
+$to="girlcarolay@hotmail.com";//MODIFICAR POR EL C.C
 $nombre= "De:$nombre";
 $email= "Correo: $email";
 $asunto= "Asunto $asunto";

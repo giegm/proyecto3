@@ -15,6 +15,17 @@ function Valida_perfil(){
 		form.cedula.focus();
 		return false;
 	}
+  	re = /[0-9]/;
+    if(!re.test(form.cedula.value)) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las cedula debe contener solo números.&nbsp;&nbsp;&times;</strong></p>";
+        form.password.focus();
+        return false;
+    }
+    if(form.cedula.value.length < 6) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las cedula debe contener al menos 6 números.&nbsp;&nbsp;&times;</strong></p>";
+        form.password.focus();
+        return false;
+    }
 	if(form.password.value==0){
 		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Debe introducir una contraseña para el nuevo usuario.&nbsp;&nbsp;&times;</strong></p>";
 		form.password.value=" ";
@@ -97,7 +108,23 @@ function Modifica_datos_perfil(){
 	}else{
 		document.getElementById("error").innerHTML="";
 	}
-
+	re = /[0-9]/;
+    if(!re.test(formu.ceduser.value)) {
+    	alert('Solo debe contener números');
+		formu.ceduser.value=" ";
+		formu.ceduser.focus();
+		return false;
+	}else{
+		document.getElementById("error").innerHTML="";
+	}
+	if(formu.ceduser.value.length < 6) {
+	    alert('Debe contener mínimo 6 dígitos');
+		formu.ceduser.value=" ";
+		formu.ceduser.focus();
+		return false;
+	}else{
+		document.getElementById("error").innerHTML="";
+	}
 	if(formu.claveactual.value==0){
 		//document.getElementById("error").innerHTML="Indique un nombre de usuario.";
 		alert('Indique la contraseña actual para efectuar la operación.');
@@ -139,41 +166,8 @@ function Modifica_claves_perfil(){
 		formu2.clavenew2.value="";
 		formu2.clavenew2.focus();
 		return false;
+
 	}
-	re = /[0-9]/;
-    if(!re.test(formu2.clavenew.value)) {
-    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos un número (0-9).&nbsp;&nbsp;&times;</strong></p>";
-        formu2.clavenew.focus();
-        return false;
-      }
-    re = /[a-z]/;
-    if(!re.test(formu2.clavenew.value)) {
-    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos una letra minuscula [a-z].&nbsp;&nbsp;&times;</strong></p>";
-        formu2.clavenew.focus();
-        return false;
-      }
-     re = /[!-?]/;
-    if(!re.test(formu2.clavenew.value)) {
-    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos una letra minuscula [a-z].&nbsp;&nbsp;&times;</strong></p>";
-        formu2.clavenew.focus();
-        return false;
-      }
-    re = /[A-Z]/;
-    if(!re.test(formu2.clavenew.value)) {
-    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos una letra mayuscula [A-Z].&nbsp;&nbsp;&times;</strong></p>";
-        formu2.clavenew.focus();
-        return false;
-	}
-	if(formu2.clavenew.value.length < 6) {
-    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos 6 letras.&nbsp;&nbsp;&times;</strong></p>";
-        formu2.clavenew.focus();
-        return false;
-      }
-	if(formu2.clavenew.value.length > 15) {
-    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Las contraseñas debe contener al menos 15 letras.&nbsp;&nbsp;&times;</strong></p>";
-        formu2.clavenew.focus();
-        return false;
-      }
 	if(formu2.clavenew.value != formu2.clavenew2.value)
 	{
 		alert('Las contraseñas no coinciden.');

@@ -49,7 +49,27 @@ public function update_perfil($id_perfil){
 	//$clavenew=md5($_POST["clavenueva"]);
 
 	$sql1=mysqli_query(Conecta::conx(),"select PASSADMIN from datos_login where ID_PERFIL=$id_perfil")or die("error en la consulta de la clave actual-->" . $sql1 . mysqli_errno(Conecta::conx()));
-	while($reg=mysqli_fetch_assoc($sql1)){
+	if($reg=mysqli_fetch_assoc($sql1)){
+		$this->passact=$reg["PASSADMIN"];
+	}
+ 	$id_sesion_usuario=$_SESSION["sesion_perfil"];
+
+	if($claveact!=$this->passact){
+		echo "<script type='text/javascript'>alert('La contraseña actual ingresada no coincide con la registrada en la base de datos.');window.location='../vistas/perfil.php?perfil=$id_sesion_usuario';</script>";
+	}else{
+	$sql=mysqli_query(Conecta::conx(),"update datos_login set USERADMIN='$user', CEDULA='$ced' where ID_PERFIL=$id_perfil") or die("Error: No se pudo modificar el usuario indicado-->" . $sql . mysqli_errno(Conecta::conx()));
+
+	echo "<script type='text/javascript'>alert('Se ha modificado el perfil exitosamente.');window.location='../vistas/perfil.php?perfil=$id_sesion_usuario';</script>";
+	}
+	
+/*
+	$user=$_POST["nameuser"];
+	$ced=$_POST["ceduser"];
+	$claveact=md5($_POST["claveactual"]);
+	//$clavenew=md5($_POST["clavenueva"]);
+
+	$sql1=mysqli_query(Conecta::conx(),"select PASSADMIN from datos_login where ID_PERFIL=$id_perfil")or die("error en la consulta de la clave actual-->" . $sql1 . mysqli_errno(Conecta::conx()));
+	if($reg=mysqli_fetch_assoc($sql1)){
 		$this->passact=$reg["PASSADMIN"];
 	}
  	$id_sesion_usuario=$_SESSION["sesion_perfil"];
@@ -62,7 +82,27 @@ public function update_perfil($id_perfil){
 	echo "<script type='text/javascript'>alert('Se ha modificado el perfil exitosamente.');window.location='../vistas/perfil.php?perfil=$id_sesion_usuario';</script>";
 	}
 
+	$claveact2=md5($_POST["claveactualp"]);
+	$sql2=mysqli_query(Conecta::conx(),"select PASSADMIN from datos_login where ID_PERFIL=$id_perfil")or die("error en la consulta de la clave actual-->" . $sql2 . mysqli_errno(Conecta::conx()));
+	if($reg=mysqli_fetch_assoc($sql1)){
+		$this->passact=$reg["PASSADMIN"];
+	}
+ 	$id_sesion_usuario=$_SESSION["sesion_perfil"];
 
+	if($claveact2!=$this->passact){
+		echo "<script type='text/javascript'>alert('La contraseña actual ingresada no coincide con la registrada en la base de datos.');window.location='../vistas/perfil.php?perfil=$id_sesion_usuario';</script>";
+	}else{
+	$pass=md5($_POST["clavenew"]);
+	$pass2=md5($_POST["clavenew2"]);
+
+	$sql="INSERT INTO datos_login(PASSADMIN,PASSADMINDOS,ID_EDO_PERFIL) VALUES('$pass','$pass2',1)";
+		if(mysqli_query(Conecta::conx(),$sql)){
+			echo "<script type='text/javascript'>alert('Contraseña modificada con éxito.'); window.location='../vistas/perfil.php?perfil=1';</script>";
+		}else{
+			echo "error al intentar modificar la contraseña" . $sql . mysqli_error(Conecta::conx());
+		}
+	}
+*/
 }//FIN DEL METODO UPDATE PERFIL
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////*/

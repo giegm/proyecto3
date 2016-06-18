@@ -15,7 +15,7 @@ $data=$objc->get_noticia_por_id($_GET["id"]);
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>C.C. Madre Tierra</title>
+    <title>Sistema de Control de Censo Demográfico y Socieconómico|Revisar Noticia</title>    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +24,7 @@ $data=$objc->get_noticia_por_id($_GET["id"]);
     <link rel="stylesheet" href="../diseño/iconos/css/font-awesome.css">
     <link rel="stylesheet" href="../diseño/selectstyles/dist/css/bootstrap-select.css">
     <script src="../js/validar_carga_noticia.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="../img/ccsantaines.ico">
   </head>
 <body>
 <?php include("../includes/navbaradmin.php"); ?>
@@ -48,16 +49,11 @@ $data=$objc->get_noticia_por_id($_GET["id"]);
     <div class="col-md-10 col-admin-central">
       
       <h1 class="page-header pageheader-general">Revisión de noticias</h1>
-
-      <?php
-        include("../includes/operacionesadmin.php");
-      ?>
-      <br/>
       <div class="col-md-12 well">
 
 <div class="panel panel-danger">
     <div class="panel-heading">
-      <h3 class="panel-title">Agregar noticia</h3>
+      <h3 class="panel-title">Modificar la noticia</h3>
     </div>
     <div class="panel-body">
       <form action="revisa_noticia.php" method="POST" class="form-horizontal" name="form" role="form">

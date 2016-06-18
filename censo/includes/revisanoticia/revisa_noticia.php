@@ -12,7 +12,7 @@ $data=$objc->get_noticia_por_id($_GET["id"]);
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>C.C. Madre Tierra</title>
+    <title>Sistema de Control de Censo Demográfico y Socieconómico|Revisar Noticia</title>    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,8 @@ $data=$objc->get_noticia_por_id($_GET["id"]);
     <link rel="stylesheet" href="../diseño/css/bootstrap.css">
     <link rel="stylesheet" href="../diseño/iconos/css/font-awesome.css">
     <link rel="stylesheet" href="../diseño/selectstyles/dist/css/bootstrap-select.css">
-    <script src="http://localhost/madretierraweb/proyecto3/js/validarcenso.js" type="text/javascript"></script>
+    <script src="../js/validar_carga_noticia.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="../img/ccsantaines.ico">
   </head>
 <body>
 <?php include("../includes/navbaradmin.php"); ?>
@@ -44,12 +45,6 @@ $data=$objc->get_noticia_por_id($_GET["id"]);
     
     <div class="col-md-10 col-admin-central">
       
-      <h1 class="page-header pageheader-general">Revisión de censos</h1>
-
-      <?php
-        include("../includes/operacionesadmin.php");
-      ?>
-      <br/>
       <div class="col-md-12 well">
 
 <div class="panel panel-danger">

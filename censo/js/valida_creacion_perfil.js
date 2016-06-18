@@ -110,7 +110,7 @@ function Modifica_datos_perfil(){
 	}
 	re = /[0-9]/;
     if(!re.test(formu.ceduser.value)) {
-    	alert('Solo debe contener números');
+    	alert('La cedula solo debe contener números');
 		formu.ceduser.value=" ";
 		formu.ceduser.focus();
 		return false;
@@ -118,7 +118,7 @@ function Modifica_datos_perfil(){
 		document.getElementById("error").innerHTML="";
 	}
 	if(formu.ceduser.value.length < 6) {
-	    alert('Debe contener mínimo 6 dígitos');
+	    alert('La cedula debe contener mínimo 6 dígitos');
 		formu.ceduser.value=" ";
 		formu.ceduser.focus();
 		return false;

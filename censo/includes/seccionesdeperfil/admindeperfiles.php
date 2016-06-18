@@ -95,7 +95,7 @@
         <label class="control-label col-md-4">Usuario:</label>
       
       <div class="col-md-4">
-        <input type="text" class="form-control" name="nameuser" maxlength="10"> value="<?php echo $data[0]["USERADMIN"] ?>">
+        <input type="text" class="form-control" name="nameuser" maxlength="10" value="<?php echo $data[0]["USERADMIN"] ?>">
       </div>
       </div>
 
@@ -103,7 +103,7 @@
         <label class="control-label col-md-4">Cedula de identidad:</label>
       
       <div class="col-md-4">
-        <input type="text" class="form-control" name="ceduser" value="<?php echo $data[0]["CEDULA"] ?>">
+        <input type="text" class="form-control" name="ceduser" maxlength="8" value="<?php echo $data[0]["CEDULA"] ?>">
       </div>
       </div>
 
@@ -317,7 +317,7 @@ if(isset($_GET["mod"])){
         <label class="control-label col-md-2">Usuario:</label>
       
       <div class="col-md-4">
-        <input type="text"  class="form-control" name="newname" maxlength="10"> autofocus value="<?php echo $perfil[0]["USERADMIN"]; ?>">
+        <input type="text"  class="form-control" name="newname" maxlength="10" autofocus value="<?php echo $perfil[0]["USERADMIN"]; ?>">
       </div>
       </div>
 
@@ -325,7 +325,7 @@ if(isset($_GET["mod"])){
         <label class="control-label col-md-2">Cedula de identidad:</label>
       
       <div class="col-md-4">
-        <input type="text" class="form-control" name="newced" value="<?php echo $perfil[0]["CEDULA"]; ?>">
+        <input type="text" class="form-control" name="newced" maxlength="8"> value="<?php echo $perfil[0]["CEDULA"]; ?>">
       </div>
       </div>
 

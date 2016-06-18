@@ -1,4 +1,4 @@
-<?php
+  <?php
 /*CONTROL DE CONTENIDO PARA LOS USUARIOS LOGUEADOS*/
 /*CASO 1:ADMINISTRADOR*/
   if($_SESSION["sesion_perfil"]==1){
@@ -95,7 +95,7 @@
         <label class="control-label col-md-4">Usuario:</label>
       
       <div class="col-md-4">
-        <input type="text" class="form-control" name="nameuser" value="<?php echo $data[0]["USERADMIN"] ?>">
+        <input type="text" class="form-control" name="nameuser" maxlength="10"> value="<?php echo $data[0]["USERADMIN"] ?>">
       </div>
       </div>
 
@@ -317,7 +317,7 @@ if(isset($_GET["mod"])){
         <label class="control-label col-md-2">Usuario:</label>
       
       <div class="col-md-4">
-        <input type="text"  class="form-control" name="newname" autofocus value="<?php echo $perfil[0]["USERADMIN"]; ?>">
+        <input type="text"  class="form-control" name="newname" maxlength="10"> autofocus value="<?php echo $perfil[0]["USERADMIN"]; ?>">
       </div>
       </div>
 
@@ -449,7 +449,7 @@ if(isset($_GET["mod"])){
         <form action="../controlador/crearperfil.php" method="POST" name="form">
         <div class="form-group">
           <label for="">Usuario</label>
-          <input type="text" name="nombre" class="form-control" placeholder="">
+          <input type="text" name="nombre" class="form-control" maxlength="10" placeholder="">
         </div>
 
         <div class="form-group">

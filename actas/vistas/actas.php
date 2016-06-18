@@ -119,7 +119,7 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/cartas/carta5.gif" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta6.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS </a></h3>
@@ -132,7 +132,7 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/cartas/carta5.gif" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta7.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS </a></h3>
@@ -145,7 +145,7 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="../../images/cartas/carta5.gif" alt="">
+                        <img class="img-responsive" src="../../images/cartas/carta8.gif" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS </a></h3>

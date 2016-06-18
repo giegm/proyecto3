@@ -20,10 +20,10 @@
 
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+                            <img src="images/cc2.jpg" class="img-responsive" alt=""> 
                        </div>
                        <div class="item">
-                            <img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+                            <img src="images/cc1.jpg" class="img-responsive" alt=""> 
                        </div> 
                        <div class="item">
                             <img src="images/slider_one.jpg" class="img-responsive" alt=""> 
@@ -329,16 +329,16 @@
                 </div>
                 <div class="col-md-4 wow fadeInDown">
                     <div class="clients-comments text-center">
-                        <img src="images/client2.png" class="img-circle" alt="">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
-                        <h4><span>-John Doe /</span>  Director of corlate.com</h4>
+                        <img src="images/mision.jpg" class="img-circle" alt="">                       
+                        <h4><span>Parque Alí Primera /</span></h4>
+                        <h4> Recuperación del Sistema de Riego</h4>
                     </div>
                 </div>
                 <div class="col-md-4 wow fadeInDown">
                     <div class="clients-comments text-center">                        
                         <h2><b>Visión</b></h2>
                         <h4>Obtener de todos los proyectos y programas desarrollados por el Consejo Comunal y de la comunidad en General presentados los
-                         beneficios esperados por los mismos, y que generen la transformación de las personas que habitan la comunidad y de la infraestructura que nos rodea, para aumentar el avanza y satisfacer todas las necesidades de todos, específicamente en la poligonal por ser nuestro rango de acción, sin menos cabo de los avances de los otros consejos comunales del Sector que logremos beneficiar con nuestras propuestas, garantizando el bienestar integral procurando un desenvolvimiento sobre el desarrollo social, manteniendo la igualdad de condiciones que ejercen cada ciudadano en el Sector.</h4>
+                         beneficios esperados por los mismos, y que generen la transformación de las personas que habitan la comunidad y de la infraestructura que nos rodea, para aumentar el avanza y satisfacer todas las necesidades de todos.</h4>
                     </div>
                 </div>
             </div>

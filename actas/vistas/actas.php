@@ -59,7 +59,7 @@
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS</a> </h3>
                                 <p>*Copia de la cedula de identidad</p>
-                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i><strong><big><u>Seleccionar</u></big></strong></a>
                             </div> 
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS</a></h3>
                                 <p>*Copia de la cedula de identidad</p>
-                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i>Seleccionar</a>
                             </div> 
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS </a></h3>
                                 <p>*Copia de la cedula de identidad</p>
-                                <a class="preview" href="../../images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="../../images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i>Seleccionar</a>
                             </div> 
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS </a></h3>
                                 <p>*Copia de la cedula de identidad</p>
-                                <a class="preview" href="#"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="#"><i class="fa fa-eye"></i> Seleccionar</a>
                             </div> 
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS</a></h3>
                                 <p>*Copia de la cedula de identidad</p>
-                                <a class="preview" href="#"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="#"><i class="fa fa-eye"></i>Seleccionar</a>
                             </div> 
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS </a></h3>
                                 <p>*Copia de la cedula de identidad</p>
-                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i>Seleccionar</a>
                             </div> 
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS </a></h3>
                                 <p>*Copia de la cedula de identidad</p>
-                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i>Seleccionar</a>
                             </div> 
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                             <div class="recent-work-inner">
                                 <h3><a href="#">REQUISITOS </a></h3>
                                 <p>*Copia de la cedula de identidad</p>
-                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="#" rel="prettyPhoto"><i class="fa fa-eye"></i>Seleccionar</a>
                             </div> 
                         </div>
                     </div>

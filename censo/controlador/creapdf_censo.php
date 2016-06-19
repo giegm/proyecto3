@@ -1,4 +1,4 @@
-<?php 
+~<?php 
 ob_start(); 
 
 require_once("../modelo/clasedecensos/class_listar_censos.php");

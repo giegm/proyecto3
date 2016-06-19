@@ -55,7 +55,7 @@
 				
 					<form action="controlador/procesa_censados.php" method="POST" class="form-inline signup" role="form">
 					  <div class="form-group">
-					    <input type="text"  pattern="{0-9}" class="form-control" id="numero" placeholder="Número de cedula"  min="6" max="8" required>
+					    <input type="text"  pattern="{0-9}" class="form-control" id="numero" placeholder="Número de cedula"  maxlength="8" required>
 					  </div>
 					  <button type="submit" class="btn btn-theme">Ingresar</button>
 					</form>				
@@ -70,13 +70,13 @@
 					  <!-- slides -->
 					  <div class="carousel-inner">
 						<div class="item active">
-						  <img src="vistas/img/slide1.png" alt="">
+						  <img src="vistas/img/documento.jpg" alt="">
 						</div>
 						<div class="item">
-						  <img src="vistas/img/slide2.png" alt="">
+						  <img src="vistas/img/documento1.jpg" alt="">
 						</div>
 						<div class="item">
-						  <img src="vistas/img/slide3.png" alt="">
+						  <img src="vistas/img/documento2.jpg" alt="">
 						</div>
 					  </div>
 					</div>		

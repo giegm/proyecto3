@@ -1,41 +1,43 @@
+<?php 
+require_once("conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <?php 
-     require_once('head.php'); ?>
-
+  <?php require_once('head.php'); ?>
   <body class="homepage">   
-	 <?php 
-     require_once('header.php'); ?>
-	
+	 <?php require_once('header.php'); ?>
 	<section id="blog" class="container">
         <div class="center">
             <h2>Noticias</h2>
             <p class="lead"></p>
         </div>
-
         <div class="blog">
             <div class="row">
+                <?php
+                    require_once("conexion.php");
+                    $re=mysql_query("SELECT FCHA_NOTICIA, TITULO_NOTICIA, DESCRIPC_NOTICIA FROM noticias_web")or die(mysql_error());
+                    while ($f=mysql_fetch_array($re)) {
+
+                ?>
                  <div class="col-md-8">
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-xs-12 col-sm-2 text-center">
                                 <div class="entry-meta">
-                                    <span id="publish_date">07  NOV</span>
-                                    <span><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
-                                    <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
-                                    <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+                                    <span id="publish_date"><?php echo $f['FCHA_NOTICIA'];?></span>
                                 </div>
                             </div>
                                 
                             <div class="col-xs-12 col-sm-10 blog-content">
-                                <a href="#"><img class="img-responsive img-blog" src="images/blog/blog1.jpg" width="100%" alt="" /></a>
-                                <h2><a href="blog-item.html">Consequat bibendum quam liquam viverra</a></h2>
-                                <h3>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper. Nullam sapien elit, lacinia eu tristique non.posuere at mi. Morbi at turpis id urna ullamcorper ullamcorper.</h3>
-                                <a class="btn btn-primary readmore" href="blog-item.html">Leer más <i class="fa fa-angle-right"></i></a>
+                                <img class="img-responsive img-blog" src="images/bandera-de-venezuela_fondos-de-pantalla-de-banderas.jpg" width="100%" alt="" />
+                                <h2><a href="blog-item.html"><?php echo $f['TITULO_NOTICIA'];?></a></h2>
+                                <h3><?php echo $f['DESCRIPC_NOTICIA'];?></h3>
                             </div>
                         </div>    
                     </div><!--/.blog-item-->
-                        
+        <?php
+                    }
+        ?>
                     <div class="blog-item">
                         <div class="row">
                              <div class="col-sm-2 text-center">

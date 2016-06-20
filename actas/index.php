@@ -55,7 +55,7 @@
 				
 					<form action="controlador/procesa_censados.php" method="POST" class="form-inline signup" role="form">
 					  <div class="form-group">
-					    <input type="text"  pattern="{0-9}" class="form-control" id="numero" placeholder="Número de cedula"  maxlength="8" required>
+					    <input type="number"  pattern="{0-9}" class="form-control" name="cedula" id="numero" placeholder="Número de cedula"  maxlength="8" required>
 					  </div>
 					  <button type="submit" class="btn btn-theme">Ingresar</button>
 					</form>				

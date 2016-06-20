@@ -11,14 +11,13 @@ require_once("conexion.php");
             <h2>Noticias</h2>
             <p class="lead"></p>
         </div>
+        <?php
+            require_once("conexion.php");
+            $re=mysql_query("SELECT FCHA_NOTICIA, TITULO_NOTICIA, DESCRIPC_NOTICIA, IMAGEN FROM noticias_web")or die(mysql_error());
+            while ($f=mysql_fetch_array($re)) {
+        ?>
         <div class="blog">
             <div class="row">
-                <?php
-                    require_once("conexion.php");
-                    $re=mysql_query("SELECT FCHA_NOTICIA, TITULO_NOTICIA, DESCRIPC_NOTICIA, IMAGEN FROM noticias_web")or die(mysql_error());
-                    while ($f=mysql_fetch_array($re)) {
-
-                ?>
                  <div class="col-md-8">
                     <div class="blog-item">
                         <div class="row">
@@ -36,7 +35,7 @@ require_once("conexion.php");
                         </div>    
                     </div><!--/.blog-item-->
         <?php
-                    }
+            }
         ?>                        
                     <ul class="pagination pagination-lg">
                         <li><a href="#"><i class="fa fa-long-arrow-left"></i>Página Anterior</a></li>

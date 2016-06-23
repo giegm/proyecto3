@@ -25,7 +25,7 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Nombre y apellido</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="namepaef[]" class="form-control"  placeholder="" >
+                                            <input type="text" name="namepaef[]" class="form-control"  placeholder="Primer Nombre y Apellido" >
                                         </div>
 
                                         
@@ -57,22 +57,23 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:center;">Edad</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="edadf[]" class="form-control"  placeholder="">
+                                            <input type="text" name="edadf[]" class="form-control"  placeholder="Solo números">
                                         </div>
                                         
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Discapacidad/tipo</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="discpf[]" class="form-control"  placeholder="">
+                                            <input type="text" name="discpf[]" class="form-control"  placeholder="De poseer, indique cual">
                                         </div>
 
                                         </div><!-- final del form-group -->
 
                                         <div class="form-group col-md-12">
-                                            <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Embarazo</label>
+                                            <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Embarazo Temprano</label>
 
                                         <div class="col-sm-2 col-md-2">
                                             <select class="form-control selectpicker show-tick" name="embrzf[]" id="">
+                                                <option value="0">seleccione</option>
                                                 <option value="SI">SI</option>
                                                 <option value="NO">NO</option>
                                             </select>
@@ -82,7 +83,7 @@
                                         
                                         <div class="col-sm-2 col-md-2">
                                             <select class="form-control selectpicker show-tick" name="parntscf[]" id="">
-                                                
+                                                <option value="0">seleccione</option>
                                                 <?php 
                                                 $parentescof=$obj2->get_parentesco_f(); 
                                                 for($q=0;$q<sizeof($parentescof);$q++){
@@ -98,7 +99,7 @@
                                         
                                         <div class="col-sm-2 col-md-2">
                                         <select class="form-control selectpicker show-tick" name="instrcf[]" >
-                                            
+                                            <option value="0">seleccione</option>
                                             <?php 
                                             $nivlinstrucf=$obj2->get_nivel_instruccion_f(); 
                                             for($k=0;$k<sizeof($nivlinstrucf);$k++){
@@ -117,6 +118,7 @@
 
                                         <div class="col-sm-2 col-md-2">
                                             <select class="form-control selectpicker show-tick" name="cnef[]" id="">
+                                                <option value="0">seleccione</option>
                                                 <option value="SI">SI</option>
                                                 <option value="NO">NO</option>
                                             </select>
@@ -127,7 +129,7 @@
                                         <div class="col-sm-2 col-md-2">
                                             
                                             <select class="form-control selectpicker show-tick" name="profesf[]" id="">
-                                                
+                                                <option value="0">seleccione</option>
                                                 <?php 
                                                 $profesionesf=$obj2->get_profesiones_f(); 
                                                 for($r=0;$r<sizeof($profesionesf);$r++){
@@ -143,6 +145,7 @@
                                         
                                         <div class="col-sm-2 col-md-2">
                                             <select class="form-control selectpicker show-tick" name="pensf[]" id="">
+                                                <option value="0">seleccione</option>
                                                 <option value="SI">SI</option>
                                                 <option value="NO">NO</option>
                                             </select>
@@ -154,7 +157,7 @@
                                             <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Ingreso mensual</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="ingmnsf[]" class="form-control"  placeholder="00000">
+                                            <input type="text" name="ingmnsf[]" class="form-control"  placeholder="Cantidad en Bsf">
                                         </div>
 
                                         </div><!-- final del form-group -->

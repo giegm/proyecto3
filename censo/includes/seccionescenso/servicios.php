@@ -16,7 +16,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="aguas_blancas" id="">
-													
+													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $aguasblancs=$obj2->get_casa_aguas_blancas(); 
 		                                            for($g=0;$g<sizeof($aguasblancs);$g++){
@@ -32,7 +32,7 @@
 
 											<div class="col-sm-2 col-md-1">
 												<select class="form-control selectpicker show-tick" name="posee_tanque" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -41,7 +41,7 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Tanque/Litros</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text" name="litros_tanque" class="form-control"  id="" placeholder="solo números">
+												<input type="text" name="litros_tanque" class="form-control"  id="" placeholder="Solo números">
 											</div>
 
 										</div>
@@ -52,7 +52,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="posee_pipotes" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -68,7 +68,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="posee_medidor" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -82,7 +82,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="aguas_servidas" id="">
-													
+													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $aguaserv=$obj2->get_casa_aguas_servidas(); 
 		                                            for($h=0;$h<sizeof($aguaserv);$h++){
@@ -98,7 +98,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="gas" id="">
-													
+													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $gascasa=$obj2->get_casa_gas(); 
 		                                            for($i=0;$i<sizeof($gascasa);$i++){
@@ -113,7 +113,7 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Proveedor/Gas</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text" name="proveedor_gas" class="form-control"  id="" placeholder="solo nombre">
+												<input type="text" name="proveedor_gas" class="form-control"  id="" placeholder="Indique el nombre del proveedor">
 											</div>
 
 										</div>
@@ -123,19 +123,19 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Cantidad de cilindros</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text"  name="cant_cilindros" class="form-control"  id="" placeholder="solo números">
+												<input type="text"  name="cant_cilindros" class="form-control"  id="" placeholder="Solo números">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Duración/Gas</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text"  name="duración_gas" class="form-control"  id="" placeholder="solo números">
+												<input type="text"  name="duración_gas" class="form-control"  id="" placeholder="Indique en días">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Precio/Gas</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text"  name="precio_gas" class="form-control"  id="" placeholder="solo números">
+												<input type="text"  name="precio_gas" class="form-control"  id="" placeholder="Cantidad en Bsf">
 											</div>
 
 										</div>
@@ -146,7 +146,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="sist_electrico" id="">
-													
+													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $electrcasa=$obj2->get_casa_sistema_electrico(); 
 		                                            for($j=0;$j<sizeof($electrcasa);$j++){
@@ -162,7 +162,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="medidor_electrico" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -172,7 +172,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="bombillos_ahorradores" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -192,7 +192,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" multiple>
-												
+													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $recolbasura=$obj2->get_casa_recoleccion_basura(); 
 		                                            for($k=0;$k<sizeof($recolbasura);$k++){
@@ -228,7 +228,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="transporte" id="">
-													
+													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $transport=$obj2->get_casa_transporte(); 
 		                                            for($m=0;$m<sizeof($transport);$m++){

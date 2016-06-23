@@ -28,7 +28,7 @@ require_once("conexion.php");
                             </div>
                                 
                             <div class="col-xs-12 col-sm-10 blog-content">
-                                <!--<img class="img-responsive img-blog" src="<?php echo $f['IMAGEN'];?>" width="100%" alt="" />-->
+                                <?php echo "<img class=\"img-responsive img-blog\" src=\""."imagenes_noticias/".$f['IMAGEN']."\" width=\"100%\" alt=\"\">";?>
                                 <h2><a href="blog-item.html"><?php echo $f['TITULO_NOTICIA'];?></a></h2>
                                 <h3><?php echo $f['DESCRIPC_NOTICIA'];?></h3>
                             </div>

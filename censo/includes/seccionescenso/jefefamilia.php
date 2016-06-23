@@ -31,20 +31,20 @@ $nac=$obj2->get_nacionalidad();
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">C.I. N°</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="text" name="ci" autofocus class="form-control" placeholder="solo numeros" >
+							<input type="text" name="ci" autofocus class="form-control" placeholder="Solo números" >
 							<br/>
 						</div>
 
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Nombres</label>
 						
 						<div class="col-sm-2 col-md-2">
-							<input type="text" name="name" class="form-control" >
+							<input type="text" name="name" class="form-control" placeholder="Nombre Completo">
 						</div>
 
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Apellidos</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="text" name="ape" class="form-control" >
+							<input type="text" name="ape" class="form-control" placeholder="Apellido Completo">
 						</div>
 
 						</div><!-- fin del primer form-group -->
@@ -54,20 +54,20 @@ $nac=$obj2->get_nacionalidad();
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Fecha de nacimiento</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="date" name="fnac" class="form-control" >
+							<input type="date" name="fnac" class="form-control">
 						</div>
 
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Edad</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="text" name="edad" class="form-control" >
+							<input type="text" name="edad" class="form-control" placeholder="Solo números">
 						</div>
 					
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Nacionalidad</label>
 
 						<div class="col-sm-2 col-md-2">
 							<select class="form-control selectpicker show-tick" name="nac">
-								
+								<option value="0">seleccione</option>
 								<?php  
 								for($n=0;$n<sizeof($nac);$n++){
 									?>
@@ -89,7 +89,7 @@ $nac=$obj2->get_nacionalidad();
 
 						<div class="col-sm-2 col-md-2">
 							<select class="form-control"  name="edocivil" >
-							
+								<option value="0">seleccione</option>
 								<?php 
 								$edoc=$obj2->get_estado_civil(); 
 								for($h=0;$h<sizeof($edoc);$h++){
@@ -106,7 +106,7 @@ $nac=$obj2->get_nacionalidad();
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="cne_f" >
-												
+												<option value="0">seleccione</option>
 												<option value="SI">SI</option>
 												<option value="NO">NO</option>
 											</select>
@@ -126,19 +126,19 @@ $nac=$obj2->get_nacionalidad();
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefono CEL</label>
 
 						<div class="col-sm-2 col-md-2">
-						<input type="text" class="form-control" name="telfcel" placeholder="000-00-00" >
+						<input type="text" class="form-control" name="telfcel" placeholder="0000-0000000" >
 						</div>
 
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefono HAB</label>
 
 						<div class="col-sm-2 col-md-2">
-						<input type="text" class="form-control" name="telfhab" placeholder="000-00-00" >
+						<input type="text" class="form-control" name="telfhab" placeholder="0000-0000000" >
 						</div>
 
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefono OFIC</label>
 
 						<div class="col-sm-2 col-md-2">
-						<input type="text" class="form-control" name="telfofic" placeholder="000-00-00" >
+						<input type="text" class="form-control" name="telfofic" placeholder="0000-0000000" >
 						</div>
 
 						</div><!-- fin del 2do form-group -->
@@ -147,7 +147,7 @@ $nac=$obj2->get_nacionalidad();
 							<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Email</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="email" class="form-control" name="email" placeholder="@example.com" >
+							<input type="email" class="form-control" name="email" placeholder="correo@example.com" >
 						</div>
 
 						</div>
@@ -162,17 +162,17 @@ $nac=$obj2->get_nacionalidad();
 
 						<div class="col-sm-2 col-md-2">
 							<select class="form-control selectpicker show-tick" name="sexo">
-								
+								<option value="0">seleccione</option>
 								<option value="Masculino">Masculino</option>
 								<option value="Femenino">Femenino</option>
 							</select>
 						</div>
 
-						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Embarazo</label>
+						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Embarazo Temprano</label>
 
 						<div class="col-sm-2 col-md-2">
 							<select class="form-control selectpicker show-tick" name="embarazo">
-								
+								<option value="0">seleccione</option>
 								<option value="SI">SI</option>
 								<option value="NO">NO</option>
 							</select>
@@ -190,7 +190,7 @@ $nac=$obj2->get_nacionalidad();
 
 						<div class="col-sm-2 col-md-2">
 							<select class="form-control selectpicker show-tick" name="disc" >
-								
+								<option value="0">seleccione</option>
 								<option value="SI">SI</option>
 								<option value="NO">NO</option>
 							</select>
@@ -206,7 +206,7 @@ $nac=$obj2->get_nacionalidad();
 
 						<div class="col-sm-2 col-md-2">
 							<select class="form-control selectpicker show-tick" name="pens" >
-								
+								<option value="0">seleccione</option>
 								<option value="SI">SI</option>
 								<option value="NO">NO</option>
 							</select>
@@ -232,7 +232,7 @@ $nac=$obj2->get_nacionalidad();
 
 						<div class="col-sm-2 col-md-2">
 							<select class="form-control selectpicker show-tick" name="trabaja" >
-								
+								<option value="0">seleccione</option>
 								<option value="SI">SI</option>
 								<option value="NO">NO</option>
 								<option value="cta_propia">Por cuenta propia</option>
@@ -246,7 +246,7 @@ $nac=$obj2->get_nacionalidad();
 
 						<div class="col-sm-4 col-md-4">
 							<select class="form-control selectpicker show-tick" name="tipoing" >
-							
+								<option value="0">seleccione</option>
 								<?php 
 								$tipoing=$obj2->get_tipo_ingreso(); 
 								for($l=0;$l<sizeof($tipoing);$l++){
@@ -261,7 +261,7 @@ $nac=$obj2->get_nacionalidad();
 					    <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Ingreso Mensual</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="text" class="form-control" name="ingmens" placeholder="00000">
+							<input type="text" class="form-control" name="ingmens" placeholder="Cantidad en Bsf">
 						</div>
 
 						</div><!-- fin del 1er form-group -->
@@ -279,7 +279,7 @@ $nac=$obj2->get_nacionalidad();
 
 						<div class="col-sm-2 col-md-2">
 							<select class="form-control selectpicker show-tick" name="nivinstruc">
-							
+								<option value="0">seleccione</option>
 								<?php 
 								$nivlinstruc=$obj2->get_nivel_instruccion(); 
 								for($k=0;$k<sizeof($nivlinstruc);$k++){
@@ -295,7 +295,7 @@ $nac=$obj2->get_nacionalidad();
 
 						<div class="col-sm-2 col-md-2">
 							<select class="form-control selectpicker show-tick" name="profesion" >
-							
+								<option value="0">seleccione</option>
 								<?php 
 								$prfnes=$obj2->get_profesiones(); 
 								for($m=0;$m<sizeof($prfnes);$m++){

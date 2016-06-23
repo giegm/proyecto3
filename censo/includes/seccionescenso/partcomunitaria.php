@@ -16,7 +16,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="org_comunitarias" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -32,7 +32,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="participa_org" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -46,7 +46,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="familiar_org" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -87,7 +87,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="pueblo_pregunta1" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -103,7 +103,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="pueblo_pregunta2" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -118,7 +118,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="pueblo_pregunta3" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -133,7 +133,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="pueblo_pregunta4" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -147,7 +147,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="pueblo_pregunta5" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>

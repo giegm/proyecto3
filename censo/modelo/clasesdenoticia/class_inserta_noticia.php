@@ -24,18 +24,13 @@ class Noticia{
 
 	if (in_array($_FILES['imagen_noticia']['type'], $permitidos) && $_FILES['imagen_noticia']['size'] <= $limite_kb * 1024){
 
-		//este es el archivo temporal
-		$imagen_temporal  = $_FILES['imagen_noticia']['tmp_name'];
-		//este es el tipo de archivo
-		$tipo = $_FILES['imagen_noticia']['type'];
-		//leer el archivo temporal en binario
-        $fp = fopen($imagen_temporal, 'r+b');
-        $data = fread($fp, filesize($imagen_temporal));
-        fclose($fp);
-		//escapar los caracteres
-        $data = mysql_escape_string($data);
+		$ruta = "../../imagenes_noticias/";
+		opendir($ruta);
+		$destino = $ruta.$_FILES['imagen_noticia']['name'];
+		copy($_FILES['imagen_noticia']['tmp_name'],$destino);
+		$nombre=$_FILES['imagen_noticia']['name'];
 
-	$sql=mysqli_query(Conecta::conx(),"insert into noticias_web(TITULO_NOTICIA,FCHA_NOTICIA,HORA,DESCRIPC_NOTICIA,IMAGEN,TIPO_IMAGEN,ID_CATEGORIA,ID_PERFIL) values('$tit','$fcha',now(),'$descrip','$data','$tipo',$cat,$id)")or die('Problemas al intentar insertar la noticia:' . $sql . mysqli_errno(Conecta::conx()));
+	$sql=mysqli_query(Conecta::conx(),"insert into noticias_web(TITULO_NOTICIA,FCHA_NOTICIA,HORA,DESCRIPC_NOTICIA,IMAGEN,ID_CATEGORIA,ID_PERFIL) values('$tit','$fcha',now(),'$descrip','$nombre',$cat,$id)")or die('Problemas al intentar insertar la noticia:' . $sql . mysqli_errno(Conecta::conx()));
 
 	echo "<script type='text/javascript'>alert('Noticia cargada exitosamente.');window.location='../vistas/listado_de_noticias.php';</script>";
 		

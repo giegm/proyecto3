@@ -15,7 +15,7 @@
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Donde trabaja</label>
 										
 										<div class="col-sm-4 col-md-4">
-											<input type="text" name="donde_trabaja" class="form-control"  placeholder="nombre empresa">
+											<input type="text" name="donde_trabaja" class="form-control"  placeholder="Si trabaja, indique el nombre de la empresa">
 										</div>
 
 							    		</div>
@@ -25,7 +25,7 @@
 										
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="act_economica" id="">
-												
+												<option value="0">seleccione</option>
 												<option value="SI">SI</option>
 												<option value="NO">NO</option>
 										
@@ -38,7 +38,7 @@
 										
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="ing_familiar" id="">
-												
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $ingfamilr=$obj2->get_ingreso_familiar(); 
 	                                            for($t=0;$t<sizeof($ingfamilr);$t++){
@@ -71,7 +71,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="condc_terreno" id="">
-												
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $condterreno=$obj2->get_condiciones_terreno(); 
 	                                            for($u=0;$u<sizeof($condterreno);$u++){
@@ -87,7 +87,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="tenencia_casa" id="">
-												
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $condterreno=$obj2->get_casa_forma_tenencia(); 
 	                                            for($v=0;$v<sizeof($condterreno);$v++){
@@ -141,14 +141,14 @@
 							    		<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">N° habitaciones</label>
 
 										<div class="col-sm-2 col-md-2">
-											<input type="text" class="form-control" name="num_habitaciones" id="" placeholder="solo numeros">
+											<input type="text" class="form-control" name="num_habitaciones" id="" placeholder="Cantidad en números">
 										</div>
 
 										<label for="" class="col-sm-2 col-md-2 control-label">Pertenece a una (OCV)</label>
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="ocv" id="">
-												
+												<option value="0">seleccione</option>
 												<option value="SI">SI</option>
 												<option value="NO">NO</option>
 											</select>
@@ -162,7 +162,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="terreno_propio" id="">
-												
+												<option value="0">seleccione</option>
 												<option value="SI">SI</option>
 												<option value="NO">NO</option>
 											</select>
@@ -172,7 +172,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="tipo_paredes" id="">
-												
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $tipoparedes=$obj2->get_casa_tipo_paredes(); 
 	                                            for($y=0;$y<sizeof($tipoparedes);$y++){
@@ -191,7 +191,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="tipo_techo" id="">
-												
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $tipotecho=$obj2->get_casa_tipo_techo(); 
 	                                            for($z=0;$z<sizeof($tipotecho);$z++){
@@ -203,11 +203,11 @@
 											</select>
 										</div>
 
-										<label for="" class="col-sm-2 col-md-2 control-label">Está inscrita en el SIVIH</label>
+										<label for="" class="col-sm-2 col-md-2 control-label">Está inscrito en el SIVIH</label>
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="SIVIH" id="">
-												
+												<option value="0">seleccione</option>
 												<option value="SI">SI</option>
 												<option value="NO">NO</option>
 											</select>
@@ -221,7 +221,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="sivih_inscripcion" id="">
-												
+												<option value="0">seleccione</option>
 												<option value="SI">SI</option>
 												<option value="NO">NO</option>
 											</select>
@@ -231,7 +231,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="ley_phab" id="">
-												
+												<option value="0">seleccione</option>
 												<option value="SI">SI</option>
 												<option value="NO">NO</option>
 											</select>
@@ -245,7 +245,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="enseres_vivienda[]" multiple>
-											
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $ensersvivind=$obj2->get_casa_enseres_vivienda(); 
 	                                            for($a=0;$a<sizeof($ensersvivind);$a++){
@@ -261,7 +261,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="salubridad_vivienda" id="">
-												
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $salubrdvivind=$obj2->get_casa_salubridad_vivienda(); 
 	                                            for($b=0;$b<sizeof($salubrdvivind);$b++){
@@ -281,7 +281,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<select class="form-control selectpicker show-tick" name="tipo_ayuda_casa" id="">
-												
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $ayudacasa=$obj2->get_casa_tipo_ayuda_mejora(); 
 	                                            for($c=0;$c<sizeof($ayudacasa);$c++){
@@ -296,7 +296,7 @@
 										<label for="" class="col-sm-2 col-md-2 control-label">Indique el tipo</label>
 
 										<div class="col-sm-2 col-md-2">
-											<input type="text" name="descrip_ayuda_casa" id="" placeholder="" class="form-control" >	
+											<input type="text" name="descrip_ayuda_casa" id="" placeholder="" class="form-control" placeholder="">	
 										</div>
 
 									</div>

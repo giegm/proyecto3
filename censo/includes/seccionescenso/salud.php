@@ -16,7 +16,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="pers_enfermedades[]" multiple>
-												
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $persenferm=$obj2->get_persona_enfermedades(); 
 	                                            for($e=0;$e<sizeof($persenferm);$e++){
@@ -33,7 +33,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="otra_enfermedad" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -47,7 +47,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="ayuda_enfermo" id="">
-													
+													<option value="0">seleccione</option>
 													<option value="SI">SI</option>
 													<option value="NO">NO</option>
 												</select>
@@ -56,7 +56,7 @@
 											<label for="" class="col-sm-3 col-md-3 control-label">Tipo de ayuda</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text" name="tipo_ayuda_enfermo" id="" placeholder="especifiquela" class="form-control" >
+												<input type="text" name="tipo_ayuda_enfermo" id="" placeholder="Describa que tipo de ayuda necesita" class="form-control" >
 											</div>
 
 										</div>
@@ -82,7 +82,7 @@
 											<label for="" class="col-sm-3 col-md-3 control-label">Cuantos</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text" name="cant_exclusion" id="" placeholder="solo números" class="form-control" >
+												<input type="text" name="cant_exclusion" id="" placeholder="Indique la cantidad en números" class="form-control" >
 											</div>
 
 										</div>

@@ -113,10 +113,10 @@
 
   // part of this is duplicated in i18n/defaults-en_US.js. Make sure to update both.
   Selectpicker.DEFAULTS = {
-    noneSelectedText: 'Nothing selected',
-    noneResultsText: 'No results match',
+    noneSelectedText: 'No ha seleccionado nada',
+    noneResultsText: 'Ningún resultado conincide',
     countSelectedText: function (numSelected, numTotal) {
-      return (numSelected == 1) ? "{0} item selected" : "{0} items selected";
+      return (numSelected == 1) ? "{0} elemento seleccionado" : "{0} elemento seleccionado";
     },
     maxOptionsText: function (numAll, numGroup) {
       var arr = [];
@@ -126,8 +126,8 @@
 
       return arr;
     },
-    selectAllText: 'Select All',
-    deselectAllText: 'Deselect All',
+    selectAllText: 'Seleccionar todo',
+    deselectAllText: 'Anular todas las selecciones',
     multipleSeparator: ', ',
     style: 'btn-default',
     size: 'auto',

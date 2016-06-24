@@ -32,48 +32,9 @@ if(isset($_SESSION["sesion_usuario"])){
 					  			<h3>Paneles de consultas</h3>
 					  			<h4><small>Use las flechas o iconos para abrir y cerrar los paneles.</small></h4>
 					  		</div>
-					  		<!--consulta menores a 18-->
-							<?php include("../includes/seccionesconsultas/menoresdieciocho.php"); ?>
-							<!--fin de consulta menores a 18-->
-							<!--consulta mayores de edad-->
-							<?php include("../includes/seccionesconsultas/mayoresdeedad.php"); ?>
-							<!--fin de consulta mayores de edad-->
-							<!--Consulta mayores de 60 años-->
-							<?php include("../includes/seccionesconsultas/mayoresasesenta.php"); ?>
-							<!--fin de consulta mayores de60 años-->
-							<!--consulta sexo femenino-->
-							<?php include("../includes/seccionesconsultas/sexofemenino.php"); ?>
-							<!--fin de consulta sexo femenino-->
-							<!--consulta sexo masculino-->
-							<?php include("../includes/seccionesconsultas/sexomasculino.php"); ?>
-							<!--fin de consulta sexo masculino-->
-							<!--consulta estudiantes-->
-							<?php include("../includes/seccionesconsultas/estudiantes.php"); ?>
-							<!--fin de consulta estudiantes-->
-							<!--consulta asalariados-->
-							<?php include("../includes/seccionesconsultas/asalariados.php"); ?>
-							<!--fin de consulta asalariados-->
-							<!--consulta trabajadorescuentapropia-->
-							<?php include("../includes/seccionesconsultas/trabajadorescuentapropia.php"); ?>
-							<!--fin de consulta trabajadorescuentapropia-->
-							<!--consulta desempleados-->
-							<?php include("../includes/seccionesconsultas/desempleados.php"); ?>
-							<!--fin de consulta desempleados-->
-							<!--consulta pensionados-->
-							<?php include("../includes/seccionesconsultas/pensionados.php"); ?>
-							<!--fin de consulta pensionados-->
-							<!--consulta discapacitados-->
-							<?php include("../includes/seccionesconsultas/discapacitados.php"); ?>
-							<!--fin de consulta discapacitados-->
-							<!--consulta enfermedadesgraves-->
-							<?php include("../includes/seccionesconsultas/enfermedadesgraves.php"); ?>
-							<!--fin de consulta enfermedadesgraves-->
-							<!--consulta alquilados-->
-							<?php include("../includes/seccionesconsultas/alquilados.php"); ?>
-							<!--fin de consulta alquilados-->
-							<!--consulta propietarios-->
-							<?php include("../includes/seccionesconsultas/propietarios.php"); ?>
-							<!--fin de consulta propietarios-->
+					  		<?php include("../includes/seccionesconsultas/consultageneral.php");?>
+					  		<br><br>
+					  		<a type="button" class="btn btn-primary" href="../controlador/creapdf_consulta.php">Generar PDF</a>
 
 							<!--FIN DE LOS PANELES DE CONSULTAS-->
 						</div>

@@ -1,4 +1,4 @@
-~<?php 
+<?php 
 ob_start(); 
 
 require_once("../modelo/clasedecensos/class_listar_censos.php");
@@ -9,35 +9,106 @@ $tra=new Censos();
 <head>
 
 <style>
-.datagrid table { border-collapse: collapse; text-align: left; width: 100%; } .datagrid {font: normal 12px/150% Times New Roman, Times, serif; background: #fff; overflow: hidden; border: 1px solid #991821; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #991821), color-stop(1, #80141C) );background:-moz-linear-gradient( center top, #991821 5%, #80141C 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#991821', endColorstr='#80141C');background-color:#991821; color:#FFFFFF; font-size: 13px; font-weight: bold; border-left: 1px solid #B01C26; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #80141C; border-left: 1px solid #F7CDCD;font-size: 12px;font-weight: normal; }.datagrid table tbody .alt td { background: #F7CDCD; color: #80141C; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }.datagrid table tfoot td div { border-top: 1px solid #991821;background: #F7CDCD;} .datagrid table tfoot td { padding: 0; font-size: 12px } .datagrid table tfoot td div{ padding: 2px; }.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }.datagrid table tfoot  li { display: inline; }.datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;border: 1px solid #991821;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #991821), color-stop(1, #80141C) );background:-moz-linear-gradient( center top, #991821 5%, #80141C 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#991821', endColorstr='#80141C');background-color:#991821; }.datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover { text-decoration: none;border-color: #80141C; color: #FFFFFF; background: none; background-color:#991821;}div.dhtmlx_window_active, div.dhx_modal_cover_dv { position: fixed !important; }
+	body{
+		font-family: Arial, Helvetica, Verdana;
+		font-size: 15px;
+	}
+	.contendor-general-reporte{
+		
+	}
+	#primer_titulo{
+		text-align: center;
+	}
+	.div_uno
+	{
+		width: 98%;
+	}
+	#td-div-uno
+	{
+		padding-left: 5px;		
+		padding-top: 10px; 
+		padding-bottom: 10px;
+	}
+	#td-medio-div-uno
+	{
+		border: none;
+	}
+	.div_uno_derecha 
+	{
+		border: 1px solid black;
+		width: 30%;
+		float: right;
+		margin-top: -72px;
+	}
+	.div_uno p
+	{
+		padding: 5px;
+	}
+	.div_uno_derecha p
+	{
+		padding: 5px;
+	}
+	.div_table table, tr, th{
+		border: 1px solid black;
+		padding: 5px;
+		border-collapse: collapse;
+	}
+	.div_table table, tr, td{
+		border: 1px solid black;
+		padding: 5px;
+		border-collapse: collapse;
+	}
+	#tdes-datos-cc{
+		border-top: none;
+		border-left: none;
+	}
+	#titulos-de-tablas{
+		text-align: center;
+	}
+	#tables-censo{
+		width: 100%;
+		margin: 0 auto; 
+	}
+	.header-pdf{
+		border: 1px solid black;
+	}
+	#imagen.header-pdf{
+
+	}
 </style>
 </head>
 <body>
-	<img id="imagen.header-pdf" src="../img/logo.png" width="100" height="100" alt="">	
-	<h2 id='primer_titulo'>Censo Demográfico y Socioeconómico</h2>
-	<center>Consejo comunal "Santa Inés"</center>
+	<img id="imagen.header-pdf" src="../../images/logo.png" width="100" height="100" alt="">	
 
 	<div class="contendor-general-reporte">
+	<h2 id='primer_titulo'>Estudio Demográfico y Socioeconómico</h2>
+	<center><h3>Consejo comunal "Santa Inés"</h3></center>
 	<hr>
-		<p>N° Planilla: 002152000545412 </p>
-		<p>Fecha: 2015/05/20</p>
+	<div class='div_uno'>
+	<table id="tables-censo">
+	<tr>		
+		<td id="td-div-uno"><p>N° Planilla: 002152000545412 </p>		
+		</td>
+	</tr>
+	</table>
 	</div>
+	<br/>
 	<div class="div_contenido_censo">
-	<h3 id="titulos-de-tablas">Ubicación Geográfica de la Comunidad</h3>
+	<h2 id="titulos-de-tablas">Ubicación Geográfica de la Comunidad</h2>
 	<hr>
-	
+	<br/>
 	<table id="tables-censo">
 		<thead>
 			<tr>
 				<td id="tdes-datos-cc"><b>Estado:</b> Distrito Capital</td>
 				<td id="tdes-datos-cc"><b>Municipio:</b> Libertador</td>
-				<td id="tdes-datos-cc"><b>Parroquia:</b> La Pastora</td>
-				<td id="tdes-datos-cc"><b>Sector:</b> San Ruperto</td>
+				<td id="tdes-datos-cc"><b>Parroquia:</b> Sucre</td>
+				<td id="tdes-datos-cc"><b>Sector:</b> Ruperto Lugo</td>
 			</tr>
 		</thead>
 	</table>
-	
-	<h3 id="titulos-de-tablas">Datos del jefe de familia</h3>
+	<br/>
+	<h2 id="titulos-de-tablas">Datos del jefe de familia</h2>
 	<hr>
 	</div>
 	<div class='div_table'>
@@ -65,7 +136,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<h3 id="titulos-de-tablas">Datos de contacto</h3>
 	<table id="tables-censo">
 		<thead>
@@ -85,7 +156,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<?php
 	 $reg=$tra->obten_datos_censo_dos($_GET["id"]); 
 	?>
@@ -108,7 +179,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/><br/><br/><br/>
 	<h3 id="titulos-de-tablas">Datos de salud</h3>
 	<table id="tables-censo">
 		<thead>
@@ -128,7 +199,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<p>
 	<?php
 	 $reg=$tra->obten_datos_censo_tres($_GET["id"]); 
@@ -150,7 +221,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<h3 id="titulos-de-tablas">Datos de academicos</h3>
 	<table id="tables-censo">
 		<thead>
@@ -166,9 +237,9 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
-	
-	<h3 id="titulos-de-tablas">Datos generales de los miembros de la familia</h3>
+	<br/>
+	<br/>
+	<h2 id="titulos-de-tablas">Datos generales de los miembros de la familia</h2>
 	<hr>
 
 	<?php
@@ -193,7 +264,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<h3 id="titulos-de-tablas">Datos academicos</h3>
 	<table id="tables-censo">
 		<thead>
@@ -209,7 +280,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/><br/><br/><br/><br/><br/>
 	<?php
 	 $reg=$tra->obten_datos_censo_cinco($_GET["id"]); 
 	?>
@@ -230,7 +301,7 @@ $tra=new Censos();
 			</tr>
 		</tbody>
 	</table>
-	
+	<br/>
 	<?php
 	 $reg=$tra->obten_datos_censo_seis($_GET["id"]); 
 	?>
@@ -252,10 +323,10 @@ $tra=new Censos();
 		</tbody>
 	</table>
 
-	
+	<br/><br/>
 
 	<p>
-	<h3 id="titulos-de-tablas">Datos generales del censo</h3>
+	<h2 id="titulos-de-tablas">Datos generales del censo</h2>
 	<hr>
 	<?php
 	 $reg=$tra->obten_datos_censo_seis($_GET["id"]); 

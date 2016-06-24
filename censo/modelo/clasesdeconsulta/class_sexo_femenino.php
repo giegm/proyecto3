@@ -8,10 +8,10 @@ class Sexo_femenino{
 	
 	public function get_sexo_femenino(){
 		//seleccionamos de forma multiple
-		$sql = mysqli_query(Conecta::conx(),"SELECT COUNT(SEXO) AS sexo_femenino FROM datos_relacion WHERE SEXO = 'Femenino'") or die('error en la consulta:' .$sql.  mysqli_errno(Conecta::conx()));
+		$sql = mysqli_query(Conecta::conx(),"SELECT COUNT(SEXO) AS femeninas FROM datos_relacion WHERE SEXO = 'Femenino'") or die('error en la consulta:' .$sql.  mysqli_errno(Conecta::conx()));
 		//$sql .= "";
 		if($reg=mysqli_fetch_array($sql)){
-			$this->femeninas=$reg["sexo_femenino"];
+			$this->femeninas=$reg["femeninas"];
 		}
 		return $this->femeninas;
 
@@ -21,10 +21,10 @@ class Sexo_femenino{
 
 	public function get_sexo_femenino_dos(){
 		//seleccionamos de forma multiple
-		$sql = mysqli_query(Conecta::conx(),"SELECT COUNT(SEXO_F) AS sexo_femenino_dos FROM familiar_relacion WHERE SEXO_F = 'Femenino'") or die('error en la consulta:' .$sql.  mysqli_errno(Conecta::conx()));
+		$sql = mysqli_query(Conecta::conx(),"SELECT COUNT(SEXO_F) AS femeninas_dos FROM familiar_relacion WHERE SEXO_F = 'Femenino'") or die('error en la consulta:' .$sql.  mysqli_errno(Conecta::conx()));
 		//$sql .= "";
 		if($reg=mysqli_fetch_array($sql)){
-			$this->femeninas_dos=$reg["sexo_femenino_dos"];
+			$this->femeninas_dos=$reg["femeninas_dos"];
 		}
 		return $this->femeninas_dos;
 

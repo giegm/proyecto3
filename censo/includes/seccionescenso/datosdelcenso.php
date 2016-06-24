@@ -33,13 +33,13 @@
 							    		<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Nombre y apellido</label>
 
 							    			<div class="col-sm-2 col-md-2">
-							    				<input type="text" name="names_encuestado" placeholder="Nombre y Apellido" class="form-control"  >
+							    				<input type="text" name="names_encuestado" placeholder="Nombre y Apellido" class="form-control" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
 							    			</div>
 
 							    		<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">N° de cedula</label>
 
 							    			<div class="col-sm-2 col-md-2">
-							    				<input type="text" name="ced_encuestado" placeholder="solo numeros" class="form-control"  >
+							    				<input type="text" name="ced_encuestado" placeholder="solo numeros" class="form-control" required onKeyPress="return SoloNumeros(event);">
 							    			</div>
 									</div>
 

@@ -41,7 +41,7 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Tanque/Litros</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text" name="litros_tanque" class="form-control"  id="" placeholder="Solo números">
+												<input type="text" name="litros_tanque" class="form-control"  id="" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 										</div>
@@ -61,7 +61,7 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Cant.Pipotes</label>
 
 											<div class="col-sm-2 col-md-1">
-												<input type="text"  name="cant_pipotes" class="form-control"  id="" placeholder="0">
+												<input type="text"  name="cant_pipotes" class="form-control"  id="" placeholder="0" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Posee medidor</label>
@@ -113,7 +113,7 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Proveedor/Gas</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text" name="proveedor_gas" class="form-control"  id="" placeholder="Indique el nombre del proveedor">
+												<input type="text" name="proveedor_gas" class="form-control"  id="" placeholder="Indique el nombre del proveedor" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
 											</div>
 
 										</div>
@@ -123,19 +123,19 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Cantidad de cilindros</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text"  name="cant_cilindros" class="form-control"  id="" placeholder="Solo números">
+												<input type="text"  name="cant_cilindros" class="form-control"  id="" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Duración/Gas</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text"  name="duración_gas" class="form-control"  id="" placeholder="Indique en días">
+												<input type="text"  name="duración_gas" class="form-control"  id="" placeholder="Indique en días" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Precio/Gas</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text"  name="precio_gas" class="form-control"  id="" placeholder="Cantidad en Bsf">
+												<input type="text"  name="precio_gas" class="form-control"  id="" placeholder="Cantidad en Bsf" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 										</div>
@@ -185,7 +185,7 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Cuantos necesita</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text"  name="cant_bombillos" class="form-control"  id="" placeholder="solo números">
+												<input type="text"  name="cant_bombillos" class="form-control"  id="" placeholder="solo números" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Recolección de basura</label>

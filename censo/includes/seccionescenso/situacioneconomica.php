@@ -15,7 +15,7 @@
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Donde trabaja</label>
 										
 										<div class="col-sm-4 col-md-4">
-											<input type="text" name="donde_trabaja" class="form-control"  placeholder="Si trabaja, indique el nombre de la empresa">
+											<input type="text" name="donde_trabaja" class="form-control"  placeholder="Indique el nombre de la empresa">
 										</div>
 
 							    		</div>

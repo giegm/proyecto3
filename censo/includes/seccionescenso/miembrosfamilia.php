@@ -25,7 +25,7 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Nombre y apellido</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="namepaef[]" class="form-control"  placeholder="Primer Nombre y Apellido" >
+                                            <input type="text" name="namepaef[]" class="form-control"  placeholder="Primer Nombre y Apellido" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
                                         </div>
 
                                         
@@ -33,13 +33,14 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">N° de cedula</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="cedf[]" class="form-control"  placeholder="V/E-00000000">
+                                            <input type="text" name="cedf[]" class="form-control"  placeholder="V/E-00000000" required onKeyPress="return SoloNumeros(event);">
                                         </div>
 
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Sexo</label>
                                         
                                         <div class="col-sm-2 col-md-2">
                                             <select name="sexof[]" title="Indique" class="form-control">
+                                                <option value="0">seleccione</option>
                                                 <option value="Masculino">Masculino</option>
                                                 <option value="Femenino">Femenino</option>
                                             </select>
@@ -57,7 +58,7 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:center;">Edad</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="edadf[]" class="form-control"  placeholder="Solo números">
+                                            <input type="text" name="edadf[]" class="form-control"  placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
                                         </div>
                                         
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Discapacidad/tipo</label>
@@ -157,7 +158,7 @@
                                             <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Ingreso mensual</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="ingmnsf[]" class="form-control"  placeholder="Cantidad en Bsf">
+                                            <input type="text" name="ingmnsf[]" class="form-control"  placeholder="Cantidad en Bsf" required onKeyPress="return SoloNumeros(event);">
                                         </div>
 
                                         </div><!-- final del form-group -->

@@ -9,72 +9,7 @@ $tra=new Censos();
 <head>
 
 <style>
-	body{
-		font-family: "Times New Roman", Georgia, Serif
-		font-size: 12px;
-	}
-	.contendor-general-reporte{
-		
-	}
-	#primer_titulo{
-		text-align: center;
-	}
-	.div_uno
-	{
-		width: 98%;
-	}
-	#td-div-uno
-	{
-		padding-left: 5px;		
-		padding-top: 10px; 
-		padding-bottom: 10px;
-	}
-	#td-medio-div-uno
-	{
-		border: none;
-	}
-	.div_uno_derecha 
-	{
-		border: 1px solid black;
-		width: 30%;
-		float: right;
-		margin-top: -30px;
-	}
-	.div_uno p
-	{
-		padding: 1px;
-	}
-	.div_uno_derecha p
-	{
-		padding: 1px;
-	}
-	.div_table table, tr, th{
-		border: 1px solid black;
-		padding: 1px;
-		border-collapse: collapse;
-	}
-	.div_table table, tr, td{
-		border: 1px solid black;
-		padding: 1px;
-		border-collapse: collapse;
-	}
-	#tdes-datos-cc{
-		border-top: none;
-		border-left: none;
-	}
-	#titulos-de-tablas{
-		text-align: center;
-	}
-	#tables-censo{
-		width: 100%;
-		margin: 0 auto; 
-	}
-	.header-pdf{
-		border: 1px solid black;
-	}
-	#imagen.header-pdf{
-
-	}
+.datagrid table { border-collapse: collapse; text-align: left; width: 100%; } .datagrid {font: normal 12px/150% Times New Roman, Times, serif; background: #fff; overflow: hidden; border: 1px solid #991821; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #991821), color-stop(1, #80141C) );background:-moz-linear-gradient( center top, #991821 5%, #80141C 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#991821', endColorstr='#80141C');background-color:#991821; color:#FFFFFF; font-size: 13px; font-weight: bold; border-left: 1px solid #B01C26; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #80141C; border-left: 1px solid #F7CDCD;font-size: 12px;font-weight: normal; }.datagrid table tbody .alt td { background: #F7CDCD; color: #80141C; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }.datagrid table tfoot td div { border-top: 1px solid #991821;background: #F7CDCD;} .datagrid table tfoot td { padding: 0; font-size: 12px } .datagrid table tfoot td div{ padding: 2px; }.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }.datagrid table tfoot  li { display: inline; }.datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;border: 1px solid #991821;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #991821), color-stop(1, #80141C) );background:-moz-linear-gradient( center top, #991821 5%, #80141C 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#991821', endColorstr='#80141C');background-color:#991821; }.datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover { text-decoration: none;border-color: #80141C; color: #FFFFFF; background: none; background-color:#991821;}div.dhtmlx_window_active, div.dhx_modal_cover_dv { position: fixed !important; }
 </style>
 </head>
 <body>

@@ -8,6 +8,39 @@ function Validar_correo(email){
 	}
 
 }
+function SoloNumeros(evt){
+ if(window.event){//asignamos el valor de la tecla a keynum
+  keynum = evt.keyCode; //IE
+ }
+ else{
+  keynum = evt.which; //FF
+ } 
+ //comprobamos si se encuentra en el rango numérico y que teclas no recibirá.
+ if((keynum > 47 && keynum < 58) || keynum == 8 || keynum == 13 || keynum == 6 ){
+  return true;
+ }
+ else{
+  return false;
+ }
+}
+
+function soloLetras(e) {
+    key = e.keyCode || e.which;
+    tecla = String.fromCharCode(key).toString();
+    letras = " áéíóúabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚABCDEFGHIJKLMNÑOPQRSTUVWXYZ";//Se define todo el abecedario que se quiere que se muestre.
+    especiales = [8, 37, 39, 46, 6]; //Es la validación del KeyCodes, que teclas recibe el campo de texto.
+
+    tecla_especial = false
+    for(var i in especiales) {
+        if(key == especiales[i]) {
+            tecla_especial = true;
+            break;
+        }
+    }
+
+    if(letras.indexOf(tecla) == -1 && !tecla_especial)
+        return false;
+}
 
 function Validar_censo(){
 
@@ -26,6 +59,16 @@ function Validar_censo(){
 		return false;
 	}else if(form.ci.value<=-1){
 		alert('la cedula no debe de tener valores negativos');
+		form.ci.value=="";
+		form.ci.focus();
+		return false;
+	}else if(form.ci.value.length < 6){
+		alert('la cedula debe tener al menos 6 caracteres');
+		form.ci.value=="";
+		form.ci.focus();
+		return false;
+	}else if(form.ci.value.length > 8){
+		alert('la cedula debe tener maximo 8 caracteres');
 		form.ci.value=="";
 		form.ci.focus();
 		return false;
@@ -134,38 +177,38 @@ function Validar_censo(){
 	}
 
 
-	if( !(/^\d{4}-\d{3}\d{4}$/.test(form.telfcel.value))) {
-  		alert('Ingrese un numero celular para el jefe de familia\n Ejemplo(0426-5555555).');
-		form.telfcel.value=" ";
-		form.telfcel.focus();
-		return false;
-	}else{
+	//if( !(/^\d{4}-\d{3}\d{4}$/.test(form.telfcel.value))) {
+  	//	alert('Ingrese un numero celular para el jefe de familia\n Ejemplo(0426-5555555).');
+	//	form.telfcel.value=" ";
+	//	form.telfcel.focus();
+	//	return false;
+	//}else{
 
-	}
+	//}
 
 	//validamos el email
-	if(form.email.value==null)
-	{
+	//if(form.email.value==null)
+	//{
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique un correo electronico para el jefe de familia.');
-		form.email.value="";
-		form.email.focus();
-		return false;
-	}else
-	{
+	//	alert('Indique un correo electronico para el jefe de familia.');
+	//	form.email.value="";
+	//	form.email.focus();
+	//	return false;
+	//}else
+	//{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}
-	if(Validar_correo(form.email.value)==false)
-	{
+	//}
+	//if(Validar_correo(form.email.value)==false)
+	//{
 		//document.getElementById("mensaje_error").innerHTML=".";
-		alert('El email del jefe de familia no es valido.');
-		form.email.value="";
-		form.email.focus();
-		return false;
-	}else
-	{
+	//	alert('El email del jefe de familia no es valido.');
+	//	form.email.value="";
+	//	form.email.focus();
+	//	return false;
+	//}else
+	//{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}
+	//}
 
 	//validamos el sexo
 	if(form.sexo.value == 0 || form.sexo.value == null){
@@ -313,7 +356,7 @@ function Validar_censo(){
 
 /*////////////////////////////////////////////////////////////////////////*/
 /*VALIDACION DE LOS DATOS DE LOS FAMILIARES*/
-/*
+
 	//validamos el primer nombre y apellido
 	if(form.nameyape_familiar1.value==null){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -331,6 +374,26 @@ function Validar_censo(){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique la cedula del miembro familiar.');
 		form.ced_familiar1.value=" ";
+		form.ced_familiar1.focus();
+		return false;
+	}else if(isNaN(form.ced_familiar1.value)==true){
+		alert('la cedula solo debe de tener valores numéricos');
+		form.ced_familiar1.value=="";
+		form.ced_familiar1.focus();
+		return false;
+	}else if(form.ced_familiar1.value<=-1){
+		alert('la cedula no debe de tener valores negativos');
+		form.ced_familiar1.value=="";
+		form.ced_familiar1.focus();
+		return false;
+	}else if(form.ced_familiar1.value.length < 6){
+		alert('la cedula debe tener al menos 6 caracteres');
+		form.ced_familiar1.value=="";
+		form.ced_familiar1.focus();
+		return false;
+	}else if(form.ced_familiar1.value.length > 8){
+		alert('la cedula debe tener maximo 8 caracteres');
+		form.ced_familiar1.value=="";
 		form.ced_familiar1.focus();
 		return false;
 	}else
@@ -354,6 +417,23 @@ function Validar_censo(){
 	if(form.edad_familiar1.value==null){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique la edad del miembro familiar.');
+		form.edad_familiar1.value=" ";
+		form.edad_familiar1.focus();
+		return false;
+			}else if(isNaN(form.edad.value)==true){
+		alert('La edad solo debe de contener valores numéricos');
+		form.edad_familiar1.value=" ";
+		form.edad_familiar1.focus();
+		return false;
+	}else if(form.edad_familiar1.value<=-1)
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('La edad no puede contener valores negativos');
+		form.edad_familiar1.value=" ";
+		form.edad_familiar1.focus();
+		return false;
+	}else if(form.edad_familiar1.value>=150){
+		alert('`La edad supera el limite.');
 		form.edad_familiar1.value=" ";
 		form.edad_familiar1.focus();
 		return false;
@@ -457,7 +537,7 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-*/
+
 
 /*////////////////////////////////////////////////////////////////////////*/
 	//SEGUIMOS CON LOS DEMAS DATOS DEL JEFE FAMILIAR//
@@ -538,16 +618,16 @@ function Validar_censo(){
 	}
 
 	//validamos los tipos de habiatciones
-	/*if(form.habitaciones.value ==0 || form.habitaciones.value == null){
+	if(form.habitaciones.value ==0 || form.habitaciones.value == null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique el tipo de habitaciones.');
+		alert('Debe indicar al menos un campo');
 		form.habitaciones.value=" ";
 		form.habitaciones.focus();
 		return false;
 	}else
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}*/
+	}
 
 	//validamos el numero de habitaciones
 	if(form.num_habitaciones.value==null || form.num_habitaciones.value==0){
@@ -645,16 +725,16 @@ function Validar_censo(){
 	}
 
 	//validamos los enseres de la vivienda
-	/*if(form.enseres_vivienda.value==null || form.enseres_vivienda.value == null || form.enseres_vivienda.value == " "){
+	if(form.enseres_vivienda.value==null || form.enseres_vivienda.value == null || form.enseres_vivienda.value == " "){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique los enseres de la vivienda.');
+		alert('Debe indicar al menos un campo');
 		form.enseres_vivienda.value=" ";
 		form.enseres_vivienda.focus();
 		return false;
 	}else
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}*/
+	}
 
 	//validamos la salubridad
 	if(form.salubridad_vivienda.value==null || form.salubridad_vivienda.value == 0 || form.salubridad_vivienda.value == " "){
@@ -668,17 +748,17 @@ function Validar_censo(){
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
 
-	/*//validamos el tipo de ayuda para la casa
+	//validamos el tipo de ayuda para la casa
 	if(form.tipo_ayuda_casa.value==null || form.tipo_ayuda_casa.value == null || form.tipo_ayuda_casa.value == " "){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique el tipo de ayuda para la vivienda.');
+		alert('Debe indicar al menos un campo');
 		form.tipo_ayuda_casa.value=" ";
 		form.tipo_ayuda_casa.focus();
 		return false;
 	}else
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}*/
+	}
 
 	//validamos la descripcion del tipo de ayuda
 	if(form.descrip_ayuda_casa.value == null || form.descrip_ayuda_casa.value == " "){
@@ -693,40 +773,40 @@ function Validar_censo(){
 	}
 
 	//validamos la presencia de plaga
-	/*if(form.plagas.value==null || form.plagas.value == null || form.plagas.value == " "){
+	if(form.plagas.value==null || form.plagas.value == null || form.plagas.value == " "){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique si posee roedores o insectos.');
+		alert('Debe indicar al menos un campo');
 		form.plagas.value=" ";
 		form.plagas.focus();
 		return false;
 	}else
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}*/
+	}
 
 	//validamos si posee animales
-	/*if(form.animales_domst.value==null || form.animales_domst.value == null || form.animales_domst.value == " "){
+	if(form.animales_domst.value==null || form.animales_domst.value == null || form.animales_domst.value == " "){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique si posee animales domesticos.');
+		alert('Debe indicar al menos un campo');
 		form.animales_domst.value=" ";
 		form.animales_domst.focus();
 		return false;
 	}else
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}*/
+	}
 
-	//validamos si hay personas con discapacidades
-	/*if(form.pers_enfermedades.value ==0 || form.pers_enfermedades.value == null){
+	//validamos si hay personas con enfermedad
+	if(form.pers_enfermedades.value ==0 || form.pers_enfermedades.value == null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique si posee personas con enfermedades.');
+		alert('Debe indicar al menos un campo');
 		form.pers_enfermedades.value=" ";
 		form.pers_enfermedades.focus();
 		return false;
 	}else
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}*/
+	}
 
 	//validamos si existe alguna otra enefermedad
 	if(form.otra_enfermedad.value ==0 || form.otra_enfermedad.value == null){
@@ -765,16 +845,16 @@ function Validar_censo(){
 	}*/
 
 	//validamos si hay personas en exclusion
-	/*if(form.pers_exclusion.value ==0 || form.pers_exclusion.value == null){
+	if(form.pers_exclusion.value ==0 || form.pers_exclusion.value == null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique si posee personas en exclusión.');
+		alert('Debe indicar al menos un campo');
 		form.pers_exclusion.value=" ";
 		form.pers_exclusion.focus();
 		return false;
 	}else
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}*/
+	}
 
 	//validamos la cantidad de personas en exclusion
 	if(isNaN(form.cant_exclusion.value)==true){
@@ -1048,28 +1128,28 @@ function Validar_censo(){
 	}
 
 	//validamos la recoleccion_basura
-	/*if(form.recoleccion_basura.value ==0 || form.recoleccion_basura.value ==null){
+	if(form.recoleccion_basura.value ==0 || form.recoleccion_basura.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique el tipo de recolección de basura.');
+		alert('Debe indicar al menos un campo');
 		form.recoleccion_basura.value=" ";
 		form.recoleccion_basura.focus();
 		return false;
 	}else
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}*/
+	}
 
 	//validamos la telefonia
-	/*if(form.telefonia.value ==0 || form.telefonia.value ==null){
+	if(form.telefonia.value ==0 || form.telefonia.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique el tipo de servicio telefónico.');
+		alert('Debe indicar al menos un campo');
 		form.telefonia.value=" ";
 		form.telefonia.focus();
 		return false;
 	}else
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}*/
+	}
 
 	//validamos el medio de transporte
 	if(form.transporte.value ==0 || form.transporte.value ==null){
@@ -1170,16 +1250,16 @@ function Validar_censo(){
 	}*/
 
 	//validamos si hay otra_mision
-	if(form.otra_mision.value==0 || form.otra_mision.value ==null){
+	//if(form.otra_mision.value==0 || form.otra_mision.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique si hay o no otra misión.');
-		form.otra_mision.value=" ";
-		form.otra_mision.focus();
-		return false;
-	}else
-	{
+	//	alert('Indique si hay o no otra misión.');
+	//	form.otra_mision.value=" ";
+	//	form.otra_mision.focus();
+	//	return false;
+	//}else
+	//{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}
+	//}
 
 	//validamos las preguntas
 	if(form.pueblo_pregunta1.value ==0 || form.pueblo_pregunta1.value ==null){
@@ -1326,16 +1406,16 @@ function Validar_censo(){
 	}*/
 
 	//validamos si hay otra_area
-	if(form.otra_area.value==null || form.otra_area.value ==0 || form.otra_area.value ==" "){
+	//if(form.otra_area.value==null || form.otra_area.value ==0 || form.otra_area.value ==" "){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique si hay o no otra area en la que participaria de la sección participación comunitaria.');
-		form.otra_area.value=" ";
-		form.otra_area.focus();
-		return false;
-	}else
-	{
+	//	alert('Indique si hay o no otra area en la que participaria de la sección participación comunitaria.');
+	//	form.otra_area.value=" ";
+	//	form.otra_area.focus();
+	//	return false;
+	//}else
+	//{
 		//document.getElementById("mensaje_error").innerHTML="";
-	}
+	//}
 
 	//validamos pueblo_pregunta14
 	if(form.pueblo_pregunta14.value ==0 || form.pueblo_pregunta14.value ==null || form.pueblo_pregunta14.value ==" "){

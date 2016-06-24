@@ -16,7 +16,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<select class="form-control selectpicker show-tick" name="pers_enfermedades[]" multiple>
-												<option value="0">seleccione</option>
+												<option value="0"></option>
 	                                            <?php 
 	                                            $persenferm=$obj2->get_persona_enfermedades(); 
 	                                            for($e=0;$e<sizeof($persenferm);$e++){

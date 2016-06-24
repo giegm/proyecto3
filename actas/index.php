@@ -7,6 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="vistas/img/logo_.ico">
+    <script src="js/validaractas.js" type="text/javascript"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+
 
     <title>C.C. "Santa Inés"</title>
 
@@ -35,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Consejo Comunal "Santa Inés"</a>
+          <a class="navbar-brand" href="../index.php">Consejo Comunal "Santa Inés"</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -55,9 +59,9 @@
 				
 					<form action="controlador/procesa_censados.php" method="POST" class="form-inline signup" role="form">
 					  <div class="form-group">
-					    <input type="number"  pattern="{0-9}" class="form-control" name="cedula" id="numero" placeholder="Número de cedula"  maxlength="8" required>
+					    <input type="text" class="form-control" name="cedula" id="numero" placeholder="Número de cedula" required onKeyPress="return SoloNumeros(event);">
 					  </div>
-					  <button type="submit" class="btn btn-theme">Ingresar</button>
+					  <input type="button" class="btn btn-theme" onClick="cedula();" value="Enviar">
 					</form>				
 				</div>
 				<div class="col-lg-4 col-lg-offset-2">

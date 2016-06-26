@@ -24,7 +24,7 @@
 				<li role="presentation"><a href="../vistas/listadocensos.php"><img src="../img/iconos/listado2.png">&nbsp;&nbsp;Listado de Censos</a></li>
 				<li role="presentation"><a href="../vistas/noticias.php"><img src="../img/iconos/noticias.png">&nbsp;&nbsp;Noticias Web</a></li>
 				<li role="presentation"><a href="../vistas/listado_de_noticias.php"><img src="../img/iconos/noticias.png">&nbsp;&nbsp;Listado de noticias</a></li>
-				<li role="presentation"><a href="../../actas/index.php" target="_blank"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Emisión de Actas</a></li>
+				<li role="presentation"><a href="../vistas/actas.php"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Emisión de Actas</a></li>
 
 				<?php
 				}

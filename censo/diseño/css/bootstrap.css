@@ -2530,7 +2530,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 30px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -2538,7 +2538,7 @@ output {
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 30px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
@@ -3067,6 +3067,7 @@ fieldset[disabled] .btn-default.active {
   color: #fff;
   background-color: #1f0bc3;
   border-color: #999;
+  border-radius: 30px;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -3077,6 +3078,7 @@ fieldset[disabled] .btn-default.active {
   color: #fff;
   background-color: #286090;
   border-color: #204d74;
+  border-radius: 30px;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3112,6 +3114,7 @@ fieldset[disabled] .btn-primary.active {
   color: #fff;
   background-color: rgb(27, 255, 0);
   border-color: #999;
+  border-radius: 30px;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -3122,6 +3125,7 @@ fieldset[disabled] .btn-primary.active {
   color: #fff;
   background-color: #449d44;
   border-color: #398439;
+  border-radius: 30px;
 }
 .btn-success:active,
 .btn-success.active,
@@ -3247,6 +3251,7 @@ fieldset[disabled] .btn-warning.active {
   color: #fff;
   background-color: rgb(224, 0, 0);
   border-color: #999;
+  border-radius: 30px;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -3257,11 +3262,13 @@ fieldset[disabled] .btn-warning.active {
   color: #fff;
   background-color: #c9302c;
   border-color: #ac2925;
+  border-radius: 30px;
 }
 .btn-danger:active,
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   background-image: none;
+  border-radius: 30px;
 }
 .btn-danger.disabled,
 .btn-danger[disabled],

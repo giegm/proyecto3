@@ -28,13 +28,8 @@ if(isset($_SESSION["sesion_usuario"])){
 					<div class="col-md-10 col-admin-central"><!-- contenedor central admin -->
 						<h1 class="page-header">Consultar Censos</h1>
 						<div class="col-md-12 well"><!-- contenedor de los paneles de consulta -->
-							<div class="page-header">
-					  			<h3>Paneles de consultas</h3>
-					  			<h4><small>Use las flechas o iconos para abrir y cerrar los paneles.</small></h4>
-					  		</div>
 					  		<?php include("../includes/seccionesconsultas/consultageneral.php");?>
 					  		<br><br>
-					  		<a type="button" class="btn btn-primary" href="../controlador/creapdf_consulta.php">Generar PDF</a>
 
 							<!--FIN DE LOS PANELES DE CONSULTAS-->
 						</div>

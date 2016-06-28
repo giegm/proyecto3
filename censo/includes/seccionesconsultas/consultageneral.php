@@ -5,6 +5,7 @@ require_once("../modelo/clasesdeconsulta/class_estudiantes.php");
 require_once("../modelo/clasesdeconsulta/class_menores_de_edad.php");
 require_once("../modelo/clasesdeconsulta/class_mayor_de_edad.php");
 require_once("../modelo/clasesdeconsulta/class_mayor_a_sesenta.php");
+require_once("../modelo/clasesdeconsulta/class_edades.php");
 require_once("../modelo/clasesdeconsulta/class_alquilados.php"); 
 require_once("../modelo/clasesdeconsulta/class_desempleados.php");
 require_once("../modelo/clasesdeconsulta/class_discapacitados.php");
@@ -65,16 +66,19 @@ require_once("../modelo/clasesdeconsulta/class_asalariados.php");
 							<td style="width:5%">											
 								<select id="de"  name="de" class="form-control" >
 									<option> - </option>
-									<?php for ($i=1; $i < 100 ; $i++) { ?>
-									<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>																													
+									<?php
+				                	$obj = new edades();
+
+									for ($obj=1; $obj < 100 ; $obj++) { ?>
+									<option value="<?php echo $obj; ?>" ><?php echo $obj; ?></option>																													
 									<?php } ?>
 								</select>											
 							</td>
 							<td style="width:5%">
 								<select  id="hast" name="hasta" class="form-control" >
 									<option> - </option>
-									<?php for ($i=1; $i < 100 ; $i++) { ?>
-									<option value="<?php echo $i; ?>" ><?php echo $i; ?></option>																												
+									<?php for ($obj=1; $obj < 100 ; $obj++) { ?>
+									<option value="<?php echo $obj; ?>" ><?php echo $obj; ?></option>																												
 									<?php } ?>
 								</select>
 							</td>
@@ -82,7 +86,7 @@ require_once("../modelo/clasesdeconsulta/class_asalariados.php");
 					</tbody>
 				</table>
 				<center><a href="#" id="Reporte" class="btn btn-success"> Generar Reporte</a>
-				<a href="reportepdf.php" class="btn btn-primary"> Imprimir</a></center>
+				<!-- <a href="reportepdf.php" class="btn btn-primary"> Imprimir</a></center>-->
 			</div>
 		</div>
 	</div>
@@ -357,11 +361,8 @@ require_once("../modelo/clasesdeconsulta/class_asalariados.php");
 			    </div>
 			    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
 			    	<div class="panel-body">
-			        	<div class="col-md-6">
+			        	<div class="col-md-12">
 							<?php require_once("../includes/graficas.php"); ?>
-				  		</div>
-				  		<div class="col-md-6">
-				  		
 				  		</div>
 			      	</div>
 			    </div>

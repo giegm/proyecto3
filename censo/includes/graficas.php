@@ -1,46 +1,63 @@
-<?php  
-require_once("../modelo/clasesdeconsulta/class_sexo_femenino.php");
-require_once("../modelo/clasesdeconsulta/class_sexo_masculino.php");
-require_once("../modelo/clasesdeconsulta/class_estudiantes.php");
-require_once("../modelo/clasesdeconsulta/class_menores_de_edad.php");
-require_once("../modelo/clasesdeconsulta/class_mayor_de_edad.php");
-require_once("../modelo/clasesdeconsulta/class_mayor_a_sesenta.php");
-require_once("../modelo/clasesdeconsulta/class_alquilados.php"); 
-require_once("../modelo/clasesdeconsulta/class_desempleados.php");
-require_once("../modelo/clasesdeconsulta/class_discapacitados.php");
-require_once("../modelo/clasesdeconsulta/class_pensionados.php");
-require_once("../modelo/clasesdeconsulta/class_propietarios.php");
-require_once("../modelo/clasesdeconsulta/class_trabajo_cuenta_propia.php");
-require_once("../modelo/clasesdeconsulta/class_enfermedades_graves.php");
-require_once("../modelo/clasesdeconsulta/class_asalariados.php");
-require_once("../modelo/clasesdeconsulta/class_totalcensados.php");
-?>
-<script src="js/Chart.js"></script>
-<div id="canvas-holder">
-	<canvas id="chart-area" width="300" height="300"></canvas>
-	<canvas id="chart-area2" width="300" height="300"></canvas>
-	<canvas id="chart-area3" width="600" height="300"></canvas>
-	<canvas id="chart-area4" width="600" height="300"></canvas>
-</div>
-
-<?php  
-    $obj = new Total_censados();            
-    $obj->get_total();
-    $obj->get_total_dos();
-    $todosxf = $obj->get_total() + $obj->get_total_dos(); 
-
-    $obj = new Mayores_edad(); 
-    $obj->get_mayores_de_edad_jefes(); 
-    $obj->get_mayores_de_edad_familiares(); 
-    $mayorestotal= $obj->get_mayores_de_edad_jefes() + $obj->get_mayores_de_edad_familiares();
-?>
-<script>
-var pieData = 	[
-					{value: <?php echo $todosxf;?>,color:"#0b82e7",highlight: "#0c62ab",label: "Google Chrome"},
-					{value: <?php echo $mayorestotal; ?>,color:"#e3e860",highlight: "#a9ad47",label: "Google Chrome"}
-				];
-var ctx = document.getElementById("chart-area").getContext("2d");
-window.myPie = new Chart(ctx).Pie(pieData);	
-</script>
-</body>
-</html>
+		<div class="col-md-12 well">
+			
+			<h3>Estadisticas generales de los Censos.</h3>
+			<hr>
+		
+			<div class="panel panel-danger">
+			    <div class="panel-heading" role="tab" id="headingOne">
+			      <h4 class="panel-title">
+			        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			          Mayores de Edad y Mayores a Sesenta
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+			      <div class="panel-body">
+			        <div class="col-md-6">
+						<img src="../modelo/grafica_mayores_de_edad.php" alt="">
+				  	</div>
+				  	<div class="col-md-6">
+						<img src="../modelo/grafica_mayores_sesenta.php" alt="">
+				  	</div>
+			      </div>
+				</div>
+			</div>
+			<div class="panel panel-danger">
+				<div class="panel-heading" role="tab" id="headingTwo">
+			      <h4 class="panel-title">
+			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			         Personas de sexo Femenino y Masculino, Trabajadores por Cuenta Propia, Asalariados y Desempleados
+			        </a>
+			      </h4>
+			    </div>
+				<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+			      <div class="panel-body">
+			        <div class="col-md-6">
+						<img src="../modelo/grafica_personas_sexo_mxyfx.php" alt="">
+				  	</div>
+				  	<div class="col-md-6">
+						<img src="../modelo/grafica_asalariados_trabjctapropia.php" alt="">
+				  	</div>
+			      </div>
+			    </div>
+			</div>
+			<div class="panel panel-danger">
+			    <div class="panel-heading" role="tab" id="headingThree">
+			      <h4 class="panel-title">
+			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			          Personas Con Enfermedades graves, Discapacitados, Pensionados, Personas Alquiladas y Propietarios.
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+			      <div class="panel-body">
+			        <div class="col-md-6">
+						<img src="../modelo/grafica_pensionados_discap_enfermos.php" alt="">
+				  	</div>
+				  	<div class="col-md-6">
+						<img src="../modelo/grafica_alquilados_propietarios.php" alt="">
+				  	</div>
+			      </div>
+			    </div>
+			</div>
+		</div>

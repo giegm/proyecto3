@@ -27,20 +27,20 @@ $data=$obj->obten_censo_por_id($_GET["id"]);
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">C.I. N°</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input value="<?php echo $data[0]["CI"] ?>" type="text" name="ci" class="form-control" placeholder="solo numeros" >
+							<input value="<?php echo $data[0]["CI"] ?>" type="text" name="ci" class="form-control" placeholder="solo numeros" required onKeyPress="return SoloNumeros(event);">
 							<br/>
 						</div>
 
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Nombres</label>
 						
 						<div class="col-sm-2 col-md-2">
-							<input value="<?php echo $data[0]["NOMBRE"] ?>" type="text" name="name" class="form-control" >
+							<input value="<?php echo $data[0]["NOMBRE"] ?>" type="text" name="name" class="form-control" required onkeypress="return soloLetras(event);">
 						</div>
 
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Apellidos</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input value="<?php echo $data[0]["APELLIDO"] ?>" type="text" name="ape" class="form-control" >
+							<input value="<?php echo $data[0]["APELLIDO"] ?>" type="text" name="ape" class="form-control" required onkeypress="return soloLetras(event);">
 						</div>
 
 						</div><!-- fin del primer form-group -->
@@ -189,19 +189,19 @@ $data=$obj->obten_censo_por_id($_GET["id"]);
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefono CEL</label>
 
 						<div class="col-sm-2 col-md-2">
-						<input value="<?php echo $data[0]["TLF_CEL"] ?>" type="text" class="form-control" name="telfcel" placeholder="000-00-00" >
+						<input value="<?php echo $data[0]["TLF_CEL"] ?>" type="text" class="form-control" name="telfcel" placeholder="Indique el número con su codigo de area" required onKeyPress="return SoloNumeros(event);">
 						</div>
 
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefono HAB</label>
 
 						<div class="col-sm-2 col-md-2">
-						<input value="<?php echo $data[0]["TLF_HAB"] ?>" type="text" class="form-control" name="telfhab" placeholder="000-00-00" >
+						<input value="<?php echo $data[0]["TLF_HAB"] ?>" type="text" class="form-control" name="telfhab" placeholder="Indique el número con su codigo de area" required onKeyPress="return SoloNumeros(event);">
 						</div>
 
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefono OFIC</label>
 
 						<div class="col-sm-2 col-md-2">
-						<input value="<?php echo $data[0]["TLF_OFI"] ?>" type="text" class="form-control" name="telfofic" placeholder="000-00-00" >
+						<input value="<?php echo $data[0]["TLF_OFI"] ?>" type="text" class="form-control" name="telfofic" placeholder="Indique el número con su codigo de area" required onKeyPress="return SoloNumeros(event);">
 						</div>
 
 						</div><!-- fin del 2do form-group -->
@@ -336,7 +336,7 @@ $data=$obj->obten_censo_por_id($_GET["id"]);
 							<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Institucion</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input value="<?php echo $data_dos[0]["INSTITUCION"] ?>" type="text" class="form-control" name="inst" placeholder="indiquela" >
+							<input value="<?php echo $data_dos[0]["INSTITUCION"] ?>" type="text" class="form-control" name="inst" placeholder="De poseer una indiquela" >
 						</div>
 						</div>
 
@@ -448,7 +448,7 @@ $data=$obj->obten_censo_por_id($_GET["id"]);
 					    <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Ingreso Mensual</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input value="<?php echo $data_dos[0]["INGRESO_MENSUAL"] ?>" type="text" class="form-control" name="ingmens" >
+							<input value="<?php echo $data_dos[0]["INGRESO_MENSUAL"] ?>" type="text" class="form-control" name="ingmens" placeholder="Cantidad en Bsf" required onKeyPress="return SoloNumeros(event);">
 						</div>
 
 						</div><!-- fin del 1er form-group -->

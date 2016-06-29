@@ -8,7 +8,16 @@ function Valida_perfil(){
 		form.nombre.focus();
 		return false;
 	}
-
+    if(form.nombre.value.length < 4) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>El nombre del usuario debe contener al menos 4 caracteres.&nbsp;&nbsp;&times;</strong></p>";
+        form.nombre.focus();
+        return false;
+    }
+    if(form.nombre.value.length > 10) {
+    	document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>El nombre del usuario debe contener maximo 10 caracteres.&nbsp;&nbsp;&times;</strong></p>";
+        form.nombre.focus();
+        return false;
+    }
 	if(form.cedula.value==0){
 		document.getElementById("mensaje_error").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Debe introducir la cedula del usuario.&nbsp;&nbsp;&times;</strong></p>";
 		form.cedula.value=" ";
@@ -103,7 +112,22 @@ function Modifica_datos_perfil(){
 	}else{
 		document.getElementById("error").innerHTML="";
 	}
-
+	if(formu.nameuser.value.length < 4) {
+	    alert('El nombre del usuario debe contener al menos 4 caracteres');
+		formu.nameuser.value=" ";
+		formu.nameuser.focus();
+		return false;
+	}else{
+		document.getElementById("error").innerHTML="";
+	}
+	if(formu.nameuser.value.length > 10) {
+	    alert('El nombre del usuario debe contener maximo 10 caracteres');
+		formu.nameuser.value=" ";
+		formu.nameuser.focus();
+		return false;
+	}else{
+		document.getElementById("error").innerHTML="";
+	}
 	if(formu.ceduser.value==0){
 		//document.getElementById("error").innerHTML="Indique un nombre de usuario.";
 		alert('Indique una cedula de identidad.');
@@ -124,6 +148,14 @@ function Modifica_datos_perfil(){
 	}
 	if(formu.ceduser.value.length < 6) {
 	    alert('La cedula debe contener mínimo 6 dígitos');
+		formu.ceduser.value=" ";
+		formu.ceduser.focus();
+		return false;
+	}else{
+		document.getElementById("error").innerHTML="";
+	}
+	if(formu.ceduser.value.length > 8) {
+	    alert('La cedula debe contener maximo 8 dígitos');
 		formu.ceduser.value=" ";
 		formu.ceduser.focus();
 		return false;

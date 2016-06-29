@@ -33,7 +33,7 @@
         <label class="control-label col-md-2">Usuario:</label>
       
       <div class="col-md-4">
-        <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["USERADMIN"] ?>">
+        <input disabled type="text" class="form-control" name="" value="<?php echo $data[$_SESSION["sesion_perfil"]]["USERADMIN"] ?>">
       </div>
       </div>
 
@@ -41,7 +41,7 @@
         <label class="control-label col-md-2">Cedula de identidad:</label>
       
       <div class="col-md-4">
-        <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["CEDULA"] ?>">
+        <input disabled type="text" class="form-control" name="" value="<?php echo $data[$_SESSION["sesion_perfil"]]["CEDULA"] ?>">
       </div>
       </div>
 
@@ -49,7 +49,7 @@
         <label class="control-label col-md-2">Perfil de Usuario:</label>
       
       <div class="col-md-4">
-        <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["PERFIL"] ?>">
+        <input disabled type="text" class="form-control" name="" value="<?php echo $data[$_SESSION["sesion_perfil"]]["PERFIL"] ?>">
       </div>
       </div>
 
@@ -95,7 +95,7 @@
         <label class="control-label col-md-4">Usuario:</label>
       
       <div class="col-md-4">
-        <input type="text" class="form-control" name="nameuser" maxlength="10" value="<?php echo $data[0]["USERADMIN"] ?>">
+        <input type="text" class="form-control" name="nameuser" maxlength="10" value="<?php echo $data[$_SESSION["sesion_perfil"]]["USERADMIN"] ?>">
       </div>
       </div>
 
@@ -103,7 +103,7 @@
         <label class="control-label col-md-4">Cedula de identidad:</label>
       
       <div class="col-md-4">
-        <input type="text" class="form-control" name="ceduser" maxlength="8" value="<?php echo $data[0]["CEDULA"] ?>">
+        <input type="text" class="form-control" name="ceduser" maxlength="8" value="<?php echo $data[$_SESSION["sesion_perfil"]]["CEDULA"] ?>">
       </div>
       </div>
 
@@ -120,7 +120,7 @@
       
       <div class="col-md-4">
           <select class="form-control selectpicker show-tick" name="rol_user" id="">
-          <option value="1"><?php echo $data[0]["PERFIL"]; ?></option>
+          <option value="1"><?php echo $data[$_SESSION["sesion_perfil"]]["PERFIL"]; ?></option>
           </select>
       </div>
       </div>
@@ -196,7 +196,7 @@
       
       <div class="col-md-4">
           <select class="form-control selectpicker show-tick" name="rol_user" id="">
-          <option value="1"><?php echo $data[0]["PERFIL"]; ?></option>
+          <option value="1"><?php echo $data[$_SESSION["sesion_perfil"]]["PERFIL"]; ?></option>
           </select>
       </div>
       </div>
@@ -299,7 +299,6 @@
 <?php  
 if(isset($_GET["mod"])){
   ?>
-
   <div class="panel panel-danger">
     <div class="panel-heading" role="tab" id="headingperfilsel">
       <h4 class="panel-title">
@@ -526,19 +525,19 @@ if(isset($_GET["mod"])){
             <div class="form-group">
               <label class="control-label col-md-2">Usuario:</label>
               <div class="col-md-4">
-                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["USERADMIN"] ?>">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[$_SESSION["sesion_perfil"]]["USERADMIN"] ?>">
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-2">Cedula de identidad:</label>
               <div class="col-md-4">
-                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["CEDULA"] ?>">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[$_SESSION["sesion_perfil"]]["CEDULA"] ?>">
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-2">Perfil de Usuario:</label>
               <div class="col-md-4">
-                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["PERFIL"] ?>">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[$_SESSION["sesion_perfil"]]["PERFIL"] ?>">
               </div>
             </div>
             <div class="form-group">
@@ -583,19 +582,19 @@ if(isset($_GET["mod"])){
             <div class="form-group">
               <label class="control-label col-md-2">Usuario:</label>
               <div class="col-md-4">
-                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["USERADMIN"] ?>">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[$_SESSION["sesion_perfil"]]["USERADMIN"] ?>">
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-2">Cedula de identidad:</label>
               <div class="col-md-4">
-                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["CEDULA"] ?>">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[$_SESSION["sesion_perfil"]]["CEDULA"] ?>">
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-2">Perfil de Usuario:</label>
               <div class="col-md-4">
-                <input disabled type="text" class="form-control" name="" value="<?php echo $data[0]["PERFIL"] ?>">
+                <input disabled type="text" class="form-control" name="" value="<?php echo $data[$_SESSION["sesion_perfil"]]["PERFIL"] ?>">
               </div>
             </div>
             <div class="form-group">

@@ -131,7 +131,7 @@ $data=$objc->get_noticia_por_id($_GET["id"]);
               <input type="button" class="btn btn-success" onclick="Validar_Noticia();" value="Cargar Noticia">
               
               <input type="button" class="btn btn-primary" onclick="Limpiar_Form();" value="Limpiar Formulario">
-              <input type="button" class="btn btn-danger" onclick="window.location='../vistas/administra.php';" value="Volver">
+              <input type="button" class="btn btn-danger" onclick="window.location='../vistas/listado_de_noticias.php';" value="Volver">
             </div>
           </div>
       </form>

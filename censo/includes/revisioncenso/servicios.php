@@ -98,7 +98,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Litros</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input value="<?php echo $data_seis[0]["TANQUE_LITROS"]; ?>" type="text" name="litros_tanque" class="form-control"  id="" placeholder="00 LTS">
+												<input value="<?php echo $data_seis[0]["TANQUE_LITROS"]; ?>" type="text" name="litros_tanque" class="form-control"  id="" placeholder="00 LTS" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 										</div>
@@ -134,7 +134,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Cuantos</label>
 
 											<div class="col-sm-2 col-md-1">
-												<input value="<?php echo $data_seis[0]["CANT_PIPOTES"]; ?>" type="text" name="cant_pipotes" class="form-control"  id="" placeholder="0">
+												<input value="<?php echo $data_seis[0]["CANT_PIPOTES"]; ?>" type="text" name="cant_pipotes" class="form-control"  id="" placeholder="0" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Posee medidor</label>
@@ -307,19 +307,19 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Cantidad de cilindros</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input value="<?php echo $data_seis[0]["CANT_CILINDROS_GAS"]; ?>" type="text" name="cant_cilindros" class="form-control"  id="" placeholder="00 Kg">
+												<input value="<?php echo $data_seis[0]["CANT_CILINDROS_GAS"]; ?>" type="text" name="cant_cilindros" class="form-control"  id="" placeholder="00 Kg" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-1 control-label" style="text-align:justify;">Duración</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input value="<?php echo $data_seis[0]["DURACION_GAS"]; ?>" type="text" name="duración_gas" class="form-control"  id="" placeholder="0 dias">
+												<input value="<?php echo $data_seis[0]["DURACION_GAS"]; ?>" type="text" name="duración_gas" class="form-control"  id="" placeholder="0 dias" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Precio </label>
 
 											<div class="col-sm-2 col-md-2">
-												<input value="<?php echo $data_seis[0]["PRECIO_GAS"]; ?>" type="text" name="precio_gas" class="form-control"  id="" placeholder="00 BsF">
+												<input value="<?php echo $data_seis[0]["PRECIO_GAS"]; ?>" type="text" name="precio_gas" class="form-control"  id="" placeholder="00 BsF" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 										</div>
@@ -437,7 +437,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Cuantos necesita</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input value="<?php echo $data_siete[0]["BOMBILLOS_NECESITA"]; ?>" type="text" name="cant_bombillos" class="form-control"  id="" placeholder="solo números">
+												<input value="<?php echo $data_siete[0]["BOMBILLOS_NECESITA"]; ?>" type="text" name="cant_bombillos" class="form-control"  id="" placeholder="solo números" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Recolección de basura</label>

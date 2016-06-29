@@ -45,7 +45,7 @@ $listado=  mysqli_query($cn,"select C.*, DP.CI from censos as C, datos_personale
                                echo '<td>'.$reg['HORA_CENSO'].'</td>';
                                echo '<td>'.$reg['CI'].'</td>';
                                ?>
-                               <td><a type="button" class="btn btn-success" href="javascript::void(0);" onclick="window.location='../controlador/revisar_censo.php?id=<?php echo $reg["ID_JEFE"]; ?>';">Revisar</a></td>
+                               <td><a type="button" class="btn btn-success" href="javascript::void(0);" onclick="window.location='../vistas/revisar_censo.php?id=<?php echo $reg["ID_JEFE"]; ?>';">Revisar</a></td>
                                <td><a type="button" class="btn btn-danger" href="javascript::void(0);" onclick="elimina_censo('../controlador/eliminar_censo.php?id=<?php echo $reg["ID_JEFE"]; ?>');">Eliminar</a></td>
                                <td><a type="button" class="btn btn-primary" href="../controlador/creapdf_censo.php?id=<?php echo $reg["ID_JEFE"]; ?>">Generar PDF</a></td>
                                <?php

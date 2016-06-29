@@ -45,7 +45,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 											<label for="" class="col-sm-2 col-md-1 control-label" style="text-align:justify;">Cuales</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input value="<?php echo $data_siete[0]["DESCRIPCION"]; ?>" type="text" name="name_organizacion" placeholder="solo nombre" class="form-control" >
+												<input value="<?php echo $data_siete[0]["DESCRIPCION"]; ?>" type="text" name="name_organizacion" placeholder="solo nombre" class="form-control" required onkeypress="return soloLetras(event);">
 											</div>
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Participa en alguna</label>
@@ -287,7 +287,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Como cree Ud. Que se van a resolver los problemas del sector</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input value="<?php echo $data_ocho_dos[0]["P_SEIS"]; ?>" type="text" name="pueblo_pregunta6" id="" placeholder="sea breve" class="form-control" >
+												<input value="<?php echo $data_ocho_dos[0]["P_SEIS"]; ?>" type="text" name="pueblo_pregunta6" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);">
 											</div>
 
 										</div>
@@ -297,7 +297,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Quien cree que va a a resolver los problemas del sector</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input value="<?php echo $data_ocho_dos[0]["P_SIETE"]; ?>" type="text" name="pueblo_pregunta7" id="" placeholder="sea breve" class="form-control" >
+												<input value="<?php echo $data_ocho_dos[0]["P_SIETE"]; ?>" type="text" name="pueblo_pregunta7" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);">
 											</div>
 
 										</div>
@@ -308,7 +308,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 										que se desarrollaran en su comunidad</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input value="<?php echo $data_ocho_dos[0]["P_OCHO"]; ?>" type="text" name="pueblo_pregunta8" id="" placeholder="sea breve" class="form-control" >
+												<input value="<?php echo $data_ocho_dos[0]["P_OCHO"]; ?>" type="text" name="pueblo_pregunta8" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);">
 											</div>
 
 										</div>
@@ -318,7 +318,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Como apoyaría Ud. A que se realicen y ejecuten los proyectos</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input value="<?php echo $data_ocho_dos[0]["P_NUEVE"]; ?>" type="text" name="pueblo_pregunta9" id="" placeholder="sea breve" class="form-control" >
+												<input value="<?php echo $data_ocho_dos[0]["P_NUEVE"]; ?>" type="text" name="pueblo_pregunta9" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);">
 											</div>
 
 										</div>
@@ -328,7 +328,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Que tipo de compromiso tiene Ud. con su sector para el mejoramiento</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input value="<?php echo $data_ocho_dos[0]["P_DIEZ"]; ?>" type="text" name="pueblo_pregunta10" id="" placeholder="sea breve" class="form-control" >
+												<input value="<?php echo $data_ocho_dos[0]["P_DIEZ"]; ?>" type="text" name="pueblo_pregunta10" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);">
 											</div>
 
 										</div>
@@ -338,7 +338,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Que opina Ud. del censo energético</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input value="<?php echo $data_ocho_dos[0]["P_ONCE"]; ?>" type="text" name="pueblo_pregunta11" id="" placeholder="sea breve" class="form-control" >
+												<input value="<?php echo $data_ocho_dos[0]["P_ONCE"]; ?>" type="text" name="pueblo_pregunta11" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);">
 											</div>
 
 										</div>
@@ -380,7 +380,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Otra area</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input value="<?php echo $data_ocho_dos[0]["OTRA_AREA"]; ?>" type="text" name="otra_area" id="" placeholder="Solo el nombre" class="form-control" >
+												<input value="<?php echo $data_ocho_dos[0]["OTRA_AREA"]; ?>" type="text" name="otra_area" id="" placeholder="Solo el nombre" class="form-control" required onkeypress="return soloLetras(event);">
 											</div>
 
 										</div>

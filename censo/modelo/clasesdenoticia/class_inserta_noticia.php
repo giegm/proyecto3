@@ -30,12 +30,12 @@ class Noticia{
 		copy($_FILES['imagen_noticia']['tmp_name'],$destino);
 		$nombre=$_FILES['imagen_noticia']['name'];
 
-	$sql=mysqli_query(Conecta::conx(),"insert into noticias_web(TITULO_NOTICIA,FCHA_NOTICIA,HORA,DESCRIPC_NOTICIA,IMAGEN,ID_CATEGORIA,ID_PERFIL) values('$tit','$fcha',now(),'$descrip','$nombre',$cat,$id)")or die('Problemas al intentar insertar la noticia:' . $sql . mysqli_errno(Conecta::conx()));
+	$sql=mysqli_query(Conecta::conx(),"insert into noticias_web(TITULO_NOTICIA,FCHA_NOTICIA,HORA,DESCRIPC_NOTICIA,IMAGEN,ID_CATEGORIA,ID_LOGIN) values('$tit','$fcha',now(),'$descrip','$nombre',$cat,$id)")or die('Problemas al intentar insertar la noticia:' . $sql . mysqli_errno(Conecta::conx()));
 
 	echo "<script type='text/javascript'>alert('Noticia cargada exitosamente.');window.location='../vistas/listado_de_noticias.php';</script>";
 		
 		}else{
-			echo "archivo no permitido, es un tipo de archivo prohibido o excede el tamano de $limite_kb Kilobytes";
+			echo "<script type='text/javascript'>alert('archivo no permitido, es un tipo de archivo prohibido o excede el tamano de $limite_kb Kilobytes');window.location='../vistas/noticias.php';</script>";
 		}
 	}
 }

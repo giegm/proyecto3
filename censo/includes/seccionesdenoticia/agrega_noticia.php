@@ -17,7 +17,7 @@
           <label style="text-align: left" class="control-label col-sm-1 col-md-1">Título</label>
          
           <div class="col-sm-7 col-md-6">
-          <input type="text" class="form-control" name="titulo_noticia" value="">
+          <input type="text" class="form-control" name="titulo_noticia" value="" maxlength="30">
           </div>
          </div>
 
@@ -33,7 +33,7 @@
           <label style="text-align: left" class="control-label col-sm-2 col-md-2">Descripción</label>
          
           <div class="col-sm-4 col-md-4">
-          <textarea name="descrip_noticia"></textarea>
+          <textarea name="descrip_noticia" maxlength="600"></textarea>
           </div>
          </div>
 

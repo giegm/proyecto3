@@ -35,7 +35,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 
 										<div class="col-sm-2 col-md-2">
 
-											<input value="<?php echo $data_tres[$i]["NOMBRES_F"] ?>" type="text" name="namepaef[]" class="form-control"  placeholder="" >
+											<input value="<?php echo $data_tres[$i]["NOMBRES_F"] ?>" type="text" name="namepaef[]" class="form-control"  placeholder="" required onkeypress="return soloLetras(event);">
 										</div>
 
 										
@@ -43,7 +43,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">N° de cedula</label>
 										
 										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_tres[$i]["CEDULA_F"]; ?>" type="text" name="cedf[]" class="form-control"  placeholder="V/E-00000000">
+											<input value="<?php echo $data_tres[$i]["CEDULA_F"]; ?>" type="text" name="cedf[]" class="form-control"  placeholder="V/E-00000000" required onKeyPress="return SoloNumeros(event);">
 										</div>
 
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Sexo</label>
@@ -82,7 +82,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:center;">Edad</label>
 										
 										<div class="col-sm-2 col-md-1">
-											<input value="<?php echo $data_tres[$i]["EDAD_F"]; ?>" type="text" name="edadf[]" class="form-control"  placeholder="">
+											<input value="<?php echo $data_tres[$i]["EDAD_F"]; ?>" type="text" name="edadf[]" class="form-control"  placeholder="" required onKeyPress="return SoloNumeros(event);">
 										</div>
 										
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Discapacidad/tipo</label>
@@ -485,7 +485,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 							    			<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Ingreso mensual</label>
 										
 										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_cuatro[$i]["INGMENSUAL_F"]; ?>" type="text" name="ingmnsf[]" class="form-control"  placeholder="0000,00 BsF">
+											<input value="<?php echo $data_cuatro[$i]["INGMENSUAL_F"]; ?>" type="text" name="ingmnsf[]" class="form-control"  placeholder="Cantidad en Bsf" required onKeyPress="return SoloNumeros(event);">
 										</div>
 
 							    		</div><!-- final del form-group -->

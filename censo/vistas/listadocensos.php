@@ -33,43 +33,30 @@ if(isset($_SESSION["sesion_usuario"])){
         <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
         <link rel="shortcut icon" href="../img/ccsantaines.ico">
         <!--    FORMATO DE TABLAS    -->
-
-
     </head>
-<body>
-	<?php
-	include("../includes/navbaradmin.php");
-	?>
-<div class="container-fluid"><!-- inicio del contenedor general -->
-
-	<div class="row"><!-- fila principal -->
-
-		<div class="col-md-2" id="list-vertical-admin">
-			
-			<?php
-			include("../includes/listverticaladmin.php");
-			?>
-			
-			<hr class="featurette-divider hr-admin visible-xs visible-sm">
-
-		</div>
-
-	<section><!-- inicio del section del contenedor central admin -->
-
-		<div class="col-md-10 col-admin-central"><!-- contenedor central admin -->
-			
-			<h1 class="page-header">Listado de censos</h1>
-			<div class="col-md-12 well">
-			<article id="contenido"></article>
-			</div>
-		
-		</div><!-- fin conteneder central admin -->
-	
-	</section><!-- fin del section del contenedor central admin -->
-
-	</div><!-- fin de row -->
-</div><!-- fin del container-fluid -->
-</body>
+	<body>
+		<?php
+		include("../includes/navbaradmin.php");
+		?>
+		<div class="container-fluid"><!-- inicio del contenedor general -->
+			<div class="row"><!-- fila principal -->
+				<div class="col-md-2" id="list-vertical-admin">
+					<?php
+					include("../includes/listverticaladmin.php");
+					?>
+					<hr class="featurette-divider hr-admin visible-xs visible-sm">
+				</div>
+				<section><!-- inicio del section del contenedor central admin -->
+					<div class="col-md-10 col-admin-central"><!-- contenedor central admin -->
+						<h1 class="page-header">Listado de censos</h1>
+						<div class="col-md-12 well">
+							<article id="contenido"></article>
+						</div>
+					</div><!-- fin conteneder central admin -->
+				</section><!-- fin del section del contenedor central admin -->
+			</div><!-- fin de row -->
+		</div><!-- fin del container-fluid -->
+	</body>
 </html>
 <?php 
 }else{

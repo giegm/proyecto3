@@ -443,7 +443,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 							    		<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">N° habitaciones</label>
 
 										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_cinco[0]["NUM_HABITACIONES"]; ?>" type="text" class="form-control"  name="num_habitaciones" id="" placeholder="solo numeros">
+											<input value="<?php echo $data_cinco[0]["NUM_HABITACIONES"]; ?>" type="text" class="form-control"  name="num_habitaciones" id="" placeholder="solo numeros" required onKeyPress="return SoloNumeros(event);">
 										</div>
 
 										<label for="" class="col-sm-2 col-md-2 control-label">Pertenece a una (OCV)</label>
@@ -927,7 +927,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label">Indique el tipo</label>
 
 										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_cinco[0]["DESCRIPCION"]; ?>" type="text" name="descrip_ayuda_casa" id="" placeholder="" class="form-control" >	
+											<input value="<?php echo $data_cinco[0]["DESCRIPCION"]; ?>" type="text" name="descrip_ayuda_casa" id="" placeholder="" class="form-control" required onkeypress="return soloLetras(event);">	
 										</div>
 
 									</div>

@@ -5,7 +5,7 @@
 								?>
 
 								<!--<input type="button" class="btn btn-success" name="btn-censo-familia" onClick="Validar_censo();" value="Guardar datos">-->
-
+								<input type="button" class="btn btn-success" name="btn-censo-familia" onClick="Validar_censo();" value="Guardar datos">
 								<a href="../vistas/listadocensos.php" type="button" class="btn btn-danger" name="btn-censo-cancela" id="cancelar">Volver</a>
 								<?php  
 								}

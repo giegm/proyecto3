@@ -176,15 +176,19 @@ function Validar_censo(){
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
 
+	if(isNaN(form.telfcel.value)==true){
+		alert('El celular solo debe de tener valores numéricos');
+		form.ci.value=="";
+		form.ci.focus();
+		return false;
+	else if( !(/^\d{4}\d{3}\d{4}$/.test(form.telfcel.value))) {
+  		alert('Ingrese un numero celular para el jefe de familia\n Ejemplo(04265555555).');
+		form.telfcel.value=" ";
+		form.telfcel.focus();
+		return false;
+	}else{
 
-	//if( !(/^\d{4}-\d{3}\d{4}$/.test(form.telfcel.value))) {
-  	//	alert('Ingrese un numero celular para el jefe de familia\n Ejemplo(0426-5555555).');
-	//	form.telfcel.value=" ";
-	//	form.telfcel.focus();
-	//	return false;
-	//}else{
-
-	//}
+	}
 
 	//validamos el email
 	//if(form.email.value==null)

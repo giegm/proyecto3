@@ -122,7 +122,7 @@ $data_selec=$obj->obten_censo_por_id_condiciones_salud($_GET["id"]);//para los m
 											<label for="" class="col-sm-3 col-md-3 control-label">Cuantos</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input value="<?php echo $data_seis[0]["CANTIDAD_EXCLUSION"]; ?>" type="text" name="cant_exclusion" id="" placeholder="solo números" class="form-control" >
+												<input value="<?php echo $data_seis[0]["CANTIDAD_EXCLUSION"]; ?>" type="text" name="cant_exclusion" id="" placeholder="solo números" class="form-control" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 										</div>

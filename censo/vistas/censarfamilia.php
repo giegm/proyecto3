@@ -107,9 +107,9 @@ $obj2=new Operar();
 											<label for="" class="control-label col-sm-2 col-md-2"></label>
 										</div>
 										<div class="col-sm-8 col-md-8">
-											<input type="button" id="btn-guardar-censo" class="btn btn-default" name="btn-censo-familia" onClick="Validar_censo();" value="Guardar datos">
-											<a href="censarfamilia.php" id="btn-limpiar-censo" type="button" class="btn btn-default" name="btn-censo-limpia" id="limpiar">Limpiar censo</a>
-											<a type="button" id="btn-cancelar-censo" name="cancelar_censo" href="javascript:void(0);" onclick="cancelar_censo('administra.php');" class="btn btn-default">Cancelar</a>
+											<input type="button" class="btn btn-success" name="btn-censo-familia" onClick="Validar_censo();" value="Guardar datos">
+											<a href="censarfamilia.php" type="button" class="btn btn-primary" name="btn-censo-limpia" id="limpiar">Limpiar censo</a>
+											<a type="button" name="cancelar_censo" href="javascript:void(0);" onclick="cancelar_censo('administra.php');" class="btn btn-danger">Cancelar</a>
 										</div>
 									</div>
 								</div>

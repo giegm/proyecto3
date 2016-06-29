@@ -21,7 +21,7 @@ class Noticias{
 	}
 
 	public function obten_noticas($inicio){
-		$sql=mysqli_query(Conecta::conx(),"select c.*, p.PERFIL, v.CATEGORIA from noticias_web as c, perfiles as p, categoria_noticia as v where c.ID_PERFIL=p.ID_PERFIL and c.ID_CATEGORIA=v.ID_CATEGORIA order by c.ID_NOTICIA desc limit $inicio,2") or die('error al consultar noticias: ' . $sql . mysqli_errno(Conecta::conx()));
+		$sql=mysqli_query(Conecta::conx(),"select c.*, p.USERADMIN, v.CATEGORIA from noticias_web as c, datos_login as p, categoria_noticia as v where c.ID_LOGIN=p.ID_LOGIN and c.ID_CATEGORIA=v.ID_CATEGORIA order by c.ID_NOTICIA desc limit $inicio,2") or die('error al consultar noticias: ' . $sql . mysqli_errno(Conecta::conx()));
 
 		while($reg=mysqli_fetch_array($sql)){
 			$this->noticias[]=$reg;

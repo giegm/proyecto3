@@ -45,7 +45,6 @@ function cedula(){
 		form.cedula.value=="";
 		form.cedula.focus();
 		return false;
-	}else{
-
 	}
+	form.submit();
 }

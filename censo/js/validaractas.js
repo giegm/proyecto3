@@ -12,12 +12,12 @@ function SoloNumeros(evt){
 	}
 }
 
-function cedula(){
+function Validar_cedula(){
 
 	var form=document.form;
 	//validamos la cedula
 	if(form.cedula.value==null || form.cedula.value==0){
-		alert('Ingrese una cedula para el jefe de familia');
+		alert('Ingrese una cedula');
 		form.cedula.value=="";
 		form.cedula.focus();
 		return false;

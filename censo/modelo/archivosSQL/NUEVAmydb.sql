@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2016 a las 08:53:48
+-- Tiempo de generación: 30-06-2016 a las 01:09:53
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.5.19
 
@@ -912,14 +912,14 @@ CREATE TABLE IF NOT EXISTS `noticias_web` (
   `DESCRIPC_NOTICIA` varchar(300) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `IMAGEN` varchar(100) NOT NULL,
   `ID_CATEGORIA` int(11) NOT NULL,
-  `ID_PERFIL` int(11) NOT NULL
+  `ID_LOGIN` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `noticias_web`
 --
 
-INSERT INTO `noticias_web` (`ID_NOTICIA`, `TITULO_NOTICIA`, `FCHA_NOTICIA`, `HORA`, `DESCRIPC_NOTICIA`, `IMAGEN`, `ID_CATEGORIA`, `ID_PERFIL`) VALUES
+INSERT INTO `noticias_web` (`ID_NOTICIA`, `TITULO_NOTICIA`, `FCHA_NOTICIA`, `HORA`, `DESCRIPC_NOTICIA`, `IMAGEN`, `ID_CATEGORIA`, `ID_LOGIN`) VALUES
 (1, 'Bandera de Venezuela', '2016-06-23', '00:47:53', 'La Bandera Nacional de Venezuela es el pabellÃ³n nacional oficial de dicho paÃ­s y uno de los tres sÃ­mbolos patrios, siendo el mÃ¡s representativo a nivel internacional.', 'bandera-de-venezuela_fondos-de-pantalla-de-banderas.jpg', 3, 1);
 
 -- --------------------------------------------------------

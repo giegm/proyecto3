@@ -25,30 +25,14 @@ if(isset($_SESSION["sesion_usuario"])){
 					<?php include("../includes/listverticaladmin.php");?>
 					<hr class="featurette-divider hr-admin visible-xs visible-sm">
 				</div>
-				<section><!-- inicio del section del contenedor central admin -->
-					<div class="col-md-10 col-admin-central"><!-- contenedor central admin -->
-						<h1 class="page-header">Sistema de Emisión de Actas</h1>
-						<div class="col-md-12 well"><!-- contenedor de los paneles de consulta -->
-							<div class="page-header">
-					  			<h3>Necesita estar censado para solicitar cualquier tipo de acta.</h3>					  			
-					  		</div>
-					  		
-					  		<div class="col-lg-6">
-							    <div class="input-group">
-							      <input type="text" class="form-control" placeholder="Introduzca el número de cedula" maxlength="8" required onKeyPress="return SoloNumeros(event);">
-							      <span class="input-group-btn">
-							        <a class="btn btn-primary" type="button" href="../controlador/procesa_censados.php">Consultar</a>
-							      </span>
-							    </div><!-- /input-group -->
-							 </div>
-					  		
-
-							<!--FIN DE LOS PANELES DE CONSULTAS-->
-						</div>
-					</div>
-				</section><!-- fin del section del contenedor central admin -->
+				<div class="col-md-10 col-admin-central">
+      				<h1 class="page-header pageheader-general">Emisión de Actas</h1>
+      				<div class="col-md-12 well">
+      					<?php include("../includes/seccionesdeacta/form_actas.php"); ?>
+      				</div>
+				</div>
 			</div><!-- fin de row -->
-		</div><!-- fin del container-fluid -->
+		</div><!-- fin	 del container-fluid -->
 		<script src="../diseño/js/jquery-1.11.2.min.js"></script> 
 		<script src = "../diseño/js/bootstrap.min.js"></script>
 		<script src="../diseño/selectstyles/dist/js/bootstrap-select.js"></script>

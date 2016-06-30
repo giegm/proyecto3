@@ -349,13 +349,13 @@ require_once("../modelo/clasesdeconsulta/class_asalariados.php");
 	<div class="col-sm-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<center><strong>Graficas Generales</strong></center>
+				<center><strong>Gráficas Generales</strong></center>
 			</div>
 			<div class="panel panel-danger">
 				<div class="panel-heading" role="tab" id="headingThree">
 			    	<h4 class="panel-title">
 			        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-			          		Personas Con Enfermedades graves, Discapacitados, Pensionados, Personas Alquiladas y Propietarios.
+			          		Gráficas
 			       	 	</a>
 			      	</h4>
 			    </div>

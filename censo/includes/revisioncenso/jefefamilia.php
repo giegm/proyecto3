@@ -63,19 +63,19 @@ $data=$obj->obten_censo_por_id($_GET["id"]);
 
 						<div class="col-sm-2 col-md-2">
 						<?php
-						if($data[0]["NACIONALIDAD"]=="Venezolana"){
+						if($data[0]["NACIONALIDAD"]=="Venezolano(a)"){
 							?>
 							<select class="form-control selectpicker show-tick" name="nac" >
 								<option value="<?php echo $data[0]["NACIONALIDAD"]; ?>"><?php echo $data[0]["NACIONALIDAD"]; ?></option>
-								<option value="Extranjera">Extranjera</option>
+								<option value="Extranjero(a)">Extranjero(a)</option>
 							</select>
 							<?php
 						}
-						if($data[0]["NACIONALIDAD"]=="Extranjera"){
+						if($data[0]["NACIONALIDAD"]=="Extranjero(a)"){
 							?>
 							<select class="form-control selectpicker show-tick" name="nac" >
 								<option value="<?php echo $data[0]["NACIONALIDAD"]; ?>"><?php echo $data[0]["NACIONALIDAD"]; ?></option>
-								<option value="Venezolana">Venezolana</option>
+								<option value="Venezolano(a)">Venezolano(a)</option>
 							</select>
 							<?php
 						}
@@ -93,58 +93,58 @@ $data=$obj->obten_censo_por_id($_GET["id"]);
 
 						<div class="col-sm-2 col-md-2">
 						<?php
-						if($data[0]["EDOCIVIL"]=="Soltero"){
+						if($data[0]["EDOCIVIL"]=="Soltero(a)"){
 							?>
 							<select class="form-control" name="edocivil" value="">
 							<option value="<?php echo $data[0]["EDOCIVIL"]; ?>"><?php echo $data[0]["EDOCIVIL"]; ?></option>
-								<option value="Casado">Casado</option>
-								<option value="Divorciado">Divorciado</option>
-								<option value="Viudo">Viudo</option>
-								<option value="Concubino">Concubino</option>
+								<option value="Casado(a)">Casado(a)</option>
+								<option value="Divorciado(a)">Divorciado(a)</option>
+								<option value="Viudo(a)">Viudo(a)</option>
+								<option value="Concubino(a)">Concubino(a)</option>
 							</select>
 							<?php
 						}
-						if($data[0]["EDOCIVIL"]=="Casado"){
+						if($data[0]["EDOCIVIL"]=="Casado(a)"){
 							?>
 							<select class="form-control" name="edocivil" value="">
 							<option value="<?php echo $data[0]["EDOCIVIL"]; ?>"><?php echo $data[0]["EDOCIVIL"]; ?></option>
-								<option value="Soltero">Soltero</option>
-								<option value="Divorciado">Divorciado</option>
-								<option value="Viudo">Viudo</option>
-								<option value="Concubino">Concubino</option>
+								<option value="Soltero(a)">Soltero(a)</option>
+								<option value="Divorciado(a)">Divorciado(a)</option>
+								<option value="Viudo(a)">Viudo(a)</option>
+								<option value="Concubino(a)">Concubino(a)</option>
 							</select>
 							<?php
 						}
-						if($data[0]["EDOCIVIL"]=="Divorciado"){
+						if($data[0]["EDOCIVIL"]=="Divorciado(a)"){
 							?>
 							<select class="form-control" name="edocivil" value="">
 							<option value="<?php echo $data[0]["EDOCIVIL"]; ?>"><?php echo $data[0]["EDOCIVIL"]; ?></option>
-								<option value="Soltero">Soltero</option>
-								<option value="Casado">Casado</option>
-								<option value="Viudo">Viudo</option>
-								<option value="Concubino">Concubino</option>
+								<option value="Soltero(a)">Soltero(a)</option>
+								<option value="Casado(a)">Casado(a)</option>
+								<option value="Viudo(a)">Viudo(a)</option>
+								<option value="Concubino(a)">Concubino(a)</option>
 							</select>
 							<?php
 						}
-						if($data[0]["EDOCIVIL"]=="Viudo"){
+						if($data[0]["EDOCIVIL"]=="Viudo(a)"){
 							?>
 							<select class="form-control" name="edocivil" value="">
 							<option value="<?php echo $data[0]["EDOCIVIL"]; ?>"><?php echo $data[0]["EDOCIVIL"]; ?></option>
-								<option value="Soltero">Soltero</option>
-								<option value="Divorciado">Divorciado</option>
-								<option value="Casado">Casado</option>
-								<option value="Concubino">Concubino</option>
+								<option value="Soltero(a)">Soltero(a)</option>
+								<option value="Divorciado(a)">Divorciado(a)</option>
+								<option value="Casado(a)">Casado(a)</option>
+								<option value="Concubino(a)">Concubino(a)</option>
 							</select>
 							<?php
 						}
-						if($data[0]["EDOCIVIL"]=="Concubino"){
+						if($data[0]["EDOCIVIL"]=="Concubino(a)"){
 							?>
 							<select class="form-control" name="edocivil" value="">
 							<option value="<?php echo $data[0]["EDOCIVIL"]; ?>"><?php echo $data[0]["EDOCIVIL"]; ?></option>
-								<option value="Soltero">Soltero</option>
-								<option value="Divorciado">Divorciado</option>
-								<option value="Casado">Casado</option>
-								<option value="Viudo">Viudo</option>
+								<option value="Soltero(a)">Soltero(a)</option>
+								<option value="Divorciado(a)">Divorciado(a)</option>
+								<option value="Casado(a)">Casado(a)</option>
+								<option value="Viudo(a)">Viudo(a)</option>
 							</select>
 							<?php
 						}
@@ -569,18 +569,29 @@ $data=$obj->obten_censo_por_id($_GET["id"]);
 								<select class="form-control selectpicker show-tick" name="profesion" >
 								<option value="<?php echo $data_dos[0]["PROFESION"]; ?>"><?php echo $data_dos[0]["PROFESION"]; ?></option>
 								<option value="Trabajador">Trabajador</option>
+								<option value="Estudiante">Ninguna</option>
 							</select>
-								<?php
+							<?php
 							}
-						if($data_dos[0]["PROFESION"]=="Trabajador"){
+							if($data_dos[0]["PROFESION"]=="Trabajador"){
 								?>
 								<select class="form-control selectpicker show-tick" name="profesion" >
 								<option value="<?php echo $data_dos[0]["PROFESION"]; ?>"><?php echo $data_dos[0]["PROFESION"]; ?></option>
 								<option value="Estudiante">Estudiante</option>
+								<option value="Estudiante">Ninguna</option>
 							</select>
 								<?php
 							}
-						?>
+							if($data_dos[0]["PROFESION"]=="Ninguna"){
+								?>
+								<select class="form-control selectpicker show-tick" name="profesion" >
+								<option value="<?php echo $data_dos[0]["PROFESION"]; ?>"><?php echo $data_dos[0]["PROFESION"]; ?></option>
+								<option value="Estudiante">Estudiante</option>
+								<option value="Estudiante">Trabajador</option>
+							</select>
+								<?php
+							}
+							?>
 					    </div>
 
 						</div><!-- fin del 1er form-group -->

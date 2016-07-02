@@ -100,7 +100,6 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 											?>
 											<select class="form-control selectpicker show-tick" name="ing_familiar" id="">
 												<option value="<?php echo $data_cuatro[0]["ING_FAMILIAR"];?>"><?php echo $data_cuatro[0]["ING_FAMILIAR"];?></option>
-												<option value="ninguno">ninguno</option>
 												<option value="Menos de 200.000">Menos de 200.000</option>
 												<option value="De 200.001 a 600.000">De 200.001 a 600.000</option>
 												<option value="De 601.000 a 2.000.000">De 601.000 a 2.000.000</option>
@@ -134,7 +133,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<?php
 										if($data_cinco[0]["COND_TERRENO"]=="Estable"){
 											?>
-											<select class="form-control selectpicker show-tick" name="ing_familiar" id="">
+											<select class="form-control selectpicker show-tick" name="condc_terreno" id="">
 												<option value="<?php echo $data_cinco[0]["COND_TERRENO"];?>"><?php echo $data_cinco[0]["COND_TERRENO"];?></option>
 												<option value="Inestable">Inestable</option>
 												<option value="Alto Riesgo">Alto Riesgo</option>
@@ -147,7 +146,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<?php
 										if($data_cinco[0]["COND_TERRENO"]=="Inestable"){
 											?>
-											<select class="form-control selectpicker show-tick" name="ing_familiar" id="">
+											<select class="form-control selectpicker show-tick" name="condc_terreno" id="">
 												<option value="<?php echo $data_cinco[0]["COND_TERRENO"];?>"><?php echo $data_cinco[0]["COND_TERRENO"];?></option>
 												<option value="Estable">Estable</option>
 												<option value="Alto Riesgo">Alto Riesgo</option>
@@ -160,7 +159,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<?php
 										if($data_cinco[0]["COND_TERRENO"]=="Alto Riesgo"){
 											?>
-											<select class="form-control selectpicker show-tick" name="ing_familiar" id="">
+											<select class="form-control selectpicker show-tick" name="condc_terreno" id="">
 												<option value="<?php echo $data_cinco[0]["COND_TERRENO"];?>"><?php echo $data_cinco[0]["COND_TERRENO"];?></option>
 												<option value="Estable">Estable</option>
 												<option value="Inestable">Inestable</option>
@@ -173,7 +172,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<?php
 										if($data_cinco[0]["COND_TERRENO"]=="Vulnerable"){
 											?>
-											<select class="form-control selectpicker show-tick" name="ing_familiar" id="">
+											<select class="form-control selectpicker show-tick" name="condc_terreno" id="">
 												<option value="<?php echo $data_cinco[0]["COND_TERRENO"];?>"><?php echo $data_cinco[0]["COND_TERRENO"];?></option>
 												<option value="Estable">Estable</option>
 												<option value="Inestable">Inestable</option>
@@ -186,7 +185,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<?php
 										if($data_cinco[0]["COND_TERRENO"]=="Otro"){
 											?>
-											<select class="form-control selectpicker show-tick" name="ing_familiar" id="">
+											<select class="form-control selectpicker show-tick" name="condc_terreno" id="">
 												<option value="<?php echo $data_cinco[0]["COND_TERRENO"];?>"><?php echo $data_cinco[0]["COND_TERRENO"];?></option>
 												<option value="Estable">Estable</option>
 												<option value="Inestable">Inestable</option>
@@ -423,7 +422,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label">Tipo/Habitaciones</label>
 
 										<div class="col-sm-2 col-md-4">
-											<select class="form-control selectpicker show-tick" name="habitaciones[]" id="" multiple title="<?php 
+											<select class="form-control selectpicker show-tick" name="habitaciones" id=""title="<?php 
 												for($a=0;$a<count($data_cinco);$a++)
 												{
 												echo $data_cinco[$a]["HABITACIONES"]." ";
@@ -443,7 +442,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 							    		<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">N° habitaciones</label>
 
 										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_cinco[0]["NUM_HABITACIONES"]; ?>" type="text" class="form-control"  name="num_habitaciones" id="" placeholder="solo numeros" required onKeyPress="return SoloNumeros(event);">
+											<input value="<?php echo $data_cinco[0]["NUM_HABITACIONES"]; ?>" type="text" class="form-control" maxlength="2" name="num_habitaciones" id="" placeholder="solo numeros" required onKeyPress="return SoloNumeros(event);">
 										</div>
 
 										<label for="" class="col-sm-2 col-md-2 control-label">Pertenece a una (OCV)</label>
@@ -813,7 +812,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Enseres de la vivienda</label>
 
 										<div class="col-sm-4 col-md-4">
-											<select class="form-control selectpicker show-tick" name="enseres_vivienda[]" id="" multiple title="<?php
+											<select class="form-control selectpicker show-tick" name="enseres_vivienda" id="" title="<?php
 												for($e=0;$e<count($data_cincodos);$e++){
 												echo $data_cincodos[$e]["ENSERES_VIVIENDA"]." ";
 												}
@@ -897,6 +896,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="tipo_ayuda_casa" id="">
 												<option value="<?php echo $data_cinco[0]["TIPO_AYUDA"];?>"><?php echo $data_cinco[0]["TIPO_AYUDA"];?></option>
 												<option value="Sustitucion">Sustitución</option>
+												<option value="Ninguna">Ninguna</option>
 											</select>
 											<?php
 											}//fin del 2do if
@@ -907,6 +907,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="tipo_ayuda_casa" id="">
 												<option value="<?php echo $data_cinco[0]["TIPO_AYUDA"];?>"><?php echo $data_cinco[0]["TIPO_AYUDA"];?></option>
 												<option value="Rehabilitacion">Rehabilitación</option>
+												<option value="Ninguna">Ninguna</option>
 											</select>
 											<?php
 											}//fin del 2do if
@@ -927,7 +928,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label">Indique el tipo</label>
 
 										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_cinco[0]["DESCRIPCION"]; ?>" type="text" name="descrip_ayuda_casa" id="" placeholder="" class="form-control" required onkeypress="return soloLetras(event);">	
+											<input value="<?php echo $data_cinco[0]["DESCRIPCION"]; ?>" maxlength="30" type="text" name="descrip_ayuda_casa" id="" placeholder="" class="form-control" required onkeypress="return soloLetras(event);">	
 										</div>
 
 									</div>
@@ -938,18 +939,17 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 
 										<div class="col-sm-3 col-md-3">
 										
-											<select class="form-control selectpicker show-tick" name="plagas[]" id="" multiple title="<?php
+											<select class="form-control selectpicker show-tick" name="plagas" id="" title="<?php
 												for($r=0;$r<sizeof($data_cinco);$r++){ 
 												echo $data_cinco[$r]["INSECTOS_ROEDORES"]." ";
 												}
 												?>">
-												<option value="SI">SI</option>
-												<option value="NO">NO</option>
+												<option value="Ninguno">Ninguno</option>
 												<option value="Moscas">Moscas</option>
-												<option value="Hormigas">Hormigas</option>
+												<option value="Hormiga">Hormiga</option>
 												<option value="Ratones">Ratones</option>
 												<option value="Ciempies">Ciempiés</option>
-												<option value="Otros">Otros</option>
+												<option value="Otro(s)">Otro(s)</option>
 											</select>
 											
 										</div>
@@ -957,21 +957,19 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label">Posee animales domesticos</label>
 
 										<div class="col-sm-3 col-md-3">
-											<select class="form-control selectpicker show-tick" name="animales_domst[]" id="" multiple title="<?php
+											<select class="form-control selectpicker show-tick" name="animales_domst" id="" title="<?php
 												for($n=0;$n<sizeof($data_cinco);$n++){ 
 												echo $data_cinco[$n]["ANIMALES_DOMESTICOS"]." ";
 												}
 												?>">
-												<option value="SI">SI</option>
-												<option value="NO">NO</option>
+												<option value="Ninguno">Ninguno</option>
 												<option value="Perro">Perro</option>
 												<option value="Gato">Gato</option>
 												<option value="Gallinas">Gallinas</option>
 												<option value="Pajaros">Pajaros</option>
 												<option value="Patos">Patos</option>
 												<option value="Cochinos">Cochinos</option>
-												<option value="Otros">Otros</option>
-
+												<option value="Otro(s)">Otro(s)</option>
 											</select>	
 										</div>
 

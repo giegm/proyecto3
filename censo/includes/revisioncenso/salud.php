@@ -21,19 +21,21 @@ $data_selec=$obj->obten_censo_por_id_condiciones_salud($_GET["id"]);//para los m
 
 											<div class="col-sm-3 col-md-3">
 											
-												<select class="form-control selectpicker show-tick" name="pers_enfermedades" id="" multiple title="<?php 
+												<select class="form-control selectpicker show-tick" name="pers_enfermedades" id="" title="<?php 
 														for($b=0;$b<count($data_selec);$b++){
 														echo $data_selec[$b]["PERSONA_ENFERMEDAD"]. " ";
 														}
 														?>">
-														<option value="SIDA">SIDA</option>
-														<option value="Corazon">Corazón</option>
+														<option value="Ninguna">Ninguna</option>
+														<option value="Diabetes">Diabetes</option>
+														<option value="Sida">Sida</option>
+														<option value="Cancer">Cancer</option>
 														<option value="Hepatitis">Hepatitis</option>
+														<option value="Corazon">Corazón</option>
 														<option value="Leucemia">Leucemia</option>
 														<option value="Tuberculosis">Tuberculosis</option>
 														<option value="Hipertension">Hipertensión</option>
 														<option value="Asma">Asma</option>
-														<option value="Cancer">Cancer</option>
 														<option value="Otra">Otra</option>
 
 													</select>
@@ -98,7 +100,7 @@ $data_selec=$obj->obten_censo_por_id_condiciones_salud($_GET["id"]);//para los m
 											<label for="" class="col-sm-3 col-md-3 control-label">Tipo de ayuda</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input value="<?php echo $data_seis[0]["TIPO_AYUDA"]; ?>" type="text" name="tipo_ayuda_enfermo" id="" placeholder="especifiquela" class="form-control" >
+												<input value="<?php echo $data_seis[0]["TIPO_AYUDA"]; ?>" type="text" name="tipo_ayuda_enfermo" id="" required onkeypress="return soloLetras(event);" maxlength="30" placeholder="especifiquela" class="form-control" >
 											</div>
 
 										</div>
@@ -109,20 +111,21 @@ $data_selec=$obj->obten_censo_por_id_condiciones_salud($_GET["id"]);//para los m
 
 											<div class="col-sm-3 col-md-3">
 
-												<select class="form-control selectpicker show-tick" name="pers_exclusion" id="" multiple title="<?php for($s=0;$s<count($data_selec);$s++){ echo $data_selec[$s]["SITUACION_EXCLUSION"]. " "; }?>">
-												<option value="Niños de la calle">Niños de la calle</option>
+												<select class="form-control selectpicker show-tick" name="pers_exclusion" id="" title="<?php for($s=0;$s<count($data_selec);$s++){ echo $data_selec[$s]["SITUACION_EXCLUSION"]. " "; }?>">
+													<option value="Ninguna">Ninguna</option>
+													<option value="Niños de la calle">Niños de la calle</option>
 													<option value="Indigentes">Indigentes</option>
 													<option value="Enfermos terminales">Enfermos terminales</option>
 													<option value="Discapacitados">Discapacitados</option>
 													<option value="Tercera edad">Tercera edad</option>
-													<option value="Otros">Otros</option>
+													<option value="Otra">Otra</option>
 												</select>
 											</div>
 
 											<label for="" class="col-sm-3 col-md-3 control-label">Cuantos</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input value="<?php echo $data_seis[0]["CANTIDAD_EXCLUSION"]; ?>" type="text" name="cant_exclusion" id="" placeholder="solo números" class="form-control" required onKeyPress="return SoloNumeros(event);">
+												<input value="<?php echo $data_seis[0]["CANTIDAD_EXCLUSION"]; ?>" type="text" name="cant_exclusion" id="" maxlength="2" placeholder="solo números" class="form-control" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 										</div>

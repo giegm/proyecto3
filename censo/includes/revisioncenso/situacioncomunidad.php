@@ -17,7 +17,7 @@
 										potencialidades y aspectos ventajosos que tiene su comunidad?</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input value="<?php echo $data_ocho_dos[0]["P_CATORCE"]; ?>" type="text" name="pueblo_pregunta14" id="" placeholder="sea breve" class="form-control" >
+												<input value="<?php echo $data_ocho_dos[0]["P_CATORCE"]; ?>" type="text" name="pueblo_pregunta14" id="" placeholder="sea breve" class="form-control" maxlength="40" required onkeypress="return soloLetras(event);">
 											</div>
 
 										</div>
@@ -28,7 +28,7 @@
 										problemas y debilidades de su comunidad?</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input value="<?php echo $data_ocho_dos[0]["P_QUINCE"]; ?>" type="text" name="pueblo_pregunta15" id="" placeholder="sea breve" class="form-control" >
+												<input value="<?php echo $data_ocho_dos[0]["P_QUINCE"]; ?>" type="text" name="pueblo_pregunta15" id="" placeholder="sea breve" class="form-control" maxlength="40" required onkeypress="return soloLetras(event);">
 											</div>
 
 										</div>

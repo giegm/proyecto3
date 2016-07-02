@@ -15,8 +15,8 @@
 											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Personas con enfermedades</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="pers_enfermedades[]" multiple>
-												<option value="0"></option>
+												<select class="form-control selectpicker show-tick" name="pers_enfermedades">
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $persenferm=$obj2->get_persona_enfermedades(); 
 	                                            for($e=0;$e<sizeof($persenferm);$e++){
@@ -56,7 +56,7 @@
 											<label for="" class="col-sm-3 col-md-3 control-label">Tipo de ayuda</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text" name="tipo_ayuda_enfermo" id="" placeholder="Describa que tipo de ayuda necesita" class="form-control" >
+												<input type="text" name="tipo_ayuda_enfermo" id="" placeholder="Describa que tipo de ayuda necesita" class="form-control" required onkeypress="return soloLetras(event);" maxlength="30">
 											</div>
 
 										</div>
@@ -66,8 +66,8 @@
 											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Situación de exclusión</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="pers_exclusion[]" multiple>
-												
+												<select class="form-control selectpicker show-tick" name="pers_exclusion">
+													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $persexclus=$obj2->get_personas_exclusion(); 
 		                                            for($f=0;$f<sizeof($persexclus);$f++){
@@ -82,7 +82,7 @@
 											<label for="" class="col-sm-3 col-md-3 control-label">Cuantos</label>
 
 											<div class="col-sm-2 col-md-2">
-												<input type="text" name="cant_exclusion" id="" placeholder="Indique la cantidad en números" class="form-control" >
+												<input type="text" name="cant_exclusion" id="" maxlength="2" placeholder="Indique la cantidad en números" class="form-control" required onKeyPress="return SoloNumeros(event);">
 											</div>
 
 										</div>

@@ -37,13 +37,13 @@ $data_ocho=$obj->obten_censo_por_id_ocho($_GET["id"]);
 							    		<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Nombre y apellido</label>
 
 							    			<div class="col-sm-2 col-md-2">
-							    				<input value="<?php echo $data_ocho[0]["NOMBRES"]; ?>" type="text" name="names_encuestado" placeholder="Nombre y Apellido" class="form-control" required onkeypress="return soloLetras(event);">
+							    				<input value="<?php echo $data_ocho[0]["NOMBRES"]; ?>" type="text" name="names_encuestado" maxlength="20" placeholder="Nombre y Apellido" class="form-control" required onkeypress="return soloLetras(event);">
 							    			</div>
 
 							    		<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">N° de cedula</label>
 
 							    			<div class="col-sm-2 col-md-2">
-							    				<input value="<?php echo $data_ocho[0]["CEDULA"]; ?>" type="text" name="ced_encuestado" placeholder="solo numeros" class="form-control" required onKeyPress="return SoloNumeros(event);">
+							    				<input value="<?php echo $data_ocho[0]["CEDULA"]; ?>" type="text" name="ced_encuestado"maxlengt="8" placeholder="solo numeros" class="form-control" required onKeyPress="return SoloNumeros(event);">
 							    			</div>
 									</div>
 

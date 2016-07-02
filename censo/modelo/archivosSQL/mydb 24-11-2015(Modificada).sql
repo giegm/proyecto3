@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2015 a las 19:52:07
+-- Tiempo de generación: 02-07-2016 a las 09:50:08
 -- Versión del servidor: 5.6.21
--- Versión de PHP: 5.6.3
+-- Versión de PHP: 5.5.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -94,20 +94,21 @@ INSERT INTO `casa_aguas_servidas` (`ID_AGUASERV`, `AGUASERVIDA`) VALUES
 CREATE TABLE IF NOT EXISTS `casa_animales` (
 `ID_ANIMALES` int(11) NOT NULL,
   `ANIMALES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_animales`
 --
 
 INSERT INTO `casa_animales` (`ID_ANIMALES`, `ANIMALES`) VALUES
-(1, 'Perro'),
-(2, 'Gato'),
-(3, 'Gallinas'),
-(4, 'Pájaros'),
-(5, 'Patos'),
-(6, 'Cochinos'),
-(7, 'Otros');
+(1, 'Ninguno'),
+(2, 'Perro'),
+(3, 'Gato'),
+(4, 'Gallinas'),
+(5, 'Pájaros'),
+(6, 'Patos'),
+(7, 'Cochinos'),
+(8, 'Otro(s)');
 
 -- --------------------------------------------------------
 
@@ -198,9 +199,9 @@ CREATE TABLE IF NOT EXISTS `casa_gas` (
 --
 
 INSERT INTO `casa_gas` (`ID_GAS`, `GAS`) VALUES
-(1, 'Bombona'),
-(2, 'Tuberia'),
-(3, 'No posee');
+(1, 'No posee'),
+(2, 'Bombona'),
+(3, 'Tuberia');
 
 -- --------------------------------------------------------
 
@@ -276,18 +277,19 @@ INSERT INTO `casa_mecanismo_infor` (`ID_MECANISMOINFO`, `MECANISMOINFO`) VALUES
 CREATE TABLE IF NOT EXISTS `casa_plagas` (
 `ID_PLAGAS` int(11) NOT NULL,
   `PLAGAS` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_plagas`
 --
 
 INSERT INTO `casa_plagas` (`ID_PLAGAS`, `PLAGAS`) VALUES
-(1, 'Moscas'),
-(2, 'Hormigas'),
-(3, 'Ratones'),
-(4, 'Ciempies'),
-(5, 'Otros');
+(1, 'Ninguno'),
+(2, 'Moscas'),
+(3, 'Hormigas'),
+(4, 'Ratones'),
+(5, 'Ciempies'),
+(6, 'Otro(s)');
 
 -- --------------------------------------------------------
 
@@ -577,7 +579,7 @@ INSERT INTO `censos` (`ID_CENSO`, `FECHA_CENSO`, `HORA_CENSO`, `ID_JEFE`) VALUES
 CREATE TABLE IF NOT EXISTS `comunidad_misiones` (
 `ID_MISIONES` int(11) NOT NULL,
   `MISIONES` varchar(70) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `comunidad_misiones`
@@ -590,7 +592,8 @@ INSERT INTO `comunidad_misiones` (`ID_MISIONES`, `MISIONES`) VALUES
 (4, 'Identidad'),
 (5, 'Barrio Adentro'),
 (6, 'Ezequiel Zamora'),
-(7, 'Mercal');
+(7, 'Mercal'),
+(8, 'Ninguna');
 
 -- --------------------------------------------------------
 
@@ -684,8 +687,8 @@ CREATE TABLE IF NOT EXISTS `datos_encuestado` (
 --
 
 INSERT INTO `datos_encuestado` (`ID_ENCUESTADO`, `NOMBRES`, `CEDULA`, `ENCUESTADOR`, `ID_JEFE`) VALUES
-(5, 'sdf sdfdsfdsf', 435534, 'Piloto', 1),
-(6, 'sdf sdfdsfdsf', 435534, 'Piloto', 6);
+(5, 'sdf sdfdsfdsf', 435534, 'admin', 1),
+(6, 'sdf sdfdsfdsf', 435534, 'admin', 6);
 
 -- --------------------------------------------------------
 
@@ -744,7 +747,7 @@ CREATE TABLE IF NOT EXISTS `datos_login` (
   `USERADMIN` varchar(20) DEFAULT NULL,
   `CEDULA` int(9) DEFAULT NULL,
   `PASSADMIN` longtext,
-  `PASSADMINDOS` varchar(15) CHARACTER SET utf8 NOT NULL,
+  `PASSADMINDOS` longtext CHARACTER SET utf8 NOT NULL,
   `ID_PERFIL` int(11) NOT NULL,
   `ID_EDO_PERFIL` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
@@ -754,9 +757,9 @@ CREATE TABLE IF NOT EXISTS `datos_login` (
 --
 
 INSERT INTO `datos_login` (`ID_LOGIN`, `USERADMIN`, `CEDULA`, `PASSADMIN`, `PASSADMINDOS`, `ID_PERFIL`, `ID_EDO_PERFIL`) VALUES
-(1, 'Piloto', 111122222, 'b4c100cb69fc93461d73e6c7f41a3812', 'cufm', 1, 1),
-(4, 'Consultor', 20202020, '33d3a1b450a9fe871cabdfc13db2c2e0', 'consultor', 3, 2),
-(6, 'Publicador', 56145645, '925ccfdd6aaf753167f3eb0b9c06a692', 'publicador', 2, 2);
+(1, 'admin', 111122222, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 1, 1),
+(4, 'operador', 20202020, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 3, 1),
+(6, 'publicador', 56145645, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -802,8 +805,8 @@ CREATE TABLE IF NOT EXISTS `datos_relacion` (
 --
 
 INSERT INTO `datos_relacion` (`ID_RELACION`, `EMBARAZO`, `CNE`, `SEXO`, `EDOCIVIL`, `NACIONALIDAD`, `ID_JEFE`) VALUES
-(5, 'SI', 'SI', 'Masculino', 'Soltero', 'Venezolana', '1'),
-(6, 'SI', 'SI', 'Masculino', 'Soltero', 'Venezolana', '6');
+(5, 'SI', 'SI', 'Masculino', 'Soltero(a)', 'Venezolano(a)', '1'),
+(6, 'SI', 'SI', 'Masculino', 'Soltero(a)', 'Venezolano(a)', '6');
 
 -- --------------------------------------------------------
 
@@ -1059,10 +1062,9 @@ CREATE TABLE IF NOT EXISTS `noticias_web` (
   `FCHA_NOTICIA` date NOT NULL,
   `HORA` time NOT NULL,
   `DESCRIPC_NOTICIA` varchar(300) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `IMAGEN` mediumblob NOT NULL,
-  `TIPO_IMAGEN` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `IMAGEN` varchar(100) NOT NULL,
   `ID_CATEGORIA` int(11) NOT NULL,
-  `ID_PERFIL` int(11) NOT NULL
+  `ID_LOGIN` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1074,22 +1076,23 @@ CREATE TABLE IF NOT EXISTS `noticias_web` (
 CREATE TABLE IF NOT EXISTS `parentesco` (
 `ID_PARENTESCO` int(11) NOT NULL,
   `PARENTESCO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `parentesco`
 --
 
 INSERT INTO `parentesco` (`ID_PARENTESCO`, `PARENTESCO`) VALUES
-(1, 'Madre'),
-(2, 'Padre'),
-(3, 'Hijo(a)'),
-(4, 'Sobrino(a)'),
-(5, 'Hermano(a)'),
-(6, 'Tio(a)'),
-(7, 'Abuelo(a)'),
-(8, 'Nieto(a)'),
-(9, 'Otro');
+(1, 'Mamá'),
+(2, 'Papá'),
+(3, 'Esposo(a)'),
+(4, 'Hijo(a)'),
+(5, 'Sobrino(a)'),
+(6, 'Hermano(a)'),
+(7, 'Tio(a)'),
+(8, 'Abuelo(a)'),
+(9, 'Nieto(a)'),
+(10, 'Otro(a)');
 
 -- --------------------------------------------------------
 
@@ -1137,8 +1140,8 @@ CREATE TABLE IF NOT EXISTS `perfiles` (
 
 INSERT INTO `perfiles` (`ID_PERFIL`, `PERFIL`) VALUES
 (1, 'Administrador'),
-(2, 'Publicador'),
-(3, 'Consultor');
+(2, 'Operador'),
+(3, 'Publicador');
 
 -- --------------------------------------------------------
 
@@ -1149,19 +1152,20 @@ INSERT INTO `perfiles` (`ID_PERFIL`, `PERFIL`) VALUES
 CREATE TABLE IF NOT EXISTS `personas_exclusion` (
 `ID_EXCLUSION` int(11) NOT NULL,
   `PERSEXCLUSION` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `personas_exclusion`
 --
 
 INSERT INTO `personas_exclusion` (`ID_EXCLUSION`, `PERSEXCLUSION`) VALUES
-(1, 'Niños de la calle'),
-(2, 'Indigentes'),
-(3, 'Enfermos terminales'),
-(4, 'Discapacitados'),
-(5, 'Tercera edad'),
-(6, 'Otros');
+(1, 'Ninguna'),
+(2, 'Niños de la calle'),
+(3, 'Indigentes'),
+(4, 'Enfermos terminales'),
+(5, 'Discapacitados'),
+(6, 'Tercera edad'),
+(7, 'Otra');
 
 -- --------------------------------------------------------
 
@@ -1172,23 +1176,24 @@ INSERT INTO `personas_exclusion` (`ID_EXCLUSION`, `PERSEXCLUSION`) VALUES
 CREATE TABLE IF NOT EXISTS `persona_enfermedades` (
 `ID_ENFERMEDADES` int(11) NOT NULL,
   `ENFERMEDADES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `persona_enfermedades`
 --
 
 INSERT INTO `persona_enfermedades` (`ID_ENFERMEDADES`, `ENFERMEDADES`) VALUES
-(1, 'Diabetes'),
-(2, 'Sida'),
-(3, 'Cancer'),
-(4, 'Hepatitis'),
-(5, 'Corazon'),
-(6, 'Leucemia'),
-(7, 'Tuberculosis'),
-(8, 'Hipertension'),
-(9, 'Asma'),
-(10, 'Otra');
+(1, 'Ninguna'),
+(2, 'Diabetes'),
+(3, 'Sida'),
+(4, 'Cancer'),
+(5, 'Hepatitis'),
+(6, 'Corazon'),
+(7, 'Leucemia'),
+(8, 'Tuberculosis'),
+(9, 'Hipertension'),
+(10, 'Asma'),
+(11, 'Otra');
 
 -- --------------------------------------------------------
 
@@ -1206,11 +1211,11 @@ CREATE TABLE IF NOT EXISTS `persona_estado_civil` (
 --
 
 INSERT INTO `persona_estado_civil` (`ID_EDOCIVIL`, `EDOCIVIL`) VALUES
-(1, 'Soltero'),
-(2, 'Casado'),
-(3, 'Divorciado'),
-(4, 'Viudo'),
-(5, 'Concubino');
+(1, 'Soltero(a)'),
+(2, 'Casado(a)'),
+(3, 'Divorciado(a)'),
+(4, 'Viudo(a)'),
+(5, 'Concubino(a)');
 
 -- --------------------------------------------------------
 
@@ -1228,8 +1233,8 @@ CREATE TABLE IF NOT EXISTS `persona_nacionalidad` (
 --
 
 INSERT INTO `persona_nacionalidad` (`id_nacionalidad`, `nacionalidad`) VALUES
-(1, 'Venezolana'),
-(2, 'Extranjera');
+(1, 'Venezolano(a)'),
+(2, 'Extranjero(a)');
 
 -- --------------------------------------------------------
 
@@ -1300,7 +1305,7 @@ INSERT INTO `preguntas_part_comunitaria` (`ID_PREG_PARTCOMUNITARIA`, `P_UNO`, `P
 CREATE TABLE IF NOT EXISTS `profesiones` (
 `ID_PROFESION` int(11) NOT NULL,
   `PROFESION` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `profesiones`
@@ -1308,7 +1313,8 @@ CREATE TABLE IF NOT EXISTS `profesiones` (
 
 INSERT INTO `profesiones` (`ID_PROFESION`, `PROFESION`) VALUES
 (1, 'Estudiante'),
-(2, 'Trabajador');
+(2, 'Trabajador'),
+(3, 'Ninguna');
 
 -- --------------------------------------------------------
 
@@ -1774,7 +1780,7 @@ MODIFY `ID_AGUASERV` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT de la tabla `casa_animales`
 --
 ALTER TABLE `casa_animales`
-MODIFY `ID_ANIMALES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `ID_ANIMALES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `casa_condiciones_terreno`
 --
@@ -1814,7 +1820,7 @@ MODIFY `ID_MECANISMOINFO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT de la tabla `casa_plagas`
 --
 ALTER TABLE `casa_plagas`
-MODIFY `ID_PLAGAS` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `ID_PLAGAS` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `casa_recoleccion_basura`
 --
@@ -1879,7 +1885,7 @@ MODIFY `ID_CENSO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT de la tabla `comunidad_misiones`
 --
 ALTER TABLE `comunidad_misiones`
-MODIFY `ID_MISIONES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `ID_MISIONES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `condiciones_salud`
 --
@@ -1989,7 +1995,7 @@ MODIFY `ID_NOTICIA` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT de la tabla `parentesco`
 --
 ALTER TABLE `parentesco`
-MODIFY `ID_PARENTESCO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+MODIFY `ID_PARENTESCO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `participacion_comunitaria`
 --
@@ -2004,12 +2010,12 @@ MODIFY `ID_PERFIL` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT de la tabla `personas_exclusion`
 --
 ALTER TABLE `personas_exclusion`
-MODIFY `ID_EXCLUSION` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `ID_EXCLUSION` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `persona_enfermedades`
 --
 ALTER TABLE `persona_enfermedades`
-MODIFY `ID_ENFERMEDADES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `ID_ENFERMEDADES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `persona_estado_civil`
 --
@@ -2034,7 +2040,7 @@ MODIFY `ID_PREG_PARTCOMUNITARIA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=
 -- AUTO_INCREMENT de la tabla `profesiones`
 --
 ALTER TABLE `profesiones`
-MODIFY `ID_PROFESION` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `ID_PROFESION` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `situacion_economica`
 --

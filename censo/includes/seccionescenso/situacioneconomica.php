@@ -15,7 +15,7 @@
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Donde trabaja</label>
 										
 										<div class="col-sm-4 col-md-4">
-											<input type="text" name="donde_trabaja" class="form-control"  placeholder="Indique el nombre de la empresa">
+											<input type="text" name="donde_trabaja" maxlength="30" class="form-control"  placeholder="Indique el nombre de la empresa" required onkeypress="return soloLetras(event);">
 										</div>
 
 							    		</div>
@@ -121,8 +121,8 @@
 										<label for="" class="col-sm-2 col-md-2 control-label">Tipo/Habitaciones</label>
 
 										<div class="col-sm-2 col-md-2">
-											<select class="form-control selectpicker show-tick" name="habitaciones[]" multiple>
-													
+											<select class="form-control selectpicker show-tick" name="habitaciones">
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $tipohab=$obj2->get_casa_habitaciones(); 
 	                                            for($x=0;$x<sizeof($tipohab);$x++){
@@ -141,7 +141,7 @@
 							    		<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">N° habitaciones</label>
 
 										<div class="col-sm-2 col-md-2">
-											<input type="text" class="form-control" name="num_habitaciones" id="" placeholder="Cantidad en números">
+											<input type="text" class="form-control" name="num_habitaciones" id="" maxlength="2" required onkeypress="return SoloNumeros(event);" placeholder="Cantidad en números">
 										</div>
 
 										<label for="" class="col-sm-2 col-md-2 control-label">Pertenece a una (OCV)</label>
@@ -244,7 +244,7 @@
 										<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Enseres de la vivienda</label>
 
 										<div class="col-sm-2 col-md-2">
-											<select class="form-control selectpicker show-tick" name="enseres_vivienda[]" multiple>
+											<select class="form-control selectpicker show-tick" name="enseres_vivienda">
 												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $ensersvivind=$obj2->get_casa_enseres_vivienda(); 
@@ -296,7 +296,7 @@
 										<label for="" class="col-sm-2 col-md-2 control-label">Indique el tipo</label>
 
 										<div class="col-sm-2 col-md-2">
-											<input type="text" name="descrip_ayuda_casa" id="" placeholder="" class="form-control" placeholder="">	
+											<input type="text" name="descrip_ayuda_casa" id="" placeholder=""  maxlength="30"required onkeypress="return soloLetras(event);" class="form-control" placeholder="">	
 										</div>
 
 									</div>
@@ -306,8 +306,8 @@
 										<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Presencia de roedores o insectos</label>
 
 										<div class="col-sm-2 col-md-2">
-											<select class="form-control selectpicker show-tick" name="plagas[]" multiple>
-											
+											<select class="form-control selectpicker show-tick" name="plagas">
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $casaplagas=$obj2->get_casa_plagas(); 
 	                                            for($d=0;$d<sizeof($casaplagas);$d++){
@@ -322,8 +322,8 @@
 										<label for="" class="col-sm-2 col-md-2 control-label">Posee animales domesticos</label>
 
 										<div class="col-sm-2 col-md-2">
-											<select class="form-control selectpicker show-tick" name="animales_domst[]" multiple>
-											
+											<select class="form-control selectpicker show-tick" name="animales_domst">
+												<option value="0">seleccione</option>
 	                                            <?php 
 	                                            $animcasa=$obj2->get_casa_animales(); 
 	                                            for($e=0;$e<sizeof($animcasa);$e++){

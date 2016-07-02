@@ -31,20 +31,20 @@ $nac=$obj2->get_nacionalidad();
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">C.I. N°</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="text" name="ci" autofocus class="form-control" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+							<input type="text" name="ci" autofocus class="form-control" maxlength="8" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
 							<br/>
 						</div>
 
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Nombres</label>
 						
 						<div class="col-sm-2 col-md-2">
-							<input type="text" name="name" class="form-control" placeholder="Nombre Completo" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
+							<input type="text" name="name" class="form-control" maxlength="30" placeholder="Nombre Completo" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
 						</div>
 
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Apellidos</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="text" name="ape" class="form-control" placeholder="Apellido Completo" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
+							<input type="text" name="ape" class="form-control" placeholder="Apellido Completo" maxlength="45" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
 						</div>
 
 						</div><!-- fin del primer form-group -->
@@ -60,7 +60,7 @@ $nac=$obj2->get_nacionalidad();
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Edad</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="text" name="edad" class="form-control" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+							<input type="text" name="edad" class="form-control" maxlength="3" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
 						</div>
 					
 						<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Nacionalidad</label>
@@ -126,19 +126,19 @@ $nac=$obj2->get_nacionalidad();
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefono CEL</label>
 
 						<div class="col-sm-2 col-md-2">
-						<input type="text" class="form-control" name="telfcel" placeholder="Indique el número con su codigo de area" required onKeyPress="return SoloNumeros(event);" >
+						<input type="text" class="form-control" name="telfcel" maxlength="11" placeholder="Indique el número con su codigo de area" required onKeyPress="return SoloNumeros(event);" >
 						</div>
 
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefono HAB</label>
 
 						<div class="col-sm-2 col-md-2">
-						<input type="text" class="form-control" name="telfhab" placeholder="Indique el número con su codigo de area" required onKeyPress="return SoloNumeros(event);">
+						<input type="text" class="form-control" name="telfhab" maxlength="11" placeholder="Indique el número con su codigo de area" required onKeyPress="return SoloNumeros(event);">
 						</div>
 
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefono OFIC</label>
 
 						<div class="col-sm-2 col-md-2">
-						<input type="text" class="form-control" name="telfofic" placeholder="Indique el número con su codigo de area" required onKeyPress="return SoloNumeros(event);">
+						<input type="text" class="form-control" name="telfofic" maxlength="11" placeholder="Indique el número con su codigo de area" required onKeyPress="return SoloNumeros(event);">
 						</div>
 
 						</div><!-- fin del 2do form-group -->
@@ -147,7 +147,7 @@ $nac=$obj2->get_nacionalidad();
 							<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Email</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="email" class="form-control" name="email" placeholder="correo@example.com" >
+							<input type="email" class="form-control" name="email" maxlength="45" placeholder="correo@example.com" >
 						</div>
 
 						</div>
@@ -199,7 +199,7 @@ $nac=$obj2->get_nacionalidad();
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Tipo Discapacidad</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="text" class="form-control"name="tipodisc" placeholder="De ser si indique" >
+							<input type="text" class="form-control"name="tipodisc" maxlength="30" placeholder="De ser si indique" >
 						</div>
 
 						<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Pensionado</label>
@@ -218,7 +218,7 @@ $nac=$obj2->get_nacionalidad();
 							<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Institucion del pensionado</label>
 
 						<div class="col-sm-3 col-md-3">
-							<input type="text" class="form-control" name="inst" placeholder="De poseer una indique" >
+							<input type="text" class="form-control" maxlength="30" name="inst" placeholder="De poseer una indique" >
 						</div>
 						</div>
 
@@ -261,7 +261,7 @@ $nac=$obj2->get_nacionalidad();
 					    <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Ingreso Mensual</label>
 
 						<div class="col-sm-2 col-md-2">
-							<input type="text" class="form-control" name="ingmens" placeholder="Cantidad en Bsf" required onKeyPress="return SoloNumeros(event);">
+							<input type="text" class="form-control" maxlength="10" name="ingmens" placeholder="Cantidad en Bsf" required onKeyPress="return SoloNumeros(event);">
 						</div>
 
 						</div><!-- fin del 1er form-group -->

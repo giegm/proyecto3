@@ -45,18 +45,19 @@ public function Modificar_censo_por_id($id){
 
 		//datos de los familiares
 		//datos del familiar uno
-		$name_f1=$_POST['nameyape_familiar1'];
-		$ced_f1 = $_POST['ced_familiar1'];
-		$fnac_f1 = $_POST['fnac_familiar1'];
-		$edad_f1 = $_POST['edad_familiar1'];
-		$discp_f1 = $_POST['discap_familiar1'];
-		$embrz_f1 = $_POST['embarazo_familiar1'];
-		$parnt_f1 = $_POST['parentesco_familiar1'];
-		$gintruc_f1 = $_POST['gradoinst_familiar1'];
-		$cne_f1 = $_POST['cne_familiar1'];
-		$prof_f1 = $_POST['profesion_familiar1'];
-		$pens_f1 = $_POST['pensionado_familiar1'];
-		$ingmensual_f1 = $_POST['ingrmensual_familiar1'];
+		$namepaef=$_POST['namepaef'];
+		$cedf = $_POST['cedf'];
+		$sexof = $_POST['sexof'];
+		$fchanacf = $_POST['fchanacf'];
+		$edadf = $_POST['edadf'];
+		$discpf = $_POST['discpf'];
+		$embrzf = $_POST['embrzf'];
+		$parntscf = $_POST['parntscf'];
+		$instrcf = $_POST['instrcf'];
+		$cnef = $_POST['cnef'];
+		$profesf = $_POST['profesf'];
+		$pensf = $_POST['pensf'];
+		$ingmnsf = $_POST['ingmnsf'];
 
 		//datos de situacion economica
 		$dond_trabaja = $_POST['donde_trabaja'];
@@ -132,7 +133,7 @@ public function Modificar_censo_por_id($id){
 		$pueblo_pregunta9=$_POST['pueblo_pregunta9'];
 		$pueblo_pregunta10=$_POST['pueblo_pregunta10'];
 		$pueblo_pregunta11=$_POST['pueblo_pregunta11'];
-		$pueblo_pregunta12=$_POST['pueblo_pregunta12'];
+		$pueblo_pregunta_final=$_POST['pueblo_pregunta_final'];
 		$pueblo_pregunta14=$_POST['pueblo_pregunta14'];
 		$pueblo_pregunta15=$_POST['pueblo_pregunta15'];
 		$otra_area = $_POST['otra_area'];
@@ -179,32 +180,16 @@ public function Modificar_censo_por_id($id){
 		
 		$sql .= "UPDATE datos_encuestado SET NOMBRES='$names_encuestado',CEDULA='$ced_encuestado',ENCUESTADOR='$names_encuestador' WHERE ID_JEFE=$id;";
 		
-	for($i=0; $i<count($_POST["namepaef"]); $i++){
-
-		if(!empty($_POST["namepaef"][$i]) && !empty($_POST["cedf"][$i]) && !empty($_POST["fchanacf"][$i]) && !empty($_POST["edadf"][$i]) && !empty($_POST["discpf"][$i]) && !empty($_POST["embrzf"][$i]) && !empty($_POST["parntscf"][$i]) && !empty($_POST["instrcf"][$i]) && !empty($_POST["cnef"][$i]) && !empty($_POST["profesf"][$i]) && !empty($_POST["pensf"][$i]) && !empty($_POST["ingmnsf"][$i])){
-
 		 	//querys para los familiares
-			$sql .= "UPDATE datos_familiares(NOMBRES_F,CEDULA_F,FECHANAC_F,EDAD_F,ID_JEFE)
-			 VALUES('".$_POST["namepaef"][$i]."',".$_POST["cedf"][$i].",'".$_POST["fchanacf"][$i]."',".$_POST["edadf"][$i].",'$idjefe');";
+		$sql .= "UPDATE datos_familiares SET NOMBRES_F='$namepaef',CEDULA_F='$cedf',SEXO_F='$sexof',FECHANAC_F='$fchanacf',EDAD_F='$edadf',ID_JEFE='$idjefe'";
 			
-			$sql .= "UPDATE familiar_academico(GRADO_INSTRUCCION_F,PROFESION_F,ID_JEFE)
-			 VALUES('".$_POST["instrcf"][$i]."','".$_POST["profesf"][$i]."','$idjefe');";
+		$sql .= "UPDATE familiar_academico SET GRADO_INSTRUCCION_F='$instrcf',PROFESION_F='$profesf',ID_JEFE='$idjefe'";
+				
+		$sql .= "UPDATE familiar_finanzas SET INGMENSUAL_F='ingmnsf',ID_JEFE='$idjefe'";
+				
+		$sql .= "UPDATE familiar_relacion SET PARENTESCO_F='$parntscf',CNE_F='$cnef',ID_JEFE='$idjefe'";
 			
-			$sql .= "UPDATE familiar_finanzas(INGMENSUAL_F,ID_JEFE)
-			 VALUES('".$_POST["ingmnsf"][$i]."','$idjefe');";
-			
-			$sql .= "UPDATE familiar_relacion(PARENTESCO_F,CNE_F,ID_JEFE)
-			 VALUES('".$_POST["parntscf"][$i]."','".$_POST["cnef"][$i]."','$idjefe');";
-			
-			$sql .= "UPDATE familiar_salud(EMBARAZO_F,DISCAPACIDAD_F,PENSIONADO_F,ID_JEFE)
-			 VALUES('".$_POST["embrzf"][$i]."','".$_POST["discpf"][$i]."','".$_POST["pensf"][$i]."','$idjefe');";
-	
-		}else{
-
-		}//fin de la condicional para los familiares	
-
-	}//fin del bucle for
-
+		$sql .= "UPDATE familiar_salud SET EMBARAZO_F='$embrzf',DISCAPACIDAD_F='$discpf',PENSIONADO_F='$pensf',ID_JEFE='$idjefe'";
 
 		//querys para la situacion economica
 		$sql .= "UPDATE situacion_economica SET DONDE_TRABAJA='$dond_trabaja',PREGUNTA_UNO='$act_economica',ING_FAMILIAR='$ing_familiar',ID_JEFE='$idjefe' WHERE ID_JEFE=$id;";
@@ -230,10 +215,10 @@ public function Modificar_censo_por_id($id){
 		//querys para participacion comunitaria
 		$sql .= "UPDATE participacion_comunitaria SET ORG_COMUNITARIA='$org_comunitarias',DESCRIPCION='$name_organizacion',PARTICIPA='$participa_org',PARTICIPA_FAMILIAR='$familiar_org',MISIONES_COMUNIDAD='$name_mision',OTRA_MISION='$otra_mision',ID_JEFE='$idjefe' WHERE ID_JEFE=$id;";
 
-		$sql .= "UPDATE preguntas_part_comunitaria SET P_UNO='$pueblo_pregunta1',P_DOS='$pueblo_pregunta2',P_TRES='$pueblo_pregunta3',P_CUATRO='$pueblo_pregunta4',P_CINCO='$pueblo_pregunta5',P_SEIS='$pueblo_pregunta6',P_SIETE='$pueblo_pregunta7',P_OCHO='$pueblo_pregunta8',P_NUEVE='$pueblo_pregunta9',P_DIEZ='$pueblo_pregunta10',P_ONCE='$pueblo_pregunta11',P_DOCE='$pueblo_pregunta12',P_CATORCE='$pueblo_pregunta14',P_QUINCE='$pueblo_pregunta15',OTRA_AREA='$otra_area',ID_JEFE='$idjefe' WHERE ID_JEFE=$id";
+		$sql .= "UPDATE preguntas_part_comunitaria SET P_UNO='$pueblo_pregunta1',P_DOS='$pueblo_pregunta2',P_TRES='$pueblo_pregunta3',P_CUATRO='$pueblo_pregunta4',P_CINCO='$pueblo_pregunta5',P_SEIS='$pueblo_pregunta6',P_SIETE='$pueblo_pregunta7',P_OCHO='$pueblo_pregunta8',P_NUEVE='$pueblo_pregunta9',P_DIEZ='$pueblo_pregunta10',P_ONCE='$pueblo_pregunta11',P_DOCE='$pueblo_pregunta_final',P_CATORCE='$pueblo_pregunta14',P_QUINCE='$pueblo_pregunta15',OTRA_AREA='$otra_area',ID_JEFE='$idjefe' WHERE ID_JEFE=$id";
 		
 			if (mysqli_multi_query(Conecta::conx(), $sql)) {
-				echo "<script type='text/javascript'>alert('Censo modificado con éxito.');window.location='../vistas/administra.php';</script>";
+				echo "<script type='text/javascript'>alert('Censo modificado con éxito.');window.location='../vistas/listadocensos.php';</script>";
 			    //header('location:../vistas/administra.php');
 			} else {
 			    echo "Error: " . $sql . "<br>" . mysqli_errno(Conecta::conx());

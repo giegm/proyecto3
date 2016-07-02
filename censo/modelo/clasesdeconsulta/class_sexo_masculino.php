@@ -21,7 +21,7 @@ class Sexo_masculino{
 
 	public function get_sexo_masculino_dos(){
 		//seleccionamos de forma multiple
-		$sql = mysqli_query(Conecta::conx(),"SELECT COUNT(SEXO_F) AS sexo_masculino_dos FROM familiar_relacion WHERE SEXO_F = 'Masculino'") or die('error en la consulta:' .$sql.  mysqli_errno(Conecta::conx()));
+		$sql = mysqli_query(Conecta::conx(),"SELECT COUNT(SEXO_F) AS sexo_masculino_dos FROM datos_familiares WHERE SEXO_F = 'Masculino'") or die('error en la consulta:' .$sql.  mysqli_errno(Conecta::conx()));
 		//$sql .= "";
 		if($reg=mysqli_fetch_array($sql)){
 			$this->masculinos_dos=$reg["sexo_masculino_dos"];

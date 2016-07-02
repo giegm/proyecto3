@@ -184,7 +184,7 @@ HTTP headers have already been sent.<br>Caused by output from file <b>%s</b> at 
 15006 => array('PiePlot::SetSize() Radius for pie must either be specified as a fraction [0, 0.5] of the size of the image or as an absolute size in pixels  in the range [10, 1000]',0),
 15007 => array('PiePlot::SetFontColor() is deprecated. Use PiePlot->value->SetColor() instead.',0),
 15008 => array('PiePlot::SetLabelType() Type for pie plots must be 0 or 1 (not %d).',1),
-15009 => array('Illegal pie plot. Sum of all data is zero for Pie Plot',0),
+15009 => array('No hay datos almacenados para graficar.',0),
 15010 => array('Sum of all data is 0 for Pie.',0),
 15011 => array('In order to use image transformation you must include the file jpgraph_imgtrans.php in your script.',0),
 15012 => array('PiePlot::SetTheme() is no longer supported. Use PieGraph::SetTheme()',0),

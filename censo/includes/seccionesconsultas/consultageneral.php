@@ -14,7 +14,7 @@ require_once("../modelo/clasesdeconsulta/class_propietarios.php");
 require_once("../modelo/clasesdeconsulta/class_trabajo_cuenta_propia.php");
 require_once("../modelo/clasesdeconsulta/class_enfermedades_graves.php");
 require_once("../modelo/clasesdeconsulta/class_asalariados.php");
-
+require_once("../modelo/clasesdeconsulta/class_total_censados.php");
                ?>
 
 <style type="text/css">
@@ -108,63 +108,89 @@ require_once("../modelo/clasesdeconsulta/class_asalariados.php");
 					<tbody>
 						<tr>
 							<td>Sexo Femenino</td>
-							<td>
+							<td><center>
 								<?php               
 				                $obj = new Sexo_femenino();	                         		              	
-				                echo $obj->get_sexo_femenino($obj);
-				                ?>
+				                echo $obj->get_sexo_femenino();
+				                ?></center>
 							</td>
-							<td>data</td>
-							<td>
-								data
+							<td><center>
+								<?php               
+				                $obj = new Sexo_femenino();	                         		              	
+				                echo $obj->get_sexo_femenino_dos();
+				                ?></center>
+				            </td>
+							<td><center>
+								<?php
+								$obj = new Sexo_femenino();	                         		              	
+								$obj->get_sexo_femenino();
+				                $obj->get_sexo_femenino_dos();
+
+				                $femeninototal= $obj->get_sexo_femenino() + $obj->get_sexo_femenino_dos();
+				                echo $femeninototal;
+				                ?></center>
 							</td>
 							
 						</tr>
 						<tr class="alt">
 							<td>Sexo Masculino</td>
-							<td>
+							<td><center>
 								<?php               
 				                $obj = new Sexo_masculino();
 				                echo $obj->get_sexo_masculino($obj);
-				                ?>
+				                ?></center>
 							</td>
-							<td>data</td>
-							<td>data</td>
+							<td><center>
+								<?php               
+				                $obj = new Sexo_masculino();
+				                echo $obj->get_sexo_masculino_dos($obj);
+				                ?></center>
+				            </td>
+							<td><center>
+								<?php
+								$obj = new Sexo_masculino();	                         		              	
+								$obj->get_sexo_masculino();
+				                $obj->get_sexo_masculino_dos();
+
+				                $femeninototal= $obj->get_sexo_masculino() + $obj->get_sexo_masculino_dos();
+				                echo $femeninototal;
+				                ?></center>
+				             </td>
 							
 						</tr>
 						<tr>
 							<td>Menores de Edad</td>
-							<td>---</td>
-							<td>
+							<td><center>---</center></td>
+							<td><center>
 								<?php
 								 $obj = new Menores_edad();             
 			                	echo $obj->get_menores_edad($obj);                
-								?>
+								?></center>
 							</td>
-							<td>
+							<td><center>
 								<?php
 								 $obj = new Menores_edad();             
 			                	echo $obj->get_menores_edad($obj);                
-								?>
+								?></center>
 							</td>
 							
 							
 						</tr>
 						<tr class="alt">
 							<td>Mayores de Edad</td>
-							<td>
+							<td><center>
 								<?php
 								 $obj = new Mayores_edad();
 			                  	echo $obj->get_mayores_de_edad_jefes($obj);
-								 ?>
+								 ?></center>
 							</td>
-							<td>
+							<td><center>
 								<?php
 								$obj = new Mayores_edad();
 			                  	echo $obj->get_mayores_de_edad_familiares($obj);
-								 ?>
+								 ?></center>
 							</td>
-							<td>
+							<td><center>
 								<?php
 								$obj = new Mayores_edad();             
 				                $obj->get_mayores_de_edad_jefes();
@@ -172,24 +198,24 @@ require_once("../modelo/clasesdeconsulta/class_asalariados.php");
 
 				                $mayorestotal= $obj->get_mayores_de_edad_jefes() + $obj->get_mayores_de_edad_familiares();
 				                echo $mayorestotal;
-				                ?>
+				                ?></center>
 							</td>
 						</tr>
 						<tr>
 							<td>Mayores de 60 años</td>
-							<td>
+							<td><center>
 								<?php
 								$obj = new Mayores_sesenta();             
 			                	echo $obj->get_mayores_a_sesenta_jefes($obj);  
-								?>
+								?></center>
 							</td>
-							<td>
+							<td><center>
 								<?php
 								$obj = new Mayores_sesenta();             
 			                	echo $obj->get_mayores_a_sesenta_familiares($obj);  
-								?>
+								?></center>
 							</td>
-							<td>
+							<td><center>
 								<?php
 								$obj = new Mayores_sesenta();             
 				                $obj->get_mayores_a_sesenta_jefes();
@@ -197,133 +223,147 @@ require_once("../modelo/clasesdeconsulta/class_asalariados.php");
 
 				                $setentatotal= $obj->get_mayores_a_sesenta_jefes() + $obj->get_mayores_a_sesenta_familiares();
 				                echo $setentatotal;
-				                ?>
+				                ?></center>
 							</td>
 							
 						</tr>
 						<tr class="alt">
 							<td>Estudiantes</td>				
-							<td>
+							<td><center>
 								<?php
 								$obj = new Estudiantes();               	                     
 				                echo $obj->get_total_estudiantes($obj);
-								 ?>
+								 ?></center>
 							</td>
-							<td>
+							<td><center>
 								<?php
 								$obj = new Estudiantes();               	                     
 				                echo $obj->get_total_estudiantes_dos($obj);
-								 ?>
+								 ?></center>
 							</td>
-							<td><?php
+							<td><center>
+								<?php
 								$obj = new Estudiantes();             
 				                $obj->get_total_estudiantes();
 				                $obj->get_total_estudiantes_dos();
 				                $estudiantestotal= $obj->get_total_estudiantes() + $obj->get_total_estudiantes_dos();
 				                echo $estudiantestotal;
-				                ?>
+				                ?></center>
 				            </td>
 						</tr>
 						<tr>
 							<td>Alquilados</td>
-							<td>---</td>
-							<td>---</td>
-							<td>
+							<td><center>---</center></td>
+							<td><center>---</center></td>
+							<td><center>
 								<?php
 								$obj = new Personas_alquiladas();
 								echo $obj->get_total_alquiladas($obj);  
-								?>
+								?></center>
 							</td>				
 						</tr>
 						<tr class="alt">
 							<td>Desempleados</td>
-							<td>---</td>
-							<td>---</td>			
-							<td>
+							<td><center>---</center></td>
+							<td><center>---</center></td>			
+							<td><center>
 								<?php
 								$obj = new Personas_desempleadas();             
 			                	echo $obj->get_total_desempleados($obj);                
-								?>
+								?></center>
 							</td>				
 						</tr>
 						<tr>
 							<td>Discapacitados</td>
-							<td>---</td>
-							<td>---</td>
-							<td>
+							<td><center>---</center></td>
+							<td><center>---</center></td>
+							<td><center>
 								<?php
 								$obj = new Personas_discapacitadas();
 			                    echo $obj->get_total_discapacitados($obj);                 
-								?>
+								?></center>
 							</td>				
 						</tr>			
 						<tr class="alt">
 							<td>Pensionados</td>				
-							<td>
+							<td><center>
 								<?php
 								$obj = new Personas_pensionadas();
 								echo $obj->get_total_pensionados($obj);;
-								?>
+								?></center>
 							</td>
-							<td>
+							<td><center>
 								<?php
 								$obj = new Personas_pensionadas();
 								echo $obj->get_total_pensionados_dos($obj);;
-								?>
+								?></center>
 							</td>
-							<td>
+							<td><center>
 								<?php
 								$obj = new Personas_pensionadas();
 			                    $obj->get_total_pensionados();
 				                $obj->get_total_pensionados_dos();
 				                $totalpns = $obj->get_total_pensionados() + $obj->get_total_pensionados_dos();
 				                echo $totalpns;
-				                ?>
+				                ?></center>
 							</td>			
 						</tr>
 						<tr>
 							<td>Propietarios</td>
-							<td>---</td>
-							<td>---</td>
-							<td>
+							<td><center>---</center></td>
+							<td><center>---</center></td>
+							<td><center>
 								<?php
 								$obj = new Personas_propietarias();             
 				                echo $obj->get_total_propietarios($obj);  
-				                ?>					
+				                ?></center>	
 							</td>
 							
 						</tr>
 						<tr class="alt">
 							<td>Trabajadores por cuenta Propia</td>				
-							<td>---</td>
-							<td>---</td>
-							<td>
+							<td><center>---</center></td>
+							<td><center>---</center></td>
+							<td><center>
 								<?php
 								$obj = new Personas_trabajo_propio();             
 				                echo $obj->get_total_trabajo_propio($obj); 
-				                ?>				
+				                ?></center>		
 							</td>
 						</tr>
 						<tr>
 							<td>Enfermedades Graves</td>
-							<td>---</td>
-							<td>---</td>
-							<td>
+							<td><center>---</center></td>
+							<td><center>---</center></td>
+							<td><center>
 								<?php
 								$obj = new Pers_enfermedad_grave();             
 				                echo $obj->get_total_enfermo_grave($obj);  
-				                ?>
+				                ?></center>
 							</td>				
 						</tr>
 						<tr class="alt">
 							<td>Asalariados</td>				
-							<td>---</td>
-							<td>---</td>
-							<td>
+							<td><center>---</center></td>
+							<td><center>---</center></td>
+							<td><center>
 								<?php
 								$obj = new Personas_asalariados();             
 				                echo $obj->get_total_asalariados($obj);  
-				                ?>
+				                ?></center>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Total de censados</b></td>
+							<td><b><center>
+								<?php
+								$obj = new Total_censados();	                         		              	
+								$obj->get_censados();
+				                $obj->get_censados_dos();
+
+				                $totalcensados= $obj->get_censados() + $obj->get_censados_dos();
+				                echo $totalcensados;
+				                ?></b></center>
 							</td>
 						</tr>
 				</table>

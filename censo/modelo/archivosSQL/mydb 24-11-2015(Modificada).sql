@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-07-2016 a las 09:50:08
+-- Tiempo de generación: 02-07-2016 a las 21:37:12
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.5.19
 
@@ -38,8 +38,7 @@ CREATE TABLE IF NOT EXISTS `ayuda_vivienda` (
 --
 
 INSERT INTO `ayuda_vivienda` (`ID_AYUDA_VIVIENDA`, `TIPO_AYUDA`, `DESCRIPCION`, `ID_JEFE`) VALUES
-(5, 'Rehabilitacion', 'Rehabilitacion', 1),
-(6, 'Rehabilitacion', 'Rehabilitacion', 6);
+(6, 'Ninguna', 'Ninguna', 6);
 
 -- --------------------------------------------------------
 
@@ -567,8 +566,7 @@ CREATE TABLE IF NOT EXISTS `censos` (
 --
 
 INSERT INTO `censos` (`ID_CENSO`, `FECHA_CENSO`, `HORA_CENSO`, `ID_JEFE`) VALUES
-(5, '2015/11/24', '19:44:30', 1),
-(6, '2015/11/24', '19:45:02', 6);
+(6, '2016/07/02', '00:00:00', 6);
 
 -- --------------------------------------------------------
 
@@ -617,12 +615,12 @@ CREATE TABLE IF NOT EXISTS `condiciones_salud` (
 --
 
 INSERT INTO `condiciones_salud` (`ID_CONDICIONES_SALUD`, `PERSONA_ENFERMEDAD`, `OTRA_ENFERMEDAD`, `AYUDA_ENFERMOS`, `TIPO_AYUDA`, `SITUACION_EXCLUSION`, `CANTIDAD_EXCLUSION`, `ID_JEFE`) VALUES
-(1, 'Diabetes', 'SI', 'SI', 'sdfsdf', 'Enfermos terminales', 4, 6),
-(2, 'Hepatitis', 'SI', 'SI', 'sdfsdf', '', 4, 6),
-(3, 'Hipertension', 'SI', 'SI', 'sdfsdf', '', 4, 6),
-(4, '', 'SI', 'SI', 'sdfsdf', '', 4, 6),
-(5, '', 'SI', 'SI', 'sdfsdf', '', 4, 6),
-(6, '', 'SI', 'SI', 'sdfsdf', '', 4, 6);
+(1, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(2, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(3, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(4, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(5, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(6, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6);
 
 -- --------------------------------------------------------
 
@@ -642,8 +640,7 @@ CREATE TABLE IF NOT EXISTS `datos_academicos` (
 --
 
 INSERT INTO `datos_academicos` (`ID_ACADEMICO`, `PROFESION`, `NIV_INSTRUCCION`, `ID_JEFE`) VALUES
-(5, 'Estudiante', 'Sin instruccion', 1),
-(6, 'Estudiante', 'Sin instruccion', 6);
+(6, 'Estudiante', 'Tecnico Superior', 6);
 
 -- --------------------------------------------------------
 
@@ -665,8 +662,7 @@ CREATE TABLE IF NOT EXISTS `datos_contacto` (
 --
 
 INSERT INTO `datos_contacto` (`ID_CONTACTO`, `TLF_CEL`, `TLF_HAB`, `TLF_OFI`, `EMAIL`, `ID_JEFE`) VALUES
-(5, '0412-3046720', '', '', 'adix_4@hotmail.com', 1),
-(6, '0412-3046720', '', '', 'adix_4@hotmail.com', 6);
+(6, '04123154389', '', '', 'girlcarolay@hotmail.com', 6);
 
 -- --------------------------------------------------------
 
@@ -687,8 +683,7 @@ CREATE TABLE IF NOT EXISTS `datos_encuestado` (
 --
 
 INSERT INTO `datos_encuestado` (`ID_ENCUESTADO`, `NOMBRES`, `CEDULA`, `ENCUESTADOR`, `ID_JEFE`) VALUES
-(5, 'sdf sdfdsfdsf', 435534, 'admin', 1),
-(6, 'sdf sdfdsfdsf', 435534, 'admin', 6);
+(6, 'Edelis Simons', 20603430, 'admin', 6);
 
 -- --------------------------------------------------------
 
@@ -711,7 +706,6 @@ CREATE TABLE IF NOT EXISTS `datos_familiares` (
 --
 
 INSERT INTO `datos_familiares` (`ID_FAMILIARES`, `NOMBRES_F`, `CEDULA_F`, `SEXO_F`, `FECHANAC_F`, `EDAD_F`, `ID_JEFE`) VALUES
-(5, '345345', 345345, 'Masculino', '2015-11-04', 45, 1),
 (6, '345345', 345345, 'Masculino', '2015-11-04', 45, 6);
 
 -- --------------------------------------------------------
@@ -733,8 +727,7 @@ CREATE TABLE IF NOT EXISTS `datos_finanzas` (
 --
 
 INSERT INTO `datos_finanzas` (`ID_FINANZAS`, `TRABAJA`, `TIPO_INGRESO`, `INGRESO_MENSUAL`, `ID_JEFE`) VALUES
-(5, 'SI', 'Diario', ' 234234', 1),
-(6, 'SI', 'Diario', ' 234234', 6);
+(6, 'SI', 'Por trabajo realizado', '30000', 6);
 
 -- --------------------------------------------------------
 
@@ -781,8 +774,7 @@ CREATE TABLE IF NOT EXISTS `datos_personales` (
 --
 
 INSERT INTO `datos_personales` (`ID_DATAPERSONAL`, `CI`, `NOMBRE`, `APELLIDO`, `F_NAC`, `EDAD`) VALUES
-(5, 3423432, 'sdfs', 'sdfdsf', '2015-11-11', 45),
-(6, 3423432, 'sdfs', 'sdfdsf', '2015-11-11', 45);
+(6, 20603430, 'Edelis Carolay', 'Simons Escalona', '1992-04-18', 24);
 
 -- --------------------------------------------------------
 
@@ -805,8 +797,7 @@ CREATE TABLE IF NOT EXISTS `datos_relacion` (
 --
 
 INSERT INTO `datos_relacion` (`ID_RELACION`, `EMBARAZO`, `CNE`, `SEXO`, `EDOCIVIL`, `NACIONALIDAD`, `ID_JEFE`) VALUES
-(5, 'SI', 'SI', 'Masculino', 'Soltero(a)', 'Venezolano(a)', '1'),
-(6, 'SI', 'SI', 'Masculino', 'Soltero(a)', 'Venezolano(a)', '6');
+(6, 'NO', 'SI', 'Femenino', 'Soltero(a)', 'Venezolano(a)', '6');
 
 -- --------------------------------------------------------
 
@@ -828,8 +819,7 @@ CREATE TABLE IF NOT EXISTS `datos_salud` (
 --
 
 INSERT INTO `datos_salud` (`ID_SALUD`, `DISCAPACIDAD`, `TIPO_DISCAPACIDAD`, `PENSIONADO`, `INSTITUCION`, `ID_JEFE`) VALUES
-(5, 'SI', 'sdfsdf', 'SI', 'fsdfdsf', 1),
-(6, 'SI', 'sdfsdf', 'SI', 'fsdfdsf', 6);
+(6, 'NO', '', 'NO', '', 6);
 
 -- --------------------------------------------------------
 
@@ -849,8 +839,7 @@ CREATE TABLE IF NOT EXISTS `detalles_serv_electrico` (
 --
 
 INSERT INTO `detalles_serv_electrico` (`ID_SERV_ELECTRICO`, `MEDIDOR`, `BOMBILLOS_NECESITA`, `ID_JEFE`) VALUES
-(5, 'SI', '4', 1),
-(6, 'SI', '4', 6);
+(6, 'NO', '10', 6);
 
 -- --------------------------------------------------------
 
@@ -876,12 +865,12 @@ CREATE TABLE IF NOT EXISTS `detalles_vivienda` (
 --
 
 INSERT INTO `detalles_vivienda` (`ID_DETALLES_VIVIENDA`, `TIPO_VIVIENDA`, `HABITACIONES`, `NUM_HABITACIONES`, `TIPO_PAREDES`, `TIPO_TECHO`, `ENSERES_VIVIENDA`, `INSECTOS_ROEDORES`, `ANIMALES_DOMESTICOS`, `ID_JEFE`) VALUES
-(1, 'Casa', 'Sala', 4, 'Frisadas', 'Platabanda', 'Gabinete', 'Ratones', 'Gato', 6),
-(2, 'Casa', 'Comedor', 4, 'Frisadas', 'Platabanda', 'Juego de Comedor', 'Ciempies', 'Patos', 6),
-(3, 'Casa', 'Cocina', 4, 'Frisadas', 'Platabanda', 'Muebles de Sala', '', '', 6),
-(4, 'Casa', '', 4, 'Frisadas', 'Platabanda', 'Utensilios de Cocina', '', '', 6),
-(5, 'Casa', '', 4, 'Frisadas', 'Platabanda', 'Tv', '', '', 6),
-(6, 'Casa', '', 4, 'Frisadas', 'Platabanda', 'Otros', '', '', 6);
+(1, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(2, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(3, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(4, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(5, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(6, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6);
 
 -- --------------------------------------------------------
 
@@ -907,8 +896,7 @@ CREATE TABLE IF NOT EXISTS `detalle_servicios` (
 --
 
 INSERT INTO `detalle_servicios` (`ID_DETALLE_SERVICIOS`, `TANQUE`, `TANQUE_LITROS`, `PIPOTES`, `CANT_PIPOTES`, `PROVEEDOR_GAS`, `CANT_CILINDROS_GAS`, `DURACION_GAS`, `PRECIO_GAS`, `ID_JEFE`) VALUES
-(5, 'SI', '5', 'SI', '4', 'sdfdsf', '4', '4', ' 32', 1),
-(6, 'SI', '5', 'SI', '4', 'sdfdsf', '4', '4', ' 32', 6);
+(6, 'NO', '', 'SI', '3', 'Visa gas y PDVSA gas', '4', '4', ' 30', 6);
 
 -- --------------------------------------------------------
 
@@ -960,7 +948,6 @@ CREATE TABLE IF NOT EXISTS `familiar_academico` (
 --
 
 INSERT INTO `familiar_academico` (`ID_ACADEMICO_F`, `GRADO_INSTRUCCION_F`, `PROFESION_F`, `ID_JEFE`) VALUES
-(5, 'Sin instruccion', 'Estudiante', 1),
 (6, 'Sin instruccion', 'Estudiante', 6);
 
 -- --------------------------------------------------------
@@ -980,7 +967,6 @@ CREATE TABLE IF NOT EXISTS `familiar_finanzas` (
 --
 
 INSERT INTO `familiar_finanzas` (`ID_FINANZAS_F`, `INGMENSUAL_F`, `ID_JEFE`) VALUES
-(5, '345345', 1),
 (6, '345345', 6);
 
 -- --------------------------------------------------------
@@ -1001,8 +987,7 @@ CREATE TABLE IF NOT EXISTS `familiar_relacion` (
 --
 
 INSERT INTO `familiar_relacion` (`ID_DETALLE_F`, `PARENTESCO_F`, `CNE_F`, `ID_JEFE`) VALUES
-(5, 'Madre', 'SI', 1),
-(6, 'Madre', 'SI', 6);
+(6, 'Hermano(a)', 'SI', 6);
 
 -- --------------------------------------------------------
 
@@ -1023,7 +1008,6 @@ CREATE TABLE IF NOT EXISTS `familiar_salud` (
 --
 
 INSERT INTO `familiar_salud` (`ID_SALUD_F`, `EMBARAZO_F`, `DISCAPACIDAD_F`, `PENSIONADO_F`, `ID_JEFE`) VALUES
-(5, 'SI', 'dsfdsf', 'SI', 1),
 (6, 'SI', 'dsfdsf', 'SI', 6);
 
 -- --------------------------------------------------------
@@ -1076,7 +1060,7 @@ CREATE TABLE IF NOT EXISTS `noticias_web` (
 CREATE TABLE IF NOT EXISTS `parentesco` (
 `ID_PARENTESCO` int(11) NOT NULL,
   `PARENTESCO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `parentesco`
@@ -1116,12 +1100,12 @@ CREATE TABLE IF NOT EXISTS `participacion_comunitaria` (
 --
 
 INSERT INTO `participacion_comunitaria` (`ID_PARTICIPACION_COMUNITARIA`, `ORG_COMUNITARIA`, `DESCRIPCION`, `PARTICIPA`, `PARTICIPA_FAMILIAR`, `MISIONES_COMUNIDAD`, `OTRA_MISION`, `ID_JEFE`) VALUES
-(1, 'SI', 'dsfdsf', 'SI', 'SI', 'Ribas', 'sdfsdfdsf', 6),
-(2, 'SI', 'dsfdsf', 'SI', 'SI', 'Vuelvan caras', 'sdfsdfdsf', 6),
-(3, 'SI', 'dsfdsf', 'SI', 'SI', 'Barrio Adentro', 'sdfsdfdsf', 6),
-(4, 'SI', 'dsfdsf', 'SI', 'SI', '', 'sdfsdfdsf', 6),
-(5, 'SI', 'dsfdsf', 'SI', 'SI', '', 'sdfsdfdsf', 6),
-(6, 'SI', 'dsfdsf', 'SI', 'SI', '', 'sdfsdfdsf', 6);
+(1, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(2, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(3, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(4, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(5, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(6, 'NO', '', 'NO', 'NO', 'Mercal', '', 6);
 
 -- --------------------------------------------------------
 
@@ -1289,12 +1273,12 @@ CREATE TABLE IF NOT EXISTS `preguntas_part_comunitaria` (
 --
 
 INSERT INTO `preguntas_part_comunitaria` (`ID_PREG_PARTCOMUNITARIA`, `P_UNO`, `P_DOS`, `P_TRES`, `P_CUATRO`, `P_CINCO`, `P_SEIS`, `P_SIETE`, `P_OCHO`, `P_NUEVE`, `P_DIEZ`, `P_ONCE`, `P_DOCE`, `P_CATORCE`, `P_QUINCE`, `OTRA_AREA`, `ID_JEFE`) VALUES
-(1, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', 'fsdfsd', 'sdf', 'Relaciones Publicas y Medios', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(2, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', 'fsdfsd', 'sdf', 'Elaboracion de\r\n												Proyectos de Desa', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(3, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', 'fsdfsd', 'sdf', 'Educacion Cultura y Tecnologia', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(4, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', 'fsdfsd', 'sdf', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(5, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', 'fsdfsd', 'sdf', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(6, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', 'fsdfsd', 'sdf', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6');
+(1, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(2, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(3, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(4, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(5, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(6, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6');
 
 -- --------------------------------------------------------
 
@@ -1335,8 +1319,7 @@ CREATE TABLE IF NOT EXISTS `situacion_economica` (
 --
 
 INSERT INTO `situacion_economica` (`ID_SITUACION_ECONOMICA`, `DONDE_TRABAJA`, `PREGUNTA_UNO`, `ING_FAMILIAR`, `ID_JEFE`) VALUES
-(5, 'sdfdsf', 'SI', 'De 2.000.001 y mas', 1),
-(6, 'sdfdsf', 'SI', 'De 2.000.001 y mas', 6);
+(6, '', 'NO', 'Menos de 200.000', 6);
 
 -- --------------------------------------------------------
 
@@ -1365,12 +1348,12 @@ CREATE TABLE IF NOT EXISTS `situacion_servicios` (
 --
 
 INSERT INTO `situacion_servicios` (`ID_SITUACION_SERVICIOS`, `AGUAS_BLANCAS`, `MEDIDOR`, `AGUAS_SERVIDAS`, `GAS`, `SISTEMA_ELECTRICO`, `BOMBILLOS_AHORRADORES`, `RECOL_BASURA`, `TELEFONIA`, `TRANSPORTE`, `TIPO_INFORMACION`, `SERV_COMUNALES`, `ID_JEFE`) VALUES
-(1, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Aseo Urbano', 'Celular', 'Publico', 'Radio', 'Farmacia', 6),
-(2, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Camion', 'Otra', 'Publico', 'Medios alternativos comunitarios', 'Escuelas', 6),
-(3, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', '', '', 'Publico', '', 'Canchas', 6),
-(4, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', '', '', 'Publico', '', '', 6),
-(5, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', '', '', 'Publico', '', '', 6),
-(6, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', '', '', 'Publico', '', '', 6);
+(1, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(2, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(3, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(4, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(5, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(6, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6);
 
 -- --------------------------------------------------------
 
@@ -1396,8 +1379,7 @@ CREATE TABLE IF NOT EXISTS `situacion_vivienda` (
 --
 
 INSERT INTO `situacion_vivienda` (`ID_SITUACION_VIVIENDA`, `COND_TERRENO`, `FORMA_TENENCIA`, `OCV`, `TERRENO_PROPIO`, `SIVIH`, `CONSTANCIA_SIVIH`, `COTIZA_LPH`, `SALUBRIDAD_VIVIENDA`, `ID_JEFE`) VALUES
-(5, 'Estable', 'Propia', 'SI', 'SI', 'SI', 'SI', 'SI', 'limpia', 1),
-(6, 'Estable', 'Propia', 'SI', 'SI', 'SI', 'SI', 'SI', 'limpia', 6);
+(6, 'Estable', 'Propia', 'NO', 'NO', 'NO', 'NO', 'SI', 'limpia', 6);
 
 --
 -- Índices para tablas volcadas
@@ -1995,7 +1977,7 @@ MODIFY `ID_NOTICIA` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT de la tabla `parentesco`
 --
 ALTER TABLE `parentesco`
-MODIFY `ID_PARENTESCO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `ID_PARENTESCO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `participacion_comunitaria`
 --

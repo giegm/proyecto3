@@ -14,13 +14,23 @@
 										<div class="form-group col-md-12">
 							    			<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">N° C.I. Solicitante</label>
 											<div class="col-sm-2 col-md-2">
-											<input type="text" name="ci" autofocus class="form-control" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+												<div class="required-field-block">
+													<input type="text" name="ci" autofocus class="form-control" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+													<div class="required-icon">
+										            	<div class="text">*</div>
+										            </div>
+									        	</div>
 											<br/>
 											</div>
 
 											<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">N° C.I. Conyugue</label>
 											<div class="col-sm-2 col-md-2">
-											<input type="text" name="ci" autofocus class="form-control" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+												<div class="required-field-block">
+													<input type="text" name="ci" autofocus class="form-control" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+													<div class="required-icon">
+										            	<div class="text">*</div>
+										            </div>
+									        	</div>
 											<br/>
 											</div>
 

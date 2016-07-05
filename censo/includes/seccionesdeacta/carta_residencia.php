@@ -15,7 +15,12 @@
 							<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Motivo de la Solicitud</label>
 
 							<div class="col-sm-2 col-md-2">
-							<input type="text" class="form-control" name="telfcel" placeholder="Indique el motivo" maxlength="10">
+								<div class="required-field-block">	
+									<input type="text" class="form-control" name="telfcel" placeholder="Indique el motivo" maxlength="10">
+									<div class="required-icon">
+								      	<div class="text">*</div>
+								    </div>
+								</div>
 							</div>
 							
 

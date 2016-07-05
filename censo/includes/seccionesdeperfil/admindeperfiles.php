@@ -111,7 +111,12 @@
         <label class="control-label col-md-4">Contraseña actual:</label>
       
       <div class="col-md-4">
-        <input type="password" class="form-control" name="claveactual" value="">
+        <div class="required-field-block">
+          <input type="password" class="form-control" name="claveactual" value="">
+          <div class="required-icon">
+            <div class="text">*</div>
+          </div>
+        </div>
       </div>
       </div>
 
@@ -171,7 +176,12 @@
         <label class="control-label col-md-4">Contraseña actual:</label>
       
       <div class="col-md-4">
-        <input type="password" class="form-control" name="claveactualp" value="" maxlength="15">
+        <div class="required-field-block">
+          <input type="password" class="form-control" name="claveactualp" value="" maxlength="15">
+          <div class="required-icon">
+            <div class="text">*</div>
+          </div>
+        </div>
       </div>
       </div>
 
@@ -179,7 +189,12 @@
         <label class="control-label col-md-4">Nueva Contraseña:</label>
       
       <div class="col-md-4">
-        <input type="password" class="form-control" name="clavenew" value="" maxlength="15">
+        <div class="required-field-block">
+          <input type="password" class="form-control" name="clavenew" value="" maxlength="15">
+          <div class="required-icon">
+            <div class="text">*</div>
+          </div>
+        </div>
       </div>
       </div>
 
@@ -187,7 +202,12 @@
         <label class="control-label col-md-4">Confirmar Contraseña:</label>
       
       <div class="col-md-4">
-        <input type="password" class="form-control" name="clavenew2" value="" maxlength="15">
+        <div class="required-field-block">
+          <input type="password" class="form-control" name="clavenew2" value="" maxlength="15">
+        <div class="required-icon">
+            <div class="text">*</div>
+          </div>
+        </div>
       </div>
       </div>
 
@@ -196,7 +216,7 @@
       
       <div class="col-md-4">
           <select class="form-control selectpicker show-tick" name="rol_user" id="">
-          <option value="1"><?php echo $data[$_SESSION["sesion_perfil"]]["PERFIL"]; ?></option>
+          <option value="1"><?php echo $data[0]["PERFIL"]; ?></option>
           </select>
       </div>
       </div>
@@ -448,22 +468,43 @@ if(isset($_GET["mod"])){
         <form action="../controlador/crearperfil.php" method="POST" name="form">
         <div class="form-group">
           <label for="">Usuario</label>
-          <input type="text" name="nombre" class="form-control" maxlength="10" placeholder="">
+          <div class="required-field-block">
+            <input type="text" name="nombre" class="form-control" maxlength="10" placeholder="">
+            <div class="required-icon">
+              <div class="text">*</div>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="">Cédula</label>
-          <input type="text" name="cedula" class="form-control" placeholder="cedula de identidad" maxlength="8">
+          <div class="required-field-block">
+            <input type="text" name="cedula" class="form-control" placeholder="cedula de identidad" maxlength="8">
+            <div class="required-icon">
+              <div class="text">*</div>
+            </div>
+          </div>
         </div>  
 
          <div class="form-group">
           <label for="">Contraseña</label>
-          <input type="password" name="password" class="form-control" placeholder="maximo 15 caracteres" maxlength="15">
+          <div class="required-field-block">
+            <input type="password" name="password" class="form-control" placeholder="maximo 15 caracteres" maxlength="15">
+            <div class="required-icon">
+              <div class="text">*</div>
+            </div>
+          </div>
           <label for="">Confirmar Contraseña</label>
-          <input type="password" name="password2" class="form-control" placeholder="maximo 15 caracteres" maxlength="15">
+          <div class="required-field-block">
+              <input type="password" name="password2" class="form-control" placeholder="maximo 15 caracteres" maxlength="15">
+            <div class="required-icon">
+              <div class="text">*</div>
+            </div>
+          </div>
         </div>
 
          <div class="form-group">
+         <div class="required-field-block">
           <label for="">Tipo de usuario</label>
           <label class="radio-inline">
           <input type="radio" name="tipo_rol" id="inlineRadio1" value="1" checked=""> Administrar
@@ -474,6 +515,10 @@ if(isset($_GET["mod"])){
           <label class="radio-inline">
           <input type="radio" name="tipo_rol" id="inlineRadio3" value="3"> Publicador
           </label>
+          <div class="required-icon">
+              <div class="text">*</div>
+            </div>
+          </div>
         </div>
 
         <input type="button" value="Guardar datos"name="envio" class="btn btn-success" onClick="Valida_perfil(); contraseña();">

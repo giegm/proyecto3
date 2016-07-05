@@ -13,6 +13,7 @@ if(isset($_SESSION["sesion_usuario"])){
 		<link rel="stylesheet" href="../diseño/estilos.css">
 		<link rel="stylesheet" href="../diseño/css/bootstrap.css">
 		<link rel="stylesheet" href="../diseño/iconos/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/requerido.css">
 		<link rel="stylesheet" href="../diseño/selectstyles/dist/css/bootstrap-select.css">
 		<link rel="shortcut icon" href="../img/ccsantaines.ico">
 		<script src="../js/validaractas.js" type="text/javascript"></script>
@@ -36,6 +37,7 @@ if(isset($_SESSION["sesion_usuario"])){
 		<script src="../diseño/js/jquery-1.11.2.min.js"></script> 
 		<script src = "../diseño/js/bootstrap.min.js"></script>
 		<script src="../diseño/selectstyles/dist/js/bootstrap-select.js"></script>
+		<script src="js/requerido.js"></script>
 	 </body>
 </html>
 <?php 

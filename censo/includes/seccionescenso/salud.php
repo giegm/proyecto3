@@ -15,30 +15,39 @@
 											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Personas con enfermedades</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="pers_enfermedades">
-												<option value="0">seleccione</option>
-	                                            <?php 
-	                                            $persenferm=$obj2->get_persona_enfermedades(); 
-	                                            for($e=0;$e<sizeof($persenferm);$e++){
-	                                                ?>
-	                                                <option value="<?php echo utf8_encode($persenferm[$e]["ENFERMEDADES"]); ?>"><?php echo utf8_encode($persenferm[$e]["ENFERMEDADES"]); ?></option>
-	                                                <?php
-	                                            }
-	                                            ?>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="pers_enfermedades">
+													<option value="0">seleccione</option>
+		                                            <?php 
+		                                            $persenferm=$obj2->get_persona_enfermedades(); 
+		                                            for($e=0;$e<sizeof($persenferm);$e++){
+		                                                ?>
+		                                                <option value="<?php echo utf8_encode($persenferm[$e]["ENFERMEDADES"]); ?>"><?php echo utf8_encode($persenferm[$e]["ENFERMEDADES"]); ?></option>
+		                                                <?php
+		                                            }
+		                                            ?>
 
-												</select>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 											<label for="" class="col-sm-3 col-md-3 control-label">Otra enfermedad</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="otra_enfermedad" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="otra_enfermedad" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
-
 										</div>
 
 										<div class="form-group col-md-12">
@@ -46,11 +55,16 @@
 											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Necesita ayuda para enfermos</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="ayuda_enfermo" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="ayuda_enfermo" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 											<label for="" class="col-sm-3 col-md-3 control-label">Tipo de ayuda</label>
@@ -66,17 +80,22 @@
 											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Situación de exclusión</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="pers_exclusion">
-													<option value="0">seleccione</option>
-		                                            <?php 
-		                                            $persexclus=$obj2->get_personas_exclusion(); 
-		                                            for($f=0;$f<sizeof($persexclus);$f++){
-		                                                ?>
-		                                                <option value="<?php echo utf8_encode($persexclus[$f]["PERSEXCLUSION"]); ?>"><?php echo utf8_encode($persexclus[$f]["PERSEXCLUSION"]); ?></option>
-		                                                <?php
-		                                            }
-		                                            ?>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="pers_exclusion">
+														<option value="0">seleccione</option>
+			                                            <?php 
+			                                            $persexclus=$obj2->get_personas_exclusion(); 
+			                                            for($f=0;$f<sizeof($persexclus);$f++){
+			                                                ?>
+			                                                <option value="<?php echo utf8_encode($persexclus[$f]["PERSEXCLUSION"]); ?>"><?php echo utf8_encode($persexclus[$f]["PERSEXCLUSION"]); ?></option>
+			                                                <?php
+			                                            }
+			                                            ?>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 											<label for="" class="col-sm-3 col-md-3 control-label">Cuantos</label>

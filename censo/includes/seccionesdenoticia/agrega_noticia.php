@@ -17,7 +17,12 @@
           <label style="text-align: left" class="control-label col-sm-1 col-md-1">Título</label>
          
           <div class="col-sm-7 col-md-6">
-          <input type="text" class="form-control" name="titulo_noticia" value="" maxlength="30">
+            <div class="required-field-block">
+              <input type="text" class="form-control" name="titulo_noticia" value="" maxlength="30">
+              <div class="required-icon">
+                <div class="text">*</div>
+              </div>
+            </div>
           </div>
          </div>
 
@@ -25,7 +30,12 @@
           <label style="text-align: left" class="control-label col-sm-2 col-md-2">Fecha de Notícia</label>
          
           <div class="col-sm-4 col-md-3">
-          <input type="date" class="form-control" name="fecha_noticia" value="">
+            <div class="required-field-block">
+              <input type="date" class="form-control" name="fecha_noticia" value="">
+              <div class="required-icon">
+                <div class="text">*</div>
+              </div>
+            </div>
           </div>
          </div>
 
@@ -41,16 +51,21 @@
           <label style="text-align: left" class="control-label col-sm-2 col-md-2">Categoría</label>
          
           <div class="col-sm-4 col-md-4">
-          <select class="form-control" name="categoria_noticia" multiple>
-          <?php 
-          require_once("../controlador/trae_categorias_noticias.php");
-          for($i=0;$i<sizeof($cat);$i++){
-          ?>
-            <option value="<?php echo utf8_encode($cat[$i]["ID_CATEGORIA"]); ?>"><?php echo  utf8_encode($cat[$i]["CATEGORIA"]); ?></option> 
-          <?php 
-          }
-          ?>
-           </select>
+            <div class="required-field-block">
+              <select class="form-control" name="categoria_noticia" multiple>
+                <?php 
+                require_once("../controlador/trae_categorias_noticias.php");
+                for($i=0;$i<sizeof($cat);$i++){
+                ?>
+                  <option value="<?php echo utf8_encode($cat[$i]["ID_CATEGORIA"]); ?>"><?php echo  utf8_encode($cat[$i]["CATEGORIA"]); ?></option> 
+                <?php 
+                }
+                ?>
+             </select>
+             <div class="required-icon">
+                <div class="text">*</div>
+              </div>
+            </div>
           </div>
          </div>
           <br/>

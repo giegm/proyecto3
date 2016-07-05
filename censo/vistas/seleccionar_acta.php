@@ -15,6 +15,7 @@ $obj2=new Operar();
 		<link rel="stylesheet" href="../diseño/estilos.css">
 		<link rel="stylesheet" href="../diseño/css/bootstrap.css">
 		<link rel="stylesheet" href="../diseño/iconos/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/requerido.css">
 		<link rel="stylesheet" href="../diseño/selectstyles/dist/css/bootstrap-select.css">	
 		<script src="../js/validarcenso.js" type="text/javascript"></script>
 		<script src="../diseño/js/jquery-1.11.2.min.js"></script>
@@ -89,9 +90,7 @@ $obj2=new Operar();
 				</section><!-- fin del section del contenedor central admin -->
 			</div><!-- fin de row -->
 	</div><!-- fin del container-fluid -->
-
-
-
+	<script src="js/requerido.js"></script>
 	<script src = "../diseño/js/bootstrap.min.js"></script>
 	<script src="../diseño/selectstyles/dist/js/bootstrap-select.js"></script>
 </body>

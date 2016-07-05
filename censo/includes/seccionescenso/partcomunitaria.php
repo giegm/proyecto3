@@ -16,11 +16,16 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Organizaciones comunitarias</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="org_comunitarias" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="org_comunitarias" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 											<label for="" class="col-sm-2 col-md-1 control-label" style="text-align:justify;">Cual o cuales</label>
@@ -32,11 +37,16 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Participa en alguna</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="participa_org" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="participa_org" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -46,27 +56,37 @@
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Participa algun familiar</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="familiar_org" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="familiar_org" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 											<label for="" class="col-sm-4 col-md-4 control-label" style="text-align:justify;">Cuales misiones estan en la comunidad</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="name_mision">
-													<option value="0">seleccione</option>
-													<?php  
-													$misiones=$obj2->get_comunidad_misiones();
-													for($q=0;$q<sizeof($misiones);$q++){
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="name_mision">
+														<option value="0">seleccione</option>
+														<?php  
+														$misiones=$obj2->get_comunidad_misiones();
+														for($q=0;$q<sizeof($misiones);$q++){
+															?>
+															<option value="<?php echo $misiones[$q]["MISIONES"]; ?>"><?php echo $misiones[$q]["MISIONES"]; ?></option>
+															<?php
+														}
 														?>
-														<option value="<?php echo $misiones[$q]["MISIONES"]; ?>"><?php echo $misiones[$q]["MISIONES"]; ?></option>
-														<?php
-													}
-													?>
-												</select>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -86,12 +106,17 @@
 										<label for="" class="col-sm-10 col-md-10 control-label" style="text-align:justify;">¿Cree Ud. que en la actualidad el
 										pueblo está interviniendo en las decisiones sobre cómo deben gastarse los recursos de su comunidad?</label>
 
-											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="pueblo_pregunta1" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+											<div class="col-sm-2 col-md-2">	
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="pueblo_pregunta1" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -103,11 +128,16 @@
 											como invertir el presupuesto en su comunidad?</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="pueblo_pregunta2" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="pueblo_pregunta2" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -118,11 +148,16 @@
 											propuesta de creación de consejos comunales?</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="pueblo_pregunta3" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="pueblo_pregunta3" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -133,11 +168,16 @@
 										y participar en la creación de un consejo comunal en su comunidad?</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="pueblo_pregunta4" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="pueblo_pregunta4" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -147,11 +187,16 @@
 										<label for="" class="col-sm-10 col-md-8 control-label" style="text-align:justify;">Participa Ud. o asiste a las asambleas de Ciudadanos (as)</label>
 
 											<div class="col-sm-2 col-md-2">
-												<select class="form-control selectpicker show-tick" name="pueblo_pregunta5" id="">
-													<option value="0">seleccione</option>
-													<option value="SI">SI</option>
-													<option value="NO">NO</option>
-												</select>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="pueblo_pregunta5" id="">
+														<option value="0">seleccione</option>
+														<option value="SI">SI</option>
+														<option value="NO">NO</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -161,7 +206,12 @@
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Como cree Ud. Que se van a resolver los problemas del sector</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input type="text" name="pueblo_pregunta6" id="" placeholder="sea breve" class="form-control" maxlength="40" required onkeypress="return soloLetras(event);">
+												<div class="required-field-block">
+													<input type="text" name="pueblo_pregunta6" id="" placeholder="sea breve" class="form-control" maxlength="40" required onkeypress="return soloLetras(event);">
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -171,7 +221,12 @@
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Quien cree que va a a resolver los problemas del sector</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input type="text" name="pueblo_pregunta7" id="" placeholder="sea breve" required onkeypress="return soloLetras(event);" maxlength="40" class="form-control" >
+												<div class="required-field-block">
+													<input type="text" name="pueblo_pregunta7" id="" placeholder="sea breve" required onkeypress="return soloLetras(event);" maxlength="40" class="form-control" >
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -182,7 +237,12 @@
 										que se desarrollaran en su comunidad</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input type="text" name="pueblo_pregunta8" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);" maxlength="40">
+												<div class="required-field-block">
+													<input type="text" name="pueblo_pregunta8" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);" maxlength="40">
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -192,7 +252,12 @@
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Como apoyaría Ud. A que se realicen y ejecuten los proyectos</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input type="text" name="pueblo_pregunta9" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);" maxlength="40">
+												<div class="required-field-block">
+													<input type="text" name="pueblo_pregunta9" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);" maxlength="40">
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -202,7 +267,12 @@
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Que tipo de compromiso tiene Ud. con su sector para el mejoramiento</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input type="text" name="pueblo_pregunta10" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);" maxlength="40">
+												<div class="required-field-block">
+													<input type="text" name="pueblo_pregunta10" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);" maxlength="40">
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -212,7 +282,12 @@
 										<label for="" class="col-sm-8 col-md-8 control-label" style="text-align:justify;">Que opina Ud. del censo energético</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input type="text" name="pueblo_pregunta11" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);" maxlength="40">
+												<div class="required-field-block">
+													<input type="text" name="pueblo_pregunta11" id="" placeholder="sea breve" class="form-control" required onkeypress="return soloLetras(event);" maxlength="40">
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>
@@ -227,23 +302,26 @@
 										<div class="form-group col-md-12">
 
 											<div class="col-sm-12 col-md-8">
-											
-											<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final">
-											 	<option value="0">seleccione</option>
-												<option value="Contraloria y Seguimiento">Contraloria y Seguimiento</option>
-												<option value="Relaciones Publicas y Medios">Relaciones Publicas y Medios</option>
-												<option value="Seguridad Ciudadana">Seguridad Ciudadana</option>
-												<option value="Infraestructura, Vivienda y Servicios Publicos">Infraestructura, Vivienda y Servicios Publicos</option>
-												<option value="Formacion y Conciencia Ideologica">Formación y Conciencia Ideológica</option>
-												<option value="Elaboracion de
-												Proyectos de Desarrollo Comunitario (Endogeno)">Elaboración de
-												Proyectos de Desarrollo Comunitario (Endógeno)</option>
-												<option value="Alimentación y Nutricion">Alimentación y Nutrición</option>
-												<option value="Educacion Cultura y Tecnologia">Educación Cultura y Tecnología</option>
-												<option value="Salud, Deporte y Saneamiento Ambiental">Salud, Deporte y Saneamiento Ambiental</option>
-												<option value="Ejecucion de Programas Sociales y las Misiones">Ejecución de Programas Sociales y las Misiones</option>
-											</select>
-												
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final">
+													 	<option value="0">seleccione</option>
+														<option value="Contraloria y Seguimiento">Contraloria y Seguimiento</option>
+														<option value="Relaciones Publicas y Medios">Relaciones Publicas y Medios</option>
+														<option value="Seguridad Ciudadana">Seguridad Ciudadana</option>
+														<option value="Infraestructura, Vivienda y Servicios Publicos">Infraestructura, Vivienda y Servicios Publicos</option>
+														<option value="Formacion y Conciencia Ideologica">Formación y Conciencia Ideológica</option>
+														<option value="Elaboracion de
+														Proyectos de Desarrollo Comunitario (Endogeno)">Elaboración de
+														Proyectos de Desarrollo Comunitario (Endógeno)</option>
+														<option value="Alimentación y Nutricion">Alimentación y Nutrición</option>
+														<option value="Educacion Cultura y Tecnologia">Educación Cultura y Tecnología</option>
+														<option value="Salud, Deporte y Saneamiento Ambiental">Salud, Deporte y Saneamiento Ambiental</option>
+														<option value="Ejecucion de Programas Sociales y las Misiones">Ejecución de Programas Sociales y las Misiones</option>
+													</select>
+													<div class="required-icon">
+									                	<div class="text">*</div>
+									            	</div>
+									        	</div>
 											</div>
 
 										</div>

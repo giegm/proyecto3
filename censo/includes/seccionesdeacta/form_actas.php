@@ -8,7 +8,12 @@
         <div class="form-group">
           <label style="text-align: left" class="control-label col-sm-1 col-md-1"></label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" name="cedula" placeholder="Introduzca un número de cédula" maxlength="8" required onKeyPress="return SoloNumeros(event);">
+            <div class="required-field-block">
+              <input type="text" class="form-control" name="cedula" placeholder="Introduzca un número de cédula" maxlength="8" required onKeyPress="return SoloNumeros(event);">
+              <div class="required-icon">
+                <div class="text">*</div>
+              </div>
+            </div>
             <div class="form-group">
             <br>
               <div class="col-md-4">

@@ -18,21 +18,33 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Institución</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="namepaef[]" class="form-control"  placeholder="Nombre de la Institución" maxlength="10">
-                                        </div>
-
-                                        
-                                        
+                                            <div class="required-field-block">
+                                                <input type="text" name="namepaef[]" class="form-control"  placeholder="Nombre de la Institución" maxlength="10">
+                                                <div class="required-icon">
+                                                    <div class="text">*</div>
+                                                </div>
+                                            </div>
+                                        </div>                                       
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Atención</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="cedf[]" class="form-control"  placeholder="A quien va dirigido">
+                                            <div class="required-field-block">
+                                                <input type="text" name="cedf[]" class="form-control"  placeholder="A quien va dirigido">
+                                                <div class="required-icon">
+                                                    <div class="text">*</div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Área de Postulación</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="ci" autofocus class="form-control" placeholder="Específicar área de estudio">
+                                            <div class="required-field-block">
+                                                <input type="text" name="ci" autofocus class="form-control" placeholder="Específicar área de estudio">
+                                                <div class="required-icon">
+                                                    <div class="text">*</div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                          <div class="col-sm-2 col-md-2">

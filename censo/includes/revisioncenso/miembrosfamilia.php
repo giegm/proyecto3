@@ -127,7 +127,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											?>
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
-												<option value="Pápa">Pápa</option>
+												<option value="Papá">Papá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
 												<option value="Hijo(a)">Hijo(a)</option>
 												<option value="Sobrino(a)">Sobrino(a)</option>
@@ -141,7 +141,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											}//fin del 2do if
 										?>
 										<?php
-										if($data_tres_fam[$i]["PARENTESCO_F"]=="Pápa"){
+										if($data_tres_fam[$i]["PARENTESCO_F"]=="Papá"){
 											?>
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
@@ -164,7 +164,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
-												<option value="Pápa">Pápa</option>
+												<option value="Papá">Papá</option>
 												<option value="Hijo(a)">Hijo(a)</option>
 												<option value="Sobrino(a)">Sobrino(a)</option>
 												<option value="Hermano(a)">Hermano(a)</option>
@@ -182,7 +182,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
-												<option value="Pápa">Pápa</option>
+												<option value="Papá">Papá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
 												<option value="Sobrino(a)">Sobrino(a)</option>
 												<option value="Hermano(a)">Hermano(a)</option>
@@ -200,7 +200,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
-												<option value="Pápa">Pápa</option>
+												<option value="Papá">Papá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
 												<option value="Hijo(a)">Hijo(a)</option>
 												<option value="Hermano(a)">Hermano(a)</option>
@@ -218,7 +218,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
-												<option value="Pápa">Pápa</option>
+												<option value="Papá">Papá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
 												<option value="Hijo(a)">Hijo(a)</option>
 												<option value="Sobrino(a)">Sobrino(a)</option>
@@ -236,7 +236,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
-												<option value="Pápa">Pápa</option>
+												<option value="Papá">Papá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
 												<option value="Hijo(a)">Hijo(a)</option>
 												<option value="Sobrino(a)">Sobrino(a)</option>
@@ -254,7 +254,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
-												<option value="Pápa">Pápa</option>
+												<option value="Papá">Papá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
 												<option value="Hijo(a)">Hijo(a)</option>
 												<option value="Sobrino(a)">Sobrino(a)</option>
@@ -272,7 +272,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
-												<option value="Pápa">Pápa</option>
+												<option value="Papá">Papá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
 												<option value="Hijo(a)">Hijo(a)</option>
 												<option value="Sobrino(a)">Sobrino(a)</option>
@@ -290,7 +290,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<select class="form-control selectpicker show-tick" name="parntscf" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
-												<option value="Pápa">Pápa</option>
+												<option value="Papá">Papá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
 												<option value="Hijo(a)">Hijo(a)</option>
 												<option value="Sobrino(a)">Sobrino(a)</option>

@@ -16,7 +16,7 @@
 
 							<div class="col-sm-2 col-md-2">
 								<div class="required-field-block">	
-									<input type="text" class="form-control" name="telfcel" placeholder="Indique el motivo" maxlength="10">
+									<input type="text" class="form-control" name="telfcel" placeholder="Indique el motivo" maxlength="30">
 									<div class="required-icon">
 								      	<div class="text">*</div>
 								    </div>

@@ -31,19 +31,19 @@
     {
     ?>
 				
-	<span class="icon-admin"><i class="fa fa-user fa-5x"></i></span>&nbsp;<a href="../vistas/noticias.php" class="links-operaciones">Agregar noticia</a>
+	<span class="icon-admin"><i class="fa fa-users"></i></span>&nbsp;<a href="../vistas/censarfamilia.php" class="links-operaciones">Censar Familia</a>
 
 </div>
 
 <div class="col-md-4 columnas-opciones">
 				
-	<span class="icon-admin"><i class="fa fa-book fa-5x"></i></span>&nbsp;<a href="../vistas/listado_de_noticias.php" class="links-operaciones">Revisar noticia</a>
+	<span class="icon-admin"><i class="fa fa-book fa-5x"></i></span>&nbsp;<a href="../vistas/consultas.php" class="links-operaciones">Consultas</a>
 				
 </div>
 
 <div class="col-md-4 columnas-opciones">
 				
-	<span class="icon-admin"><i class="fa fa-list-alt fa-5x"></i></span>&nbsp;<a href="" class="links-operaciones">Eliminar noticia</a>
+	<span class="icon-admin"><i class="fa fa-list-alt fa-5x"></i></span>&nbsp;<a href="../vistas/listadocensos.php" class="links-operaciones">Listado de Censos</a>
 
 	<?php
 	}
@@ -55,19 +55,19 @@
     {
     ?>
 				
-	<span class="icon-admin"><i class="fa fa-user fa-5x"></i></span>&nbsp;<a href="../vistas/listadocensos.php" class="links-operaciones">Listado de Censos</a>
+	<span class="icon-admin"><i class="fa fa-user fa-5x"></i></span>&nbsp;<a href="../vistas/noticias.php" class="links-operaciones">Noticias web</a>
 
 </div>
 
 <div class="col-md-4 columnas-opciones">
 				
-	<span class="icon-admin"><i class="fa fa-book fa-5x"></i></span>&nbsp;<a href="../vistas/consultas.php" class="links-operaciones">Ver Estadisticas</a>
+	<span class="icon-admin"></i></span>&nbsp;
 				
 </div>
 
 <div class="col-md-4 columnas-opciones">
 				
-	<span class="icon-admin"><i class="fa fa-list-alt fa-5x"></i></span>&nbsp;<a href="" class="links-operaciones">Ver Perfil</a>
+	<span class="icon-admin"><i class="fa fa-book fa-5x"></i></span>&nbsp;<a href="../vistas/listado_de_noticias.php" class="links-operaciones">Listado de noticias</a>
 	<?php
 	}
 	?>

@@ -19,7 +19,7 @@
 
                                         <div class="col-sm-2 col-md-2">
                                             <div class="required-field-block">
-                                                <input type="text" name="namepaef[]" class="form-control"  placeholder="Nombre de la Institución" maxlength="10">
+                                                <input type="text" name="namepaef[]" class="form-control"  placeholder="Nombre de la Institución" maxlength="20">
                                                 <div class="required-icon">
                                                     <div class="text">*</div>
                                                 </div>
@@ -29,7 +29,7 @@
                                         
                                         <div class="col-sm-2 col-md-2">
                                             <div class="required-field-block">
-                                                <input type="text" name="cedf[]" class="form-control"  placeholder="A quien va dirigido">
+                                                <input type="text" name="cedf[]" class="form-control"  placeholder="A quien va dirigido" maxlength="15">
                                                 <div class="required-icon">
                                                     <div class="text">*</div>
                                                 </div>
@@ -40,7 +40,7 @@
                                         
                                         <div class="col-sm-2 col-md-2">
                                             <div class="required-field-block">
-                                                <input type="text" name="ci" autofocus class="form-control" placeholder="Específicar área de estudio">
+                                                <input type="text" name="ci" autofocus class="form-control" placeholder="Específicar área de estudio" maxlength="15">
                                                 <div class="required-icon">
                                                     <div class="text">*</div>
                                                 </div>

@@ -7,9 +7,13 @@
           
           <div class="form-group">
           <label style="text-align: left" class="control-label col-sm-1 col-md-1">Imagen</label>
-         
           <div class="col-sm-7 col-md-6">
-          <input type="file" class="form-control" name="imagen_noticia" id="imagen_noticia" value="">
+          <div class="required-field-block">
+            <input type="file" class="form-control" name="imagen_noticia" id="imagen_noticia" value="">
+          <div class="required-icon">
+              <div class="text">*</div>
+          </div>
+          </div>
           </div>
          </div>
 
@@ -30,12 +34,7 @@
           <label style="text-align: left" class="control-label col-sm-2 col-md-2">Fecha de Notícia</label>
          
           <div class="col-sm-4 col-md-3">
-            <div class="required-field-block">
               <input type="date" class="form-control" name="fecha_noticia" value="">
-              <div class="required-icon">
-                <div class="text">*</div>
-              </div>
-            </div>
           </div>
          </div>
 
@@ -43,7 +42,7 @@
           <label style="text-align: left" class="control-label col-sm-2 col-md-2">Descripción</label>
          
           <div class="col-sm-4 col-md-4">
-          <textarea name="descrip_noticia" maxlength="600"></textarea>
+          <textarea name="descrip_noticia" maxlength="300"></textarea>
           </div>
          </div>
 

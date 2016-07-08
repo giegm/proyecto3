@@ -37,7 +37,9 @@
 				<li role="presentation"><a href="../vistas/administra.php"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Inicio&nbsp;&nbsp;</a></li>
 				<li role="presentation"><a href="../vistas/censarfamilia.php"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Censar Familias</a></li>
 				<li role="presentation"><a href="../vistas/consultas.php"><i class="fa fa-book"></i>&nbsp;&nbsp;Consultas&nbsp;&nbsp;&nbsp;</a></li>
-				<li role="presentation"><a href="../vistas/listadocensos.php"><img src="../img/iconos/listado2.png">&nbsp;&nbsp;Listado de Censos</a></li>				<?php
+				<li role="presentation"><a href="../vistas/listadocensos.php"><img src="../img/iconos/listado2.png">&nbsp;&nbsp;Listado de Censos</a></li>
+				<li role="presentation"><a href="../vistas/actas.php"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Emisión de Actas</a></li>
+				<?php
 				}
 				?>
 

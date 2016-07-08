@@ -133,8 +133,8 @@
       <div class="form-group">
         <label class="control-label col-md-4"></label>
         <div class="col-md-8">
-          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
-      <input type="button" value="Guardar datos" name="envio" class="btn btn-success btn-sm" onClick="Modifica_datos_perfil();">
+          <input type="button" class="btn btn-danger btn-sm" data-dismiss="modal"value="Cancelar">
+        <input type="button" value="Guardar datos" name="envio" class="btn btn-success btn-sm" onClick="Modifica_datos_perfil();">
         </div>
       </div>
       <!--cuadro de errores js-->
@@ -347,15 +347,6 @@ if(isset($_GET["mod"])){
         <input type="text" class="form-control" name="newced" maxlength="8" value="<?php echo $perfil[0]["CEDULA"]; ?>">
       </div>
       </div>
-
-      <div class="form-group">
-        <label class="control-label col-md-2">Contraseña:</label>
-      
-      <div class="col-md-4">
-        <input type="text" class="form-control" name="newpass" maxlength="15" value="<?php echo $perfil[0]["PASSADMINDOS"]; ?>">
-      </div>
-      </div>
-
       <div class="form-group">
         <label class="control-label col-md-2">Perfil de Usuario:</label>
       
@@ -428,7 +419,7 @@ if(isset($_GET["mod"])){
         <label class="control-label col-md-2"></label>
       
       <div class="col-md-8">
-        <button type="button" class="btn btn-danger btn-sm" onClick="window.location='?perfil=<?php echo $_SESSION["sesion_perfil"]; ?>'">Cancelar</button>
+        <input type="button" class="btn btn-danger btn-sm" onClick="window.location='?perfil=<?php echo $_SESSION["sesion_perfil"]; ?>'"value="Cancelar">
         <input type="button" class="btn btn-primary btn-sm" onClick="Modifica_datos_perfil_seleccionado();" value="Guardar datos">
       </div>
       </div>

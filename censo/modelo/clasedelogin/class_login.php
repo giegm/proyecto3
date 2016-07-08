@@ -41,8 +41,7 @@ class Acceso_user{
 						$_SESSION["sesion_usuario"]=$row["USERADMIN"];
 						$_SESSION["sesion_perfil"]=$row["ID_PERFIL"];
 						//y lo mandamos a su perfil
-						header('location:../vistas/administra.php');
-					}else{
+						echo "<script type='text/javascript'>alert('Usuario valido.'); window.location='../vistas/administra.php?perfil=1';</script>";					}else{
 						//El usuario esta suspendido, y pasamos el valor 4 via GET
 						header('location:../ingreso.php?err=4');
 					}

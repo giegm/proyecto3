@@ -55,7 +55,7 @@ $nac=$obj2->get_nacionalidad();
 
 						<div class="col-sm-2 col-md-2">
 							<div class="required-field-block">
-								<input type="text" name="ape" class="form-control" placeholder="Apellido Completo" maxlength="45" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
+								<input type="text" name="ape" class="form-control" placeholder="Apellido Completo" maxlength="30" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
 								<div class="required-icon">
 					                <div class="text">*</div>
 					            </div>

@@ -46,7 +46,7 @@
         <div class="container">
             <div class="row">
                 <div class="features">  
-                    <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="col-md-6 col-md-offset-3" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <a href="censo/ingreso.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;"><div class="feature-wrap">
                             <i class="fa fa-users"></i>
                             <h2>Sistema de Censo Demográfico y Socioeconómico</h2>
@@ -54,13 +54,13 @@
                         </div></a>
                     </div><!--/.col-md-4-->
 
-                    <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <a href="actas/index.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;"><div class="feature-wrap">
+                    <!--<div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
                             <i class="fa fa-file-pdf-o"></i>
                             <h2>Sistema de Emisión de Actas</h2>
                             <h3></h3>
-                        </div></a>
-                    </div>
+                        </div>
+                    </div>-->
                    <!--/.col-md-4-->
                 </div><!--/.services-->
             </div><!--/.row-->    

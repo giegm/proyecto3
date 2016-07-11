@@ -182,7 +182,7 @@
         </div><!--/.container-->
     </section><!--/#recent-works-->	
 	
-    <section id="middle">
+  <!--  <section id="middle">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 wow fadeInDown">
@@ -230,7 +230,7 @@
 
                 </div><!--/.col-sm-6-->
 
-                <div class="col-sm-6 wow fadeInDown">
+                <!--<div class="col-sm-6 wow fadeInDown">
                     <div class="accordion">
                         <h2>Why People like us?</h2>
                         <div class="panel-group" id="accordion1">
@@ -308,11 +308,11 @@
                           </div>
                         </div><!--/#accordion1-->
                     </div>
-                </div>
+                </div> -->
 
             </div><!--/.row-->
         </div><!--/.container-->
-    </section><!--/#middle-->
+    </section> --> <!--/#middle--> 
 
     <div class="clients-area center wow fadeInDown">
                 <h2>Misión y Visión</h2>

@@ -84,7 +84,7 @@ class Acceso_user{
 
 <?php
 
-$segundos = 600; //si pasa este tiempo se detecta la inactividad del usuario en el sitio 
+$segundos = 300; //si pasa este tiempo se detecta la inactividad del usuario en el sitio 
 if(($_SESSION['tiempo']+$segundos) < time()) {
 	session_destroy();
 	echo'<script type="text/javascript">alert("Su sesion ha expirado por inactividad'; 

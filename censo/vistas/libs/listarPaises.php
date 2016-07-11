@@ -9,7 +9,7 @@ $listado=  mysqli_query($cn,"select C.*, DP.CI from censos as C, datos_personale
 
 <div class="panel panel-default" id="paneles-censo">
     <div class="panel-heading" id="cabecera-panel-listado-de-censos">
-      <h3 class="panel-title">Tabla general</h3>
+      <h3 class="panel-title">Lista general</h3>
     </div>
     <div class="panel-body">
       <div class="table-responsive">

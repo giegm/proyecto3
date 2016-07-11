@@ -1,6 +1,20 @@
 <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row">
+                             
+
+               <div class="col-md-3 col-sm-6">
+                    <div class="widget"><
+                        <h3></h3>
+                       <!-- <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">SEO Marketing</a></li>
+                            <li><a href="#">Theme</a></li>
+                            <li><a href="#">Development</a></li>
+                        </ul>-->
+                    </div>    
+                </div><!--/.col-md-3-->
+
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
                         <h3>C.C. "Santa Inés"</h3>
@@ -22,25 +36,13 @@
 
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
-                        <h3>Developers</h3>
-                        <ul>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">SEO Marketing</a></li>
-                            <li><a href="#">Theme</a></li>
-                            <li><a href="#">Development</a></li>
-                        </ul>
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Our Partners</h3>
-                        <ul>
+                        <h3></h3>
+                       <!-- <ul>
                             <li><a href="#">Adipisicing Elit</a></li>
                             <li><a href="#">Eiusmod</a></li>
                             <li><a href="#">Tempor</a></li>
                             <li><a href="#">Veniam</a></li>                           
-                        </ul>
+                        </ul>-->
                     </div>    
                 </div><!--/.col-md-3-->
             </div>

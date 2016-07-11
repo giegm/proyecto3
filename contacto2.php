@@ -10,7 +10,6 @@ $nombre= "De:$nombre";
 $email= "Correo: $email";
 $asunto= "Asunto $asunto";
 $mensaje= "Mensaje: $mensaje";
-
 /*<table border='0' cellspacing='2' cellpadding='2'>
   <tr>
     <td width='20%' align='center' bgcolor='#FFFFCC'><strong>Nombre:</strong></td>

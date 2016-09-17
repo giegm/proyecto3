@@ -4,9 +4,32 @@
      require_once('head.php'); ?>
 
   <body class="homepage">   
-	<?php 
-     require_once('header.php'); ?>
-	
+  <header id="header">
+        <nav class="navbar navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.php"><img src="images/1.png" class="img-rounded"></a>
+                </div>
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.php">Inicio</a></li>
+                        <li><a href="nosotros.php">Nosotros</a></li>                        
+                        <li><a href="portafolio.php">Portafolio</a></li>
+                        <li><a href="noticias.php">Noticias</a></li> 
+                        <li><a href="contacto.php">Contáctenos</a></li>                        
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+        
+    </header><!--/header-->
 	<div class="slider">
         <div class="container">
             <div id="about-slider">
@@ -46,11 +69,19 @@
         <div class="container">
             <div class="row">
                 <div class="features">  
+<<<<<<< HEAD
+                    <center><div class="col-md-6 col-md-offset-3" data-wow-duration="1000ms" data-wow-delay="600ms">
+=======
                     <div class="col-md-6 col-md-offset-3" data-wow-duration="1000ms" data-wow-delay="600ms">
+>>>>>>> 5e6d5ea72d5ce3dc11fbe743392856e58285783b
                         <a href="censo/ingreso.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;"><div class="feature-wrap">
                             <i class="fa fa-users"></i>
                             <h2>Sistema de Censo Demográfico y Socioeconómico</h2>
                             <h3></h3>
+<<<<<<< HEAD
+                        </div></a></center>
+                    </div>
+=======
                         </div></a>
                     </div><!--/.col-md-4-->
 
@@ -62,6 +93,7 @@
                         </div>
                     </div>-->
                    <!--/.col-md-4-->
+>>>>>>> 5e6d5ea72d5ce3dc11fbe743392856e58285783b
                 </div><!--/.services-->
             </div><!--/.row-->    
         </div><!--/.container-->

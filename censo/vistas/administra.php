@@ -59,10 +59,6 @@ if(isset($_SESSION["sesion_usuario"]) and isset($_SESSION["sesion_perfil"]))
 			<h1 class="page-header pageheader-general"></h1>
 			<center><img src="../img/censo.png" align="center"></center>
 			<h1 class="page-header pageheader-general"></h1>
-			
-			<?php
-				include("../includes/operacionesadmin.php");
-			?>
 			<br/>
 	</section>
 	</div><!-- fin fila principal -->

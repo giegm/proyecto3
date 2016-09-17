@@ -4,8 +4,32 @@
      require_once('head.php'); ?>
 
   <body class="homepage">   
-	 <?php 
-     require_once('header.php'); ?>
+<header id="header">
+        <nav class="navbar navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.php"><img src="images/1.png" class="img-rounded"></a>
+                </div>
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.php">Inicio</a></li>
+                        <li><a href="nosotros.php">Nosotros</a></li>                        
+                        <li><a href="portafolio.php">Portafolio</a></li>
+                        <li><a href="noticias.php">Noticias</a></li> 
+                        <li class="active"><a href="contacto.php">Contáctenos</a></li>                        
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+        
+    </header><!--/header-->
 		
 	<div class="map"> <!-- http://es.map-generator.org/-->
 		<iframe src="http://www.map-generator.org/c58014dc-fc5d-4fc2-8659-2cfc3158dc1c/iframe-map.aspx" scrolling="no" width="2000px" height="600px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
@@ -21,29 +45,25 @@
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
                
-                <form action="contacto2.php" id="main-contact-form" class="contact-form" name="contact-form" method="post">
+                <form action="contacto2.php" method="post" class="contact-form">
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
                             <label>Nombre y Apellido *</label>
-                            <input type="text" name="nombre" class="form-control" required="required" onblur="revisar(this);">
+                            <input type="text" name="nombre" class="form-control" id="nombre" maxlength="30" placeholder="Ingrese su nombre" required="required">
                         </div>
                         <div class="form-group">
                             <label>Correo Electronico *</label>
-                            <input type="email" name="email" class="form-control" required="required" onblur="revisar(this); revisaremail(this);">
-                        </div>
-                        <div class="form-group">
-                            <label>Teléfono</label>
-                            <input type="number" name="telefono" class="form-control">
-                        </div>                                            
+                            <input type="email" name="email" class="form-control" id="email" maxlength="30" placeholder="Ingrese su correo" required="required">
+                        </div>                                                                  
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
                             <label>Motivo del Mensaje *</label>
-                            <input type="text" name="asunto" class="form-control" required="required" maxlength="15" onblur="revisar(this);">
+                            <input type="text" name="asunto" class="form-control" id="asunto" maxlength="15" placeholder="Ingrese un asunto" required="required">
                         </div>
                         <div class="form-group">
                             <label>Mensaje *</label>
-                            <textarea name="mensaje" id="message" required="required" class="form-control" maxlength="100" rows="8" cols="50" onblur="revisar(this);"></textarea>
+                            <textarea name="mensaje" id="message" required="required" class="form-control" maxlength="100" rows="8" cols="50"></textarea>
                         </div>                        
                         <div class="form-group">                           
                             <input class="btn btn-primary" type="submit" value="Enviar Mensaje"/>

@@ -1,12 +1,8 @@
-<!--Prueba-->
-
 <?php 
 ob_start(); 
 
 require_once("../modelo/clasedecensos/class_listar_censos.php");
-require_once("../modelo/dompdf/fpdf.php");
 $tra=new Censos();
-
 ?>
 
 <html>
@@ -14,7 +10,6 @@ $tra=new Censos();
 
 <style>
 	body{
-
 		font-family: Arial, Helvetica, Verdana;
 		font-size: 15px;
 	}

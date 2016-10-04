@@ -21,7 +21,8 @@ require_once("conexion.php");
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Inicio</a></li>
-                        <li><a href="nosotros.php">Nosotros</a></li>                        
+                        <li><a href="nosotros.php">Nosotros</a></li>
+                        <li><a href="servicios.php">Servicios</a></li>
                         <li><a href="portafolio.php">Portafolio</a></li>
                         <li class="active"><a href="noticias.php">Noticias</a></li> 
                         <li><a href="contacto.php">Contáctenos</a></li>                        

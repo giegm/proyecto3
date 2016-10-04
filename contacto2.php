@@ -33,4 +33,4 @@ die ("<script>alert('Su mensaje fue enviado correctamente, le responderemos lo m
 die ("<script languaje='Javascript'>alert('Su mensaje no pudo ser enviado.');location.href ='contacto.php';</script>");
 }
 }
-?>
+?>			

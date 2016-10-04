@@ -120,8 +120,7 @@
 	<section id="feature" class="transparent-bg">
 		<div class="container">
 			<div class="get-started center wow fadeInDown">
-				<h2>Servicios</h2>
-				<p class="lead">El consejo comunal "Santa Inés" emite las siguientes cartas<br>a los habitantes de su comunidad</p>
+				<h2>Cartas Emitidas por el Consejo Comunal "Santa Inés"</h2>
 				
             </div><!--/.get-started-->
 
@@ -129,20 +128,18 @@
 
                 <div class="features">
                     <div class="col-md-6 fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="skill">
-                            <a href="#"><h3 class="bg-primary">Emisión de Actas</h3></a>
-                            <a href="#"><h3 class="bg-info">Carta de Residencia</h3></a>
-                            <a href="#"><h3 class="bg-warning">Carta de Buena Conducta</h3></a>
-                            <a href="#"><h3 class="bg-danger">Carta de Concubinato</h3></a>                            
+                        <div class="skill"><center>
+                            <a href="#"><h3 class="bg-primary">Carta de Residencia</h3></a>
+                            <a href="#"><h3 class="bg-info">Carta de Postulación</h3></a>
+                            <a href="#"><h3 class="bg-danger">Constancia de No poseer empleo</h3></a> </center>                           
                         </div>
                     </div><!--/.col-md-4-->
 
                       <div class="col-md-6 fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="skill">
-                            <a href=""><h3 class="bg-primary">Emisión de Actas</h3></a> 
-                            <a href=""><h3 class="bg-info">Constancia de No poseer empleo</h3></a>
-                            <a href=""><h3 class="bg-warning">Carta de Postulación</h3></a>
-                            <a href=""><h3 class="bg-danger">Constancia de No poseer vivienda</h3></a>
+                        <div class="skill"><center>
+                            <a href=""><h3 class="bg-primary">Constancia de No poseer vivienda</h3></a> 
+                            <a href=""><h3 class="bg-info">Carta de Buena Conducta</h3></a>
+                            <a href=""><h3 class="bg-danger">Carta de Concubino</h3></a> </center>
                         </div>
                     </div><!--/.col-md-4-->                      
     

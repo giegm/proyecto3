@@ -20,7 +20,8 @@
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Inicio</a></li>
-                        <li><a href="nosotros.php">Nosotros</a></li>                        
+                        <li><a href="nosotros.php">Nosotros</a></li>
+                        <li><a href="servicios.php">Servicios</a></li>
                         <li><a href="portafolio.php">Portafolio</a></li>
                         <li><a href="noticias.php">Noticias</a></li> 
                         <li><a href="contacto.php">Contáctenos</a></li>                        
@@ -69,31 +70,13 @@
         <div class="container">
             <div class="row">
                 <div class="features">  
-<<<<<<< HEAD
                     <center><div class="col-md-6 col-md-offset-3" data-wow-duration="1000ms" data-wow-delay="600ms">
-=======
-                    <div class="col-md-6 col-md-offset-3" data-wow-duration="1000ms" data-wow-delay="600ms">
->>>>>>> 5e6d5ea72d5ce3dc11fbe743392856e58285783b
                         <a href="censo/ingreso.php" target="_blank" onclick="window.open(this.href,this.target,'width=1000,height=600,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;"><div class="feature-wrap">
                             <i class="fa fa-users"></i>
                             <h2>Sistema de Censo Demográfico y Socioeconómico</h2>
                             <h3></h3>
-<<<<<<< HEAD
                         </div></a></center>
                     </div>
-=======
-                        </div></a>
-                    </div><!--/.col-md-4-->
-
-                    <!--<div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-file-pdf-o"></i>
-                            <h2>Sistema de Emisión de Actas</h2>
-                            <h3></h3>
-                        </div>
-                    </div>-->
-                   <!--/.col-md-4-->
->>>>>>> 5e6d5ea72d5ce3dc11fbe743392856e58285783b
                 </div><!--/.services-->
             </div><!--/.row-->    
         </div><!--/.container-->
@@ -340,11 +323,11 @@
                           </div>
                         </div><!--/#accordion1-->
                     </div>
-                </div> -->
+                </div>
 
             </div><!--/.row-->
         </div><!--/.container-->
-    </section> --> <!--/#middle--> 
+    </section> <!--/#middle--> 
 
     <div class="clients-area center wow fadeInDown">
                 <h2>Misión y Visión</h2>

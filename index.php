@@ -44,13 +44,13 @@
 
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="images/cc2.jpg" class="img-responsive" alt=""> 
+                            <img src="images/cc3.jpg" class="img-responsive" alt=""> 
                        </div>
                        <div class="item">
-                            <img src="images/cc1.jpg" class="img-responsive" alt=""> 
+                            <img src="images/cc2.jpg" class="img-responsive" alt=""> 
                        </div> 
                        <div class="item">
-                            <img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+                            <img src="images/cc1.jpg" class="img-responsive" alt=""> 
                        </div> 
                     </div>
                     

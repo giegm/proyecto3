@@ -2,7 +2,7 @@
 session_start();
 class Conecta{
 	public static function conx(){
-		$con=mysqli_connect("localhost","root","123456","mydb");
+		$con=mysqli_connect("localhost","root","","mydb");
 		@mysqli_query("SET NAMES 'utf8'");
 
 		if(!$con){

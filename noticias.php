@@ -4,7 +4,17 @@ require_once("conexion.php");
 <!DOCTYPE html>
 <html lang="en">
   <?php require_once('head.php'); ?>
-  <body class="homepage">   
+  <body class="homepage">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.7";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+
 <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">
@@ -62,6 +72,10 @@ require_once("conexion.php");
         <?php
             }
         ?>          
+
+                 <aside class="col-md-12">
+                    <div class="fb-comments" data-href="http://localhost/proyecto3/noticias.php" data-numposts="6"></div>
+                </aside>
                        <ul class="pagination pagination-lg">
                         <li><a href="#"><i class="fa fa-long-arrow-left"></i>Página Anterior</a></li>
                         <li class="active"><a href="#">1</a></li>
@@ -76,7 +90,9 @@ require_once("conexion.php");
                     <a class="twitter-timeline"  href="https://twitter.com/search" data-widget-id="755550151897452546">Tweets sobre </a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           
-    			</aside>  
+                </aside>
+
+                
             </div><!--/.row-->
         </div>
     </section><!--/#blog-->

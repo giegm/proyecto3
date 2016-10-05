@@ -86,6 +86,24 @@ require_once("../modelo/clasesdeconsulta/class_total_censados.php");
 					</tbody>
 				</table>
 				<center><a href="#" id="Reporte" class="btn btn-success"> Generar Reporte</a>
+				<table>
+					<thead>
+						<tr>
+							<th>
+								Total de Edades Consultadas
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<?php
+									echo $obj->get_edades();
+				                ?>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 				<!-- <a href="reportepdf.php" class="btn btn-primary"> Imprimir</a></center>-->
 			</div>
 		</div>

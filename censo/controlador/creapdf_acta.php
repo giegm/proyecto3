@@ -1,4 +1,4 @@
-~<?php 
+<?php 
 ob_start(); 
 
 require_once("../modelo/clasedecensos/class_listar_censos.php");
@@ -143,7 +143,7 @@ $dompdf = new DOMPDF();
 $dompdf->load_html(ob_get_clean());
 $dompdf->render();
 $pdf = $dompdf->output();
-$filename = "Censo".date("Y-m-d").'.pdf';
+$filename = "Carta de R.".date("Y-m-d").'.pdf';
 file_put_contents($filename, $pdf);
 $dompdf->stream($filename);
 

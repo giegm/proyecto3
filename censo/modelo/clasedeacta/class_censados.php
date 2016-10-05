@@ -51,7 +51,7 @@ class Personas_censados{
 private $censadas;
 public function POST_cedula(){
 		$ci=$_POST["cedula"];
-		$sql = mysqli_query(Conecta::conx(),"SELECT CI, CEDULA_F FROM datos_personales, datos_familiares WHERE (CI=$ci) or (CEDULA_F=$ci)") or die('error en la consulta:' .$sql.  mysqli_errno(Conecta::conx()));
+		$sql = mysqli_query(Conecta::conx(),"SELECT CI, CEDULA_F, NOMBRE, APELLIDO, NOMBRES_F FROM datos_personales, datos_familiares WHERE (CI=$ci) or (CEDULA_F=$ci)") or die('error en la consulta:' .$sql.  mysqli_errno(Conecta::conx()));
 		//$sql .= "";;
 		if($reg=mysqli_fetch_array($sql)){	
 			echo "<script type='text/javascript'>alert('usuario censado'); window.location='../vistas/seleccionar_acta.php';</script>";

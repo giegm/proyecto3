@@ -33,6 +33,15 @@ $data=$objc->obten_censo_por_id($_GET["id"]);
 		<link rel="shortcut icon" href="../img/ccsantaines.ico">
 	</head>
 <body>
+	<script language="JavaScript" type="text/javascript">
+		function click(){
+		if(event.button==2){
+		alert('Esta acción no está permitida');
+		}
+		}
+		document.onmousedown=click
+		//-->
+	</script>
 	<?php include("../includes/navbaradmin.php"); ?>
 	<div class="container-fluid"><!-- inicio del contenedor general -->
 		<div class="row"><!-- fila principal -->

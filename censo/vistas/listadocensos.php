@@ -35,6 +35,15 @@ if(isset($_SESSION["sesion_usuario"])){
         <!--    FORMATO DE TABLAS    -->
     </head>
 	<body>
+        <script language="JavaScript" type="text/javascript">
+            function click(){
+            if(event.button==2){
+            alert('Esta acción no está permitida');
+            }
+            }
+            document.onmousedown=click
+            //-->
+        </script>
 		<?php
 		include("../includes/navbaradmin.php");
 		?>

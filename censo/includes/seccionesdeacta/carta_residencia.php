@@ -1,4 +1,4 @@
- <div id="paneles-censo" class="panel panel-danger">
+<div id="paneles-censo" class="panel panel-danger">
 				    <div class="panel-heading" role="tab" id="headingprincipal">
 				      <h4 class="panel-title">
 				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseprincipal" aria-expanded="true" aria-controls="collapseprincipal">

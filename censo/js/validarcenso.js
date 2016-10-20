@@ -74,8 +74,18 @@ function Validar_censo(){
 	}else{
 
 	}
-
 	//Validamos el nombre
+
+	if(form.name.value.length < 3) {
+		alert('EL nombre debe tener al menos 3 caracteres.');
+        form.name.focus();
+        return false;
+    }
+    if(form.name.value.length > 30) {
+    	alert('El nombre debe tener maximo 30 caracteres.');
+        form.name.focus();
+        return false;
+    }	
 	if(form.name.value == null || form.name.value.length == 0 || /^\s+$/.test(form.name.value) ) {
 	  	alert('Ingresa un nombre para el jefe de familia.');
 		form.name.value=" ";
@@ -87,6 +97,17 @@ function Validar_censo(){
 	}
 
 	//validamos el apellido
+
+	if(form.name.value.length < 3) {
+		alert('El apellido debe tener minímo 3 caracteres.');
+        form.name.focus();
+        return false;
+    }
+    if(form.name.value.length > 30) {
+    	alert('El apellido debe tener maximo 30 caracteres.');
+        form.name.focus();
+        return false;
+    }
 	if(form.ape.value == null || form.ape.value.length == 0 || /^\s+$/.test(form.ape.value)){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Ingresa un apellido para el jefe de familia.');

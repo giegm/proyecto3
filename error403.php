@@ -72,7 +72,7 @@ body{
 	    <p>Error ocurrido!</p><p>Acceso denegado/prohibido</p>
 	    
   	      <div class="sub">
-	        <p><a href="index.php">Atras</a></p>
+	        <p><a href="../index.php">Atras</a></p>
 	      </div>
         </div>
 	</div>

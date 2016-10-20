@@ -112,6 +112,6 @@ en la tabla del listado que viene via GET conteniendo el ID_JEFE*/
 </html>
 <?php 
 }else{
-	echo "<script type='text/javascript'>alert('necesita iniciar sesión para ver esta sección.');window.location='../ingreso.php';</script>";
+	echo "<script type='text/javascript'>alert('Necesita iniciar sesi\u00f3n para ver esta secci\u00f3n.');window.location='../ingreso.php';</script>";
 }
 ?>

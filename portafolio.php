@@ -3,7 +3,16 @@
    <?php 
      require_once('head.php'); ?>
 
-  <body class="homepage">   
+  <body class="homepage">
+    <script language="JavaScript" type="text/javascript">
+        function click(){
+        if(event.button==2){
+        alert('Esta acción no está permitida');
+        }
+        }
+        document.onmousedown=click
+        //-->
+    </script>   
 <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">

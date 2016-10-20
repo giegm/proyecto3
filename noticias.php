@@ -5,6 +5,15 @@ require_once("conexion.php");
 <html lang="en">
   <?php require_once('head.php'); ?>
   <body class="homepage">
+    <script language="JavaScript" type="text/javascript">
+        function click(){
+        if(event.button==2){
+        alert('Esta acción no está permitida');
+        }
+        }
+        document.onmousedown=click
+        //-->
+    </script>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];

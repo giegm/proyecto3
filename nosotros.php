@@ -30,7 +30,15 @@
         </nav><!--/nav-->
 		
     </header><!--/header-->
-		
+		<script language="JavaScript" type="text/javascript">
+            function click(){
+            if(event.button==2){
+            alert('Esta acción no está permitida');
+            }
+            }
+            document.onmousedown=click
+            //-->
+        </script>
 	<section id="about-us">
         <div class="container">			
 			<div class="skill-wrap clearfix">			

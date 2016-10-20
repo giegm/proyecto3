@@ -4,7 +4,7 @@
                              
 
                <div class="col-md-3 col-sm-6">
-                    <div class="widget"><
+                    <div class="widget">
                         <h3></h3>
                        <!-- <ul>
                             <li><a href="#">Web Development</a></li>
@@ -20,7 +20,6 @@
                         <h3>C.C. "Santa Inés"</h3>
                         <ul>
                             <li><a href="nosotros.php">Nosotros</a></li>
-                            <li>Copyright</li>                                                     
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->

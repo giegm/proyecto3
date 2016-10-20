@@ -1,0 +1,3 @@
+options -Indexes
+
+ErrorDocument 404 error/index.php

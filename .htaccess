@@ -1,3 +1,4 @@
 options -Indexes
 
-ErrorDocument 404 error/index.php
+ErrorDocument 404 /proyecto3/error404.php
+ErrorDocument 403 /proyecto3/error403.php

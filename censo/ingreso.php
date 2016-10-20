@@ -22,6 +22,15 @@ else
 		<link rel="shortcut icon" href="img/ccsantaines.ico">
 	</head>
 <body>
+	<script language="JavaScript" type="text/javascript">
+		function click(){
+		if(event.button==2){
+		alert('Esta acción no está permitida');
+		}
+		}
+		document.onmousedown=click
+		//-->
+	</script>
 	<style type="text/css"> 
 		body { 
 		background: url(img/bandera.jpg) no-repeat fixed center; 

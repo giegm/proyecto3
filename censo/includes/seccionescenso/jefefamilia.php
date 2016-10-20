@@ -60,9 +60,6 @@ $nac=$obj2->get_nacionalidad();
 						<div class="col-sm-2 col-md-2">
 							<div class="required-field-block">
 								<input type="date" name="fnac" class="form-control">
-								<div class="required-icon">
-					                <div class="text">*</div>
-					            </div>
 					        </div>
 						</div>
 

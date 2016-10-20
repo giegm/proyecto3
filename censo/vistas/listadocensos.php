@@ -60,6 +60,8 @@ if(isset($_SESSION["sesion_usuario"])){
 						<h1 class="page-header">Listado de censos</h1>
 						<div class="col-md-12 well">
 							<article id="contenido"></article>
+                            Si desea realizar una copia de seguridad, presione aquí 
+                            <a href="backup.php" class="btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i> Copia de seguridad</a>
 						</div>
 					</div><!-- fin conteneder central admin -->
 				</section><!-- fin del section del contenedor central admin -->

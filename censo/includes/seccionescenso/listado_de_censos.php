@@ -54,7 +54,7 @@ if(isset($_SESSION["sesion_usuario"])){
 <!--TABLA DE CENSOS-->
 <div id="contenido">
 	<?php
-	include("../includes/seccionescenso/paginador_censos.php");
+	include("../includes/seccionescenso/paginador.php");
 	?>
 </div>
 <!--FIN TABLA DE CENSOS-->

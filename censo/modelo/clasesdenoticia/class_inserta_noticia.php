@@ -29,7 +29,7 @@ class Noticia{
 		$destino = $ruta.$_FILES['imagen_noticia']['name'];
 		copy($_FILES['imagen_noticia']['tmp_name'],$destino);
 		$nombre=$_FILES['imagen_noticia']['name'];
-	$palabras= array('Pajuo','Coño','Marico','Verga');
+	$palabras= array('Pajuo','Coño','Marico','Verga','puto', 'malparido', 'culo', 'culiado', 'gonorrea', 'marica', 'boludo', 'tonto', 'hijuputa', 'pendejo', 'pendejo', 'polla', 'chupame la polla', 'puto', 'verga', 'puta', 'perra', 'coños', 'perra de mierda', 'gilipollas', 'cagon');
 	$descrip = str_ireplace($palabras, '******', $descrip);
 	$tit = str_ireplace($palabras, '******', $tit);
 	$sql=mysqli_query(Conecta::conx(),"insert into noticias_web(TITULO_NOTICIA,FCHA_NOTICIA,HORA,DESCRIPC_NOTICIA,IMAGEN,ID_CATEGORIA,ID_LOGIN) values('$tit','$fcha',now(),'$descrip','$nombre',$cat,$id)")or die('Problemas al intentar insertar la noticia:' . $sql . mysqli_errno(Conecta::conx()));

@@ -54,11 +54,8 @@
                 <div class="col-lg-12">
                    <div class="social">
                         <ul class="social-share">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            <li><a href="https://www.facebook.com/concejocomunal.santaines" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/CCSantaInes2008" target="_blank"><i class="fa fa-twitter"></i></a></li>
                         </ul>
                    </div>
                 </div>

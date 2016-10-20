@@ -22,8 +22,6 @@ require_once("conexion.php");
           js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.7";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-
-
 <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">
@@ -34,7 +32,7 @@ require_once("conexion.php");
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/1.png" class="img-rounded"></a>
+                    &nbsp;&nbsp;&nbsp;Consejo comunal<a class="navbar-brand" href="index.php"><img src="images/logo.png" width="75" height="75"></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Santa Inés"
                 </div>
                 
                 <div class="collapse navbar-collapse navbar-right">
@@ -72,7 +70,7 @@ require_once("conexion.php");
                             </div>
                                 
                             <div class="col-xs-12 col-sm-10 blog-content">
-                                <?php echo "<img class=\"img-responsive img-blog\" src=\""."imagenes_noticias/".$f['IMAGEN']."\" width=\"100%\" alt=\"\">";?>
+                                <?php echo "<img class=\"img-responsive img-blog\" src=\""."imagenes_noticias/".$f['IMAGEN']."\" width=\"300\" \" height=\"300\" alt=\"\">";?>
                                 <h2><a href="blog-item.html"><?php echo $f['TITULO_NOTICIA'];?></a></h2>
                                 <h3><?php echo $f['DESCRIPC_NOTICIA'];?></h3>
                             </div>

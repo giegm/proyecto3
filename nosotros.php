@@ -3,8 +3,8 @@
   <?php 
      require_once('head.php'); ?>
 
-  <body class="homepage">   
-<header id="header">
+  <body class="homepage">
+    <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -14,7 +14,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/1.png" class="img-rounded"></a>
+                    &nbsp;&nbsp;&nbsp;Consejo comunal<a class="navbar-brand" href="index.php"><img src="images/logo.png" width="75" height="75"></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Santa Inés"
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right">

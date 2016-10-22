@@ -1,7 +1,7 @@
 <?php
 //aca los parametros de conexion, si tienes aparte la conexión , solo incluyuela
 $usuario="root";
-$passwd="";
+$passwd="database-mariaDB";
 $host="localhost";
 $bd="mydb";
 $nombre="backup ".date("Y-m-d").".sql"; //Este es el nombre del archivo a generar

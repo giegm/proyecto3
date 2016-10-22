@@ -170,7 +170,7 @@
       </div>
       <hr/>
 
-      <form action="../controlador/update_perfil.php" method="POST" name="formu2" class="form-horizontal">
+      <form action="../controlador/update_perfil.php?updtclave_perfil_activo=EnProceso" method="POST" name="formu2" class="form-horizontal">
 
       <div class="form-group">
         <label class="control-label col-md-4">Contraseña actual:</label>

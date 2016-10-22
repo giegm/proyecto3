@@ -208,15 +208,13 @@ function Modifica_claves_perfil(){
 	if(formu2.clavenew.value != formu2.clavenew2.value)
 	{
 		alert('Las contraseñas no coinciden.');
-		formu2.clavenew.value="";
-		formu2.clavenew2.value="";
 		formu2.clavenew.focus();
 		return false;
 
 	}
 	else
 	{
-		document.getElementById("mensaje-error").innerHTML="";
+		document.getElementById("error").innerHTML="";
 	}
 
 
@@ -247,7 +245,7 @@ function Modifica_datos_perfil_seleccionado(){
 	}else{
 		document.getElementById("error_campos").innerHTML="";
 	}
-
+/*
 	if(form.newpass.value==0){
 		document.getElementById("error_campos").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Indique una contraseña.&nbsp;&nbsp;&times;</strong></p>";
 		//alert('Indique la contraseña actual para efectuar la operación.');
@@ -257,7 +255,7 @@ function Modifica_datos_perfil_seleccionado(){
 	}else{
 		document.getElementById("error_campos").innerHTML="";
 	}
-
+*/
 	if(form.newrol.value==0){
 		document.getElementById("error_campos").innerHTML="<p class='alert alert-danger' class='close' data-dismiss='alert' aria-hidden='true'><strong>Indique un rol para el usuario.&nbsp;&nbsp;&times;</strong></p>";
 		//alert('Indique un rol para el usuario.');

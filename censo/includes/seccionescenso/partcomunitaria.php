@@ -72,7 +72,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="name_mision">
+													<select class="form-control selectpicker show-tick" name="name_mision" multiple>
 														<option value="0">seleccione</option>
 														<?php  
 														$misiones=$obj2->get_comunidad_misiones();

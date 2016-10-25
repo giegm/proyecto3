@@ -16,7 +16,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="pers_enfermedades">
+													<select class="form-control selectpicker show-tick" name="pers_enfermedades" multiple>
 													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $persenferm=$obj2->get_persona_enfermedades(); 
@@ -81,7 +81,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="pers_exclusion">
+													<select class="form-control selectpicker show-tick" name="pers_exclusion" multiple>
 														<option value="0">seleccione</option>
 			                                            <?php 
 			                                            $persexclus=$obj2->get_personas_exclusion(); 

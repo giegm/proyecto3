@@ -427,7 +427,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 												{
 												echo $data_cinco[$a]["HABITACIONES"]." ";
 												}	
-												?>">
+												?>" multiple>
 												<option value="Sala">Sala</option>
 												<option value="Comedor">Comedor</option>
 												<option value="Cocina">Cocina</option>
@@ -816,7 +816,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 												for($e=0;$e<count($data_cincodos);$e++){
 												echo $data_cincodos[$e]["ENSERES_VIVIENDA"]." ";
 												}
-												?>">
+												?>" multiple>
 												<option value="Nevera">Nevera</option>
 												<option value="Cocina">Cocina</option>
 												<option value="Gabinete">Gabinete</option>
@@ -943,7 +943,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 												for($r=0;$r<sizeof($data_cinco);$r++){ 
 												echo $data_cinco[$r]["INSECTOS_ROEDORES"]." ";
 												}
-												?>">
+												?>" multiple>
 												<option value="Ninguno">Ninguno</option>
 												<option value="Moscas">Moscas</option>
 												<option value="Hormiga">Hormiga</option>
@@ -961,7 +961,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 												for($n=0;$n<sizeof($data_cinco);$n++){ 
 												echo $data_cinco[$n]["ANIMALES_DOMESTICOS"]." ";
 												}
-												?>">
+												?>" multiple>
 												<option value="Ninguno">Ninguno</option>
 												<option value="Perro">Perro</option>
 												<option value="Gato">Gato</option>

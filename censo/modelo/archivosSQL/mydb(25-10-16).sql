@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-06-2016 a las 01:09:53
--- Versión del servidor: 5.6.21
--- Versión de PHP: 5.5.19
+-- Tiempo de generación: 26-10-2016 a las 00:29:56
+-- Versión del servidor: 10.1.16-MariaDB
+-- Versión de PHP: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `mydb`
@@ -26,12 +26,19 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `ayuda_vivienda`
 --
 
-CREATE TABLE IF NOT EXISTS `ayuda_vivienda` (
-`ID_AYUDA_VIVIENDA` int(11) NOT NULL,
+CREATE TABLE `ayuda_vivienda` (
+  `ID_AYUDA_VIVIENDA` int(11) NOT NULL,
   `TIPO_AYUDA` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `DESCRIPCION` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `ayuda_vivienda`
+--
+
+INSERT INTO `ayuda_vivienda` (`ID_AYUDA_VIVIENDA`, `TIPO_AYUDA`, `DESCRIPCION`, `ID_JEFE`) VALUES
+(6, 'Ninguna', 'Ninguna', 6);
 
 -- --------------------------------------------------------
 
@@ -39,10 +46,10 @@ CREATE TABLE IF NOT EXISTS `ayuda_vivienda` (
 -- Estructura de tabla para la tabla `casa_aguas_blancas`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_aguas_blancas` (
-`ID_AGUASBLANCAS` int(11) NOT NULL,
+CREATE TABLE `casa_aguas_blancas` (
+  `ID_AGUASBLANCAS` int(11) NOT NULL,
   `AGUASBLANCAS` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_aguas_blancas`
@@ -60,10 +67,10 @@ INSERT INTO `casa_aguas_blancas` (`ID_AGUASBLANCAS`, `AGUASBLANCAS`) VALUES
 -- Estructura de tabla para la tabla `casa_aguas_servidas`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_aguas_servidas` (
-`ID_AGUASERV` int(11) NOT NULL,
+CREATE TABLE `casa_aguas_servidas` (
+  `ID_AGUASERV` int(11) NOT NULL,
   `AGUASERVIDA` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_aguas_servidas`
@@ -83,10 +90,10 @@ INSERT INTO `casa_aguas_servidas` (`ID_AGUASERV`, `AGUASERVIDA`) VALUES
 -- Estructura de tabla para la tabla `casa_animales`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_animales` (
-`ID_ANIMALES` int(11) NOT NULL,
-  `ANIMALES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+CREATE TABLE `casa_animales` (
+  `ID_ANIMALES` int(11) NOT NULL,
+  `ANIMALES` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_animales`
@@ -94,12 +101,12 @@ CREATE TABLE IF NOT EXISTS `casa_animales` (
 
 INSERT INTO `casa_animales` (`ID_ANIMALES`, `ANIMALES`) VALUES
 (1, 'Ninguno'),
-(2, 'Perro(s)'),
-(3, 'Gato(s)'),
-(4, 'Gallina(s)'),
-(5, 'Pájaro(s)'),
-(6, 'Patos(s)'),
-(7, 'Cochino(s)'),
+(2, 'Perro'),
+(3, 'Gato'),
+(4, 'Gallinas'),
+(5, 'Pájaros'),
+(6, 'Patos'),
+(7, 'Cochinos'),
 (8, 'Otro(s)');
 
 -- --------------------------------------------------------
@@ -108,10 +115,10 @@ INSERT INTO `casa_animales` (`ID_ANIMALES`, `ANIMALES`) VALUES
 -- Estructura de tabla para la tabla `casa_condiciones_terreno`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_condiciones_terreno` (
-`ID_CONDTERRENO` int(11) NOT NULL,
+CREATE TABLE `casa_condiciones_terreno` (
+  `ID_CONDTERRENO` int(11) NOT NULL,
   `CONDTERRENO` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_condiciones_terreno`
@@ -130,10 +137,10 @@ INSERT INTO `casa_condiciones_terreno` (`ID_CONDTERRENO`, `CONDTERRENO`) VALUES
 -- Estructura de tabla para la tabla `casa_enseres_vivienda`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_enseres_vivienda` (
-`ID_ENSERESVIVIENDA` int(11) NOT NULL,
-  `ENSERESVIVIENDA` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+CREATE TABLE `casa_enseres_vivienda` (
+  `ID_ENSERESVIVIENDA` int(11) NOT NULL,
+  `ENSERESVIVIENDA` varchar(150) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_enseres_vivienda`
@@ -157,10 +164,10 @@ INSERT INTO `casa_enseres_vivienda` (`ID_ENSERESVIVIENDA`, `ENSERESVIVIENDA`) VA
 -- Estructura de tabla para la tabla `casa_formas_tenencia`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_formas_tenencia` (
-`ID_FORMATENENCIA` int(11) NOT NULL,
+CREATE TABLE `casa_formas_tenencia` (
+  `ID_FORMATENENCIA` int(11) NOT NULL,
   `FORMATENENCIA` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_formas_tenencia`
@@ -181,10 +188,10 @@ INSERT INTO `casa_formas_tenencia` (`ID_FORMATENENCIA`, `FORMATENENCIA`) VALUES
 -- Estructura de tabla para la tabla `casa_gas`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_gas` (
-`ID_GAS` int(11) NOT NULL,
+CREATE TABLE `casa_gas` (
+  `ID_GAS` int(11) NOT NULL,
   `GAS` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_gas`
@@ -201,10 +208,10 @@ INSERT INTO `casa_gas` (`ID_GAS`, `GAS`) VALUES
 -- Estructura de tabla para la tabla `casa_habitaciones`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_habitaciones` (
-`ID_HABITACIONES` int(11) NOT NULL,
+CREATE TABLE `casa_habitaciones` (
+  `ID_HABITACIONES` int(11) NOT NULL,
   `HABITACIONES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_habitaciones`
@@ -222,10 +229,10 @@ INSERT INTO `casa_habitaciones` (`ID_HABITACIONES`, `HABITACIONES`) VALUES
 -- Estructura de tabla para la tabla `casa_ingreso_familiar`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_ingreso_familiar` (
-`ID_INGFAMILIAR` int(11) NOT NULL,
+CREATE TABLE `casa_ingreso_familiar` (
+  `ID_INGFAMILIAR` int(11) NOT NULL,
   `INGFAMILIAR` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_ingreso_familiar`
@@ -243,10 +250,10 @@ INSERT INTO `casa_ingreso_familiar` (`ID_INGFAMILIAR`, `INGFAMILIAR`) VALUES
 -- Estructura de tabla para la tabla `casa_mecanismo_infor`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_mecanismo_infor` (
-`ID_MECANISMOINFO` int(11) NOT NULL,
-  `MECANISMOINFO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+CREATE TABLE `casa_mecanismo_infor` (
+  `ID_MECANISMOINFO` int(11) NOT NULL,
+  `MECANISMOINFO` varchar(70) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_mecanismo_infor`
@@ -266,10 +273,10 @@ INSERT INTO `casa_mecanismo_infor` (`ID_MECANISMOINFO`, `MECANISMOINFO`) VALUES
 -- Estructura de tabla para la tabla `casa_plagas`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_plagas` (
-`ID_PLAGAS` int(11) NOT NULL,
-  `PLAGAS` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+CREATE TABLE `casa_plagas` (
+  `ID_PLAGAS` int(11) NOT NULL,
+  `PLAGAS` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_plagas`
@@ -281,7 +288,7 @@ INSERT INTO `casa_plagas` (`ID_PLAGAS`, `PLAGAS`) VALUES
 (3, 'Hormigas'),
 (4, 'Ratones'),
 (5, 'Ciempies'),
-(6, 'Otros');
+(6, 'Otro(s)');
 
 -- --------------------------------------------------------
 
@@ -289,10 +296,10 @@ INSERT INTO `casa_plagas` (`ID_PLAGAS`, `PLAGAS`) VALUES
 -- Estructura de tabla para la tabla `casa_recoleccion_basura`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_recoleccion_basura` (
-`ID_RECOLBASURA` int(11) NOT NULL,
-  `RECOLBASURA` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+CREATE TABLE `casa_recoleccion_basura` (
+  `ID_RECOLBASURA` int(11) NOT NULL,
+  `RECOLBASURA` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_recoleccion_basura`
@@ -313,10 +320,10 @@ INSERT INTO `casa_recoleccion_basura` (`ID_RECOLBASURA`, `RECOLBASURA`) VALUES
 -- Estructura de tabla para la tabla `casa_salubridad_vivienda`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_salubridad_vivienda` (
-`ID_SALUBRIDADVIVIENDA` int(11) NOT NULL,
+CREATE TABLE `casa_salubridad_vivienda` (
+  `ID_SALUBRIDADVIVIENDA` int(11) NOT NULL,
   `SALUBRIDADVIVIENDA` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_salubridad_vivienda`
@@ -334,10 +341,10 @@ INSERT INTO `casa_salubridad_vivienda` (`ID_SALUBRIDADVIVIENDA`, `SALUBRIDADVIVI
 -- Estructura de tabla para la tabla `casa_servicios_comunales`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_servicios_comunales` (
-`ID_SERVCOMUNALES` int(11) NOT NULL,
-  `SERVCOMUNALES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+CREATE TABLE `casa_servicios_comunales` (
+  `ID_SERVCOMUNALES` int(11) NOT NULL,
+  `SERVCOMUNALES` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_servicios_comunales`
@@ -364,10 +371,10 @@ INSERT INTO `casa_servicios_comunales` (`ID_SERVCOMUNALES`, `SERVCOMUNALES`) VAL
 -- Estructura de tabla para la tabla `casa_sistema_electrico`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_sistema_electrico` (
-`ID_SISTELECTRICO` int(11) NOT NULL,
+CREATE TABLE `casa_sistema_electrico` (
+  `ID_SISTELECTRICO` int(11) NOT NULL,
   `SISTELECTRICO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_sistema_electrico`
@@ -385,10 +392,10 @@ INSERT INTO `casa_sistema_electrico` (`ID_SISTELECTRICO`, `SISTELECTRICO`) VALUE
 -- Estructura de tabla para la tabla `casa_telefonia`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_telefonia` (
-`ID_TELEFONIA` int(11) NOT NULL,
+CREATE TABLE `casa_telefonia` (
+  `ID_TELEFONIA` int(11) NOT NULL,
   `TELEFONIA` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_telefonia`
@@ -408,10 +415,10 @@ INSERT INTO `casa_telefonia` (`ID_TELEFONIA`, `TELEFONIA`) VALUES
 -- Estructura de tabla para la tabla `casa_tipo_ayuda_mejora`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_tipo_ayuda_mejora` (
-`ID_TIPOAYUDACASA` int(11) NOT NULL,
+CREATE TABLE `casa_tipo_ayuda_mejora` (
+  `ID_TIPOAYUDACASA` int(11) NOT NULL,
   `TIPOAYUDACASA` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_tipo_ayuda_mejora`
@@ -428,10 +435,10 @@ INSERT INTO `casa_tipo_ayuda_mejora` (`ID_TIPOAYUDACASA`, `TIPOAYUDACASA`) VALUE
 -- Estructura de tabla para la tabla `casa_tipo_paredes`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_tipo_paredes` (
-`ID_TIPOPAREDES` int(11) NOT NULL,
+CREATE TABLE `casa_tipo_paredes` (
+  `ID_TIPOPAREDES` int(11) NOT NULL,
   `TIPOPAREDES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_tipo_paredes`
@@ -453,10 +460,10 @@ INSERT INTO `casa_tipo_paredes` (`ID_TIPOPAREDES`, `TIPOPAREDES`) VALUES
 -- Estructura de tabla para la tabla `casa_tipo_techo`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_tipo_techo` (
-`ID_TIPOTECHO` int(11) NOT NULL,
+CREATE TABLE `casa_tipo_techo` (
+  `ID_TIPOTECHO` int(11) NOT NULL,
   `TIPOTECHO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_tipo_techo`
@@ -477,10 +484,10 @@ INSERT INTO `casa_tipo_techo` (`ID_TIPOTECHO`, `TIPOTECHO`) VALUES
 -- Estructura de tabla para la tabla `casa_tipo_vivienda`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_tipo_vivienda` (
-`ID_TIPOVIVIENDA` int(11) NOT NULL,
+CREATE TABLE `casa_tipo_vivienda` (
+  `ID_TIPOVIVIENDA` int(11) NOT NULL,
   `TIPOVIVIENDA` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish2_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_tipo_vivienda`
@@ -501,10 +508,10 @@ INSERT INTO `casa_tipo_vivienda` (`ID_TIPOVIVIENDA`, `TIPOVIVIENDA`) VALUES
 -- Estructura de tabla para la tabla `casa_transporte`
 --
 
-CREATE TABLE IF NOT EXISTS `casa_transporte` (
-`ID_TRANSPORTE` int(11) NOT NULL,
+CREATE TABLE `casa_transporte` (
+  `ID_TRANSPORTE` int(11) NOT NULL,
   `TRANSPORTE` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `casa_transporte`
@@ -524,10 +531,10 @@ INSERT INTO `casa_transporte` (`ID_TRANSPORTE`, `TRANSPORTE`) VALUES
 -- Estructura de tabla para la tabla `categoria_noticia`
 --
 
-CREATE TABLE IF NOT EXISTS `categoria_noticia` (
-`ID_CATEGORIA` int(11) NOT NULL,
+CREATE TABLE `categoria_noticia` (
+  `ID_CATEGORIA` int(11) NOT NULL,
   `CATEGORIA` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `categoria_noticia`
@@ -535,11 +542,11 @@ CREATE TABLE IF NOT EXISTS `categoria_noticia` (
 
 INSERT INTO `categoria_noticia` (`ID_CATEGORIA`, `CATEGORIA`) VALUES
 (1, 'Deportes'),
-(2, 'Economía'),
+(2, 'Salud'),
 (3, 'Educación'),
 (4, 'Social'),
 (5, 'Política'),
-(6, 'Salud');
+(6, 'Otros');
 
 -- --------------------------------------------------------
 
@@ -547,12 +554,19 @@ INSERT INTO `categoria_noticia` (`ID_CATEGORIA`, `CATEGORIA`) VALUES
 -- Estructura de tabla para la tabla `censos`
 --
 
-CREATE TABLE IF NOT EXISTS `censos` (
-`ID_CENSO` int(11) NOT NULL,
+CREATE TABLE `censos` (
+  `ID_CENSO` int(11) NOT NULL,
   `FECHA_CENSO` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `HORA_CENSO` time NOT NULL,
   `ID_JEFE` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `censos`
+--
+
+INSERT INTO `censos` (`ID_CENSO`, `FECHA_CENSO`, `HORA_CENSO`, `ID_JEFE`) VALUES
+(6, '2016/07/11', '00:00:00', 6);
 
 -- --------------------------------------------------------
 
@@ -560,10 +574,10 @@ CREATE TABLE IF NOT EXISTS `censos` (
 -- Estructura de tabla para la tabla `comunidad_misiones`
 --
 
-CREATE TABLE IF NOT EXISTS `comunidad_misiones` (
-`ID_MISIONES` int(11) NOT NULL,
-  `MISIONES` varchar(70) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+CREATE TABLE `comunidad_misiones` (
+  `ID_MISIONES` int(11) NOT NULL,
+  `MISIONES` varchar(80) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `comunidad_misiones`
@@ -585,8 +599,8 @@ INSERT INTO `comunidad_misiones` (`ID_MISIONES`, `MISIONES`) VALUES
 -- Estructura de tabla para la tabla `condiciones_salud`
 --
 
-CREATE TABLE IF NOT EXISTS `condiciones_salud` (
-`ID_CONDICIONES_SALUD` int(11) NOT NULL,
+CREATE TABLE `condiciones_salud` (
+  `ID_CONDICIONES_SALUD` int(11) NOT NULL,
   `PERSONA_ENFERMEDAD` varchar(30) DEFAULT NULL,
   `OTRA_ENFERMEDAD` varchar(3) DEFAULT NULL,
   `AYUDA_ENFERMOS` varchar(3) DEFAULT NULL,
@@ -594,7 +608,19 @@ CREATE TABLE IF NOT EXISTS `condiciones_salud` (
   `SITUACION_EXCLUSION` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `CANTIDAD_EXCLUSION` int(2) DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `condiciones_salud`
+--
+
+INSERT INTO `condiciones_salud` (`ID_CONDICIONES_SALUD`, `PERSONA_ENFERMEDAD`, `OTRA_ENFERMEDAD`, `AYUDA_ENFERMOS`, `TIPO_AYUDA`, `SITUACION_EXCLUSION`, `CANTIDAD_EXCLUSION`, `ID_JEFE`) VALUES
+(1, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(2, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(3, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(4, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(5, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
+(6, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6);
 
 -- --------------------------------------------------------
 
@@ -602,12 +628,19 @@ CREATE TABLE IF NOT EXISTS `condiciones_salud` (
 -- Estructura de tabla para la tabla `datos_academicos`
 --
 
-CREATE TABLE IF NOT EXISTS `datos_academicos` (
-`ID_ACADEMICO` int(11) NOT NULL,
+CREATE TABLE `datos_academicos` (
+  `ID_ACADEMICO` int(11) NOT NULL,
   `PROFESION` varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
   `NIV_INSTRUCCION` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `datos_academicos`
+--
+
+INSERT INTO `datos_academicos` (`ID_ACADEMICO`, `PROFESION`, `NIV_INSTRUCCION`, `ID_JEFE`) VALUES
+(6, 'Estudiante', 'Tecnico Superior', 6);
 
 -- --------------------------------------------------------
 
@@ -615,14 +648,21 @@ CREATE TABLE IF NOT EXISTS `datos_academicos` (
 -- Estructura de tabla para la tabla `datos_contacto`
 --
 
-CREATE TABLE IF NOT EXISTS `datos_contacto` (
-`ID_CONTACTO` int(11) NOT NULL,
+CREATE TABLE `datos_contacto` (
+  `ID_CONTACTO` int(11) NOT NULL,
   `TLF_CEL` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `TLF_HAB` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `TLF_OFI` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `EMAIL` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `ID_JEFE` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `datos_contacto`
+--
+
+INSERT INTO `datos_contacto` (`ID_CONTACTO`, `TLF_CEL`, `TLF_HAB`, `TLF_OFI`, `EMAIL`, `ID_JEFE`) VALUES
+(6, '04123154389', '', '', 'girlcarolay@hotmail.com', 6);
 
 -- --------------------------------------------------------
 
@@ -630,13 +670,20 @@ CREATE TABLE IF NOT EXISTS `datos_contacto` (
 -- Estructura de tabla para la tabla `datos_encuestado`
 --
 
-CREATE TABLE IF NOT EXISTS `datos_encuestado` (
-`ID_ENCUESTADO` int(11) NOT NULL,
+CREATE TABLE `datos_encuestado` (
+  `ID_ENCUESTADO` int(11) NOT NULL,
   `NOMBRES` varchar(45) DEFAULT NULL,
   `CEDULA` int(9) DEFAULT NULL,
   `ENCUESTADOR` varchar(30) DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `datos_encuestado`
+--
+
+INSERT INTO `datos_encuestado` (`ID_ENCUESTADO`, `NOMBRES`, `CEDULA`, `ENCUESTADOR`, `ID_JEFE`) VALUES
+(6, 'Pedro Perezs', 43256789, 'admin', 6);
 
 -- --------------------------------------------------------
 
@@ -644,8 +691,8 @@ CREATE TABLE IF NOT EXISTS `datos_encuestado` (
 -- Estructura de tabla para la tabla `datos_familiares`
 --
 
-CREATE TABLE IF NOT EXISTS `datos_familiares` (
-`ID_FAMILIARES` int(11) NOT NULL,
+CREATE TABLE `datos_familiares` (
+  `ID_FAMILIARES` int(11) NOT NULL,
   `NOMBRES_F` varchar(30) DEFAULT NULL,
   `CEDULA_F` int(10) DEFAULT NULL,
   `SEXO_F` varchar(20) NOT NULL,
@@ -654,19 +701,33 @@ CREATE TABLE IF NOT EXISTS `datos_familiares` (
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `datos_familiares`
+--
+
+INSERT INTO `datos_familiares` (`ID_FAMILIARES`, `NOMBRES_F`, `CEDULA_F`, `SEXO_F`, `FECHANAC_F`, `EDAD_F`, `ID_JEFE`) VALUES
+(6, 'Valentina Silva', 20345678, 'Femenino', '2004-02-02', 12, 6);
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `datos_finanzas`
 --
 
-CREATE TABLE IF NOT EXISTS `datos_finanzas` (
-`ID_FINANZAS` int(11) NOT NULL,
+CREATE TABLE `datos_finanzas` (
+  `ID_FINANZAS` int(11) NOT NULL,
   `TRABAJA` varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
   `TIPO_INGRESO` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
   `INGRESO_MENSUAL` varchar(45) COLLATE utf8_spanish_ci DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `datos_finanzas`
+--
+
+INSERT INTO `datos_finanzas` (`ID_FINANZAS`, `TRABAJA`, `TIPO_INGRESO`, `INGRESO_MENSUAL`, `ID_JEFE`) VALUES
+(6, 'SI', 'Por trabajo realizado', '30000', 6);
 
 -- --------------------------------------------------------
 
@@ -674,24 +735,24 @@ CREATE TABLE IF NOT EXISTS `datos_finanzas` (
 -- Estructura de tabla para la tabla `datos_login`
 --
 
-CREATE TABLE IF NOT EXISTS `datos_login` (
-`ID_LOGIN` int(10) NOT NULL,
+CREATE TABLE `datos_login` (
+  `ID_LOGIN` int(10) NOT NULL,
   `USERADMIN` varchar(20) DEFAULT NULL,
   `CEDULA` int(9) DEFAULT NULL,
   `PASSADMIN` longtext,
-  `PASSADMINDOS` longtext CHARACTER SET utf8,
+  `PASSADMINDOS` longtext CHARACTER SET utf8 NOT NULL,
   `ID_PERFIL` int(11) NOT NULL,
   `ID_EDO_PERFIL` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `datos_login`
 --
 
 INSERT INTO `datos_login` (`ID_LOGIN`, `USERADMIN`, `CEDULA`, `PASSADMIN`, `PASSADMINDOS`, `ID_PERFIL`, `ID_EDO_PERFIL`) VALUES
-(1, 'admin', 111122222, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 1, 1),
-(2, 'operador', 20202020, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 2, 1),
-(3, 'publicador', 56145645, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 3, 1);
+(1, 'admin', 12345678, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 1, 1),
+(4, 'publicador', 14563284, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 3, 1),
+(6, 'operador', 45123789, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -699,8 +760,8 @@ INSERT INTO `datos_login` (`ID_LOGIN`, `USERADMIN`, `CEDULA`, `PASSADMIN`, `PASS
 -- Estructura de tabla para la tabla `datos_personales`
 --
 
-CREATE TABLE IF NOT EXISTS `datos_personales` (
-`ID_DATAPERSONAL` int(11) NOT NULL,
+CREATE TABLE `datos_personales` (
+  `ID_DATAPERSONAL` int(11) NOT NULL,
   `CI` int(11) DEFAULT NULL,
   `NOMBRE` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
   `APELLIDO` varchar(45) COLLATE utf8_spanish_ci DEFAULT NULL,
@@ -708,14 +769,21 @@ CREATE TABLE IF NOT EXISTS `datos_personales` (
   `EDAD` int(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `datos_personales`
+--
+
+INSERT INTO `datos_personales` (`ID_DATAPERSONAL`, `CI`, `NOMBRE`, `APELLIDO`, `F_NAC`, `EDAD`) VALUES
+(6, 43256789, 'Edelis Carolay', 'Simons Escalona', '1992-04-18', 24);
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `datos_relacion`
 --
 
-CREATE TABLE IF NOT EXISTS `datos_relacion` (
-`ID_RELACION` int(11) NOT NULL,
+CREATE TABLE `datos_relacion` (
+  `ID_RELACION` int(11) NOT NULL,
   `EMBARAZO` varchar(5) COLLATE utf8_spanish_ci DEFAULT NULL,
   `CNE` varchar(5) COLLATE utf8_spanish_ci DEFAULT NULL,
   `SEXO` varchar(45) COLLATE utf8_spanish_ci DEFAULT NULL,
@@ -724,14 +792,21 @@ CREATE TABLE IF NOT EXISTS `datos_relacion` (
   `ID_JEFE` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `datos_relacion`
+--
+
+INSERT INTO `datos_relacion` (`ID_RELACION`, `EMBARAZO`, `CNE`, `SEXO`, `EDOCIVIL`, `NACIONALIDAD`, `ID_JEFE`) VALUES
+(6, 'NO', 'SI', 'Femenino', 'Soltero(a)', 'Venezolano(a)', '6');
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `datos_salud`
 --
 
-CREATE TABLE IF NOT EXISTS `datos_salud` (
-`ID_SALUD` int(11) NOT NULL,
+CREATE TABLE `datos_salud` (
+  `ID_SALUD` int(11) NOT NULL,
   `DISCAPACIDAD` varchar(2) COLLATE utf8_spanish_ci DEFAULT NULL,
   `TIPO_DISCAPACIDAD` varchar(45) COLLATE utf8_spanish_ci DEFAULT NULL,
   `PENSIONADO` varchar(2) COLLATE utf8_spanish_ci DEFAULT NULL,
@@ -739,18 +814,32 @@ CREATE TABLE IF NOT EXISTS `datos_salud` (
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `datos_salud`
+--
+
+INSERT INTO `datos_salud` (`ID_SALUD`, `DISCAPACIDAD`, `TIPO_DISCAPACIDAD`, `PENSIONADO`, `INSTITUCION`, `ID_JEFE`) VALUES
+(6, 'NO', '', 'NO', '', 6);
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `detalles_serv_electrico`
 --
 
-CREATE TABLE IF NOT EXISTS `detalles_serv_electrico` (
-`ID_SERV_ELECTRICO` int(11) NOT NULL,
+CREATE TABLE `detalles_serv_electrico` (
+  `ID_SERV_ELECTRICO` int(11) NOT NULL,
   `MEDIDOR` varchar(3) DEFAULT NULL,
   `BOMBILLOS_NECESITA` varchar(3) DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `detalles_serv_electrico`
+--
+
+INSERT INTO `detalles_serv_electrico` (`ID_SERV_ELECTRICO`, `MEDIDOR`, `BOMBILLOS_NECESITA`, `ID_JEFE`) VALUES
+(6, 'NO', '10', 6);
 
 -- --------------------------------------------------------
 
@@ -758,8 +847,8 @@ CREATE TABLE IF NOT EXISTS `detalles_serv_electrico` (
 -- Estructura de tabla para la tabla `detalles_vivienda`
 --
 
-CREATE TABLE IF NOT EXISTS `detalles_vivienda` (
-`ID_DETALLES_VIVIENDA` int(11) NOT NULL,
+CREATE TABLE `detalles_vivienda` (
+  `ID_DETALLES_VIVIENDA` int(11) NOT NULL,
   `TIPO_VIVIENDA` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `HABITACIONES` varchar(30) DEFAULT NULL,
   `NUM_HABITACIONES` int(3) DEFAULT NULL,
@@ -771,14 +860,26 @@ CREATE TABLE IF NOT EXISTS `detalles_vivienda` (
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `detalles_vivienda`
+--
+
+INSERT INTO `detalles_vivienda` (`ID_DETALLES_VIVIENDA`, `TIPO_VIVIENDA`, `HABITACIONES`, `NUM_HABITACIONES`, `TIPO_PAREDES`, `TIPO_TECHO`, `ENSERES_VIVIENDA`, `INSECTOS_ROEDORES`, `ANIMALES_DOMESTICOS`, `ID_JEFE`) VALUES
+(1, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(2, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(3, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(4, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(5, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
+(6, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6);
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `detalle_servicios`
 --
 
-CREATE TABLE IF NOT EXISTS `detalle_servicios` (
-`ID_DETALLE_SERVICIOS` int(11) NOT NULL,
+CREATE TABLE `detalle_servicios` (
+  `ID_DETALLE_SERVICIOS` int(11) NOT NULL,
   `TANQUE` varchar(3) DEFAULT NULL,
   `TANQUE_LITROS` varchar(5) DEFAULT NULL,
   `PIPOTES` varchar(3) DEFAULT NULL,
@@ -790,14 +891,21 @@ CREATE TABLE IF NOT EXISTS `detalle_servicios` (
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `detalle_servicios`
+--
+
+INSERT INTO `detalle_servicios` (`ID_DETALLE_SERVICIOS`, `TANQUE`, `TANQUE_LITROS`, `PIPOTES`, `CANT_PIPOTES`, `PROVEEDOR_GAS`, `CANT_CILINDROS_GAS`, `DURACION_GAS`, `PRECIO_GAS`, `ID_JEFE`) VALUES
+(6, 'NO', '', 'SI', '3', 'Visa gas y PDVSA gas', '4', '4', ' 30', 6);
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `empleado`
 --
 
-CREATE TABLE IF NOT EXISTS `empleado` (
-`idempleado` int(11) NOT NULL,
+CREATE TABLE `empleado` (
+  `idempleado` int(11) NOT NULL,
   `nombres` varchar(32) NOT NULL DEFAULT '',
   `departamento` varchar(40) NOT NULL DEFAULT '',
   `sueldo` double DEFAULT NULL
@@ -809,10 +917,10 @@ CREATE TABLE IF NOT EXISTS `empleado` (
 -- Estructura de tabla para la tabla `estado_perfil`
 --
 
-CREATE TABLE IF NOT EXISTS `estado_perfil` (
-`ID_EDO_PERFIL` int(11) NOT NULL,
+CREATE TABLE `estado_perfil` (
+  `ID_EDO_PERFIL` int(11) NOT NULL,
   `ESTADO` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `estado_perfil`
@@ -828,12 +936,19 @@ INSERT INTO `estado_perfil` (`ID_EDO_PERFIL`, `ESTADO`) VALUES
 -- Estructura de tabla para la tabla `familiar_academico`
 --
 
-CREATE TABLE IF NOT EXISTS `familiar_academico` (
-`ID_ACADEMICO_F` int(11) NOT NULL,
+CREATE TABLE `familiar_academico` (
+  `ID_ACADEMICO_F` int(11) NOT NULL,
   `GRADO_INSTRUCCION_F` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `PROFESION_F` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `familiar_academico`
+--
+
+INSERT INTO `familiar_academico` (`ID_ACADEMICO_F`, `GRADO_INSTRUCCION_F`, `PROFESION_F`, `ID_JEFE`) VALUES
+(6, 'Sin instruccion', 'Estudiante', 6);
 
 -- --------------------------------------------------------
 
@@ -841,11 +956,18 @@ CREATE TABLE IF NOT EXISTS `familiar_academico` (
 -- Estructura de tabla para la tabla `familiar_finanzas`
 --
 
-CREATE TABLE IF NOT EXISTS `familiar_finanzas` (
-`ID_FINANZAS_F` int(10) unsigned NOT NULL,
+CREATE TABLE `familiar_finanzas` (
+  `ID_FINANZAS_F` int(10) UNSIGNED NOT NULL,
   `INGMENSUAL_F` varchar(20) DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `familiar_finanzas`
+--
+
+INSERT INTO `familiar_finanzas` (`ID_FINANZAS_F`, `INGMENSUAL_F`, `ID_JEFE`) VALUES
+(6, '345345', 6);
 
 -- --------------------------------------------------------
 
@@ -853,12 +975,19 @@ CREATE TABLE IF NOT EXISTS `familiar_finanzas` (
 -- Estructura de tabla para la tabla `familiar_relacion`
 --
 
-CREATE TABLE IF NOT EXISTS `familiar_relacion` (
-`ID_DETALLE_F` int(11) NOT NULL,
+CREATE TABLE `familiar_relacion` (
+  `ID_DETALLE_F` int(11) NOT NULL,
   `PARENTESCO_F` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `CNE_F` varchar(5) DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `familiar_relacion`
+--
+
+INSERT INTO `familiar_relacion` (`ID_DETALLE_F`, `PARENTESCO_F`, `CNE_F`, `ID_JEFE`) VALUES
+(6, 'Hermano(a)', 'SI', 6);
 
 -- --------------------------------------------------------
 
@@ -866,13 +995,20 @@ CREATE TABLE IF NOT EXISTS `familiar_relacion` (
 -- Estructura de tabla para la tabla `familiar_salud`
 --
 
-CREATE TABLE IF NOT EXISTS `familiar_salud` (
-`ID_SALUD_F` int(11) NOT NULL,
+CREATE TABLE `familiar_salud` (
+  `ID_SALUD_F` int(11) NOT NULL,
   `EMBARAZO_F` varchar(5) DEFAULT NULL,
   `DISCAPACIDAD_F` varchar(45) DEFAULT NULL,
   `PENSIONADO_F` varchar(5) DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `familiar_salud`
+--
+
+INSERT INTO `familiar_salud` (`ID_SALUD_F`, `EMBARAZO_F`, `DISCAPACIDAD_F`, `PENSIONADO_F`, `ID_JEFE`) VALUES
+(6, 'SI', 'dsfdsf', 'SI', 6);
 
 -- --------------------------------------------------------
 
@@ -880,10 +1016,10 @@ CREATE TABLE IF NOT EXISTS `familiar_salud` (
 -- Estructura de tabla para la tabla `nivel_instruccion`
 --
 
-CREATE TABLE IF NOT EXISTS `nivel_instruccion` (
-`ID_NIVINSTR` int(11) NOT NULL,
+CREATE TABLE `nivel_instruccion` (
+  `ID_NIVINSTR` int(11) NOT NULL,
   `NIVL_INSTRUCCION` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `nivel_instruccion`
@@ -904,8 +1040,8 @@ INSERT INTO `nivel_instruccion` (`ID_NIVINSTR`, `NIVL_INSTRUCCION`) VALUES
 -- Estructura de tabla para la tabla `noticias_web`
 --
 
-CREATE TABLE IF NOT EXISTS `noticias_web` (
-`ID_NOTICIA` int(11) NOT NULL,
+CREATE TABLE `noticias_web` (
+  `ID_NOTICIA` int(11) NOT NULL,
   `TITULO_NOTICIA` varchar(100) CHARACTER SET utf32 COLLATE utf32_spanish_ci NOT NULL,
   `FCHA_NOTICIA` date NOT NULL,
   `HORA` time NOT NULL,
@@ -913,14 +1049,7 @@ CREATE TABLE IF NOT EXISTS `noticias_web` (
   `IMAGEN` varchar(100) NOT NULL,
   `ID_CATEGORIA` int(11) NOT NULL,
   `ID_LOGIN` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `noticias_web`
---
-
-INSERT INTO `noticias_web` (`ID_NOTICIA`, `TITULO_NOTICIA`, `FCHA_NOTICIA`, `HORA`, `DESCRIPC_NOTICIA`, `IMAGEN`, `ID_CATEGORIA`, `ID_LOGIN`) VALUES
-(1, 'Bandera de Venezuela', '2016-06-23', '00:47:53', 'La Bandera Nacional de Venezuela es el pabellÃ³n nacional oficial de dicho paÃ­s y uno de los tres sÃ­mbolos patrios, siendo el mÃ¡s representativo a nivel internacional.', 'bandera-de-venezuela_fondos-de-pantalla-de-banderas.jpg', 3, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -928,27 +1057,26 @@ INSERT INTO `noticias_web` (`ID_NOTICIA`, `TITULO_NOTICIA`, `FCHA_NOTICIA`, `HOR
 -- Estructura de tabla para la tabla `parentesco`
 --
 
-CREATE TABLE IF NOT EXISTS `parentesco` (
-`ID_PARENTESCO` int(11) NOT NULL,
+CREATE TABLE `parentesco` (
+  `ID_PARENTESCO` int(11) NOT NULL,
   `PARENTESCO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `parentesco`
 --
 
 INSERT INTO `parentesco` (`ID_PARENTESCO`, `PARENTESCO`) VALUES
-(1, 'Madre'),
-(2, 'Padre'),
-(3, 'Espeso(a)'),
+(1, 'Mamá'),
+(2, 'Papá'),
+(3, 'Esposo(a)'),
 (4, 'Hijo(a)'),
 (5, 'Sobrino(a)'),
 (6, 'Hermano(a)'),
 (7, 'Tio(a)'),
 (8, 'Abuelo(a)'),
 (9, 'Nieto(a)'),
-(10, 'Primo(a)'),
-(11, 'Otro(a)');
+(10, 'Otro(a)');
 
 -- --------------------------------------------------------
 
@@ -956,8 +1084,8 @@ INSERT INTO `parentesco` (`ID_PARENTESCO`, `PARENTESCO`) VALUES
 -- Estructura de tabla para la tabla `participacion_comunitaria`
 --
 
-CREATE TABLE IF NOT EXISTS `participacion_comunitaria` (
-`ID_PARTICIPACION_COMUNITARIA` int(11) NOT NULL,
+CREATE TABLE `participacion_comunitaria` (
+  `ID_PARTICIPACION_COMUNITARIA` int(11) NOT NULL,
   `ORG_COMUNITARIA` varchar(3) DEFAULT NULL,
   `DESCRIPCION` varchar(45) DEFAULT NULL,
   `PARTICIPA` varchar(3) DEFAULT NULL,
@@ -967,16 +1095,28 @@ CREATE TABLE IF NOT EXISTS `participacion_comunitaria` (
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `participacion_comunitaria`
+--
+
+INSERT INTO `participacion_comunitaria` (`ID_PARTICIPACION_COMUNITARIA`, `ORG_COMUNITARIA`, `DESCRIPCION`, `PARTICIPA`, `PARTICIPA_FAMILIAR`, `MISIONES_COMUNIDAD`, `OTRA_MISION`, `ID_JEFE`) VALUES
+(1, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(2, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(3, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(4, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(5, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
+(6, 'NO', '', 'NO', 'NO', 'Mercal', '', 6);
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `perfiles`
 --
 
-CREATE TABLE IF NOT EXISTS `perfiles` (
-`ID_PERFIL` int(11) NOT NULL,
+CREATE TABLE `perfiles` (
+  `ID_PERFIL` int(11) NOT NULL,
   `PERFIL` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `perfiles`
@@ -993,10 +1133,10 @@ INSERT INTO `perfiles` (`ID_PERFIL`, `PERFIL`) VALUES
 -- Estructura de tabla para la tabla `personas_exclusion`
 --
 
-CREATE TABLE IF NOT EXISTS `personas_exclusion` (
-`ID_EXCLUSION` int(11) NOT NULL,
-  `PERSEXCLUSION` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+CREATE TABLE `personas_exclusion` (
+  `ID_EXCLUSION` int(11) NOT NULL,
+  `PERSEXCLUSION` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `personas_exclusion`
@@ -1017,10 +1157,10 @@ INSERT INTO `personas_exclusion` (`ID_EXCLUSION`, `PERSEXCLUSION`) VALUES
 -- Estructura de tabla para la tabla `persona_enfermedades`
 --
 
-CREATE TABLE IF NOT EXISTS `persona_enfermedades` (
-`ID_ENFERMEDADES` int(11) NOT NULL,
-  `ENFERMEDADES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+CREATE TABLE `persona_enfermedades` (
+  `ID_ENFERMEDADES` int(11) NOT NULL,
+  `ENFERMEDADES` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `persona_enfermedades`
@@ -1045,10 +1185,10 @@ INSERT INTO `persona_enfermedades` (`ID_ENFERMEDADES`, `ENFERMEDADES`) VALUES
 -- Estructura de tabla para la tabla `persona_estado_civil`
 --
 
-CREATE TABLE IF NOT EXISTS `persona_estado_civil` (
-`ID_EDOCIVIL` int(11) NOT NULL,
+CREATE TABLE `persona_estado_civil` (
+  `ID_EDOCIVIL` int(11) NOT NULL,
   `EDOCIVIL` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `persona_estado_civil`
@@ -1067,10 +1207,10 @@ INSERT INTO `persona_estado_civil` (`ID_EDOCIVIL`, `EDOCIVIL`) VALUES
 -- Estructura de tabla para la tabla `persona_nacionalidad`
 --
 
-CREATE TABLE IF NOT EXISTS `persona_nacionalidad` (
-`id_nacionalidad` int(11) NOT NULL,
+CREATE TABLE `persona_nacionalidad` (
+  `id_nacionalidad` int(11) NOT NULL,
   `nacionalidad` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `persona_nacionalidad`
@@ -1086,10 +1226,10 @@ INSERT INTO `persona_nacionalidad` (`id_nacionalidad`, `nacionalidad`) VALUES
 -- Estructura de tabla para la tabla `persona_tipo_ingreso`
 --
 
-CREATE TABLE IF NOT EXISTS `persona_tipo_ingreso` (
-`ID_TIPOING` int(11) NOT NULL,
+CREATE TABLE `persona_tipo_ingreso` (
+  `ID_TIPOING` int(11) NOT NULL,
   `TIPO_INGRESO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `persona_tipo_ingreso`
@@ -1108,8 +1248,8 @@ INSERT INTO `persona_tipo_ingreso` (`ID_TIPOING`, `TIPO_INGRESO`) VALUES
 -- Estructura de tabla para la tabla `preguntas_part_comunitaria`
 --
 
-CREATE TABLE IF NOT EXISTS `preguntas_part_comunitaria` (
-`ID_PREG_PARTCOMUNITARIA` int(11) NOT NULL,
+CREATE TABLE `preguntas_part_comunitaria` (
+  `ID_PREG_PARTCOMUNITARIA` int(11) NOT NULL,
   `P_UNO` varchar(45) DEFAULT NULL,
   `P_DOS` varchar(45) DEFAULT NULL,
   `P_TRES` varchar(45) DEFAULT NULL,
@@ -1128,16 +1268,28 @@ CREATE TABLE IF NOT EXISTS `preguntas_part_comunitaria` (
   `ID_JEFE` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `preguntas_part_comunitaria`
+--
+
+INSERT INTO `preguntas_part_comunitaria` (`ID_PREG_PARTCOMUNITARIA`, `P_UNO`, `P_DOS`, `P_TRES`, `P_CUATRO`, `P_CINCO`, `P_SEIS`, `P_SIETE`, `P_OCHO`, `P_NUEVE`, `P_DIEZ`, `P_ONCE`, `P_DOCE`, `P_CATORCE`, `P_QUINCE`, `OTRA_AREA`, `ID_JEFE`) VALUES
+(1, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(2, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(3, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(4, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(5, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(6, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6');
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `profesiones`
 --
 
-CREATE TABLE IF NOT EXISTS `profesiones` (
-`ID_PROFESION` int(11) NOT NULL,
+CREATE TABLE `profesiones` (
+  `ID_PROFESION` int(11) NOT NULL,
   `PROFESION` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `profesiones`
@@ -1154,13 +1306,20 @@ INSERT INTO `profesiones` (`ID_PROFESION`, `PROFESION`) VALUES
 -- Estructura de tabla para la tabla `situacion_economica`
 --
 
-CREATE TABLE IF NOT EXISTS `situacion_economica` (
-`ID_SITUACION_ECONOMICA` int(11) NOT NULL,
+CREATE TABLE `situacion_economica` (
+  `ID_SITUACION_ECONOMICA` int(11) NOT NULL,
   `DONDE_TRABAJA` varchar(40) DEFAULT NULL,
   `PREGUNTA_UNO` varchar(3) DEFAULT NULL,
   `ING_FAMILIAR` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `situacion_economica`
+--
+
+INSERT INTO `situacion_economica` (`ID_SITUACION_ECONOMICA`, `DONDE_TRABAJA`, `PREGUNTA_UNO`, `ING_FAMILIAR`, `ID_JEFE`) VALUES
+(6, '', 'NO', 'Menos de 200.000', 6);
 
 -- --------------------------------------------------------
 
@@ -1168,8 +1327,8 @@ CREATE TABLE IF NOT EXISTS `situacion_economica` (
 -- Estructura de tabla para la tabla `situacion_servicios`
 --
 
-CREATE TABLE IF NOT EXISTS `situacion_servicios` (
-`ID_SITUACION_SERVICIOS` int(11) NOT NULL,
+CREATE TABLE `situacion_servicios` (
+  `ID_SITUACION_SERVICIOS` int(11) NOT NULL,
   `AGUAS_BLANCAS` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `MEDIDOR` varchar(3) DEFAULT NULL,
   `AGUAS_SERVIDAS` varchar(30) DEFAULT NULL,
@@ -1182,7 +1341,19 @@ CREATE TABLE IF NOT EXISTS `situacion_servicios` (
   `TIPO_INFORMACION` varchar(40) DEFAULT NULL,
   `SERV_COMUNALES` varchar(30) DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `situacion_servicios`
+--
+
+INSERT INTO `situacion_servicios` (`ID_SITUACION_SERVICIOS`, `AGUAS_BLANCAS`, `MEDIDOR`, `AGUAS_SERVIDAS`, `GAS`, `SISTEMA_ELECTRICO`, `BOMBILLOS_AHORRADORES`, `RECOL_BASURA`, `TELEFONIA`, `TRANSPORTE`, `TIPO_INFORMACION`, `SERV_COMUNALES`, `ID_JEFE`) VALUES
+(1, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(2, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(3, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(4, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(5, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
+(6, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6);
 
 -- --------------------------------------------------------
 
@@ -1190,8 +1361,8 @@ CREATE TABLE IF NOT EXISTS `situacion_servicios` (
 -- Estructura de tabla para la tabla `situacion_vivienda`
 --
 
-CREATE TABLE IF NOT EXISTS `situacion_vivienda` (
-`ID_SITUACION_VIVIENDA` int(11) NOT NULL,
+CREATE TABLE `situacion_vivienda` (
+  `ID_SITUACION_VIVIENDA` int(11) NOT NULL,
   `COND_TERRENO` varchar(30) DEFAULT NULL,
   `FORMA_TENENCIA` varchar(30) DEFAULT NULL,
   `OCV` varchar(3) DEFAULT NULL,
@@ -1204,6 +1375,13 @@ CREATE TABLE IF NOT EXISTS `situacion_vivienda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Volcado de datos para la tabla `situacion_vivienda`
+--
+
+INSERT INTO `situacion_vivienda` (`ID_SITUACION_VIVIENDA`, `COND_TERRENO`, `FORMA_TENENCIA`, `OCV`, `TERRENO_PROPIO`, `SIVIH`, `CONSTANCIA_SIVIH`, `COTIZA_LPH`, `SALUBRIDAD_VIVIENDA`, `ID_JEFE`) VALUES
+(6, 'Estable', 'Propia', 'NO', 'NO', 'NO', 'NO', 'SI', 'limpia', 6);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -1211,355 +1389,358 @@ CREATE TABLE IF NOT EXISTS `situacion_vivienda` (
 -- Indices de la tabla `ayuda_vivienda`
 --
 ALTER TABLE `ayuda_vivienda`
- ADD PRIMARY KEY (`ID_AYUDA_VIVIENDA`);
+  ADD PRIMARY KEY (`ID_AYUDA_VIVIENDA`);
 
 --
 -- Indices de la tabla `casa_aguas_blancas`
 --
 ALTER TABLE `casa_aguas_blancas`
- ADD PRIMARY KEY (`ID_AGUASBLANCAS`);
+  ADD PRIMARY KEY (`ID_AGUASBLANCAS`);
 
 --
 -- Indices de la tabla `casa_aguas_servidas`
 --
 ALTER TABLE `casa_aguas_servidas`
- ADD PRIMARY KEY (`ID_AGUASERV`);
+  ADD PRIMARY KEY (`ID_AGUASERV`);
 
 --
 -- Indices de la tabla `casa_animales`
 --
 ALTER TABLE `casa_animales`
- ADD PRIMARY KEY (`ID_ANIMALES`);
+  ADD PRIMARY KEY (`ID_ANIMALES`);
 
 --
 -- Indices de la tabla `casa_condiciones_terreno`
 --
 ALTER TABLE `casa_condiciones_terreno`
- ADD PRIMARY KEY (`ID_CONDTERRENO`);
+  ADD PRIMARY KEY (`ID_CONDTERRENO`);
 
 --
 -- Indices de la tabla `casa_enseres_vivienda`
 --
 ALTER TABLE `casa_enseres_vivienda`
- ADD PRIMARY KEY (`ID_ENSERESVIVIENDA`);
+  ADD PRIMARY KEY (`ID_ENSERESVIVIENDA`);
 
 --
 -- Indices de la tabla `casa_formas_tenencia`
 --
 ALTER TABLE `casa_formas_tenencia`
- ADD PRIMARY KEY (`ID_FORMATENENCIA`);
+  ADD PRIMARY KEY (`ID_FORMATENENCIA`);
 
 --
 -- Indices de la tabla `casa_gas`
 --
 ALTER TABLE `casa_gas`
- ADD PRIMARY KEY (`ID_GAS`);
+  ADD PRIMARY KEY (`ID_GAS`);
 
 --
 -- Indices de la tabla `casa_habitaciones`
 --
 ALTER TABLE `casa_habitaciones`
- ADD PRIMARY KEY (`ID_HABITACIONES`);
+  ADD PRIMARY KEY (`ID_HABITACIONES`);
 
 --
 -- Indices de la tabla `casa_ingreso_familiar`
 --
 ALTER TABLE `casa_ingreso_familiar`
- ADD PRIMARY KEY (`ID_INGFAMILIAR`);
+  ADD PRIMARY KEY (`ID_INGFAMILIAR`);
 
 --
 -- Indices de la tabla `casa_mecanismo_infor`
 --
 ALTER TABLE `casa_mecanismo_infor`
- ADD PRIMARY KEY (`ID_MECANISMOINFO`);
+  ADD PRIMARY KEY (`ID_MECANISMOINFO`);
 
 --
 -- Indices de la tabla `casa_plagas`
 --
 ALTER TABLE `casa_plagas`
- ADD PRIMARY KEY (`ID_PLAGAS`);
+  ADD PRIMARY KEY (`ID_PLAGAS`);
 
 --
 -- Indices de la tabla `casa_recoleccion_basura`
 --
 ALTER TABLE `casa_recoleccion_basura`
- ADD PRIMARY KEY (`ID_RECOLBASURA`);
+  ADD PRIMARY KEY (`ID_RECOLBASURA`);
 
 --
 -- Indices de la tabla `casa_salubridad_vivienda`
 --
 ALTER TABLE `casa_salubridad_vivienda`
- ADD PRIMARY KEY (`ID_SALUBRIDADVIVIENDA`);
+  ADD PRIMARY KEY (`ID_SALUBRIDADVIVIENDA`);
 
 --
 -- Indices de la tabla `casa_servicios_comunales`
 --
 ALTER TABLE `casa_servicios_comunales`
- ADD PRIMARY KEY (`ID_SERVCOMUNALES`);
+  ADD PRIMARY KEY (`ID_SERVCOMUNALES`);
 
 --
 -- Indices de la tabla `casa_sistema_electrico`
 --
 ALTER TABLE `casa_sistema_electrico`
- ADD PRIMARY KEY (`ID_SISTELECTRICO`);
+  ADD PRIMARY KEY (`ID_SISTELECTRICO`);
 
 --
 -- Indices de la tabla `casa_telefonia`
 --
 ALTER TABLE `casa_telefonia`
- ADD PRIMARY KEY (`ID_TELEFONIA`);
+  ADD PRIMARY KEY (`ID_TELEFONIA`);
 
 --
 -- Indices de la tabla `casa_tipo_ayuda_mejora`
 --
 ALTER TABLE `casa_tipo_ayuda_mejora`
- ADD PRIMARY KEY (`ID_TIPOAYUDACASA`);
+  ADD PRIMARY KEY (`ID_TIPOAYUDACASA`);
 
 --
 -- Indices de la tabla `casa_tipo_paredes`
 --
 ALTER TABLE `casa_tipo_paredes`
- ADD PRIMARY KEY (`ID_TIPOPAREDES`);
+  ADD PRIMARY KEY (`ID_TIPOPAREDES`);
 
 --
 -- Indices de la tabla `casa_tipo_techo`
 --
 ALTER TABLE `casa_tipo_techo`
- ADD PRIMARY KEY (`ID_TIPOTECHO`);
+  ADD PRIMARY KEY (`ID_TIPOTECHO`);
 
 --
 -- Indices de la tabla `casa_tipo_vivienda`
 --
 ALTER TABLE `casa_tipo_vivienda`
- ADD PRIMARY KEY (`ID_TIPOVIVIENDA`);
+  ADD PRIMARY KEY (`ID_TIPOVIVIENDA`);
 
 --
 -- Indices de la tabla `casa_transporte`
 --
 ALTER TABLE `casa_transporte`
- ADD PRIMARY KEY (`ID_TRANSPORTE`);
+  ADD PRIMARY KEY (`ID_TRANSPORTE`);
 
 --
 -- Indices de la tabla `categoria_noticia`
 --
 ALTER TABLE `categoria_noticia`
- ADD PRIMARY KEY (`ID_CATEGORIA`);
+  ADD PRIMARY KEY (`ID_CATEGORIA`);
 
 --
 -- Indices de la tabla `censos`
 --
 ALTER TABLE `censos`
- ADD PRIMARY KEY (`ID_CENSO`);
+  ADD PRIMARY KEY (`ID_CENSO`);
 
 --
 -- Indices de la tabla `comunidad_misiones`
 --
 ALTER TABLE `comunidad_misiones`
- ADD PRIMARY KEY (`ID_MISIONES`);
+  ADD PRIMARY KEY (`ID_MISIONES`);
 
 --
 -- Indices de la tabla `condiciones_salud`
 --
 ALTER TABLE `condiciones_salud`
- ADD PRIMARY KEY (`ID_CONDICIONES_SALUD`);
+  ADD PRIMARY KEY (`ID_CONDICIONES_SALUD`);
 
 --
 -- Indices de la tabla `datos_academicos`
 --
 ALTER TABLE `datos_academicos`
- ADD PRIMARY KEY (`ID_ACADEMICO`);
+  ADD PRIMARY KEY (`ID_ACADEMICO`);
 
 --
 -- Indices de la tabla `datos_contacto`
 --
 ALTER TABLE `datos_contacto`
- ADD PRIMARY KEY (`ID_CONTACTO`);
+  ADD PRIMARY KEY (`ID_CONTACTO`);
 
 --
 -- Indices de la tabla `datos_encuestado`
 --
 ALTER TABLE `datos_encuestado`
- ADD PRIMARY KEY (`ID_ENCUESTADO`);
+  ADD PRIMARY KEY (`ID_ENCUESTADO`);
 
 --
 -- Indices de la tabla `datos_familiares`
 --
 ALTER TABLE `datos_familiares`
- ADD PRIMARY KEY (`ID_FAMILIARES`);
+  ADD PRIMARY KEY (`ID_FAMILIARES`),
+  ADD UNIQUE KEY `CEDULA_F` (`CEDULA_F`);
 
 --
 -- Indices de la tabla `datos_finanzas`
 --
 ALTER TABLE `datos_finanzas`
- ADD PRIMARY KEY (`ID_FINANZAS`);
+  ADD PRIMARY KEY (`ID_FINANZAS`);
 
 --
 -- Indices de la tabla `datos_login`
 --
 ALTER TABLE `datos_login`
- ADD PRIMARY KEY (`ID_LOGIN`);
+  ADD PRIMARY KEY (`ID_LOGIN`),
+  ADD UNIQUE KEY `CEDULA` (`CEDULA`);
 
 --
 -- Indices de la tabla `datos_personales`
 --
 ALTER TABLE `datos_personales`
- ADD PRIMARY KEY (`ID_DATAPERSONAL`);
+  ADD PRIMARY KEY (`ID_DATAPERSONAL`),
+  ADD UNIQUE KEY `CI` (`CI`);
 
 --
 -- Indices de la tabla `datos_relacion`
 --
 ALTER TABLE `datos_relacion`
- ADD PRIMARY KEY (`ID_RELACION`);
+  ADD PRIMARY KEY (`ID_RELACION`);
 
 --
 -- Indices de la tabla `datos_salud`
 --
 ALTER TABLE `datos_salud`
- ADD PRIMARY KEY (`ID_SALUD`);
+  ADD PRIMARY KEY (`ID_SALUD`);
 
 --
 -- Indices de la tabla `detalles_serv_electrico`
 --
 ALTER TABLE `detalles_serv_electrico`
- ADD PRIMARY KEY (`ID_SERV_ELECTRICO`);
+  ADD PRIMARY KEY (`ID_SERV_ELECTRICO`);
 
 --
 -- Indices de la tabla `detalles_vivienda`
 --
 ALTER TABLE `detalles_vivienda`
- ADD PRIMARY KEY (`ID_DETALLES_VIVIENDA`);
+  ADD PRIMARY KEY (`ID_DETALLES_VIVIENDA`);
 
 --
 -- Indices de la tabla `detalle_servicios`
 --
 ALTER TABLE `detalle_servicios`
- ADD PRIMARY KEY (`ID_DETALLE_SERVICIOS`);
+  ADD PRIMARY KEY (`ID_DETALLE_SERVICIOS`);
 
 --
 -- Indices de la tabla `empleado`
 --
 ALTER TABLE `empleado`
- ADD KEY `id` (`idempleado`);
+  ADD KEY `id` (`idempleado`);
 
 --
 -- Indices de la tabla `estado_perfil`
 --
 ALTER TABLE `estado_perfil`
- ADD PRIMARY KEY (`ID_EDO_PERFIL`);
+  ADD PRIMARY KEY (`ID_EDO_PERFIL`);
 
 --
 -- Indices de la tabla `familiar_academico`
 --
 ALTER TABLE `familiar_academico`
- ADD PRIMARY KEY (`ID_ACADEMICO_F`);
+  ADD PRIMARY KEY (`ID_ACADEMICO_F`);
 
 --
 -- Indices de la tabla `familiar_finanzas`
 --
 ALTER TABLE `familiar_finanzas`
- ADD PRIMARY KEY (`ID_FINANZAS_F`);
+  ADD PRIMARY KEY (`ID_FINANZAS_F`);
 
 --
 -- Indices de la tabla `familiar_relacion`
 --
 ALTER TABLE `familiar_relacion`
- ADD PRIMARY KEY (`ID_DETALLE_F`);
+  ADD PRIMARY KEY (`ID_DETALLE_F`);
 
 --
 -- Indices de la tabla `familiar_salud`
 --
 ALTER TABLE `familiar_salud`
- ADD PRIMARY KEY (`ID_SALUD_F`);
+  ADD PRIMARY KEY (`ID_SALUD_F`);
 
 --
 -- Indices de la tabla `nivel_instruccion`
 --
 ALTER TABLE `nivel_instruccion`
- ADD PRIMARY KEY (`ID_NIVINSTR`);
+  ADD PRIMARY KEY (`ID_NIVINSTR`);
 
 --
 -- Indices de la tabla `noticias_web`
 --
 ALTER TABLE `noticias_web`
- ADD PRIMARY KEY (`ID_NOTICIA`);
+  ADD PRIMARY KEY (`ID_NOTICIA`);
 
 --
 -- Indices de la tabla `parentesco`
 --
 ALTER TABLE `parentesco`
- ADD PRIMARY KEY (`ID_PARENTESCO`);
+  ADD PRIMARY KEY (`ID_PARENTESCO`);
 
 --
 -- Indices de la tabla `participacion_comunitaria`
 --
 ALTER TABLE `participacion_comunitaria`
- ADD PRIMARY KEY (`ID_PARTICIPACION_COMUNITARIA`);
+  ADD PRIMARY KEY (`ID_PARTICIPACION_COMUNITARIA`);
 
 --
 -- Indices de la tabla `perfiles`
 --
 ALTER TABLE `perfiles`
- ADD PRIMARY KEY (`ID_PERFIL`);
+  ADD PRIMARY KEY (`ID_PERFIL`);
 
 --
 -- Indices de la tabla `personas_exclusion`
 --
 ALTER TABLE `personas_exclusion`
- ADD PRIMARY KEY (`ID_EXCLUSION`);
+  ADD PRIMARY KEY (`ID_EXCLUSION`);
 
 --
 -- Indices de la tabla `persona_enfermedades`
 --
 ALTER TABLE `persona_enfermedades`
- ADD PRIMARY KEY (`ID_ENFERMEDADES`);
+  ADD PRIMARY KEY (`ID_ENFERMEDADES`);
 
 --
 -- Indices de la tabla `persona_estado_civil`
 --
 ALTER TABLE `persona_estado_civil`
- ADD PRIMARY KEY (`ID_EDOCIVIL`);
+  ADD PRIMARY KEY (`ID_EDOCIVIL`);
 
 --
 -- Indices de la tabla `persona_nacionalidad`
 --
 ALTER TABLE `persona_nacionalidad`
- ADD PRIMARY KEY (`id_nacionalidad`);
+  ADD PRIMARY KEY (`id_nacionalidad`);
 
 --
 -- Indices de la tabla `persona_tipo_ingreso`
 --
 ALTER TABLE `persona_tipo_ingreso`
- ADD PRIMARY KEY (`ID_TIPOING`);
+  ADD PRIMARY KEY (`ID_TIPOING`);
 
 --
 -- Indices de la tabla `preguntas_part_comunitaria`
 --
 ALTER TABLE `preguntas_part_comunitaria`
- ADD PRIMARY KEY (`ID_PREG_PARTCOMUNITARIA`);
+  ADD PRIMARY KEY (`ID_PREG_PARTCOMUNITARIA`);
 
 --
 -- Indices de la tabla `profesiones`
 --
 ALTER TABLE `profesiones`
- ADD PRIMARY KEY (`ID_PROFESION`);
+  ADD PRIMARY KEY (`ID_PROFESION`);
 
 --
 -- Indices de la tabla `situacion_economica`
 --
 ALTER TABLE `situacion_economica`
- ADD PRIMARY KEY (`ID_SITUACION_ECONOMICA`);
+  ADD PRIMARY KEY (`ID_SITUACION_ECONOMICA`);
 
 --
 -- Indices de la tabla `situacion_servicios`
 --
 ALTER TABLE `situacion_servicios`
- ADD PRIMARY KEY (`ID_SITUACION_SERVICIOS`);
+  ADD PRIMARY KEY (`ID_SITUACION_SERVICIOS`);
 
 --
 -- Indices de la tabla `situacion_vivienda`
 --
 ALTER TABLE `situacion_vivienda`
- ADD PRIMARY KEY (`ID_SITUACION_VIVIENDA`);
+  ADD PRIMARY KEY (`ID_SITUACION_VIVIENDA`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -1569,297 +1750,297 @@ ALTER TABLE `situacion_vivienda`
 -- AUTO_INCREMENT de la tabla `ayuda_vivienda`
 --
 ALTER TABLE `ayuda_vivienda`
-MODIFY `ID_AYUDA_VIVIENDA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_AYUDA_VIVIENDA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `casa_aguas_blancas`
 --
 ALTER TABLE `casa_aguas_blancas`
-MODIFY `ID_AGUASBLANCAS` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `ID_AGUASBLANCAS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `casa_aguas_servidas`
 --
 ALTER TABLE `casa_aguas_servidas`
-MODIFY `ID_AGUASERV` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_AGUASERV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `casa_animales`
 --
 ALTER TABLE `casa_animales`
-MODIFY `ID_ANIMALES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `ID_ANIMALES` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `casa_condiciones_terreno`
 --
 ALTER TABLE `casa_condiciones_terreno`
-MODIFY `ID_CONDTERRENO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `ID_CONDTERRENO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `casa_enseres_vivienda`
 --
 ALTER TABLE `casa_enseres_vivienda`
-MODIFY `ID_ENSERESVIVIENDA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `ID_ENSERESVIVIENDA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `casa_formas_tenencia`
 --
 ALTER TABLE `casa_formas_tenencia`
-MODIFY `ID_FORMATENENCIA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `ID_FORMATENENCIA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `casa_gas`
 --
 ALTER TABLE `casa_gas`
-MODIFY `ID_GAS` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `ID_GAS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `casa_habitaciones`
 --
 ALTER TABLE `casa_habitaciones`
-MODIFY `ID_HABITACIONES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `ID_HABITACIONES` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `casa_ingreso_familiar`
 --
 ALTER TABLE `casa_ingreso_familiar`
-MODIFY `ID_INGFAMILIAR` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `ID_INGFAMILIAR` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `casa_mecanismo_infor`
 --
 ALTER TABLE `casa_mecanismo_infor`
-MODIFY `ID_MECANISMOINFO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_MECANISMOINFO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `casa_plagas`
 --
 ALTER TABLE `casa_plagas`
-MODIFY `ID_PLAGAS` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_PLAGAS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `casa_recoleccion_basura`
 --
 ALTER TABLE `casa_recoleccion_basura`
-MODIFY `ID_RECOLBASURA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `ID_RECOLBASURA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `casa_salubridad_vivienda`
 --
 ALTER TABLE `casa_salubridad_vivienda`
-MODIFY `ID_SALUBRIDADVIVIENDA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `ID_SALUBRIDADVIVIENDA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `casa_servicios_comunales`
 --
 ALTER TABLE `casa_servicios_comunales`
-MODIFY `ID_SERVCOMUNALES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `ID_SERVCOMUNALES` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de la tabla `casa_sistema_electrico`
 --
 ALTER TABLE `casa_sistema_electrico`
-MODIFY `ID_SISTELECTRICO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `ID_SISTELECTRICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `casa_telefonia`
 --
 ALTER TABLE `casa_telefonia`
-MODIFY `ID_TELEFONIA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_TELEFONIA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `casa_tipo_ayuda_mejora`
 --
 ALTER TABLE `casa_tipo_ayuda_mejora`
-MODIFY `ID_TIPOAYUDACASA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `ID_TIPOAYUDACASA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `casa_tipo_paredes`
 --
 ALTER TABLE `casa_tipo_paredes`
-MODIFY `ID_TIPOPAREDES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `ID_TIPOPAREDES` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `casa_tipo_techo`
 --
 ALTER TABLE `casa_tipo_techo`
-MODIFY `ID_TIPOTECHO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `ID_TIPOTECHO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `casa_tipo_vivienda`
 --
 ALTER TABLE `casa_tipo_vivienda`
-MODIFY `ID_TIPOVIVIENDA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `ID_TIPOVIVIENDA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `casa_transporte`
 --
 ALTER TABLE `casa_transporte`
-MODIFY `ID_TRANSPORTE` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_TRANSPORTE` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `categoria_noticia`
 --
 ALTER TABLE `categoria_noticia`
-MODIFY `ID_CATEGORIA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_CATEGORIA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `censos`
 --
 ALTER TABLE `censos`
-MODIFY `ID_CENSO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_CENSO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `comunidad_misiones`
 --
 ALTER TABLE `comunidad_misiones`
-MODIFY `ID_MISIONES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `ID_MISIONES` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `condiciones_salud`
 --
 ALTER TABLE `condiciones_salud`
-MODIFY `ID_CONDICIONES_SALUD` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_CONDICIONES_SALUD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `datos_academicos`
 --
 ALTER TABLE `datos_academicos`
-MODIFY `ID_ACADEMICO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_ACADEMICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `datos_contacto`
 --
 ALTER TABLE `datos_contacto`
-MODIFY `ID_CONTACTO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_CONTACTO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `datos_encuestado`
 --
 ALTER TABLE `datos_encuestado`
-MODIFY `ID_ENCUESTADO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_ENCUESTADO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `datos_familiares`
 --
 ALTER TABLE `datos_familiares`
-MODIFY `ID_FAMILIARES` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_FAMILIARES` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `datos_finanzas`
 --
 ALTER TABLE `datos_finanzas`
-MODIFY `ID_FINANZAS` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_FINANZAS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `datos_login`
 --
 ALTER TABLE `datos_login`
-MODIFY `ID_LOGIN` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_LOGIN` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `datos_personales`
 --
 ALTER TABLE `datos_personales`
-MODIFY `ID_DATAPERSONAL` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_DATAPERSONAL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `datos_relacion`
 --
 ALTER TABLE `datos_relacion`
-MODIFY `ID_RELACION` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_RELACION` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `datos_salud`
 --
 ALTER TABLE `datos_salud`
-MODIFY `ID_SALUD` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_SALUD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `detalles_serv_electrico`
 --
 ALTER TABLE `detalles_serv_electrico`
-MODIFY `ID_SERV_ELECTRICO` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_SERV_ELECTRICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `detalles_vivienda`
 --
 ALTER TABLE `detalles_vivienda`
-MODIFY `ID_DETALLES_VIVIENDA` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_DETALLES_VIVIENDA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `detalle_servicios`
 --
 ALTER TABLE `detalle_servicios`
-MODIFY `ID_DETALLE_SERVICIOS` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_DETALLE_SERVICIOS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-MODIFY `idempleado` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idempleado` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `estado_perfil`
 --
 ALTER TABLE `estado_perfil`
-MODIFY `ID_EDO_PERFIL` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `ID_EDO_PERFIL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `familiar_academico`
 --
 ALTER TABLE `familiar_academico`
-MODIFY `ID_ACADEMICO_F` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_ACADEMICO_F` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `familiar_finanzas`
 --
 ALTER TABLE `familiar_finanzas`
-MODIFY `ID_FINANZAS_F` int(10) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_FINANZAS_F` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `familiar_relacion`
 --
 ALTER TABLE `familiar_relacion`
-MODIFY `ID_DETALLE_F` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_DETALLE_F` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `familiar_salud`
 --
 ALTER TABLE `familiar_salud`
-MODIFY `ID_SALUD_F` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_SALUD_F` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `nivel_instruccion`
 --
 ALTER TABLE `nivel_instruccion`
-MODIFY `ID_NIVINSTR` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `ID_NIVINSTR` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `noticias_web`
 --
 ALTER TABLE `noticias_web`
-MODIFY `ID_NOTICIA` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `ID_NOTICIA` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `parentesco`
 --
 ALTER TABLE `parentesco`
-MODIFY `ID_PARENTESCO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `ID_PARENTESCO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `participacion_comunitaria`
 --
 ALTER TABLE `participacion_comunitaria`
-MODIFY `ID_PARTICIPACION_COMUNITARIA` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_PARTICIPACION_COMUNITARIA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `perfiles`
 --
 ALTER TABLE `perfiles`
-MODIFY `ID_PERFIL` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `ID_PERFIL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `personas_exclusion`
 --
 ALTER TABLE `personas_exclusion`
-MODIFY `ID_EXCLUSION` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `ID_EXCLUSION` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `persona_enfermedades`
 --
 ALTER TABLE `persona_enfermedades`
-MODIFY `ID_ENFERMEDADES` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `ID_ENFERMEDADES` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `persona_estado_civil`
 --
 ALTER TABLE `persona_estado_civil`
-MODIFY `ID_EDOCIVIL` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `ID_EDOCIVIL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `persona_nacionalidad`
 --
 ALTER TABLE `persona_nacionalidad`
-MODIFY `id_nacionalidad` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id_nacionalidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `persona_tipo_ingreso`
 --
 ALTER TABLE `persona_tipo_ingreso`
-MODIFY `ID_TIPOING` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `ID_TIPOING` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `preguntas_part_comunitaria`
 --
 ALTER TABLE `preguntas_part_comunitaria`
-MODIFY `ID_PREG_PARTCOMUNITARIA` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_PREG_PARTCOMUNITARIA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `profesiones`
 --
 ALTER TABLE `profesiones`
-MODIFY `ID_PROFESION` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `ID_PROFESION` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `situacion_economica`
 --
 ALTER TABLE `situacion_economica`
-MODIFY `ID_SITUACION_ECONOMICA` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_SITUACION_ECONOMICA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `situacion_servicios`
 --
 ALTER TABLE `situacion_servicios`
-MODIFY `ID_SITUACION_SERVICIOS` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `ID_SITUACION_SERVICIOS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `situacion_vivienda`
 --
 ALTER TABLE `situacion_vivienda`
-MODIFY `ID_SITUACION_VIVIENDA` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_SITUACION_VIVIENDA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -109,7 +109,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 												for($z=0;$z<count($data_part_comun);$z++){
 												echo $data_part_comun[$z]["MISIONES_COMUNIDAD"]. " ";
 												}
-												?>">
+												?>" multiple>
 													<option value="Ribas">Ribas</option>
 													<option value="Sucre">Sucre</option>
 													<option value="Vuelvan caras">Vuelvan caras</option>

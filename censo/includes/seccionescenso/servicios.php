@@ -236,7 +236,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura" >
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura" multiple>
 														<option value="0">seleccione</option>
 			                                            <?php 
 			                                            $recolbasura=$obj2->get_casa_recoleccion_basura(); 
@@ -257,7 +257,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="telefonia">
+													<select class="form-control selectpicker show-tick" name="telefonia" multiple>
 														<option value="0">seleccione</option>
 			                                            <?php 
 			                                            $telefonia=$obj2->get_casa_telefonia(); 
@@ -303,7 +303,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="mecan_informacion">
+													<select class="form-control selectpicker show-tick" name="mecan_informacion" multiple>
 														<option value="0">seleccione</option>
 			                                            <?php 
 			                                            $mecainfo=$obj2->get_casa_mecanismo_infor(); 
@@ -328,7 +328,7 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="serv_comunales">
+													<select class="form-control selectpicker show-tick" name="serv_comunales" multiple>
 														<option value="0">seleccione</option>
 			                                            <?php 
 			                                            $servcomun=$obj2->get_casa_servicios_comunales(); 

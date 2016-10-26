@@ -158,7 +158,7 @@ public function Modificar_censo_por_id($id){
 		$idjefe=$_POST["id_jefe"];
 
 		//DATOS DEL EVENTO CENSO
-		$sql = "UPDATE censos SET FECHA_CENSO='$fecha_censo',HORA_CENSO='now()',ID_JEFE='$idjefe' 
+		$sql = "UPDATE censos SET FECHA_CENSO='$fecha_censo',HORA_CENSO=now(),ID_JEFE='$idjefe' 
 		WHERE ID_JEFE=$id;";
 		
 		//datos del jefe de familia

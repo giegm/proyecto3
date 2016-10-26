@@ -355,7 +355,7 @@ $data=$obj->obten_censo_por_id($_GET["id"]);
 								<select class="form-control selectpicker show-tick" name="trabaja" >
 								<option value="<?php echo $data_dos[0]["TRABAJA"]; ?>"><?php echo $data_dos[0]["TRABAJA"]; ?></option>
 								<option value="NO">NO</option>
-								<option value="Cuenta propia">Por cuenta propia</option>
+								<option value="por cuenta propia">Por cuenta propia</option>
 							</select>
 								<?php
 							}
@@ -364,11 +364,11 @@ $data=$obj->obten_censo_por_id($_GET["id"]);
 								<select class="form-control selectpicker show-tick" name="trabaja" >
 								<option value="<?php echo $data_dos[0]["TRABAJA"]; ?>"><?php echo $data_dos[0]["TRABAJA"]; ?></option>
 								<option value="SI">SI</option>
-								<option value="Cuenta propia">Por cuenta propia</option>
+								<option value="por cuenta propia">Por cuenta propia</option>
 							</select>
 								<?php
 							}
-							if($data_dos[0]["TRABAJA"]=="cta_propia"){
+							if($data_dos[0]["TRABAJA"]=="por cuenta propia"){
 								?>
 								<select class="form-control selectpicker show-tick" name="trabaja" >
 								<option value="<?php echo $data_dos[0]["TRABAJA"]; ?>"><?php echo $data_dos[0]["TRABAJA"]; ?></option>

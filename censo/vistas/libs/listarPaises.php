@@ -20,7 +20,7 @@ $listado=  mysqli_query($cn,"select C.*, DP.* from censos as C, datos_personales
                         <th>CEDULA</th>
                         <th>FECHA DE CENSO</th><!--Estado-->
                         <th>HORA DE CENSO</th>
-                        <th>REVISAR</th>
+                        <th>MODIFICAR</th>
                         <th>OPERACIÓN</th>
                         <th>REPORTE</th>
                     </tr>
@@ -45,7 +45,7 @@ $listado=  mysqli_query($cn,"select C.*, DP.* from censos as C, datos_personales
                                echo '<td>'.mb_convert_encoding($reg['FECHA_CENSO'], "UTF-8").'</td>';
                                echo '<td>'.$reg['HORA_CENSO'].'</td>';
                                ?>
-                               <td><a type="button" class="btn btn-success" href="javascript::void(0);" onclick="window.location='../vistas/revisar_censo.php?id=<?php echo $reg["ID_JEFE"]; ?>';">Revisar</a></td>
+                               <td><a type="button" class="btn btn-success" href="javascript::void(0);" onclick="window.location='../vistas/revisar_censo.php?id=<?php echo $reg["ID_JEFE"]; ?>';">Modificar</a></td>
                                <td><a type="button" class="btn btn-danger" href="javascript::void(0);" onclick="elimina_censo('../controlador/eliminar_censo.php?id=<?php echo $reg["ID_JEFE"]; ?>');">Eliminar</a></td>
                                <td><a type="button" class="btn btn-primary" href="../controlador/creapdf_censo.php?id=<?php echo $reg["ID_JEFE"]; ?>">Generar PDF</a></td>
                                <?php

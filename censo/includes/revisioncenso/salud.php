@@ -21,7 +21,7 @@ $data_selec=$obj->obten_censo_por_id_condiciones_salud($_GET["id"]);//para los m
 
 											<div class="col-sm-3 col-md-3">
 											
-												<select class="form-control selectpicker show-tick" name="pers_enfermedades" id="" title="<?php 
+												<select class="form-control selectpicker show-tick" name="pers_enfermedades[]" id="" title="<?php 
 														for($b=0;$b<count($data_selec);$b++){
 														echo $data_selec[$b]["PERSONA_ENFERMEDAD"]. " ";
 														}
@@ -111,7 +111,7 @@ $data_selec=$obj->obten_censo_por_id_condiciones_salud($_GET["id"]);//para los m
 
 											<div class="col-sm-3 col-md-3">
 
-												<select class="form-control selectpicker show-tick" name="pers_exclusion" id="" title="<?php for($s=0;$s<count($data_selec);$s++){ echo $data_selec[$s]["SITUACION_EXCLUSION"]. " "; }?>" multiple>
+												<select class="form-control selectpicker show-tick" name="pers_exclusion[]" id="" title="<?php for($s=0;$s<count($data_selec);$s++){ echo $data_selec[$s]["SITUACION_EXCLUSION"]. " "; }?>" multiple>
 													<option value="Ninguna">Ninguna</option>
 													<option value="Niños de la calle">Niños de la calle</option>
 													<option value="Indigentes">Indigentes</option>

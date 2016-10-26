@@ -279,7 +279,7 @@ $nac=$obj2->get_nacionalidad();
 									<option value="0">seleccione</option>
 									<option value="SI">SI</option>
 									<option value="NO">NO</option>
-									<option value="cta_propia">Por cuenta propia</option>
+									<option value="por cuenta propia">Por cuenta propia</option>
 								</select>
 								<div class="required-icon">
 					                <div class="text">*</div>

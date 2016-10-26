@@ -106,7 +106,7 @@ if(isset($_SESSION["sesion_usuario"]))
 							<td><?php echo $res[$i]["HORA"]; ?></td>
 							<td><?php echo utf8_encode($res[$i]["CATEGORIA"]); ?></td>
 							<td><?php echo $res[$i]["USERADMIN"]; ?></td>
-							<td><a type="button" class="btn btn-success" href="javascript:void(0);" onclick="window.location='revisa_noticia.php?id=<?php echo $res[$i]["ID_NOTICIA"]; ?>';">Revisar</a></td>
+							<td><a type="button" class="btn btn-success" href="javascript:void(0);" onclick="window.location='revisa_noticia.php?id=<?php echo $res[$i]["ID_NOTICIA"]; ?>';">Modificar</a></td>
 							<td><a type="button" class="btn btn-danger" href="javascript:void(0);" onclick="eliminar('../controlador/elimina_noticia.php?id=<?php echo $res[$i]["ID_NOTICIA"]; ?>');">Eliminar</a></td>
 						</tr>
 					</tbody>

@@ -446,7 +446,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<?php
 												if($data_seis[0]["RECOL_BASURA"]=="Aseo Urbano"){
 													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura" id="" multiple>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
 													<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
 													<option value="Conteiner">Conteiner</option>
 													<option value="Bajante">Bajante</option>
@@ -461,7 +461,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<?php
 												if($data_seis[0]["RECOL_BASURA"]=="Conteiner"){
 													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura" id="" multiple>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
 														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
 													<option value="Aseo Urbano">Aseo Urbano</option>
 													<option value="Bajante">Bajante</option>
@@ -476,7 +476,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<?php
 												if($data_seis[0]["RECOL_BASURA"]=="Bajante"){
 													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura" id="" multiple>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
 														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
 													<option value="Aseo Urbano">Aseo Urbano</option>
 													<option value="Conteiner">Conteiner</option>
@@ -491,7 +491,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<?php
 												if($data_seis[0]["RECOL_BASURA"]=="Camion"){
 													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura" id=""multiple>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id=""multiple>
 														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
 													<option value="Aseo Urbano">Aseo Urbano</option>
 													<option value="Conteiner">Conteiner</option>
@@ -506,7 +506,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<?php
 												if($data_seis[0]["RECOL_BASURA"]=="Al aire libre"){
 													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura" id="" multiple>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
 														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
 													<option value="Aseo Urbano">Aseo Urbano</option>
 													<option value="Conteiner">Conteiner</option>
@@ -521,7 +521,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<?php
 												if($data_seis[0]["RECOL_BASURA"]=="Quemada"){
 													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura" id="" multiple>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
 														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
 													<option value="Aseo Urbano">Aseo Urbano</option>
 													<option value="Conteiner">Conteiner</option>
@@ -536,7 +536,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<?php
 												if($data_seis[0]["RECOL_BASURA"]=="Otros"){
 													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura" id="" multiple>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
 														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
 													<option value="Aseo Urbano">Aseo Urbano</option>
 													<option value="Conteiner">Conteiner</option>
@@ -554,7 +554,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 
 											<div class="col-sm-2 col-md-2">
 
-													<select class="form-control selectpicker show-tick" name="telefonia" title="<?php 
+													<select class="form-control selectpicker show-tick" name="telefonia[]" title="<?php 
 														for($a=0;$a<count($data_ser);$a++)
 														{
 														echo $data_ser[$a]["TELEFONIA"]." ";
@@ -667,7 +667,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 
 											<div class="col-sm-2 col-md-4">
 											
-													<select class="form-control selectpicker show-tick" name="mecan_informacion" id="" title="<?php
+													<select class="form-control selectpicker show-tick" name="mecan_informacion[]" id="" title="<?php
 														for($d=0;$d<count($data_ser);$d++){ 
 														echo $data_ser[$d]["TIPO_INFORMACION"]. " ";
 														}
@@ -689,7 +689,7 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 
 											<div class="col-sm-5 col-md-5">
 											
-													<select class="form-control selectpicker show-tick" name="serv_comunales" id="" title="<?php
+													<select class="form-control selectpicker show-tick" name="serv_comunales[]" id="" title="<?php
 														 for($b=0;$b<count($data_ser);$b++){
 														 echo $data_ser[
 														 $b]["SERV_COMUNALES"]." ";

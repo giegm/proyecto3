@@ -1,6 +1,7 @@
 <?php
 $obj=new Revisiones(); 
 $data_cinco=$obj->obten_censo_por_id_cinco($_GET["id"]);
+$data_cuatro=$obj->obten_censo_por_id_cuatro($_GET["id"]);
 $data_cincodos=$obj->obten_censo_por_id_cincodos($_GET["id"]);
 $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 ?>
@@ -422,7 +423,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label">Tipo/Habitaciones</label>
 
 										<div class="col-sm-2 col-md-4">
-											<select class="form-control selectpicker show-tick" name="habitaciones" id=""title="<?php 
+											<select class="form-control selectpicker show-tick" name="habitaciones[]" id=""title="<?php 
 												for($a=0;$a<count($data_cinco);$a++)
 												{
 												echo $data_cinco[$a]["HABITACIONES"]." ";
@@ -812,7 +813,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Enseres de la vivienda</label>
 
 										<div class="col-sm-4 col-md-4">
-											<select class="form-control selectpicker show-tick" name="enseres_vivienda" id="" title="<?php
+											<select class="form-control selectpicker show-tick" name="enseres_vivienda[]" id="" title="<?php
 												for($e=0;$e<count($data_cincodos);$e++){
 												echo $data_cincodos[$e]["ENSERES_VIVIENDA"]." ";
 												}
@@ -939,7 +940,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 
 										<div class="col-sm-3 col-md-3">
 										
-											<select class="form-control selectpicker show-tick" name="plagas" id="" title="<?php
+											<select class="form-control selectpicker show-tick" name="plagas[]" id="" title="<?php
 												for($r=0;$r<sizeof($data_cinco);$r++){ 
 												echo $data_cinco[$r]["INSECTOS_ROEDORES"]." ";
 												}
@@ -957,7 +958,7 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label">Posee animales domesticos</label>
 
 										<div class="col-sm-3 col-md-3">
-											<select class="form-control selectpicker show-tick" name="animales_domst" id="" title="<?php
+											<select class="form-control selectpicker show-tick" name="animales_domst[]" id="" title="<?php
 												for($n=0;$n<sizeof($data_cinco);$n++){ 
 												echo $data_cinco[$n]["ANIMALES_DOMESTICOS"]." ";
 												}

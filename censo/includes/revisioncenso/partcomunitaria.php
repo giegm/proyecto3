@@ -105,7 +105,7 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 											<label for="" class="col-sm-4 col-md-4 control-label" style="text-align:justify;">Cuales misiones estan en la comunidad</label>
 
 											<div class="col-sm-4 col-md-4">
-												<select class="form-control selectpicker show-tick" name="name_mision" id="" title="<?php
+												<select class="form-control selectpicker show-tick" name="name_mision[]" id="" title="<?php
 												for($z=0;$z<count($data_part_comun);$z++){
 												echo $data_part_comun[$z]["MISIONES_COMUNIDAD"]. " ";
 												}
@@ -352,13 +352,13 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 
 										<div class="form-group col-md-12">
 
-										<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final" title="
+										<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final[]" title="
 												<?php
 												for($z=0;$z<sizeof($data_ocho_dos);$z++){
 												echo $data_ocho_dos[$z]["P_DOCE"]. " ";
 												}
 												?>
-												">
+												" multiple>
 												<option value="Contraloria y Seguimiento">Contraloria y Seguimiento</option>
 												<option value="Relaciones Publicas y Medios">Relaciones Publicas y Medios</option>
 												<option value="Seguridad Ciudadana">Seguridad Ciudadana</option>

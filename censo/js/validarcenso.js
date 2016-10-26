@@ -602,6 +602,7 @@ function Validar_censo(){
 	}
 
 	//validamos los tipos de habiatciones
+	/*
 	if(form.habitaciones.value ==0 || form.habitaciones.value == null){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique el tipo de habitaciones.');
@@ -612,7 +613,7 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+	*/
 	//validamos el numero de habitaciones
 	if(form.num_habitaciones.value==null || form.num_habitaciones.value==0){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -709,6 +710,7 @@ function Validar_censo(){
 	}
 
 	//validamos los enseres de la vivienda
+	/*
 	if(form.enseres_vivienda.value==null || form.enseres_vivienda.value == null || form.enseres_vivienda.value == " "){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique los enseres de la vivienda.');
@@ -719,7 +721,7 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+	*/
 	//validamos la salubridad
 	if(form.salubridad_vivienda.value==null || form.salubridad_vivienda.value == 0 || form.salubridad_vivienda.value == " "){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -751,17 +753,21 @@ function Validar_censo(){
 	*/
 
 	//validamos la presencia de plaga
+	/*
 	if (form.plagas.options[form.plagas.selectedIndex].value == "0"){
 		alert("Por favor, seleccione una opción si presenta o no roedores o insectos en su vivienda");
 		form.plagas.focus(); return true;
     }
-
+	*/
 	//validamos si posee animales
+	/*
 	if (form.animales_domst.options[form.animales_domst.selectedIndex].value == "0"){
 		alert("Por favor, seleccione una opción si posee o no animales en su vivienda");
 		form.animales_domst.focus(); return true;
     }
+    */
 	//validamos si hay personas con enfermedad
+	/*
 	if(form.pers_enfermedades.value ==0 || form.pers_enfermedades.value == null){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique si posee personas con enfermedades.');
@@ -772,7 +778,7 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+*/
 	//validamos si existe alguna otra enefermedad
 	if(form.otra_enfermedad.value ==0 || form.otra_enfermedad.value == null){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -810,6 +816,7 @@ function Validar_censo(){
 	}*/
 
 	//validamos si hay personas en exclusion
+	/*
 	if(form.pers_exclusion.value ==0 || form.pers_exclusion.value == null){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique si posee personas en exclusión.');
@@ -820,7 +827,7 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+	*/
 	//validamos la cantidad de personas en exclusion
 	/*if(isNaN(form.cant_exclusion.value)==true){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -1093,6 +1100,7 @@ function Validar_censo(){
 	}
 
 	//validamos la recoleccion_basura
+	/*
 	if(form.recoleccion_basura.value ==0 || form.recoleccion_basura.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique el tipo de recolección de basura.');
@@ -1103,8 +1111,9 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+	*/
 	//validamos la telefonia
+	/*
 	if(form.telefonia.value ==0 || form.telefonia.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique el tipo de servicio telefónico.');
@@ -1115,7 +1124,7 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+*/
 	//validamos el medio de transporte
 	if(form.transporte.value ==0 || form.transporte.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -1129,6 +1138,7 @@ function Validar_censo(){
 	}
 
 	//validamos el mecan_informacion
+	/*
 	if(form.mecan_informacion.value ==0 || form.mecan_informacion.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique el medio información.');
@@ -1139,8 +1149,9 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+	*/
 	//validamos los serv_comunales
+	/*
 	if(form.serv_comunales.value ==0 || form.serv_comunales.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique los servicios comunales.');
@@ -1151,7 +1162,7 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+	*/
 	//AHORA VALIDAMOS LA Partcipación comunitaria
 
 	//validamos si existen org_comunitarias
@@ -1203,6 +1214,7 @@ function Validar_censo(){
 	}
 
 	//validamos el name_mision
+	/*
 	if(form.name_mision.value ==0 || form.name_mision.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique que misión esta en su comunidad.');
@@ -1213,7 +1225,7 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+	*/
 	//validamos si hay otra_mision
 	/*if(form.otra_mision.value==0 || form.otra_mision.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -1359,6 +1371,7 @@ function Validar_censo(){
 	}
 
 	//validamos pregunta12
+	/*
 	if(form.pueblo_pregunta_final.value ==0 || form.pueblo_pregunta_final.value ==null || form.pueblo_pregunta_final.value ==" "){
 		//document.getElementById("mensaje_error").innerHTML="";
 		alert('Indique al menu un área de trabajo  que le gustaría participar de la sección participación comunitaria.');
@@ -1369,7 +1382,7 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-
+	*/
 	//validamos si hay otra_area
 	if(form.otra_area.value==null || form.otra_area.value ==0 || form.otra_area.value ==" "){
 		//document.getElementById("mensaje_error").innerHTML="";

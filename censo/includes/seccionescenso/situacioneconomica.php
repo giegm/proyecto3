@@ -146,7 +146,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<div class="required-field-block">
-												<select class="form-control selectpicker show-tick" name="habitaciones" multiple>
+												<select class="form-control selectpicker show-tick" name="habitaciones[]" multiple>
 													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $tipohab=$obj2->get_casa_habitaciones(); 
@@ -314,7 +314,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<div class="required-field-block">
-												<select class="form-control selectpicker show-tick" name="enseres_vivienda" multiple>
+												<select class="form-control selectpicker show-tick" name="enseres_vivienda[]" multiple>
 													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $ensersvivind=$obj2->get_casa_enseres_vivienda(); 
@@ -391,7 +391,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<div class="required-field-block">
-												<select class="form-control selectpicker show-tick" name="plagas" multiple>
+												<select class="form-control selectpicker show-tick" name="plagas[]" multiple>
 													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $casaplagas=$obj2->get_casa_plagas(); 
@@ -412,7 +412,7 @@
 
 										<div class="col-sm-2 col-md-2">
 											<div class="required-field-block">
-												<select class="form-control selectpicker show-tick" name="animales_domst" multiple>
+												<select class="form-control selectpicker show-tick" name="animales_domst[]" multiple>
 													<option value="0">seleccione</option>
 		                                            <?php 
 		                                            $animcasa=$obj2->get_casa_animales(); 

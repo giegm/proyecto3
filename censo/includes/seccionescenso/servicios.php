@@ -236,17 +236,22 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" multiple>
-														<option value="0">seleccione</option>
-			                                            <?php 
-			                                            $recolbasura=$obj2->get_casa_recoleccion_basura(); 
-			                                            for($k=0;$k<sizeof($recolbasura);$k++){
-			                                                ?>
-			                                                <option value="<?php echo utf8_encode($recolbasura[$k]["RECOLBASURA"]); ?>"><?php echo utf8_encode($recolbasura[$k]["RECOLBASURA"]); ?></option>
-			                                                <?php
-			                                            }
-			                                            ?>
-													</select>
+													<br>
+													<p>Aseo Urbano
+													<input name="recoleccion_basura" type="checkbox" value="Aseo Urbano">
+													Container
+													<input name="recoleccion_basura1" type="checkbox" value="Container">
+													Bajante
+													<input name="recoleccion_basura2" type="checkbox" value="Bajante">
+													Camión
+													<input name="recoleccion_basura3" type="checkbox" value="Camion">
+													Al aire libre
+													<input name="recoleccion_basura4" type="checkbox" value="Al aire libre">
+													Quemada
+													<input name="recoleccion_basura5" type="checkbox" value="Quemada">
+													Otro
+													<input name="recoleccion_basura6" type="checkbox" value="Otro">
+													</p>
 													<div class="required-icon">
 									                	<div class="text">*</div>
 									            	</div>
@@ -257,17 +262,21 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="telefonia[]" multiple>
-														<option value="0">seleccione</option>
-			                                            <?php 
-			                                            $telefonia=$obj2->get_casa_telefonia(); 
-			                                            for($l=0;$l<sizeof($telefonia);$l++){
-			                                                ?>
-			                                                <option value="<?php echo utf8_encode($telefonia[$l]["TELEFONIA"]); ?>"><?php echo utf8_encode($telefonia[$l]["TELEFONIA"]); ?></option>
-			                                                <?php
-			                                            }
-			                                            ?>
-													</select>
+													<br>
+													<p>Domiciliaria
+													<input name="telefonia" type="checkbox" value="Domiciliaria">
+													Celular
+													<input name="telefonia1" type="checkbox" value="Celular">
+													Prepago
+													<input name="telefonia2" type="checkbox" value="Prepago">
+													Centro de conexión
+													<input name="telefonia3" type="checkbox" value="Centro de conexion">
+													Otra
+													<input name="telefonia4" type="checkbox" value="Otra">
+													No posee
+													<input name="telefonia5" type="checkbox" value="No posee">
+													</p>
+
 													<div class="required-icon">
 									                	<div class="text">*</div>
 									            	</div>
@@ -303,17 +312,21 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="mecan_informacion[]" multiple>
-														<option value="0">seleccione</option>
-			                                            <?php 
-			                                            $mecainfo=$obj2->get_casa_mecanismo_infor(); 
-			                                            for($n=0;$n<sizeof($mecainfo);$n++){
-			                                                ?>
-			                                                <option value="<?php echo utf8_encode($mecainfo[$n]["MECANISMOINFO"]); ?>"><?php echo utf8_encode($mecainfo[$n]["MECANISMOINFO"]); ?></option>
-			                                                <?php
-			                                            }
-			                                            ?>
-													</select>
+													<br>
+													<p>Televisión
+													<input name="mecan_informacion" type="checkbox" value="Television">
+													Radio
+													<input name="mecan_informacion1" type="checkbox" value="Radio">
+													Prensa
+													<input name="mecan_informacion2" type="checkbox" value="Prensa">
+													Internet
+													<input name="mecan_informacion3" type="checkbox" value="Internet">
+													Medios alternativos comunitarios
+													<input name="mecan_informacion4" type="checkbox" value="Medios alternativos comunitarios">
+													Otros
+													<input name="mecan_informacion5" type="checkbox" value="Otros">
+													</p>
+													
 													<div class="required-icon">
 									                	<div class="text">*</div>
 									            	</div>
@@ -328,17 +341,34 @@
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="serv_comunales[]" multiple>
-														<option value="0">seleccione</option>
-			                                            <?php 
-			                                            $servcomun=$obj2->get_casa_servicios_comunales(); 
-			                                            for($p=0;$p<sizeof($servcomun);$p++){
-			                                                ?>
-			                                                <option value="<?php echo utf8_encode($servcomun[$p]["SERVCOMUNALES"]); ?>"><?php echo utf8_encode($servcomun[$p]["SERVCOMUNALES"]); ?></option>
-			                                                <?php
-			                                            }
-			                                            ?>
-													</select>
+													<br>
+													<p>Mercado
+													<input name="serv_comunales" type="checkbox" value="Mercado">
+													Bodega
+													<input name="serv_comunales1" type="checkbox" value="Bodega">
+													Abastos
+													<input name="serv_comunales2" type="checkbox" value="Abastos">
+													Farmacia
+													<input name="serv_comunales3" type="checkbox" value="Farmacia">
+													Plazas y Parques
+													<input name="serv_comunales4" type="checkbox" value="Plazas y Parques">
+													Preescolar
+													<input name="serv_comunales5" type="checkbox" value="Preescolar">
+													Escuelas
+													<input name="serv_comunales6" type="checkbox" value="Escuelas">
+													Liceos
+													<input name="serv_comunales7" type="checkbox" value="Liceos">
+													Centro de salud
+													<input name="serv_comunales8" type="checkbox" value="Centro de Salud">
+													Canchas
+													<input name="serv_comunales9" type="checkbox" value="Canchas">
+													Casa comunal
+													<input name="serv_comunales10" type="checkbox" value="Casa comunal">
+													Iglesia
+													<input name="serv_comunales11" type="checkbox" value="Iglesia">
+													Otros
+													<input name="serv_comunales12" type="checkbox" value="Otros">
+													</p>									
 													<div class="required-icon">
 									                	<div class="text">*</div>
 									            	</div>

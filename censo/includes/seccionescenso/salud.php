@@ -14,27 +14,40 @@
 
 											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Personas con enfermedades</label>
 
-											<div class="col-sm-2 col-md-2">
+											<div class="col-sm-6">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="pers_enfermedades[]" multiple>
-													<option value="0">seleccione</option>
-		                                            <?php 
-		                                            $persenferm=$obj2->get_persona_enfermedades(); 
-		                                            for($e=0;$e<sizeof($persenferm);$e++){
-		                                                ?>
-		                                                <option value="<?php echo utf8_encode($persenferm[$e]["ENFERMEDADES"]); ?>"><?php echo utf8_encode($persenferm[$e]["ENFERMEDADES"]); ?></option>
-		                                                <?php
-		                                            }
-		                                            ?>
-
-													</select>
+													<p>Ninguna
+													<input name="pers_enfermedades" type="checkbox" value="Ninguna">
+													Diabetes
+													<input name="pers_enfermedades1" type="checkbox" value="Diabetes">
+													Sida
+													<input name="pers_enfermedades2" type="checkbox" value="Sida">
+													Cancer
+													<input name="pers_enfermedades3" type="checkbox" value="Cancer">
+													Hepatitis
+													<input name="pers_enfermedades4" type="checkbox" value="Hepatitis">
+													Corazón
+													<input name="pers_enfermedades5" type="checkbox" value="Corazon">
+													Leucemia
+													<input name="pers_enfermedades6" type="checkbox" value="Leucemia">
+													Tuberculosis
+													<input name="pers_enfermedades7" type="checkbox" value="Tuberculosis">
+													Hipertensión
+													<input name="pers_enfermedades8" type="checkbox" value="Hipertension">
+													Asma
+													<input name="pers_enfermedades9" type="checkbox" value="Asma">
+													Otra
+													<input name="pers_enfermedades10" type="checkbox" value="Otra">
+													</p>
+													
 													<div class="required-icon">
 									                	<div class="text">*</div>
 									            	</div>
 									        	</div>
 											</div>
-
-											<label for="" class="col-sm-3 col-md-3 control-label">Otra enfermedad</label>
+										</div>
+										<div class="form-group col-md-12">
+											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Otra enfermedad</label>
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
@@ -79,26 +92,34 @@
 
 											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Situación de exclusión</label>
 
-											<div class="col-sm-2 col-md-2">
+											<div class="col-sm-6">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="pers_exclusion[]" multiple>
-														<option value="0">seleccione</option>
-			                                            <?php 
-			                                            $persexclus=$obj2->get_personas_exclusion(); 
-			                                            for($f=0;$f<sizeof($persexclus);$f++){
-			                                                ?>
-			                                                <option value="<?php echo utf8_encode($persexclus[$f]["PERSEXCLUSION"]); ?>"><?php echo utf8_encode($persexclus[$f]["PERSEXCLUSION"]); ?></option>
-			                                                <?php
-			                                            }
-			                                            ?>
-													</select>
+													<p>Ninguna
+													<input name="pers_exclusion" type="checkbox" value="Ninguna">
+													Niños de la Calle
+													<input name="pers_exclusion1" type="checkbox" value="Ninos de la Calle">
+													Indigentes
+													<input name="pers_exclusion2" type="checkbox" value="Indigentes">
+													Enfermos terminales
+													<input name="pers_exclusion3" type="checkbox" value="Enfermos terminales">
+													Discapacitados
+													<input name="pers_exclusion4" type="checkbox" value="Discapacitados">
+													Tercera Edad
+													<input name="pers_exclusion5" type="checkbox" value="Tercera Edad">
+													Otra
+													<input name="pers_exclusion6" type="checkbox" value="Otra">
+													</p>
+													
 													<div class="required-icon">
 									                	<div class="text">*</div>
 									            	</div>
 									        	</div>
 											</div>
+										</div>
 
-											<label for="" class="col-sm-3 col-md-3 control-label">Cuantos</label>
+										<div class="form-group col-md-12">
+
+											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Cuantos</label>
 
 											<div class="col-sm-2 col-md-2">
 												<input type="text" name="cant_exclusion" id="" maxlength="2" placeholder="Indique la cantidad en números" class="form-control" required onKeyPress="return SoloNumeros(event);">

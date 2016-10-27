@@ -3,7 +3,7 @@
 					    	  <div class="panel-heading" role="tab" id="heading5">
 					    			<h3 class="panel-title">
 					    				<a href="#collapse5" data-toggle="collapse" data-parent="#accordion5" aria-expanded="true" aria-control="collapse5">
-					    					Partcipación comunitaria
+					    					Participación comunitaria
 					    				<i class="fa fa-caret-down" style="float:right"></i><span style="float:right;">&nbsp;&nbsp;</span><i class="fa fa-caret-up" style="float:right"></i></a>
 					    			</h3>
 					    	  </div><!-- final del primer heading -->
@@ -28,13 +28,13 @@
 									        	</div>
 											</div>
 
-											<label for="" class="col-sm-2 col-md-1 control-label" style="text-align:justify;">Cual o cuales</label>
+											<label for="" class="col-sm-2 col-md-1 control-label" style="text-align:justify;">¿Cuál o Cuáles?</label>
 
 											<div class="col-sm-2 col-md-2">
 												<input type="text" name="name_organizacion" placeholder="solo nombre" maxlength="40" class="form-control" required onkeypress="return soloLetras(event);">
 											</div>
 
-											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Participa en alguna</label>
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">¿Participa en alguna?</label>
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
@@ -53,7 +53,7 @@
 
 										<div class="form-group col-md-12">
 
-											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Participa algun familiar</label>
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">¿Participa algún familiar?</label>
 
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
@@ -68,21 +68,28 @@
 									        	</div>
 											</div>
 
-											<label for="" class="col-sm-4 col-md-4 control-label" style="text-align:justify;">Cuales misiones estan en la comunidad</label>
+											<label for="" class="col-sm-4 col-md-4 control-label" style="text-align:justify;">¿Cuáles misiones estan en la comunidad?</label>
 
-											<div class="col-sm-2 col-md-2">
+											<div class="col-sm-6">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="name_mision[]" multiple>
-														<option value="0">seleccione</option>
-														<?php  
-														$misiones=$obj2->get_comunidad_misiones();
-														for($q=0;$q<sizeof($misiones);$q++){
-															?>
-															<option value="<?php echo $misiones[$q]["MISIONES"]; ?>"><?php echo $misiones[$q]["MISIONES"]; ?></option>
-															<?php
-														}
-														?>
-													</select>
+													<p>Ribas
+													<input name="name_mision" type="checkbox" value="Ribas">
+													Sucre
+													<input name="name_mision1" type="checkbox" value="Sucre">
+													Vuelvan caras
+													<input name="name_mision2" type="checkbox" value="Vuelvan caras">
+													Identidad
+													<input name="name_mision3" type="checkbox" value="Identidad">
+													Barrio Adentro
+													<input name="name_mision4" type="checkbox" value="Barrio Adentro">
+													Ezequiel Zamora
+													<input name="name_mision5" type="checkbox" value="Ezequiel Zamora">
+													Mercal
+													<input name="name_mision6" type="checkbox" value="Mercal">
+													Ninguna
+													<input name="name_mision7" type="checkbox" value="Ninguna">
+													</p>
+													
 													<div class="required-icon">
 									                	<div class="text">*</div>
 									            	</div>
@@ -294,8 +301,8 @@
 
 										<div class="form-group col-md-12">
 
-										<label for="" class="col-sm-12 col-md-12 control-label" style="text-align:justify;">¿De crearse un consejo comunal en su comunidad, 
-										en cual área de trabajo le gustaría participar?</label>
+										<label for="" class="col-sm-12 col-md-12 control-label" style="text-align:justify;">De crearse un consejo comunal en su comunidad, 
+										¿en cuál área de trabajo le gustaría participar?</label>
 										
 										</div>
 
@@ -303,21 +310,28 @@
 
 											<div class="col-sm-12 col-md-8">
 												<div class="required-field-block">
-													<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final[]" multiple>
-													 	<option value="0">seleccione</option>
-														<option value="Contraloria y Seguimiento">Contraloria y Seguimiento</option>
-														<option value="Relaciones Publicas y Medios">Relaciones Publicas y Medios</option>
-														<option value="Seguridad Ciudadana">Seguridad Ciudadana</option>
-														<option value="Infraestructura, Vivienda y Servicios Publicos">Infraestructura, Vivienda y Servicios Publicos</option>
-														<option value="Formacion y Conciencia Ideologica">Formación y Conciencia Ideológica</option>
-														<option value="Elaboracion de
-														Proyectos de Desarrollo Comunitario (Endogeno)">Elaboración de
-														Proyectos de Desarrollo Comunitario (Endógeno)</option>
-														<option value="Alimentación y Nutricion">Alimentación y Nutrición</option>
-														<option value="Educacion Cultura y Tecnologia">Educación Cultura y Tecnología</option>
-														<option value="Salud, Deporte y Saneamiento Ambiental">Salud, Deporte y Saneamiento Ambiental</option>
-														<option value="Ejecucion de Programas Sociales y las Misiones">Ejecución de Programas Sociales y las Misiones</option>
-													</select>
+													<p>Contraloria y Seguimiento
+													<input name="pueblo_pregunta_final" type="checkbox" value="Contraloria y Seguimiento">
+													Relaciones Publicas y Medios
+													<input name="pueblo_pregunta_final1" type="checkbox" value="Relaciones Publicas y Medios">
+													Seguridad Ciudadana
+													<input name="pueblo_pregunta_final2" type="checkbox" value="Seguridad Ciudadana">
+													Infraestructura, Vivienda y Servicios Publicos
+													<input name="pueblo_pregunta_final3" type="checkbox" value="Infraestructura, Vivienda y Servicios Publicos">
+													Formacion y Conciencia Ideologica
+													<input name="pueblo_pregunta_final4" type="checkbox" value="Formacion y Conciencia Ideologica">
+													Elaboración de Proyectos de Desarrollo Comunitario
+													<input name="pueblo_pregunta_final5" type="checkbox" value="Elaboracion de Proyectos de Desarrollo Comunitario">
+													Alimentación y Nutricion
+													<input name="pueblo_pregunta_final6" type="checkbox" value="Alimentación y Nutricion">
+													Educacion Cultura y Tecnologia
+													<input name="pueblo_pregunta_final7" type="checkbox" value="Educacion Cultura y Tecnologia">
+													Salud, Deporte y Saneamiento Ambiental
+													<input name="pueblo_pregunta_final8" type="checkbox" value="Salud, Deporte y Saneamiento Ambiental">
+													Ejecucion de Programas Sociales y las Misiones
+													<input name="pueblo_pregunta_final9" type="checkbox" value="Ejecucion de Programas Sociales y las Misiones">													
+													</p>
+													
 													<div class="required-icon">
 									                	<div class="text">*</div>
 									            	</div>

@@ -2,7 +2,10 @@
 ob_start(); 
 
 require_once("../modelo/clasedecensos/class_listar_censos.php");
+require_once("../modelo/clasedeacta/class_censados.php");
+$obj=new Personas_censados();
 $tra=new Censos();
+$data_cedula=$obj->POST_cedula($_GET["$ci"]);
 ?>
 
 <html>
@@ -111,7 +114,7 @@ $tra=new Censos();
 	<center>
 		<p style="text-align: justify;">EL Consejo  Comunal Santa Inés de los frailes de Catia Parroquia Sucre, en uso de las atribucione
 		s legales que le confiere la Ley Orgánica  de los consejos comunales, en concordancia con la Ordenanza de Funcionamiento de los Consejos
-		 Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano(a)  #, titular de la C.I: # , residente del sector: #</p>
+		 Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano(a) <?php echo $data_cedula[0]["NOMBRE, APELLIDO"] or ["NOMBRES_F"];?>">, titular de la C.I: # , residente del sector: #</p>
 		
 		<p style="text-align: left;">MOTIVO DE LA SOLICITUD: #</p>
 		<br>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-10-2016 a las 00:29:56
+-- Tiempo de generación: 27-10-2016 a las 06:38:01
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 7.0.9
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `mydb`
+-- Base de datos: `mydb(nueva)`
 --
 
 -- --------------------------------------------------------
@@ -92,7 +92,7 @@ INSERT INTO `casa_aguas_servidas` (`ID_AGUASERV`, `AGUASERVIDA`) VALUES
 
 CREATE TABLE `casa_animales` (
   `ID_ANIMALES` int(11) NOT NULL,
-  `ANIMALES` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `ANIMALES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -139,7 +139,7 @@ INSERT INTO `casa_condiciones_terreno` (`ID_CONDTERRENO`, `CONDTERRENO`) VALUES
 
 CREATE TABLE `casa_enseres_vivienda` (
   `ID_ENSERESVIVIENDA` int(11) NOT NULL,
-  `ENSERESVIVIENDA` varchar(150) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `ENSERESVIVIENDA` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -252,7 +252,7 @@ INSERT INTO `casa_ingreso_familiar` (`ID_INGFAMILIAR`, `INGFAMILIAR`) VALUES
 
 CREATE TABLE `casa_mecanismo_infor` (
   `ID_MECANISMOINFO` int(11) NOT NULL,
-  `MECANISMOINFO` varchar(70) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `MECANISMOINFO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -275,7 +275,7 @@ INSERT INTO `casa_mecanismo_infor` (`ID_MECANISMOINFO`, `MECANISMOINFO`) VALUES
 
 CREATE TABLE `casa_plagas` (
   `ID_PLAGAS` int(11) NOT NULL,
-  `PLAGAS` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `PLAGAS` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -298,7 +298,7 @@ INSERT INTO `casa_plagas` (`ID_PLAGAS`, `PLAGAS`) VALUES
 
 CREATE TABLE `casa_recoleccion_basura` (
   `ID_RECOLBASURA` int(11) NOT NULL,
-  `RECOLBASURA` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `RECOLBASURA` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -343,7 +343,7 @@ INSERT INTO `casa_salubridad_vivienda` (`ID_SALUBRIDADVIVIENDA`, `SALUBRIDADVIVI
 
 CREATE TABLE `casa_servicios_comunales` (
   `ID_SERVCOMUNALES` int(11) NOT NULL,
-  `SERVCOMUNALES` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `SERVCOMUNALES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -576,7 +576,7 @@ INSERT INTO `censos` (`ID_CENSO`, `FECHA_CENSO`, `HORA_CENSO`, `ID_JEFE`) VALUES
 
 CREATE TABLE `comunidad_misiones` (
   `ID_MISIONES` int(11) NOT NULL,
-  `MISIONES` varchar(80) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `MISIONES` varchar(70) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -602,10 +602,26 @@ INSERT INTO `comunidad_misiones` (`ID_MISIONES`, `MISIONES`) VALUES
 CREATE TABLE `condiciones_salud` (
   `ID_CONDICIONES_SALUD` int(11) NOT NULL,
   `PERSONA_ENFERMEDAD` varchar(30) DEFAULT NULL,
+  `PERSONA_ENFERMEDAD1` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `PERSONA_ENFERMEDAD2` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `PERSONA_ENFERMEDAD3` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `PERSONA_ENFERMEDAD4` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `PERSONA_ENFERMEDAD5` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `PERSONA_ENFERMEDAD6` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `PERSONA_ENFERMEDAD7` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `PERSONA_ENFERMEDAD8` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `PERSONA_ENFERMEDAD9` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `PERSONA_ENFERMEDAD10` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
   `OTRA_ENFERMEDAD` varchar(3) DEFAULT NULL,
   `AYUDA_ENFERMOS` varchar(3) DEFAULT NULL,
   `TIPO_AYUDA` varchar(45) DEFAULT NULL,
   `SITUACION_EXCLUSION` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `SITUACION_EXCLUSION1` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SITUACION_EXCLUSION2` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SITUACION_EXCLUSION3` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SITUACION_EXCLUSION4` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SITUACION_EXCLUSION5` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SITUACION_EXCLUSION6` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
   `CANTIDAD_EXCLUSION` int(2) DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -614,13 +630,13 @@ CREATE TABLE `condiciones_salud` (
 -- Volcado de datos para la tabla `condiciones_salud`
 --
 
-INSERT INTO `condiciones_salud` (`ID_CONDICIONES_SALUD`, `PERSONA_ENFERMEDAD`, `OTRA_ENFERMEDAD`, `AYUDA_ENFERMOS`, `TIPO_AYUDA`, `SITUACION_EXCLUSION`, `CANTIDAD_EXCLUSION`, `ID_JEFE`) VALUES
-(1, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
-(2, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
-(3, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
-(4, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
-(5, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6),
-(6, 'Ninguna', 'NO', 'NO', '', 'Tercera edad', 1, 6);
+INSERT INTO `condiciones_salud` (`ID_CONDICIONES_SALUD`, `PERSONA_ENFERMEDAD`, `PERSONA_ENFERMEDAD1`, `PERSONA_ENFERMEDAD2`, `PERSONA_ENFERMEDAD3`, `PERSONA_ENFERMEDAD4`, `PERSONA_ENFERMEDAD5`, `PERSONA_ENFERMEDAD6`, `PERSONA_ENFERMEDAD7`, `PERSONA_ENFERMEDAD8`, `PERSONA_ENFERMEDAD9`, `PERSONA_ENFERMEDAD10`, `OTRA_ENFERMEDAD`, `AYUDA_ENFERMOS`, `TIPO_AYUDA`, `SITUACION_EXCLUSION`, `SITUACION_EXCLUSION1`, `SITUACION_EXCLUSION2`, `SITUACION_EXCLUSION3`, `SITUACION_EXCLUSION4`, `SITUACION_EXCLUSION5`, `SITUACION_EXCLUSION6`, `CANTIDAD_EXCLUSION`, `ID_JEFE`) VALUES
+(1, 'Ninguna', '', '', '', '', '', '', '', '', '', '', 'NO', 'NO', '', 'Tercera edad', '', '', '', '', '', '', 1, 6),
+(2, 'Ninguna', '', '', '', '', '', '', '', '', '', '', 'NO', 'NO', '', 'Tercera edad', '', '', '', '', '', '', 1, 6),
+(3, 'Ninguna', '', '', '', '', '', '', '', '', '', '', 'NO', 'NO', '', 'Tercera edad', '', '', '', '', '', '', 1, 6),
+(4, 'Ninguna', '', '', '', '', '', '', '', '', '', '', 'NO', 'NO', '', 'Tercera edad', '', '', '', '', '', '', 1, 6),
+(5, 'Ninguna', '', '', '', '', '', '', '', '', '', '', 'NO', 'NO', '', 'Tercera edad', '', '', '', '', '', '', 1, 6),
+(6, 'Ninguna', '', '', '', '', '', '', '', '', '', '', 'NO', 'NO', '', 'Tercera edad', '', '', '', '', '', '', 1, 6);
 
 -- --------------------------------------------------------
 
@@ -751,8 +767,8 @@ CREATE TABLE `datos_login` (
 
 INSERT INTO `datos_login` (`ID_LOGIN`, `USERADMIN`, `CEDULA`, `PASSADMIN`, `PASSADMINDOS`, `ID_PERFIL`, `ID_EDO_PERFIL`) VALUES
 (1, 'admin', 12345678, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 1, 1),
-(4, 'publicador', 14563284, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 3, 1),
-(6, 'operador', 45123789, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 2, 1);
+(4, 'publicador', 20202020, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 3, 1),
+(6, 'operador', 56145645, '21232f297a57a5a743894a0e4a801fc3', '21232f297a57a5a743894a0e4a801fc3', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -850,13 +866,37 @@ INSERT INTO `detalles_serv_electrico` (`ID_SERV_ELECTRICO`, `MEDIDOR`, `BOMBILLO
 CREATE TABLE `detalles_vivienda` (
   `ID_DETALLES_VIVIENDA` int(11) NOT NULL,
   `TIPO_VIVIENDA` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
-  `HABITACIONES` varchar(30) DEFAULT NULL,
+  `HABITACIONES` varchar(10) DEFAULT NULL,
+  `HABITACIONES1` varchar(10) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `HABITACIONES2` varchar(10) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `HABITACIONES3` varchar(10) CHARACTER SET utf8mb4 DEFAULT NULL,
   `NUM_HABITACIONES` int(3) DEFAULT NULL,
   `TIPO_PAREDES` varchar(30) DEFAULT NULL,
   `TIPO_TECHO` varchar(30) DEFAULT NULL,
   `ENSERES_VIVIENDA` varchar(60) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `ENSERES_VIVIENDA2` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `ENSERES_VIVIENDA3` int(15) NOT NULL,
+  `ENSERES_VIVIENDA4` int(15) NOT NULL,
+  `ENSERES_VIVIENDA5` int(15) NOT NULL,
+  `ENSERES_VIVIENDA6` int(15) NOT NULL,
+  `ENSERES_VIVIENDA7` int(15) NOT NULL,
+  `ENSERES_VIVIENDA8` int(15) NOT NULL,
+  `ENSERES_VIVIENDA9` int(15) NOT NULL,
+  `ENSERES_VIVIENDA10` int(15) NOT NULL,
   `INSECTOS_ROEDORES` varchar(10) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `INSECTOS_ROEDORES2` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `INSECTOS_ROEDORES3` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `INSECTOS_ROEDORES4` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `INSECTOS_ROEDORES5` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `INSECTOS_ROEDORES6` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
   `ANIMALES_DOMESTICOS` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `ANIMALES_DOMESTICOS2` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `ANIMALES_DOMESTICOS3` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `ANIMALES_DOMESTICOS4` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `ANIMALES_DOMESTICOS5` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `ANIMALES_DOMESTICOS6` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `ANIMALES_DOMESTICOS7` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `ANIMALES_DOMESTICOS8` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -864,13 +904,13 @@ CREATE TABLE `detalles_vivienda` (
 -- Volcado de datos para la tabla `detalles_vivienda`
 --
 
-INSERT INTO `detalles_vivienda` (`ID_DETALLES_VIVIENDA`, `TIPO_VIVIENDA`, `HABITACIONES`, `NUM_HABITACIONES`, `TIPO_PAREDES`, `TIPO_TECHO`, `ENSERES_VIVIENDA`, `INSECTOS_ROEDORES`, `ANIMALES_DOMESTICOS`, `ID_JEFE`) VALUES
-(1, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
-(2, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
-(3, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
-(4, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
-(5, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6),
-(6, 'Casa', 'Comedor', 3, 'Frisadas', 'Platabanda', 'otros', 'Ninguno', 'Ninguno', 6);
+INSERT INTO `detalles_vivienda` (`ID_DETALLES_VIVIENDA`, `TIPO_VIVIENDA`, `HABITACIONES`, `HABITACIONES1`, `HABITACIONES2`, `HABITACIONES3`, `NUM_HABITACIONES`, `TIPO_PAREDES`, `TIPO_TECHO`, `ENSERES_VIVIENDA`, `ENSERES_VIVIENDA2`, `ENSERES_VIVIENDA3`, `ENSERES_VIVIENDA4`, `ENSERES_VIVIENDA5`, `ENSERES_VIVIENDA6`, `ENSERES_VIVIENDA7`, `ENSERES_VIVIENDA8`, `ENSERES_VIVIENDA9`, `ENSERES_VIVIENDA10`, `INSECTOS_ROEDORES`, `INSECTOS_ROEDORES2`, `INSECTOS_ROEDORES3`, `INSECTOS_ROEDORES4`, `INSECTOS_ROEDORES5`, `INSECTOS_ROEDORES6`, `ANIMALES_DOMESTICOS`, `ANIMALES_DOMESTICOS2`, `ANIMALES_DOMESTICOS3`, `ANIMALES_DOMESTICOS4`, `ANIMALES_DOMESTICOS5`, `ANIMALES_DOMESTICOS6`, `ANIMALES_DOMESTICOS7`, `ANIMALES_DOMESTICOS8`, `ID_JEFE`) VALUES
+(1, 'Casa', 'Comedor', '0', '0', '0', 3, 'Frisadas', 'Platabanda', 'otros', '', 0, 0, 0, 0, 0, 0, 0, 0, 'Ninguno', '', '', '', '', '', 'Ninguno', '', '', '', '', '', '', '', 6),
+(2, 'Casa', 'Comedor', '0', '0', '0', 3, 'Frisadas', 'Platabanda', 'otros', '', 0, 0, 0, 0, 0, 0, 0, 0, 'Ninguno', '', '', '', '', '', 'Ninguno', '', '', '', '', '', '', '', 6),
+(3, 'Casa', 'Comedor', '0', '0', '0', 3, 'Frisadas', 'Platabanda', 'otros', '', 0, 0, 0, 0, 0, 0, 0, 0, 'Ninguno', '', '', '', '', '', 'Ninguno', '', '', '', '', '', '', '', 6),
+(4, 'Casa', 'Comedor', '0', '0', '0', 3, 'Frisadas', 'Platabanda', 'otros', '', 0, 0, 0, 0, 0, 0, 0, 0, 'Ninguno', '', '', '', '', '', 'Ninguno', '', '', '', '', '', '', '', 6),
+(5, 'Casa', 'Comedor', '0', '0', '0', 3, 'Frisadas', 'Platabanda', 'otros', '', 0, 0, 0, 0, 0, 0, 0, 0, 'Ninguno', '', '', '', '', '', 'Ninguno', '', '', '', '', '', '', '', 6),
+(6, 'Casa', 'Comedor', '0', '0', '0', 3, 'Frisadas', 'Platabanda', 'otros', '', 0, 0, 0, 0, 0, 0, 0, 0, 'Ninguno', '', '', '', '', '', 'Ninguno', '', '', '', '', '', '', '', 6);
 
 -- --------------------------------------------------------
 
@@ -1091,6 +1131,13 @@ CREATE TABLE `participacion_comunitaria` (
   `PARTICIPA` varchar(3) DEFAULT NULL,
   `PARTICIPA_FAMILIAR` varchar(3) DEFAULT NULL,
   `MISIONES_COMUNIDAD` varchar(45) DEFAULT NULL,
+  `MISIONES_COMUNIDAD1` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `MISIONES_COMUNIDAD2` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `MISIONES_COMUNIDAD3` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `MISIONES_COMUNIDAD4` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `MISIONES_COMUNIDAD5` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `MISIONES_COMUNIDAD6` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `MISIONES_COMUNIDAD7` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
   `OTRA_MISION` varchar(45) DEFAULT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -1099,13 +1146,13 @@ CREATE TABLE `participacion_comunitaria` (
 -- Volcado de datos para la tabla `participacion_comunitaria`
 --
 
-INSERT INTO `participacion_comunitaria` (`ID_PARTICIPACION_COMUNITARIA`, `ORG_COMUNITARIA`, `DESCRIPCION`, `PARTICIPA`, `PARTICIPA_FAMILIAR`, `MISIONES_COMUNIDAD`, `OTRA_MISION`, `ID_JEFE`) VALUES
-(1, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
-(2, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
-(3, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
-(4, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
-(5, 'NO', '', 'NO', 'NO', 'Mercal', '', 6),
-(6, 'NO', '', 'NO', 'NO', 'Mercal', '', 6);
+INSERT INTO `participacion_comunitaria` (`ID_PARTICIPACION_COMUNITARIA`, `ORG_COMUNITARIA`, `DESCRIPCION`, `PARTICIPA`, `PARTICIPA_FAMILIAR`, `MISIONES_COMUNIDAD`, `MISIONES_COMUNIDAD1`, `MISIONES_COMUNIDAD2`, `MISIONES_COMUNIDAD3`, `MISIONES_COMUNIDAD4`, `MISIONES_COMUNIDAD5`, `MISIONES_COMUNIDAD6`, `MISIONES_COMUNIDAD7`, `OTRA_MISION`, `ID_JEFE`) VALUES
+(1, 'NO', '', 'NO', 'NO', 'Mercal', '', '', '', '', '', '', '', '', 6),
+(2, 'NO', '', 'NO', 'NO', 'Mercal', '', '', '', '', '', '', '', '', 6),
+(3, 'NO', '', 'NO', 'NO', 'Mercal', '', '', '', '', '', '', '', '', 6),
+(4, 'NO', '', 'NO', 'NO', 'Mercal', '', '', '', '', '', '', '', '', 6),
+(5, 'NO', '', 'NO', 'NO', 'Mercal', '', '', '', '', '', '', '', '', 6),
+(6, 'NO', '', 'NO', 'NO', 'Mercal', '', '', '', '', '', '', '', '', 6);
 
 -- --------------------------------------------------------
 
@@ -1135,7 +1182,7 @@ INSERT INTO `perfiles` (`ID_PERFIL`, `PERFIL`) VALUES
 
 CREATE TABLE `personas_exclusion` (
   `ID_EXCLUSION` int(11) NOT NULL,
-  `PERSEXCLUSION` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `PERSEXCLUSION` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1159,7 +1206,7 @@ INSERT INTO `personas_exclusion` (`ID_EXCLUSION`, `PERSEXCLUSION`) VALUES
 
 CREATE TABLE `persona_enfermedades` (
   `ID_ENFERMEDADES` int(11) NOT NULL,
-  `ENFERMEDADES` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `ENFERMEDADES` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1262,6 +1309,15 @@ CREATE TABLE `preguntas_part_comunitaria` (
   `P_DIEZ` varchar(45) DEFAULT NULL,
   `P_ONCE` varchar(45) DEFAULT NULL,
   `P_DOCE` varchar(45) DEFAULT NULL,
+  `P_DOCE1` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `P_DOCE2` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `P_DOCE3` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `P_DOCE4` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `P_DOCE5` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `P_DOCE6` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `P_DOCE7` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `P_DOCE8` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `P_DOCE9` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
   `P_CATORCE` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `P_QUINCE` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `OTRA_AREA` varchar(45) DEFAULT NULL,
@@ -1272,13 +1328,13 @@ CREATE TABLE `preguntas_part_comunitaria` (
 -- Volcado de datos para la tabla `preguntas_part_comunitaria`
 --
 
-INSERT INTO `preguntas_part_comunitaria` (`ID_PREG_PARTCOMUNITARIA`, `P_UNO`, `P_DOS`, `P_TRES`, `P_CUATRO`, `P_CINCO`, `P_SEIS`, `P_SIETE`, `P_OCHO`, `P_NUEVE`, `P_DIEZ`, `P_ONCE`, `P_DOCE`, `P_CATORCE`, `P_QUINCE`, `OTRA_AREA`, `ID_JEFE`) VALUES
-(1, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(2, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(3, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(4, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(5, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
-(6, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6');
+INSERT INTO `preguntas_part_comunitaria` (`ID_PREG_PARTCOMUNITARIA`, `P_UNO`, `P_DOS`, `P_TRES`, `P_CUATRO`, `P_CINCO`, `P_SEIS`, `P_SIETE`, `P_OCHO`, `P_NUEVE`, `P_DIEZ`, `P_ONCE`, `P_DOCE`, `P_DOCE1`, `P_DOCE2`, `P_DOCE3`, `P_DOCE4`, `P_DOCE5`, `P_DOCE6`, `P_DOCE7`, `P_DOCE8`, `P_DOCE9`, `P_CATORCE`, `P_QUINCE`, `OTRA_AREA`, `ID_JEFE`) VALUES
+(1, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', '', '', '', '', '', '', '', '', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(2, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', '', '', '', '', '', '', '', '', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(3, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', '', '', '', '', '', '', '', '', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(4, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', '', '', '', '', '', '', '', '', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(5, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', '', '', '', '', '', '', '', '', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6'),
+(6, 'SI', 'SI', 'SI', 'SI', 'SI', 'sdfdsf', 'sdfsd', 'fds', 'dsf', ' asuhuicxs', ' sgasdgc', '', '', '', '', '', '', '', '', '', '', 'sdfsdf', 'sdfsdf', 'dfsdf', '6');
 
 -- --------------------------------------------------------
 
@@ -1336,10 +1392,38 @@ CREATE TABLE `situacion_servicios` (
   `SISTEMA_ELECTRICO` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `BOMBILLOS_AHORRADORES` varchar(3) DEFAULT NULL,
   `RECOL_BASURA` varchar(30) DEFAULT NULL,
+  `RECOL_BASURA1` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `RECOL_BASURA2` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `RECOL_BASURA3` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `RECOL_BASURA4` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `RECOL_BASURA5` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `RECOL_BASURA6` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
   `TELEFONIA` varchar(30) DEFAULT NULL,
+  `TELEFONIA1` varchar(10) CHARACTER SET utf8mb4 NOT NULL,
+  `TELEFONIA2` varchar(10) CHARACTER SET utf8mb4 NOT NULL,
+  `TELEFONIA3` varchar(10) CHARACTER SET utf8mb4 NOT NULL,
+  `TELEFONIA4` varchar(10) CHARACTER SET utf8mb4 NOT NULL,
+  `TELEFONIA5` varchar(10) CHARACTER SET utf8mb4 NOT NULL,
   `TRANSPORTE` varchar(30) DEFAULT NULL,
   `TIPO_INFORMACION` varchar(40) DEFAULT NULL,
+  `TIPO_INFORMACION1` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `TIPO_INFORMACION2` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `TIPO_INFORMACION3` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `TIPO_INFORMACION4` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `TIPO_INFORMACION5` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
   `SERV_COMUNALES` varchar(30) DEFAULT NULL,
+  `SERV_COMUNALES1` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES2` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES3` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES4` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES5` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES6` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES7` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES8` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES9` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES10` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES11` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
+  `SERV_COMUNALES12` varchar(15) CHARACTER SET utf8mb4 NOT NULL,
   `ID_JEFE` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1347,13 +1431,13 @@ CREATE TABLE `situacion_servicios` (
 -- Volcado de datos para la tabla `situacion_servicios`
 --
 
-INSERT INTO `situacion_servicios` (`ID_SITUACION_SERVICIOS`, `AGUAS_BLANCAS`, `MEDIDOR`, `AGUAS_SERVIDAS`, `GAS`, `SISTEMA_ELECTRICO`, `BOMBILLOS_AHORRADORES`, `RECOL_BASURA`, `TELEFONIA`, `TRANSPORTE`, `TIPO_INFORMACION`, `SERV_COMUNALES`, `ID_JEFE`) VALUES
-(1, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
-(2, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
-(3, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
-(4, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
-(5, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6),
-(6, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', 'Prepago', 'Publico', 'Prensa', 'Bodega', 6);
+INSERT INTO `situacion_servicios` (`ID_SITUACION_SERVICIOS`, `AGUAS_BLANCAS`, `MEDIDOR`, `AGUAS_SERVIDAS`, `GAS`, `SISTEMA_ELECTRICO`, `BOMBILLOS_AHORRADORES`, `RECOL_BASURA`, `RECOL_BASURA1`, `RECOL_BASURA2`, `RECOL_BASURA3`, `RECOL_BASURA4`, `RECOL_BASURA5`, `RECOL_BASURA6`, `TELEFONIA`, `TELEFONIA1`, `TELEFONIA2`, `TELEFONIA3`, `TELEFONIA4`, `TELEFONIA5`, `TRANSPORTE`, `TIPO_INFORMACION`, `TIPO_INFORMACION1`, `TIPO_INFORMACION2`, `TIPO_INFORMACION3`, `TIPO_INFORMACION4`, `TIPO_INFORMACION5`, `SERV_COMUNALES`, `SERV_COMUNALES1`, `SERV_COMUNALES2`, `SERV_COMUNALES3`, `SERV_COMUNALES4`, `SERV_COMUNALES5`, `SERV_COMUNALES6`, `SERV_COMUNALES7`, `SERV_COMUNALES8`, `SERV_COMUNALES9`, `SERV_COMUNALES10`, `SERV_COMUNALES11`, `SERV_COMUNALES12`, `ID_JEFE`) VALUES
+(1, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', '', '', '', '', '', '', 'Prepago', '', '', '', '', '', 'Publico', 'Prensa', '', '', '', '', '', 'Bodega', '', '', '', '', '', '', '', '', '', '', '', '', 6),
+(2, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', '', '', '', '', '', '', 'Prepago', '', '', '', '', '', 'Publico', 'Prensa', '', '', '', '', '', 'Bodega', '', '', '', '', '', '', '', '', '', '', '', '', 6),
+(3, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', '', '', '', '', '', '', 'Prepago', '', '', '', '', '', 'Publico', 'Prensa', '', '', '', '', '', 'Bodega', '', '', '', '', '', '', '', '', '', '', '', '', 6),
+(4, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', '', '', '', '', '', '', 'Prepago', '', '', '', '', '', 'Publico', 'Prensa', '', '', '', '', '', 'Bodega', '', '', '', '', '', '', '', '', '', '', '', '', 6),
+(5, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', '', '', '', '', '', '', 'Prepago', '', '', '', '', '', 'Publico', 'Prensa', '', '', '', '', '', 'Bodega', '', '', '', '', '', '', '', '', '', '', '', '', 6),
+(6, 'Acueducto', 'SI', 'Cloacas', 'Bombona', 'Publico', 'SI', 'Conteiner', '', '', '', '', '', '', 'Prepago', '', '', '', '', '', 'Publico', 'Prensa', '', '', '', '', '', 'Bodega', '', '', '', '', '', '', '', '', '', '', '', '', 6);
 
 -- --------------------------------------------------------
 
@@ -1563,8 +1647,7 @@ ALTER TABLE `datos_encuestado`
 -- Indices de la tabla `datos_familiares`
 --
 ALTER TABLE `datos_familiares`
-  ADD PRIMARY KEY (`ID_FAMILIARES`),
-  ADD UNIQUE KEY `CEDULA_F` (`CEDULA_F`);
+  ADD PRIMARY KEY (`ID_FAMILIARES`);
 
 --
 -- Indices de la tabla `datos_finanzas`
@@ -1576,15 +1659,13 @@ ALTER TABLE `datos_finanzas`
 -- Indices de la tabla `datos_login`
 --
 ALTER TABLE `datos_login`
-  ADD PRIMARY KEY (`ID_LOGIN`),
-  ADD UNIQUE KEY `CEDULA` (`CEDULA`);
+  ADD PRIMARY KEY (`ID_LOGIN`);
 
 --
 -- Indices de la tabla `datos_personales`
 --
 ALTER TABLE `datos_personales`
-  ADD PRIMARY KEY (`ID_DATAPERSONAL`),
-  ADD UNIQUE KEY `CI` (`CI`);
+  ADD PRIMARY KEY (`ID_DATAPERSONAL`);
 
 --
 -- Indices de la tabla `datos_relacion`

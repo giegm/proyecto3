@@ -146,17 +146,16 @@
 
 										<div class="col-sm-2 col-md-2">
 											<div class="required-field-block">
-												<select class="form-control selectpicker show-tick" name="habitaciones[]" multiple>
-													<option value="0">seleccione</option>
-		                                            <?php 
-		                                            $tipohab=$obj2->get_casa_habitaciones(); 
-		                                            for($x=0;$x<sizeof($tipohab);$x++){
-		                                                ?>
-		                                                <option value="<?php echo utf8_encode($tipohab[$x]["HABITACIONES"]); ?>"><?php echo utf8_encode($tipohab[$x]["HABITACIONES"]); ?></option>
-		                                                <?php
-		                                            }
-		                                            ?>
-												</select>
+													<p><br>
+														Sala
+														<input type="checkbox" name="habitaciones" value="Sala">
+														Comedor
+														<input type="checkbox" name="habitaciones1" value="Comedor">
+														Cocina
+														<input type="checkbox" name="habitaciones2" value="Cocina">
+														Baño
+														<input type="checkbox" name="habitaciones3" value="Baño">
+													</p>
 												<div class="required-icon">
 									                <div class="text">*</div>
 									            </div>
@@ -314,17 +313,28 @@
 
 										<div class="col-sm-2 col-md-2">
 											<div class="required-field-block">
-												<select class="form-control selectpicker show-tick" name="enseres_vivienda[]" multiple>
-													<option value="0">seleccione</option>
-		                                            <?php 
-		                                            $ensersvivind=$obj2->get_casa_enseres_vivienda(); 
-		                                            for($a=0;$a<sizeof($ensersvivind);$a++){
-		                                                ?>
-		                                                <option value="<?php echo utf8_encode($ensersvivind[$a]["ENSERESVIVIENDA"]); ?>"><?php echo utf8_encode($ensersvivind[$a]["ENSERESVIVIENDA"]); ?></option>
-		                                                <?php
-		                                            }
-		                                            ?>
-												</select>
+												<p><br>
+		                                            Nevera
+													<input type="checkbox" name="enseres_vivienda" value="Nevera">
+													Cocina
+													<input type="checkbox" name="enseres_vivienda2" value="Cocina">
+													Gabinete
+													<input type="checkbox" name="enseres_vivienda3" value="Gabinete">
+													Cama
+													<input type="checkbox" name="enseres_vivienda4" value="Cama">
+													Ventilador
+													<input type="checkbox" name="enseres_vivienda5" value="Ventilador">
+													Juego de Comedor
+													<input type="checkbox" name="enseres_vivienda6" value="Juego de Comedor">
+													Muebles de Sala
+													<input type="checkbox" name="enseres_vivienda7" value="Muebles de Sala">
+													Utensilios de Cocina
+													<input type="checkbox" name="enseres_vivienda8" value="Utensilios de Cocina">
+													TV
+													<input type="checkbox" name="enseres_vivienda9" value="TV">
+													Otro(s)
+													<input type="checkbox" name="enseres_vivienda10" value="Otro(s)">
+												</p>
 												<div class="required-icon">
 									                <div class="text">*</div>
 									            </div>
@@ -391,17 +401,20 @@
 
 										<div class="col-sm-2 col-md-2">
 											<div class="required-field-block">
-												<select class="form-control selectpicker show-tick" name="plagas[]" multiple>
-													<option value="0">seleccione</option>
-		                                            <?php 
-		                                            $casaplagas=$obj2->get_casa_plagas(); 
-		                                            for($d=0;$d<sizeof($casaplagas);$d++){
-		                                                ?>
-		                                                <option value="<?php echo utf8_encode($casaplagas[$d]["PLAGAS"]); ?>"><?php echo utf8_encode($casaplagas[$d]["PLAGAS"]); ?></option>
-		                                                <?php
-		                                            }
-		                                            ?>
-												</select>
+												<p><br>
+		                                            Ninguno
+													<input type="checkbox" name="plagas" value="Ninguno">
+													Moscas
+													<input type="checkbox" name="plagas2" value="Moscas">
+													Hormigas
+													<input type="checkbox" name="plagas3" value="Hormigas">
+													Ratones
+													<input type="checkbox" name="plagas4" value="Ratones">
+													Ciempies
+													<input type="checkbox" name="plagas5" value="Ciempies">
+													Otro(s)
+													<input type="checkbox" name="plagas6" value="Otro(s)">
+												</p>
 												<div class="required-icon">
 					                				<div class="text">*</div>
 					            				</div>
@@ -412,17 +425,24 @@
 
 										<div class="col-sm-2 col-md-2">
 											<div class="required-field-block">
-												<select class="form-control selectpicker show-tick" name="animales_domst[]" multiple>
-													<option value="0">seleccione</option>
-		                                            <?php 
-		                                            $animcasa=$obj2->get_casa_animales(); 
-		                                            for($e=0;$e<sizeof($animcasa);$e++){
-		                                                ?>
-		                                                <option value="<?php echo utf8_encode($animcasa[$e]["ANIMALES"]); ?>"><?php echo utf8_encode($animcasa[$e]["ANIMALES"]); ?></option>
-		                                                <?php
-		                                            }
-		                                            ?>
-												</select>
+												<p><br>
+		                                            Ninguno
+													<input type="checkbox" name="animales_domst" value="Ninguno">
+													Perro(s)
+													<input type="checkbox" name="animales_domst2" value="Perro(s)">
+													Gato(s)
+													<input type="checkbox" name="animales_domst3" value="Gato(s)">
+													Gallina(s)
+													<input type="checkbox" name="animales_domst4" value="Gallina(s)">
+													Pajaro(s)
+													<input type="checkbox" name="animales_domst5" value="Pajaro(s)">
+													Pato(s)
+													<input type="checkbox" name="animales_domst6" value="Pato(s)">
+													Cochino(s)
+													<input type="checkbox" name="animales_domst7" value="Cochino(s)">
+													Otro(s)
+													<input type="checkbox" name="animales_domst8" value="Otro(s)">
+												</p>
 												<div class="required-icon">
 					                				<div class="text">*</div>
 										            </div>

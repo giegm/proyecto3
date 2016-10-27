@@ -397,7 +397,7 @@ $tra=new Censos();
 		<thead>
 			<tr>
 				<th>Tipo de vivienda</th>
-				<th>Habitaciones</th>
+				<th>Tipo/Habitaciones</th>
 				<th>N° de habitaciones</th>
 				<th>Tipo de paredes</th>
 			</tr>

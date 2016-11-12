@@ -3,9 +3,9 @@ ob_start();
 
 require_once("../modelo/clasedecensos/class_listar_censos.php");
 require_once("../modelo/clasedeacta/class_censados.php");
-$obj=new Personas_censados();
 $tra=new Censos();
-$data_cedula=$obj->POST_cedula($_GET["$ci"]);
+$c=new Personas_censados();
+
 ?>
 
 <html>
@@ -81,18 +81,17 @@ $data_cedula=$obj->POST_cedula($_GET["$ci"]);
 </style>
 </head>
 <body>
-<script>
-						var mydate=new Date();
-						var year=mydate.getYear(); 
-						if (year < 1000) year+=1900; 
-						var day=mydate.getDay(); 
-						var month=mydate.getMonth(); 
-						var daym=mydate.getDate(); 
-						if (daym<10) daym="0"+daym; 
-						var dayarray=new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
-						var montharray=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto",
-						"Septiembre","Octubre","Noviembre","Diciembre"); 
-						</script>
+	<script>
+		var mydate=new Date();
+		var year=mydate.getYear(); 
+		if (year < 1000) year+=1900; 
+		var day=mydate.getDay(); 
+		var month=mydate.getMonth(); 
+		var daym=mydate.getDate(); 
+		if (daym<10) daym="0"+daym; 
+		var dayarray=new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
+		var montharray=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
+	</script>
 
 	<img id="imagen.header-pdf" src="../../images/logo.png" width="100" height="100" alt="">
 	<div class="col-xs-12 col-sm-8 col-md-3">
@@ -108,19 +107,24 @@ $data_cedula=$obj->POST_cedula($_GET["$ci"]);
 	</div>			
 	
 	<div class="div_contenido_censo"><br>
-	<h3 id="titulos-de-tablas">CARTA DE RESIDENCIA</h3>	
+	<h3 id="titulos-de-tablas">CARTA DE RESIDENCIA</h3>
+
+	<?php
+	 $reg=$c->POST_cedula($_GET["id"]);
+	?>
 	
 	<div class="col-xs-12 col-sm-8 col-md-3">
 	<center>
 		<p style="text-align: justify;">EL Consejo  Comunal Santa Inés de los frailes de Catia Parroquia Sucre, en uso de las atribucione
 		s legales que le confiere la Ley Orgánica  de los consejos comunales, en concordancia con la Ordenanza de Funcionamiento de los Consejos
-		 Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano(a) <?php echo $data_cedula[0]["NOMBRE, APELLIDO"] or ["NOMBRES_F"];?>">, titular de la C.I: # , residente del sector: #</p>
+		 Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano(a) <?php echo $reg[0]["NOMBRE, APELLIDO"] or ["NOMBRES_F"];?>, titular de la C.I: # , residente del sector: #</p>
 		
 		<p style="text-align: left;">MOTIVO DE LA SOLICITUD: #</p>
 		<br>
 		<p style="text-align: justify;">Constancia que se expide a petición de la parte interesada en Caracas <?php setlocale(LC_TIME, "es-VE"); echo strftime("%A %d del mes de %B de %Y"); ?> </p>
 	</center>
-	</div>	
+	</div>
+	
 	
 	<br><br><br>
 	<hr height="10px" width="50%">

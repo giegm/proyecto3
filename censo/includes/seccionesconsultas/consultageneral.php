@@ -58,38 +58,50 @@ require_once("../modelo/clasesdeconsulta/class_total_censados.php");
 <div class="row">
 	<div class="col-md-4 col-md-offset-4">
 		<div id="PanelTitulo" style=" color: red;  font-size: 17px;  text-transform: uppercase;"></div>
-			<div class="panel-body" >
-				<table class="table sliders table-striped">
-					<tbody>
-						<tr>
-							<td style="width:2%">Edad: </td>
-							<td style="width:5%">											
-								<select id="de"  name="de" class="form-control" >
-									<option> - </option>
-									<?php
-				                	$obj = new edades();
-
-									for ($obj=1; $obj < 100 ; $obj++) { ?>
-									<option value="<?php echo $obj; ?>" ><?php echo $obj; ?></option>																													
-									<?php } ?>
-								</select>											
-							</td>
-							<td style="width:5%">
-								<select  id="hast" name="hasta" class="form-control" >
-									<option> - </option>
-									<?php for ($obj=1; $obj < 100 ; $obj++) { ?>
-									<option value="<?php echo $obj; ?>" ><?php echo $obj; ?></option>																												
-									<?php } ?>
-								</select>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<center><a href="#" id="Reporte" class="btn btn-success"> Generar Reporte</a>
-				<!-- <a href="reportepdf.php" class="btn btn-primary"> Imprimir</a></center>-->
+		<div class="panel-body" >
+			<table class="table sliders table-striped">
+				<tbody>
+					<tr>
+						<td style="width:2%">Edad: </td>
+						<td style="width:5%">											
+							<select id="de"  name="de" class="form-control" >
+								<option> - </option>
+								<?php for ($obj=1; $obj < 100 ; $obj++) { ?>
+								<option value="<?php echo $obj; ?>" ><?php echo $obj; ?></option>																													
+								<?php } ?>
+							</select>											
+						</td>
+						<td style="width:5%">
+							<select  id="hast" name="hasta" class="form-control" >
+								<option> - </option>
+								<?php for ($obj=1; $obj < 100 ; $obj++) { ?>
+								<option value="<?php echo $obj; ?>" ><?php echo $obj; ?></option>																												
+								<?php } ?>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<center><a href="#" id="Reporte" class="btn btn-success"> Generar Reporte</a>
+			<!-- <a href="reportepdf.php" class="btn btn-primary"> Imprimir</a></center>-->
+		</div>
+	</div>
+</div>
+<div class="row" id="respuesta">
+	<div class="col-md-6">
+		<!-- start: LABEL FORMATTER PANEL -->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<center><strong>Consulta por edad</strong></center>
+			</div>
+		<div class="panel-body">
+			<div>
+				<div id="placeholder82" class="flot-placeholder"></div>
 			</div>
 		</div>
 	</div>
+</div>
+<div class="row">
 	<div class="col-md-6">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -370,20 +382,6 @@ require_once("../modelo/clasesdeconsulta/class_total_censados.php");
 			</div>
 			<br>
 			<a type="button" class="btn btn-primary" href="../controlador/creapdf_consulta.php">Generar PDF</a>
-		</div>
-	</div>
-	<div class="row" id="respuesta">
-		<div class="col-md-6">
-			<!-- start: LABEL FORMATTER PANEL -->
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<center><strong>Consulta por edad</strong></center>
-				</div>
-			<div class="panel-body">
-				<div>
-					<div id="placeholder82" class="flot-placeholder"></div>
-				</div>
-			</div>
 		</div>
 	</div>
 	<div class="col-sm-12">

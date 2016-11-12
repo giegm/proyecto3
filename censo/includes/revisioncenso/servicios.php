@@ -439,143 +439,115 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 											<div class="col-sm-2 col-md-2">
 												<input value="<?php echo $data_siete[0]["BOMBILLOS_NECESITA"]; ?>" type="text" name="cant_bombillos" class="form-control" maxlength="2" id="" placeholder="solo números" required onKeyPress="return SoloNumeros(event);">
 											</div>
-
-											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Recolección de basura</label>
-
-											<div class="col-sm-2 col-md-2">
-											<?php
-												if($data_seis[0]["RECOL_BASURA"]=="Aseo Urbano"){
-													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
-													<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
-													<option value="Conteiner">Conteiner</option>
-													<option value="Bajante">Bajante</option>
-													<option value="Camion">Camión</option>
-													<option value="Al aire libre">Al aire libre</option>
-													<option value="Quemada">Quemada</option>
-													<option value="Otros">Otros</option>
-												</select>
-													<?php
-													}//fin del 2do if
-											?>
-											<?php
-												if($data_seis[0]["RECOL_BASURA"]=="Conteiner"){
-													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
-														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
-													<option value="Aseo Urbano">Aseo Urbano</option>
-													<option value="Bajante">Bajante</option>
-													<option value="Camion">Camión</option>
-													<option value="Al aire libre">Al aire libre</option>
-													<option value="Quemada">Quemada</option>
-													<option value="Otros">Otros</option>
-												</select>
-													<?php
-													}//fin del 2do if
-											?>
-											<?php
-												if($data_seis[0]["RECOL_BASURA"]=="Bajante"){
-													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
-														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
-													<option value="Aseo Urbano">Aseo Urbano</option>
-													<option value="Conteiner">Conteiner</option>
-													<option value="Camion">Camión</option>
-													<option value="Al aire libre">Al aire libre</option>
-													<option value="Quemada">Quemada</option>
-													<option value="Otros">Otros</option>
-												</select>
-													<?php
-													}//fin del 2do if
-											?>
-											<?php
-												if($data_seis[0]["RECOL_BASURA"]=="Camion"){
-													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id=""multiple>
-														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
-													<option value="Aseo Urbano">Aseo Urbano</option>
-													<option value="Conteiner">Conteiner</option>
-													<option value="Bajante">Bajante</option>
-													<option value="Al aire libre">Al aire libre</option>
-													<option value="Quemada">Quemada</option>
-													<option value="Otros">Otros</option>
-												</select>
-													<?php
-													}//fin del 2do if
-											?>
-											<?php
-												if($data_seis[0]["RECOL_BASURA"]=="Al aire libre"){
-													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
-														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
-													<option value="Aseo Urbano">Aseo Urbano</option>
-													<option value="Conteiner">Conteiner</option>
-													<option value="Bajante">Bajante</option>
-													<option value="Camion">Camion</option>
-													<option value="Quemada">Quemada</option>
-													<option value="Otros">Otros</option>
-												</select>
-													<?php
-													}//fin del 2do if
-											?>
-											<?php
-												if($data_seis[0]["RECOL_BASURA"]=="Quemada"){
-													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
-														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
-													<option value="Aseo Urbano">Aseo Urbano</option>
-													<option value="Conteiner">Conteiner</option>
-													<option value="Bajante">Bajante</option>
-													<option value="Camion">Camion</option>
-													<option value="Al aire libre">Al aire libre</option>
-													<option value="Otros">Otros</option>
-												</select>
-													<?php
-													}//fin del 2do if
-											?>
-											<?php
-												if($data_seis[0]["RECOL_BASURA"]=="Otros"){
-													?>
-													<select class="form-control selectpicker show-tick" name="recoleccion_basura[]" id="" multiple>
-														<option value="<?php echo $data_seis[0]["RECOL_BASURA"] ;?>"><?php echo $data_seis[0]["RECOL_BASURA"] ;?></option>
-													<option value="Aseo Urbano">Aseo Urbano</option>
-													<option value="Conteiner">Conteiner</option>
-													<option value="Bajante">Bajante</option>
-													<option value="Camion">Camion</option>
-													<option value="Al aire libre">Al aire libre</option>
-													<option value="Quemada">Quemada</option>
-												</select>
-													<?php
-													}//fin del 2do if
-											?>
-											</div>
-
-											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefonía</label>
-
-											<div class="col-sm-2 col-md-2">
-
-													<select class="form-control selectpicker show-tick" name="telefonia[]" title="<?php 
-														for($a=0;$a<count($data_ser);$a++)
-														{
-														echo $data_ser[$a]["TELEFONIA"]." ";
-														}	
-														?>" multiple>
-													<option value="Domiciliaria">Domiciliaria</option>
-													<option value="Celular">Celular</option>
-													<option value="Prepago">Prepago</option>
-													<option value="Centro de conexion">Centro de conexión</option>
-													<option value="Otra">Otra</option>
-													<option value="No posee">No posee</option>
-												</select>
-
-											</div>
-
 										</div>
 
+
 										<div class="form-group col-md-12">
-
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Recolección de basura</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Aseo Urbano</b>
+														<select class="form-control selectpicker show-tick" name="recoleccion_basura" id="" title="<?php for($e=0;$e<count($data_seis);$e++){echo $data_seis[$e]["RECOL_BASURA"]." ";}?>">
+															<option value="Aseo Urbano ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Container</b>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura1" id="" title="<?php for($e=0;$e<count($data_seis);$e++){echo $data_seis[$e]["RECOL_BASURA1"]." ";}?>">
+														<option value="Container ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Bajante</b>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura2" id="" title="<?php for($e=0;$e<count($data_seis);$e++){echo $data_seis[$e]["RECOL_BASURA2"]." ";}?>">
+														<option value="Bajante ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Camión</b>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura3" id="" title="<?php for($e=0;$e<count($data_seis);$e++){echo $data_seis[$e]["RECOL_BASURA3"]." ";}?>">
+														<option value="Camión ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+										</div>
+										<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Al Aire Libre</b>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura4" id="" title="<?php for($e=0;$e<count($data_seis);$e++){echo $data_seis[$e]["RECOL_BASURA4"]." ";}?>">
+														<option value="Al Aire Libre ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Quemada</b>
+													<select class="form-control selectpicker show-tick" name="recoleccion_basura5" id="" title="<?php for($e=0;$e<count($data_seis);$e++){echo $data_seis[$e]["RECOL_BASURA5"]." ";}?>">
+														<option value="Quemada ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Otro</b>
+														<select class="form-control selectpicker show-tick" name="recoleccion_basura6" id="" title="<?php for($e=0;$e<count($data_seis);$e++){echo $data_seis[$e]["RECOL_BASURA6"]." ";}?>">
+															<option value="Otro ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+										</div>
+										<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefonía</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Domiciliaría</b>
+													<select class="form-control selectpicker show-tick" name="telefonia" id="" title="<?php for($a=0;$a<count($data_ser);$a++){echo $data_ser[$a]["TELEFONIA"]." ";}?>">
+														<option value="Domiciliaría ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Célular</b>
+													<select class="form-control selectpicker show-tick" name="telefonia1" id="" title="<?php for($a=0;$a<count($data_ser);$a++){echo $data_ser[$a]["TELEFONIA1"]." ";}?>">
+														<option value="Célular ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Prepago</b>
+													<select class="form-control selectpicker show-tick" name="telefonia2" id="" title="<?php for($a=0;$a<count($data_ser);$a++){echo $data_ser[$a]["TELEFONIA2"]." ";}?>">
+														<option value="Prepago ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Centro de Conexión</b>
+													<select class="form-control selectpicker show-tick" name="telefonia3" id="" title="<?php for($a=0;$a<count($data_ser);$a++){echo $data_ser[$a]["TELEFONIA3"]." ";}?>">
+														<option value="Centro de Conexión ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+										</div>
+										<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Otra</b>
+													<select class="form-control selectpicker show-tick" name="telefonia4" id="" title="<?php for($a=0;$a<count($data_ser);$a++){echo $data_ser[$a]["TELEFONIA4"]." ";}?>">
+														<option value="Otra ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+										</div>
+										<div class="form-group col-md-12">
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Transporte</label>
-
 											<div class="col-sm-2 col-md-2">
 											<?php
 												if($data_ser[0]["TRANSPORTE"]=="Publico"){
@@ -662,57 +634,173 @@ $data_ser=$obj->obten_censo_por_id_ser($_GET["id"]);//trayendo situacion_servici
 													}//fin del 2do if
 											?>
 											</div>
-
-											<label for="" class="col-sm-4 col-md-4 control-label" style="text-align:justify;">Mecanismo de información</label>
-
-											<div class="col-sm-2 col-md-4">
-											
-													<select class="form-control selectpicker show-tick" name="mecan_informacion[]" id="" title="<?php
-														for($d=0;$d<count($data_ser);$d++){ 
-														echo $data_ser[$d]["TIPO_INFORMACION"]. " ";
-														}
-														?>" multiple>
-													<option value="Radio">Radio</option>
-													<option value="Prensa">Prensa</option>
-													<option value="Internet">Internet</option>
-													<option value="Medios alternativos comunitarios">Medios alternativos comunitarios</option>
-													<option value="Otros">Otros</option>
-												</select>
-													
 											</div>
-
-										</div>
-
-										<div class="form-group col-md-12">
-
-										<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Servicios comunales</label>
-
-											<div class="col-sm-5 col-md-5">
-											
-													<select class="form-control selectpicker show-tick" name="serv_comunales[]" id="" title="<?php
-														 for($b=0;$b<count($data_ser);$b++){
-														 echo $data_ser[
-														 $b]["SERV_COMUNALES"]." ";
-														 }
-														 ?>" multiple>
-													<option value="Mercado">Mercado</option>
-													<option value="Bodega">Bodega</option>
-													<option value="Abastos">Abastos</option>
-													<option value="Farmacia">Farmacia</option>
-													<option value="Plazas y parques">Plazas y parques</option>
-													<option value="Preescolar">Preescolar</option>
-													<option value="Escuelas">Escuelas</option>
-													<option value="Liceos">Liceos</option>
-													<option value="Centro de salud">Centro de salud</option>
-													<option value="Canchas">Canchas</option>
-													<option value="Casa comunal">Casa comunal</option>
-													<option value="Iglesia">Iglesia</option>
-													<option value="Otros">Otros</option>
-												</select>
-
+<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Mecanismo de información</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Televisión</b>
+														<select class="form-control selectpicker show-tick" name="mecan_informacion" id="" title="<?php for($d=0;$d<count($data_ser);$d++){ echo $data_ser[$d]["TIPO_INFORMACION"]. " ";}?>">
+															<option value="Televisión ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Radio</b>
+															<select class="form-control selectpicker show-tick" name="mecan_informacion1" id="" title="<?php for($d=0;$d<count($data_ser);$d++){ echo $data_ser[$d]["TIPO_INFORMACION1"]. " ";}?>">
+																<option value="Radio ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Prensa</b>
+															<select class="form-control selectpicker show-tick" name="mecan_informacion2" id="" title="<?php for($d=0;$d<count($data_ser);$d++){ echo $data_ser[$d]["TIPO_INFORMACION2"]. " ";}?>">
+																<option value="Prensa ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Internet</b>
+															<select class="form-control selectpicker show-tick" name="mecan_informacion3" id="" title="<?php for($d=0;$d<count($data_ser);$d++){ echo $data_ser[$d]["TIPO_INFORMACION3"]. " ";}?>">
+																<option value="Internet ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
 											</div>
-										</div>
-
+											<div class="form-group col-md-12">
+												<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Medios Alternativos</b>
+															<select class="form-control selectpicker show-tick" name="mecan_informacion4" id="" title="<?php for($d=0;$d<count($data_ser);$d++){ echo $data_ser[$d]["TIPO_INFORMACION4"]. " ";}?>">
+																<option value="Medios Alternativos Comunitarios ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Otros</b>
+															<select class="form-control selectpicker show-tick" name="mecan_informacion5" id="" title="<?php for($d=0;$d<count($data_ser);$d++){ echo $data_ser[$d]["TIPO_INFORMACION5"]. " ";}?>">
+																<option value="Otros ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Servicios Comunales</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Mercado</b>
+														<select class="form-control selectpicker show-tick" name="serv_comunales" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES"]." ";}?>">
+															<option value="Mercado ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Bodega</b>
+															<select class="form-control selectpicker show-tick" name="serv_comunales1" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES1"]." ";}?>">
+																<option value="Bodega ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Abastos</b>
+															<select class="form-control selectpicker show-tick" name="serv_comunales2" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES2"]." ";}?>">
+																<option value="Abastos ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Farmacia</b>
+															<select class="form-control selectpicker show-tick" name="serv_comunales3" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES3"]." ";}?>">
+																<option value="Farmacia ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Plazas y Parques</b>
+														<select class="form-control selectpicker show-tick" name="serv_comunales4" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES4"]." ";}?>">
+															<option value="PLazas y Parques ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Preescolar</b>
+															<select class="form-control selectpicker show-tick" name="serv_comunales5" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES5"]." ";}?>">
+																<option value="Preescolar ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Escuelas</b>
+															<select class="form-control selectpicker show-tick" name="serv_comunales6" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES6"]." ";}?>">
+																<option value="Escuelas ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Liceos</b>
+															<select class="form-control selectpicker show-tick" name="serv_comunales7" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES7"]." ";}?>">
+																<option value="Liceos ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Centro de Salud</b>
+														<select class="form-control selectpicker show-tick" name="serv_comunales8" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES8"]." ";}?>">
+															<option value="Centro de Salud ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Canchas</b>
+															<select class="form-control selectpicker show-tick" name="serv_comunales9" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES9"]." ";}?>">
+																<option value="Canchas ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Casa Comunal</b>
+															<select class="form-control selectpicker show-tick" name="serv_comunales10" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES10"]." ";}?>">
+																<option value="Casa Comunal ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Iglesia</b>
+															<select class="form-control selectpicker show-tick" name="serv_comunales11" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES1"]." ";}?>">
+																<option value="Iglesia ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Otros</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="serv_comunales12" id="" title="<?php for($b=0;$b<count($data_ser);$b++){echo $data_ser[$b]["SERV_COMUNALES12"]." ";}?>">
+															<option value="Otros ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+													</div>
+												</div>
+									</div>
 
 						    	</div><!-- final del panel body -->
 					    	</div>

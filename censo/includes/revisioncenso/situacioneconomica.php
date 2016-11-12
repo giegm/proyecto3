@@ -419,24 +419,63 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 											}//fin del 2do if
 										?>
 										</div>
-
-										<label for="" class="col-sm-2 col-md-2 control-label">Tipo/Habitaciones</label>
-
-										<div class="col-sm-2 col-md-4">
-											<select class="form-control selectpicker show-tick" name="habitaciones[]" id=""title="<?php 
-												for($a=0;$a<count($data_cinco);$a++)
-												{
-												echo $data_cinco[$a]["HABITACIONES"]." ";
-												}	
-												?>" multiple>
-												<option value="Sala">Sala</option>
-												<option value="Comedor">Comedor</option>
-												<option value="Cocina">Cocina</option>
-												<option value="Baño">Baño</option>
-											</select>
 										</div>
-
-									</div>
+										<div class="form-group col-md-12">
+											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Tipo/Habitaciones</label>
+											<div class="col-sm-2 col-md-2">
+												<b>Sala</b>
+												<div class="required-field-block">
+													<select class="form-control selectpicker show-tick" name="habitaciones" id=""title="<?php 
+														for($a=0;$a<count($data_cinco);$a++)
+														{
+														echo $data_cinco[$a]["HABITACIONES"]." ";
+														}	
+														?>">
+															<option value="Sala ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Comedor</b>
+													<select class="form-control selectpicker show-tick" name="habitaciones1" id=""title="<?php 
+														for($a=0;$a<count($data_cinco);$a++)
+														{
+														echo $data_cinco[$a]["HABITACIONES1"]." ";
+														}	
+														?>">
+														<option value="Comedor ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Cocina</b>
+													<select class="form-control selectpicker show-tick" name="habitaciones2" id=""title="<?php 
+														for($a=0;$a<count($data_cinco);$a++)
+														{
+														echo $data_cinco[$a]["HABITACIONES2"]." ";
+														}	
+														?>">
+														<option value="Cocina ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Baño</b>
+													<select class="form-control selectpicker show-tick" name="habitaciones3" id=""title="<?php 
+														for($a=0;$a<count($data_cinco);$a++)
+														{
+														echo $data_cinco[$a]["HABITACIONES3"]." ";
+														}	
+														?>">
+														<option value="Baño ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+										</div>
 
 									<div class="form-group col-md-12">
 							    		
@@ -805,177 +844,379 @@ $data_cinco2=$obj->obten_censo_por_id_situacion_vivienda($_GET["id"]);
 											}//fin del 2do if
 										?>
 										</div>
-
 									</div>
-
 									<div class="form-group col-md-12">
-
 										<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Enseres de la vivienda</label>
-
-										<div class="col-sm-4 col-md-4">
-											<select class="form-control selectpicker show-tick" name="enseres_vivienda[]" id="" title="<?php
-												for($e=0;$e<count($data_cincodos);$e++){
-												echo $data_cincodos[$e]["ENSERES_VIVIENDA"]." ";
-												}
-												?>" multiple>
-												<option value="Nevera">Nevera</option>
-												<option value="Cocina">Cocina</option>
-												<option value="Gabinete">Gabinete</option>
-												<option value="Cama">Cama</option>
-												<option value="Ventilador">Ventilador</option>
-												<option value="Juego de comedor">Juego de comedor</option>
-												<option value="Muebles de sala">Muebles de sala</option>
-												<option value="Utensilios de cocina">Utensilios de cocina</option>
-												<option value="tv">tv</option>
-												<option value="otros">otros</option>
-											</select>
+											<div class="col-sm-2 col-md-2">
+												<b>Nevera</b>
+												<select class="form-control selectpicker show-tick" name="enseres_vivienda" id=""title="<?php
+													for($e=0;$e<count($data_cincodos);$e++){
+													echo $data_cincodos[$e]["ENSERES_VIVIENDA"]." ";
+													}
+													?>">
+													<option value="Nevera ">SI</option>
+													<option value=" ">NO</option>
+												</select>
+											</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Cocina</b>
+														<select class="form-control selectpicker show-tick" name="enseres_vivienda2" id=""title="<?php
+															for($e=0;$e<count($data_cincodos);$e++){
+															echo $data_cincodos[$e]["ENSERES_VIVIENDA2"]." ";
+															}
+															?>">
+															<option value="Cocina ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Gabinete</b>
+														<select class="form-control selectpicker show-tick" name="enseres_vivienda3" id=""title="<?php
+															for($e=0;$e<count($data_cincodos);$e++){
+															echo $data_cincodos[$e]["ENSERES_VIVIENDA3"]." ";
+															}
+															?>">
+															<option value="Gabinete ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Cama</b>
+														<select class="form-control selectpicker show-tick" name="enseres_vivienda4" id=""title="<?php
+															for($e=0;$e<count($data_cincodos);$e++){
+															echo $data_cincodos[$e]["ENSERES_VIVIENDA4"]." ";
+															}
+															?>">
+															<option value="Cama ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
 										</div>
-
-										<label for="" class="col-sm-2 col-md-2 control-label">Salubridad de vivienda</label>
-
-										<div class="col-sm-2 col-md-2">
-										<?php
-										if($data_cinco2[0]["SALUBRIDAD_VIVIENDA"]=="limpia"){
-											?>
-											<select class="form-control selectpicker show-tick" name="salubridad_vivienda" id="">
-												<option value="<?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?>"><?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?></option>
-												<option value="Sucia">Sucia</option>
-												<option value="Medio Sucia">Medio sucia</option>
-												<option value="Otro">Otro</option>
-											</select>
-											<?php
-											}//fin del 2do if
-										?>
-										<?php
-										if($data_cinco2[0]["SALUBRIDAD_VIVIENDA"]=="Sucia"){
-											?>
-											<select class="form-control selectpicker show-tick" name="salubridad_vivienda" id="">
-												<option value="<?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?>"><?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?></option>
-												<option value="Limpia">Limpia</option>
-												<option value="Medio Sucia">Medio sucia</option>
-												<option value="Otro">Otro</option>
-											</select>
-											<?php
-											}//fin del 2do if
-										?>
-										<?php
-										if($data_cinco2[0]["SALUBRIDAD_VIVIENDA"]=="Medio Sucia"){
-											?>
-											<select class="form-control selectpicker show-tick" name="salubridad_vivienda" id="">
-												<option value="<?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?>"><?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?></option>
-												<option value="Limpia">Limpia</option>
-												<option value="Sucia">Sucia</option>
-												<option value="Otro">Otro</option>
-											</select>
-											<?php
-											}//fin del 2do if
-										?>
-										<?php
-										if($data_cinco2[0]["SALUBRIDAD_VIVIENDA"]=="Otro"){
-											?>
-											<select class="form-control selectpicker show-tick" name="salubridad_vivienda" id="">
-												<option value="<?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?>"><?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?></option>
-												<option value="Limpia">Limpia</option>
-												<option value="Sucia">Sucia</option>
-												<option value="Medio Sucia">Medio sucia</option>
-											</select>
-											<?php
-											}//fin del 2do if
-										?>
+										<div class="form-group col-md-12">
+											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Ventilador</b>
+														<select class="form-control selectpicker show-tick" name="enseres_vivienda5" id=""title="<?php
+															for($e=0;$e<count($data_cincodos);$e++){
+															echo $data_cincodos[$e]["ENSERES_VIVIENDA5"]." ";
+															}
+															?>">
+															<option value="Ventilador ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Juego de Comedor</b>
+														<select class="form-control selectpicker show-tick" name="enseres_vivienda6" id=""title="<?php
+															for($e=0;$e<count($data_cincodos);$e++){
+															echo $data_cincodos[$e]["ENSERES_VIVIENDA6"]." ";
+															}
+															?>">
+															<option value="Juego de Comedor ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Muebles de Sala</b>
+														<select class="form-control selectpicker show-tick" name="enseres_vivienda7" id=""title="<?php
+															for($e=0;$e<count($data_cincodos);$e++){
+															echo $data_cincodos[$e]["ENSERES_VIVIENDA7"]." ";
+															}
+															?>">
+															<option value="Muebles de Sala ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Utensilios de Cocina</b>
+														<select class="form-control selectpicker show-tick" name="enseres_vivienda8" id=""title="<?php
+															for($e=0;$e<count($data_cincodos);$e++){
+															echo $data_cincodos[$e]["ENSERES_VIVIENDA8"]." ";
+															}
+															?>">
+															<option value="Utensilios de Cocina ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
 										</div>
-
+										<div class="form-group col-md-12">
+											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>TV</b>
+														<select class="form-control selectpicker show-tick" name="enseres_vivienda9" id=""title="<?php
+															for($e=0;$e<count($data_cincodos);$e++){
+															echo $data_cincodos[$e]["ENSERES_VIVIENDA9"]." ";
+															}
+															?>">
+															<option value="TV ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+											<label for="" class=".col-xs-6 .col-sm-3"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Otro(s)</b>
+														<select class="form-control selectpicker show-tick" name="enseres_vivienda10" id=""title="<?php
+															for($e=0;$e<count($data_cincodos);$e++){
+															echo $data_cincodos[$e]["ENSERES_VIVIENDA10"]." ";
+															}
+															?>">
+															<option value="Otro(s) ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
 									</div>
-
 									<div class="form-group col-md-12">
-
-										<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Tipo de ayuda para mejorar su casa</label>
-
-										<div class="col-sm-2 col-md-2">
-										<?php
-										if($data_cinco[0]["TIPO_AYUDA"]=="Rehabilitacion"){
-											?>
-											<select class="form-control selectpicker show-tick" name="tipo_ayuda_casa" id="">
-												<option value="<?php echo $data_cinco[0]["TIPO_AYUDA"];?>"><?php echo $data_cinco[0]["TIPO_AYUDA"];?></option>
-												<option value="Sustitucion">Sustitución</option>
-												<option value="Ninguna">Ninguna</option>
-											</select>
-											<?php
-											}//fin del 2do if
-										?>
-										<?php
-										if($data_cinco[0]["TIPO_AYUDA"]=="Sustitucion"){
-											?>
-											<select class="form-control selectpicker show-tick" name="tipo_ayuda_casa" id="">
-												<option value="<?php echo $data_cinco[0]["TIPO_AYUDA"];?>"><?php echo $data_cinco[0]["TIPO_AYUDA"];?></option>
-												<option value="Rehabilitacion">Rehabilitación</option>
-												<option value="Ninguna">Ninguna</option>
-											</select>
-											<?php
-											}//fin del 2do if
-											if($data_cinco[0]["TIPO_AYUDA"]=="Ninguna"){
-											?>
-											<select class="form-control selectpicker show-tick" name="tipo_ayuda_casa" id="">
-												<option value="<?php echo $data_cinco[0]["TIPO_AYUDA"];?>"><?php echo $data_cinco[0]["TIPO_AYUDA"];?></option>
-												<option value="Sustitucion">Sustitución</option>
-												<option value="Rehabilitacion">Rehabilitación</option>
-											</select>
-											<?php
-											}//fin del 2do if
-										?>
-										
-
+										<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Salubridad de vivienda</label>
+											<div class="col-sm-2 col-md-2">
+												<?php
+												if($data_cinco2[0]["SALUBRIDAD_VIVIENDA"]=="limpia"){
+												?>
+												<select class="form-control selectpicker show-tick" name="salubridad_vivienda" id="">
+													<option value="<?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?>"><?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?></option>
+													<option value="Sucia">Sucia</option>
+													<option value="Medio Sucia">Medio sucia</option>
+													<option value="Otro">Otro</option>
+												</select>
+												<?php
+												}//fin del 2do if
+												?>
+												<?php
+												if($data_cinco2[0]["SALUBRIDAD_VIVIENDA"]=="Sucia"){
+												?>
+												<select class="form-control selectpicker show-tick" name="salubridad_vivienda" id="">
+													<option value="<?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?>"><?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?></option>
+													<option value="Limpia">Limpia</option>
+													<option value="Medio Sucia">Medio sucia</option>
+													<option value="Otro">Otro</option>
+												</select>
+												<?php
+												}//fin del 2do if
+												?>
+												<?php
+												if($data_cinco2[0]["SALUBRIDAD_VIVIENDA"]=="Medio Sucia"){
+												?>
+												<select class="form-control selectpicker show-tick" name="salubridad_vivienda" id="">
+													<option value="<?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?>"><?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?></option>
+													<option value="Limpia">Limpia</option>
+													<option value="Sucia">Sucia</option>
+													<option value="Otro">Otro</option>
+												</select>
+												<?php
+												}//fin del 2do if
+												?>
+												<?php
+												if($data_cinco2[0]["SALUBRIDAD_VIVIENDA"]=="Otro"){
+												?>
+												<select class="form-control selectpicker show-tick" name="salubridad_vivienda" id="">
+													<option value="<?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?>"><?php echo $data_cinco2[0]["SALUBRIDAD_VIVIENDA"];?></option>
+													<option value="Limpia">Limpia</option>
+													<option value="Sucia">Sucia</option>
+													<option value="Medio Sucia">Medio sucia</option>
+												</select>
+												<?php
+												}//fin del 2do if
+												?>
+											</div>
+												<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Tipo de ayuda para mejorar su casa</label>
+													<div class="col-sm-2 col-md-2">
+													<?php
+													if($data_cinco[0]["TIPO_AYUDA"]=="Rehabilitacion"){
+													?>
+													<select class="form-control selectpicker show-tick" name="tipo_ayuda_casa" id="">
+														<option value="<?php echo $data_cinco[0]["TIPO_AYUDA"];?>"><?php echo $data_cinco[0]["TIPO_AYUDA"];?></option>
+														<option value="Sustitucion">Sustitución</option>
+														<option value="Ninguna">Ninguna</option>
+													</select>
+													<?php
+													}//fin del 2do if
+													?>
+													<?php
+													if($data_cinco[0]["TIPO_AYUDA"]=="Sustitucion"){
+													?>
+													<select class="form-control selectpicker show-tick" name="tipo_ayuda_casa" id="">
+														<option value="<?php echo $data_cinco[0]["TIPO_AYUDA"];?>"><?php echo $data_cinco[0]["TIPO_AYUDA"];?></option>
+														<option value="Rehabilitacion">Rehabilitación</option>
+														<option value="Ninguna">Ninguna</option>
+													</select>
+													<?php
+													}//fin del 2do if
+													if($data_cinco[0]["TIPO_AYUDA"]=="Ninguna"){
+													?>
+													<select class="form-control selectpicker show-tick" name="tipo_ayuda_casa" id="">
+														<option value="<?php echo $data_cinco[0]["TIPO_AYUDA"];?>"><?php echo $data_cinco[0]["TIPO_AYUDA"];?></option>
+														<option value="Sustitucion">Sustitución</option>
+														<option value="Rehabilitacion">Rehabilitación</option>
+													</select>
+													<?php
+													}//fin del 2do if
+													?>
+											</div>
+										</div>
+										<div class="form-group col-md-12">
+											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Indique el tipo</label>
+												<div class="col-sm-2 col-md-2">
+													<input value="<?php echo $data_cinco[0]["DESCRIPCION"]; ?>" maxlength="30" type="text" name="descrip_ayuda_casa" id="" placeholder="" class="form-control" required onkeypress="return soloLetras(event);">	
+												</div>
 										</div>
 
-										<label for="" class="col-sm-2 col-md-2 control-label">Indique el tipo</label>
-
-										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_cinco[0]["DESCRIPCION"]; ?>" maxlength="30" type="text" name="descrip_ayuda_casa" id="" placeholder="" class="form-control" required onkeypress="return soloLetras(event);">	
-										</div>
-
-									</div>
-
-									<div class="form-group col-md-12">
-
-										<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Presencia de roedores o insectos</label>
-
-										<div class="col-sm-3 col-md-3">
-										
-											<select class="form-control selectpicker show-tick" name="plagas[]" id="" title="<?php
-												for($r=0;$r<sizeof($data_cinco);$r++){ 
-												echo $data_cinco[$r]["INSECTOS_ROEDORES"]." ";
-												}
-												?>" multiple>
-												<option value="Ninguno">Ninguno</option>
-												<option value="Moscas">Moscas</option>
-												<option value="Hormiga">Hormiga</option>
-												<option value="Ratones">Ratones</option>
-												<option value="Ciempies">Ciempiés</option>
-												<option value="Otro(s)">Otro(s)</option>
-											</select>
-											
-										</div>
-
-										<label for="" class="col-sm-2 col-md-2 control-label">Posee animales domesticos</label>
-
-										<div class="col-sm-3 col-md-3">
-											<select class="form-control selectpicker show-tick" name="animales_domst[]" id="" title="<?php
-												for($n=0;$n<sizeof($data_cinco);$n++){ 
-												echo $data_cinco[$n]["ANIMALES_DOMESTICOS"]." ";
-												}
-												?>" multiple>
-												<option value="Ninguno">Ninguno</option>
-												<option value="Perro">Perro</option>
-												<option value="Gato">Gato</option>
-												<option value="Gallinas">Gallinas</option>
-												<option value="Pajaros">Pajaros</option>
-												<option value="Patos">Patos</option>
-												<option value="Cochinos">Cochinos</option>
-												<option value="Otro(s)">Otro(s)</option>
-											</select>	
-										</div>
-
-									</div>
-
+										<div class="form-group col-md-12">
+											<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Presencia de Roedores o Insectos</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Moscas</b>
+														<select class="form-control selectpicker show-tick" name="plagas" id=""title="<?php
+															for($r=0;$r<sizeof($data_cinco);$r++){ 
+															echo $data_cinco[$r]["INSECTOS_ROEDORES"]." ";
+															}
+															?>">
+															<option value="Moscas ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Hormigas</b>
+															<select class="form-control selectpicker show-tick" name="plagas2" id=""title="<?php
+																for($r=0;$r<sizeof($data_cinco);$r++){ 
+																echo $data_cinco[$r]["INSECTOS_ROEDORES2"]." ";
+																}
+																?>">
+																<option value="Hormigas ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Ratones</b>
+																<select class="form-control selectpicker show-tick" name="plagas3" id=""title="<?php
+																	for($r=0;$r<sizeof($data_cinco);$r++){ 
+																	echo $data_cinco[$r]["INSECTOS_ROEDORES3"]." ";
+																	}
+																	?>">
+																<option value="Ratones ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Ciempies</b>
+														<select class="form-control selectpicker show-tick" name="plagas4" id=""title="<?php
+															for($r=0;$r<sizeof($data_cinco);$r++){ 
+															echo $data_cinco[$r]["INSECTOS_ROEDORES4"]." ";
+															}
+															?>">
+															<option value="Ciempies ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+												<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Otros</b>
+													<select class="form-control selectpicker show-tick" name="plagas5" id=""title="<?php
+														for($r=0;$r<sizeof($data_cinco);$r++){ 
+														echo $data_cinco[$r]["INSECTOS_ROEDORES5"]." ";
+														}
+														?>">
+														<option value="Otros ">SI</option>
+														<option value=" ">NO</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group col-md-12">
+												<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;">Posee animales domesticos</label>
+													<div class="col-sm-2 col-md-2">
+														<b>Perro(s)</b>
+														<select class="form-control selectpicker show-tick" name="animales_domst" id=""title="<?php
+															for($n=0;$n<sizeof($data_cinco);$n++){ 
+															echo $data_cinco[$n]["ANIMALES_DOMESTICOS"]." ";
+															}
+															?>">
+															<option value="Perro(s) ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Gato(s)</b>
+														<select class="form-control selectpicker show-tick" name="animales_domst2" id=""title="<?php
+															for($n=0;$n<sizeof($data_cinco);$n++){ 
+															echo $data_cinco[$n]["ANIMALES_DOMESTICOS2"]." ";
+															}
+															?>">
+															<option value="Gato(s) ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Gallina(s)</b>
+														<select class="form-control selectpicker show-tick" name="animales_domst3" id=""title="<?php
+															for($n=0;$n<sizeof($data_cinco);$n++){ 
+															echo $data_cinco[$n]["ANIMALES_DOMESTICOS3"]." ";
+															}
+															?>">
+															<option value="Gallina(s) ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Pajaro(s)</b>
+														<select class="form-control selectpicker show-tick" name="animales_domst4" id=""title="<?php
+															for($n=0;$n<sizeof($data_cinco);$n++){ 
+															echo $data_cinco[$n]["ANIMALES_DOMESTICOS4"]." ";
+															}
+															?>">
+															<option value="Pajaro(s) ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+												<label for="" class="col-sm-3 col-md-3 control-label" style="text-align:justify;"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Pato(s)</b>
+														<select class="form-control selectpicker show-tick" name="animales_domst5" id=""title="<?php
+															for($n=0;$n<sizeof($data_cinco);$n++){ 
+															echo $data_cinco[$n]["ANIMALES_DOMESTICOS5"]." ";
+															}
+															?>">
+															<option value="Pato(s) ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Cochino(s)</b>
+															<select class="form-control selectpicker show-tick" name="animales_domst6" id=""title="<?php
+																for($n=0;$n<sizeof($data_cinco);$n++){ 
+																echo $data_cinco[$n]["ANIMALES_DOMESTICOS6"]." ";
+																}
+																?>">
+																<option value="Cochino(s) ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Otro(s)</b>
+															<select class="form-control selectpicker show-tick" name="animales_domst7" id=""title="<?php
+																for($n=0;$n<sizeof($data_cinco);$n++){ 
+																echo $data_cinco[$n]["ANIMALES_DOMESTICOS7"]." ";
+																}
+																?>">
+																<option value="Otro(s) ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+											</div>
 								</div><!-- final del panel body -->
 					    	</div>
 					    	</div>

@@ -25,7 +25,7 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Nombre y apellido</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="namepaef" class="form-control" maxlength="30" placeholder="Primer Nombre y Apellido" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
+                                            <input type="text" name="namepaef[]" class="form-control" maxlength="30" placeholder="Primer Nombre y Apellido" required onkeypress="return soloLetras(event);" onKeyUp="this.value = this.value.toUpperCase();">
                                         </div>
 
                                         
@@ -33,13 +33,13 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">N° de cedula</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="cedf" class="form-control" maxlength="8" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+                                            <input type="text" name="cedf[]" class="form-control" maxlength="8" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
                                         </div>
 
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Sexo</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <select name="sexof" title="Indique" class="form-control">
+                                            <select name="sexof[]" title="Indique" class="form-control">
                                                 <option value="0">seleccione</option>
                                                 <option value="Masculino">Masculino</option>
                                                 <option value="Femenino">Femenino</option>
@@ -52,19 +52,19 @@
                                             <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Fecha de Nac.</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="date" name="fchanacf" class="form-control"  placeholder="">
+                                            <input type="date" name="fchanacf[]" class="form-control"  placeholder="">
                                         </div>
 
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:center;">Edad</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="edadf" class="form-control" maxlength="3" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+                                            <input type="text" name="edadf[]" class="form-control" maxlength="3" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
                                         </div>
                                         
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Discapacidad/tipo</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="discpf" maxlength="45" class="form-control"  placeholder="De poseer, indique cual">
+                                            <input type="text" name="discpf[]" maxlength="45" class="form-control"  placeholder="De poseer, indique cual">
                                         </div>
 
                                         </div><!-- final del form-group -->
@@ -73,7 +73,7 @@
                                             <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Embarazo Temprano</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <select class="form-control selectpicker show-tick" name="embrzf" id="">
+                                            <select class="form-control selectpicker show-tick" name="embrzf[]" id="">
                                                 <option value="0">seleccione</option>
                                                 <option value="SI">SI</option>
                                                 <option value="NO">NO</option>
@@ -83,7 +83,7 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:center;">Parentesco</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <select class="form-control selectpicker show-tick" name="parntscf" id="">
+                                            <select class="form-control selectpicker show-tick" name="parntscf[]" id="">
                                                 <option value="0">seleccione</option>
                                                 <?php 
                                                 $parentescof=$obj2->get_parentesco_f(); 
@@ -99,7 +99,7 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">G° de instrucción</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                        <select class="form-control selectpicker show-tick" name="instrcf" >
+                                        <select class="form-control selectpicker show-tick" name="instrcf[]" >
                                             <option value="0">seleccione</option>
                                             <?php 
                                             $nivlinstrucf=$obj2->get_nivel_instruccion_f(); 
@@ -118,7 +118,7 @@
                                             <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">CNE</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <select class="form-control selectpicker show-tick" name="cnef" id="">
+                                            <select class="form-control selectpicker show-tick" name="cnef[]" id="">
                                                 <option value="0">seleccione</option>
                                                 <option value="SI">SI</option>
                                                 <option value="NO">NO</option>
@@ -129,7 +129,7 @@
                                         
                                         <div class="col-sm-2 col-md-2">
                                             
-                                            <select class="form-control selectpicker show-tick" name="profesf" id="">
+                                            <select class="form-control selectpicker show-tick" name="profesf[]" id="">
                                                 <option value="0">seleccione</option>
                                                 <?php 
                                                 $profesionesf=$obj2->get_profesiones_f(); 
@@ -145,7 +145,7 @@
                                         <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Pensionado</label>
                                         
                                         <div class="col-sm-2 col-md-2">
-                                            <select class="form-control selectpicker show-tick" name="pensf" id="">
+                                            <select class="form-control selectpicker show-tick" name="pensf[]" id="">
                                                 <option value="0">seleccione</option>
                                                 <option value="SI">SI</option>
                                                 <option value="NO">NO</option>
@@ -158,7 +158,7 @@
                                             <label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Ingreso mensual</label>
 
                                         <div class="col-sm-2 col-md-2">
-                                            <input type="text" name="ingmnsf" class="form-control"  placeholder="Cantidad en Bsf" maxlength="10" required onKeyPress="return SoloNumeros(event);">
+                                            <input type="text" name="ingmnsf[]" class="form-control"  placeholder="Cantidad en Bsf" maxlength="10" required onKeyPress="return SoloNumeros(event);">
                                         </div>
 
                                         </div><!-- final del form-group -->

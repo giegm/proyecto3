@@ -15,7 +15,7 @@
     <link id="t-colors" href="skins/default.css" rel="stylesheet" />
 
     <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="images/logo_.ico" />
+    <link rel="shortcut icon" href="ccsantaines.ico" />
 	 <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>

@@ -147,7 +147,6 @@ public function insertacenso(){
 		$plagas3 = $_POST['plagas3'];
 		$plagas4 = $_POST['plagas4'];
 		$plagas5 = $_POST['plagas5'];
-		$plagas6 = $_POST['plagas6'];
 		$animales_domst = $_POST['animales_domst'];
 		$animales_domst2 = $_POST['animales_domst2'];
 		$animales_domst3 = $_POST['animales_domst3'];
@@ -155,8 +154,6 @@ public function insertacenso(){
 		$animales_domst5 = $_POST['animales_domst5'];
 		$animales_domst6 = $_POST['animales_domst6'];
 		$animales_domst7 = $_POST['animales_domst7'];
-		$animales_domst8 = $_POST['animales_domst8'];
-
 		$SIVIH = $_POST['SIVIH'];
 		$sivih_inscripcion = $_POST['sivih_inscripcion'];
 		$ley_phab = $_POST['ley_phab'];
@@ -176,7 +173,6 @@ public function insertacenso(){
 		$pers_enfermedades7 = $_POST['pers_enfermedades7'];
 		$pers_enfermedades8 = $_POST['pers_enfermedades8'];
 		$pers_enfermedades9 = $_POST['pers_enfermedades9'];
-		$pers_enfermedades10 = $_POST['pers_enfermedades10'];
 		$otra_enfermedad = $_POST['otra_enfermedad'];
 		$ayuda_enfermo = $_POST['ayuda_enfermo'];
 		$tipo_ayuda_enfermo = $_POST['tipo_ayuda_enfermo'];
@@ -186,7 +182,6 @@ public function insertacenso(){
 		$pers_exclusion3 = $_POST['pers_exclusion3'];
 		$pers_exclusion4 = $_POST['pers_exclusion4'];
 		$pers_exclusion5 = $_POST['pers_exclusion5'];
-		$pers_exclusion6 = $_POST['pers_exclusion6'];
 		$cant_exclusion = $_POST['cant_exclusion'];
 
 		//DATOS SITUACION_SERVICIOS
@@ -218,8 +213,13 @@ public function insertacenso(){
 		$telefonia2 = $_POST['telefonia2'];
 		$telefonia3 = $_POST['telefonia3'];
 		$telefonia4 = $_POST['telefonia4'];
-		$telefonia5 = $_POST['telefonia5'];
 		$transporte = $_POST['transporte'];
+		$mecan_informacion = $_POST['mecan_informacion'];
+		$mecan_informacion1 = $_POST['mecan_informacion1'];
+		$mecan_informacion2 = $_POST['mecan_informacion2'];
+		$mecan_informacion3 = $_POST['mecan_informacion3'];
+		$mecan_informacion4 = $_POST['mecan_informacion4'];
+		$mecan_informacion5 = $_POST['mecan_informacion5'];
 		$serv_comunales = $_POST['serv_comunales'];
 		$serv_comunales1 = $_POST['serv_comunales1'];
 		$serv_comunales2 = $_POST['serv_comunales2'];
@@ -246,7 +246,6 @@ public function insertacenso(){
 		$name_mision4 = $_POST['name_mision4'];
 		$name_mision5 = $_POST['name_mision5'];
 		$name_mision6 = $_POST['name_mision6'];
-		$name_mision7 = $_POST['name_mision7'];
 		$familiar_org = $_POST['familiar_org'];
 		$otra_mision = $_POST['otra_mision'];
 		$pueblo_pregunta1 = $_POST['pueblo_pregunta1'];
@@ -316,47 +315,53 @@ public function insertacenso(){
 		 VALUES('$names_encuestado','$ced_encuestado','$names_encuestador','$idjefe');";
 
 
-	for($i=0; $i<count($_POST["namepaef"]); $i++){
 
-		if(!empty($_POST["namepaef"][$i]) && !empty($_POST["cedf"][$i]) && !empty($_POST["sexof"][$i]) &&!empty($_POST["fchanacf"][$i]) && !empty($_POST["edadf"][$i]) && !empty($_POST["discpf"][$i]) && !empty($_POST["embrzf"][$i]) && !empty($_POST["parntscf"][$i]) && !empty($_POST["instrcf"][$i]) && !empty($_POST["cnef"][$i]) && !empty($_POST["profesf"][$i]) && !empty($_POST["pensf"][$i]) && !empty($_POST["ingmnsf"][$i])){
+	 	//querys para los familiares
+		
+		for ($i=0; $i <count($_POST["namepaef"]); $i++) { 
+		
+		//datos del miembro de familia
+		$namepaef = $_POST['namepaef'][$i];
+		$cedf = $_POST['cedf'][$i];
+		$sexof = $_POST['sexof'][$i];
+		$fchanacf = $_POST['fchanacf'][$i];
+		$edadf = $_POST['edadf'][$i];
+		$instrcf = $_POST['instrcf'][$i];
+		$profesf = $_POST['profesf'][$i];
+		$ingmnsf = $_POST['ingmnsf'][$i];
+		$parntscf = $_POST['parntscf'][$i];
+		$cnef = $_POST['cnef'][$i];
+		$embrzf = $_POST['embrzf'][$i];
+		$discpf = $_POST['discpf'][$i];
+		$pensf = $_POST['pensf'][$i];
 
-		 	//querys para los familiares
-			$sql .= "INSERT INTO datos_familiares(NOMBRES_F,CEDULA_F,SEXO_F,FECHANAC_F,EDAD_F,ID_JEFE)
-			 VALUES('".$_POST["namepaef"][$i]."',".$_POST["cedf"][$i].",'".$_POST["sexof"][$i]."','".$_POST["fchanacf"][$i]."',".$_POST["edadf"][$i].",'$idjefe');";
+		$sql .= "INSERT INTO datos_familiares(NOMBRES_F,CEDULA_F,SEXO_F,FECHANAC_F,EDAD_F,ID_JEFE) VALUES('$namepaef','$cedf','$sexof','$fchanacf','$edadf','$idjefe');";
 			
-			$sql .= "INSERT INTO familiar_academico(GRADO_INSTRUCCION_F,PROFESION_F,ID_JEFE)
-			 VALUES('".$_POST["instrcf"][$i]."','".$_POST["profesf"][$i]."','$idjefe');";
+		$sql .= "INSERT INTO familiar_academico(GRADO_INSTRUCCION_F,PROFESION_F,ID_JEFE) VALUES('$instrcf','$profesf','$idjefe');";
 			
-			$sql .= "INSERT INTO familiar_finanzas(INGMENSUAL_F,ID_JEFE)
-			 VALUES('".$_POST["ingmnsf"][$i]."','$idjefe');";
+		$sql .= "INSERT INTO familiar_finanzas(INGMENSUAL_F,ID_JEFE) VALUES('$ingmnsf','$idjefe');";
 			
-			$sql .= "INSERT INTO familiar_relacion(PARENTESCO_F,CNE_F,ID_JEFE)
-			 VALUES('".$_POST["parntscf"][$i]."','".$_POST["cnef"][$i]."','$idjefe');";
-			
-			$sql .= "INSERT INTO familiar_salud(EMBARAZO_F,DISCAPACIDAD_F,PENSIONADO_F,ID_JEFE)
-			 VALUES('".$_POST["embrzf"][$i]."','".$_POST["discpf"][$i]."','".$_POST["pensf"][$i]."','$idjefe');";
-		}else{
-			echo "faltaron campos por llenar";
-		}	
-
-	}//fin del for
+		$sql .= "INSERT INTO familiar_relacion(PARENTESCO_F,CNE_F,ID_JEFE) VALUES('$parntscf','$cnef','$idjefe');";
+		
+		$sql .= "INSERT INTO familiar_salud(EMBARAZO_F,DISCAPACIDAD_F,PENSIONADO_F,ID_JEFE) VALUES('$embrzf','$discpf','$pensf','$idjefe');";
+	
+		}
 
 		//querys para detalles de vivienda
 
-		$sql .= "INSERT INTO detalles_vivienda (TIPO_VIVIENDA,HABITACIONES,HABITACIONES1,HABITACIONES2,HABITACIONES3,NUM_HABITACIONES,TIPO_PAREDES,TIPO_TECHO,ENSERES_VIVIENDA,ENSERES_VIVIENDA2,ENSERES_VIVIENDA3,ENSERES_VIVIENDA4,ENSERES_VIVIENDA5,ENSERES_VIVIENDA6,ENSERES_VIVIENDA7,ENSERES_VIVIENDA8,ENSERES_VIVIENDA9,ENSERES_VIVIENDA10,INSECTOS_ROEDORES,INSECTOS_ROEDORES2,INSECTOS_ROEDORES3,INSECTOS_ROEDORES4,INSECTOS_ROEDORES5,INSECTOS_ROEDORES6,ANIMALES_DOMESTICO,ANIMALES_DOMESTICO2,ANIMALES_DOMESTICO3,ANIMALES_DOMESTICO4,ANIMALES_DOMESTICO5,ANIMALES_DOMESTICO6,ANIMALES_DOMESTICO7,ANIMALES_DOMESTICO8,ID_JEFE)
-		VALUES('$tipo_vivienda','$habitaciones','$habitaciones1','$habitaciones2','$habitaciones3','$num_habitaciones','$tipo_paredes','$tipo_techo','$enseres_vivienda','$enseres_vivienda2','$enseres_vivienda3','$enseres_vivienda4','$enseres_vivienda5','$enseres_vivienda6','$enseres_vivienda7','$enseres_vivienda8','$enseres_vivienda9','$enseres_vivienda10','$plagas','$plagas2','$plagas3','$plagas4','$plagas5','$plagas6','$animales_domst','$animales_domst2','$animales_domst3','$animales_domst4','$animales_domst5','$animales_domst6','$animales_domst7','$animales_domst8',$idjefe);";
+		$sql .= "INSERT INTO detalles_vivienda VALUES('','$tipo_vivienda','$habitaciones','$habitaciones1','$habitaciones2','$habitaciones3','$num_habitaciones','$tipo_paredes','$tipo_techo','$enseres_vivienda','$enseres_vivienda2','$enseres_vivienda3','$enseres_vivienda4','$enseres_vivienda5','$enseres_vivienda6','$enseres_vivienda7','$enseres_vivienda8','$enseres_vivienda9','$enseres_vivienda10','$plagas','$plagas2','$plagas3','$plagas4','$plagas5','$animales_domst','$animales_domst2','$animales_domst3','$animales_domst4','$animales_domst5','$animales_domst6','$animales_domst7',$idjefe);";
 
 		//querys para situacion salud
-		$sql .= "INSERT INTO condiciones_salud(PERSONA_ENFERMEDAD,PERSONA_ENFERMEDAD1,PERSONA_ENFERMEDAD2,PERSONA_ENFERMEDAD3,PERSONA_ENFERMEDAD4,PERSONA_ENFERMEDAD5,PERSONA_ENFERMEDAD6,PERSONA_ENFERMEDAD7,PERSONA_ENFERMEDAD8,PERSONA_ENFERMEDAD9,PERSONA_ENFERMEDAD10,OTRA_ENFERMEDAD,AYUDA_ENFERMOS,TIPO_AYUDA,SITUACION_EXCLUSION,SITUACION_EXCLUSION1,SITUACION_EXCLUSION2,SITUACION_EXCLUSION3,SITUACION_EXCLUSION4,SITUACION_EXCLUSION5,SITUACION_EXCLUSION6,CANTIDAD_EXCLUSION,ID_JEFE)
-		VALUES('$pers_enfermedades','$pers_enfermedades1','$pers_enfermedades2','$pers_enfermedades3','$pers_enfermedades4','$pers_enfermedades5','$pers_enfermedades6','$pers_enfermedades7','$pers_enfermedades8','$pers_enfermedades9','$pers_enfermedades10','$otra_enfermedad','$ayuda_enfermo','$tipo_ayuda_enfermo','$pers_exclusion','$pers_exclusion1','$pers_exclusion2','$pers_exclusion3','$pers_exclusion4','$pers_exclusion5','$pers_exclusion6','$cant_exclusion','$idjefe');";
+		$sql .= "INSERT INTO condiciones_salud(PERSONA_ENFERMEDAD,PERSONA_ENFERMEDAD1,PERSONA_ENFERMEDAD2,PERSONA_ENFERMEDAD3,PERSONA_ENFERMEDAD4,PERSONA_ENFERMEDAD5,PERSONA_ENFERMEDAD6,PERSONA_ENFERMEDAD7,PERSONA_ENFERMEDAD8,PERSONA_ENFERMEDAD9,OTRA_ENFERMEDAD,AYUDA_ENFERMOS,TIPO_AYUDA,SITUACION_EXCLUSION,SITUACION_EXCLUSION1,SITUACION_EXCLUSION2,SITUACION_EXCLUSION3,SITUACION_EXCLUSION4,SITUACION_EXCLUSION5,CANTIDAD_EXCLUSION,ID_JEFE)
+		VALUES('$pers_enfermedades','$pers_enfermedades1','$pers_enfermedades2','$pers_enfermedades3','$pers_enfermedades4','$pers_enfermedades5','$pers_enfermedades6','$pers_enfermedades7','$pers_enfermedades8','$pers_enfermedades9','$otra_enfermedad','$ayuda_enfermo','$tipo_ayuda_enfermo','$pers_exclusion','$pers_exclusion1','$pers_exclusion2','$pers_exclusion3','$pers_exclusion4','$pers_exclusion5','$cant_exclusion','$idjefe');";
 
 		//querys para situacion servicios
-		$sql .= "INSERT INTO situacion_servicios(AGUAS_BLANCAS,MEDIDOR,AGUAS_SERVIDAS,GAS,SISTEMA_ELECTRICO,BOMBILLOS_AHORRADORES,RECOL_BASURA,RECOL_BASURA1,RECOL_BASURA2,RECOL_BASURA3,RECOL_BASURA4,RECOL_BASURA5,RECOL_BASURA6,TELEFONIA,TELEFONIA1,TELEFONIA2,TELEFONIA3,TELEFONIA4,TELEFONIA5,TRANSPORTE,TIPO_INFORMACION,TIPO_INFORMACION1,TIPO_INFORMACION2,TIPO_INFORMACION3,TIPO_INFORMACION4,TIPO_INFORMACION5,SERV_COMUNALES,SERV_COMUNALES1,SERV_COMUNALES2,SERV_COMUNALES3,SERV_COMUNALES4,SERV_COMUNALES5,SERV_COMUNALES6,SERV_COMUNALES7,SERV_COMUNALES8,SERV_COMUNALES9,SERV_COMUNALES10,SERV_COMUNALES11,SERV_COMUNALES12,ID_JEFE)
-		VALUES('$aguas_blancas','$posee_medidor','$aguas_servidas','$gas','$sist_electrico','$bombillos_ahorradores','$recoleccion_basura','$recoleccion_basura1','$recoleccion_basura2','$recoleccion_basura3','$recoleccion_basura4','$recoleccion_basura5','$recoleccion_basura6','$telefonia','$telefonia1','$telefonia2','$telefonia3','$telefonia4','$telefonia5','$transporte','$mecan_informacion','$mecan_informacion1','$mecan_informacion2','$mecan_informacion3','$mecan_informacion4','$mecan_informacion5','$serv_comunales','$serv_comunales1','$serv_comunales2','$serv_comunales3','$serv_comunales4','$serv_comunales5','$serv_comunales6','$serv_comunales7','$serv_comunales8','$serv_comunales9','$serv_comunales10','$serv_comunales11','$serv_comunales12','$idjefe');";
+		$sql .= "INSERT INTO situacion_servicios(AGUAS_BLANCAS,MEDIDOR,AGUAS_SERVIDAS,GAS,SISTEMA_ELECTRICO,BOMBILLOS_AHORRADORES,RECOL_BASURA,RECOL_BASURA1,RECOL_BASURA2,RECOL_BASURA3,RECOL_BASURA4,RECOL_BASURA5,RECOL_BASURA6,TELEFONIA,TELEFONIA1,TELEFONIA2,TELEFONIA3,TELEFONIA4,TRANSPORTE,TIPO_INFORMACION,TIPO_INFORMACION1,TIPO_INFORMACION2,TIPO_INFORMACION3,TIPO_INFORMACION4,TIPO_INFORMACION5,SERV_COMUNALES,SERV_COMUNALES1,SERV_COMUNALES2,SERV_COMUNALES3,SERV_COMUNALES4,SERV_COMUNALES5,SERV_COMUNALES6,SERV_COMUNALES7,SERV_COMUNALES8,SERV_COMUNALES9,SERV_COMUNALES10,SERV_COMUNALES11,SERV_COMUNALES12,ID_JEFE)
+		VALUES('$aguas_blancas','$posee_medidor','$aguas_servidas','$gas','$sist_electrico','$bombillos_ahorradores','$recoleccion_basura','$recoleccion_basura1','$recoleccion_basura2','$recoleccion_basura3','$recoleccion_basura4','$recoleccion_basura5','$recoleccion_basura6','$telefonia','$telefonia1','$telefonia2','$telefonia3','$telefonia4','$transporte','$mecan_informacion','$mecan_informacion1','$mecan_informacion2','$mecan_informacion3','$mecan_informacion4','$mecan_informacion5','$serv_comunales','$serv_comunales1','$serv_comunales2','$serv_comunales3','$serv_comunales4','$serv_comunales5','$serv_comunales6','$serv_comunales7','$serv_comunales8','$serv_comunales9','$serv_comunales10','$serv_comunales11','$serv_comunales12','$idjefe');";
 
 		//querys para participacion comunitaria
-		$sql .= "INSERT INTO participacion_comunitaria(ORG_COMUNITARIA,DESCRIPCION,PARTICIPA,PARTICIPA_FAMILIAR,MISIONES_COMUNIDAD, MISIONES_COMUNIDAD1,MISIONES_COMUNIDAD2,MISIONES_COMUNIDAD3,MISIONES_COMUNIDAD4,MISIONES_COMUNIDAD5,MISIONES_COMUNIDAD6,MISIONES_COMUNIDAD7,OTRA_MISION,ID_JEFE)
-		VALUES('$org_comunitarias','$name_organizacion','$participa_org','$familiar_org','$name_mision','$name_mision1','$name_mision2','$name_mision3','$name_mision4','$name_mision5','$name_mision6','$name_mision7','$otra_mision','$idjefe');";
+		$sql .= "INSERT INTO participacion_comunitaria(ORG_COMUNITARIA,DESCRIPCION,PARTICIPA,PARTICIPA_FAMILIAR,MISIONES_COMUNIDAD, MISIONES_COMUNIDAD1,MISIONES_COMUNIDAD2,MISIONES_COMUNIDAD3,MISIONES_COMUNIDAD4,MISIONES_COMUNIDAD5,MISIONES_COMUNIDAD6,OTRA_MISION,ID_JEFE)
+		VALUES('$org_comunitarias','$name_organizacion','$participa_org','$familiar_org','$name_mision','$name_mision1','$name_mision2','$name_mision3','$name_mision4','$name_mision5','$name_mision6','$otra_mision','$idjefe');";
 
 		$sql .= "INSERT INTO preguntas_part_comunitaria(P_UNO,P_DOS,P_TRES,P_CUATRO,P_CINCO,P_SEIS,P_SIETE,P_OCHO,P_NUEVE,P_DIEZ,P_ONCE,P_DOCE,P_DOCE1,P_DOCE2,P_DOCE3,P_DOCE4,P_DOCE5,P_DOCE6,P_DOCE7,P_DOCE8,P_DOCE9,P_CATORCE,P_QUINCE,OTRA_AREA,ID_JEFE)
 		VALUES('$pueblo_pregunta1','$pueblo_pregunta2','$pueblo_pregunta3','$pueblo_pregunta4','$pueblo_pregunta5','$pueblo_pregunta6','$pueblo_pregunta7','$pueblo_pregunta8','$pueblo_pregunta9','$pueblo_pregunta10','$pueblo_pregunta11','$pueblo_pregunta_final','$pueblo_pregunta_final1','$pueblo_pregunta_final2','$pueblo_pregunta_final3','$pueblo_pregunta_final4','$pueblo_pregunta_final5','$pueblo_pregunta_final6','$pueblo_pregunta_final7','$pueblo_pregunta_final8','$pueblo_pregunta_final9','$pueblo_pregunta14','$pueblo_pregunta15','$otra_area','$idjefe');";

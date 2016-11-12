@@ -230,65 +230,186 @@
 
 											<div class="col-sm-2 col-md-2">
 												<input type="text"  name="cant_bombillos" class="form-control" maxlength="2" id="" placeholder="solo números" required onKeyPress="return SoloNumeros(event);">
-											</div>
-
-											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Recolección de basura</label>
-
-											<div class="col-sm-2 col-md-2">
-												<div class="required-field-block">
-													<br>
-													<p>Aseo Urbano
-													<input name="recoleccion_basura" type="checkbox" value="Aseo Urbano">
-													Container
-													<input name="recoleccion_basura1" type="checkbox" value="Container">
-													Bajante
-													<input name="recoleccion_basura2" type="checkbox" value="Bajante">
-													Camión
-													<input name="recoleccion_basura3" type="checkbox" value="Camion">
-													Al aire libre
-													<input name="recoleccion_basura4" type="checkbox" value="Al aire libre">
-													Quemada
-													<input name="recoleccion_basura5" type="checkbox" value="Quemada">
-													Otro
-													<input name="recoleccion_basura6" type="checkbox" value="Otro">
-													</p>
-													<div class="required-icon">
-									                	<div class="text">*</div>
-									            	</div>
-									        	</div>
-											</div>
-
-											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefonía</label>
-
-											<div class="col-sm-2 col-md-2">
-												<div class="required-field-block">
-													<br>
-													<p>Domiciliaria
-													<input name="telefonia" type="checkbox" value="Domiciliaria">
-													Celular
-													<input name="telefonia1" type="checkbox" value="Celular">
-													Prepago
-													<input name="telefonia2" type="checkbox" value="Prepago">
-													Centro de conexión
-													<input name="telefonia3" type="checkbox" value="Centro de conexion">
-													Otra
-													<input name="telefonia4" type="checkbox" value="Otra">
-													No posee
-													<input name="telefonia5" type="checkbox" value="No posee">
-													</p>
-
-													<div class="required-icon">
-									                	<div class="text">*</div>
-									            	</div>
-									        	</div>
-											</div>
-
 										</div>
-
 										<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Recolección de basura</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Aseo Urbano</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="recoleccion_basura" id="">
+															<option value="0">seleccione</option>
+															<option value="Aseo Urbano ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Container</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="recoleccion_basura1" id="">
+																<option value="0">seleccione</option>
+																<option value="Container ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Bajante</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="recoleccion_basura2" id="">
+																<option value="0">seleccione</option>
+																<option value="Bajante ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Camión</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="recoleccion_basura3" id="">
+																<option value="0">seleccione</option>
+																<option value="Camión ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+												<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Al Aire Libre</b>
+															<div class="required-field-block">
+																<select class="form-control selectpicker show-tick" name="recoleccion_basura4" id="">
+																	<option value="0">seleccione</option>
+																	<option value="Al Aire Libre ">SI</option>
+																	<option value=" ">NO</option>
+																</select>
+																<div class="required-icon">
+															    	<div class="text">*</div>
+																</div>
+															</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Quemada</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="recoleccion_basura5" id="">
+																<option value="0">seleccione</option>
+																<option value="Quemada ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Otro</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="recoleccion_basura6" id="">
+																<option value="0">seleccione</option>
+																<option value="Otro ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+											</div>
 
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Telefonía</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Domiciliaría</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="telefonia" id="">
+															<option value="0">seleccione</option>
+															<option value="Domiciliaría ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Célular</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="telefonia1" id="">
+																<option value="0">seleccione</option>
+																<option value="Célular ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Prepago</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="telefonia2" id="">
+																<option value="0">seleccione</option>
+																<option value="Prepago ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Centro de Conexión</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="telefonia3" id="">
+																<option value="0">seleccione</option>
+																<option value="Centro de Conexión ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+												<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Otra</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="telefonia4" id="">
+																<option value="0">seleccione</option>
+																<option value="Otra ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+												</div>
+											</div>
+										<div class="form-group col-md-12">
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Transporte</label>
-
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
 													<select class="form-control selectpicker show-tick" name="transporte" id="">
@@ -307,75 +428,286 @@
 									            	</div>
 									        	</div>
 											</div>
-
-											<label for="" class="col-sm-4 col-md-4 control-label" style="text-align:justify;">Mecanismo de información</label>
-
-											<div class="col-sm-2 col-md-2">
-												<div class="required-field-block">
-													<br>
-													<p>Televisión
-													<input name="mecan_informacion" type="checkbox" value="Television">
-													Radio
-													<input name="mecan_informacion1" type="checkbox" value="Radio">
-													Prensa
-													<input name="mecan_informacion2" type="checkbox" value="Prensa">
-													Internet
-													<input name="mecan_informacion3" type="checkbox" value="Internet">
-													Medios alternativos comunitarios
-													<input name="mecan_informacion4" type="checkbox" value="Medios alternativos comunitarios">
-													Otros
-													<input name="mecan_informacion5" type="checkbox" value="Otros">
-													</p>
-													
-													<div class="required-icon">
-									                	<div class="text">*</div>
-									            	</div>
-									        	</div>
-											</div>
-
 										</div>
-
 										<div class="form-group col-md-12">
-
-										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Servicios comunales</label>
-
-											<div class="col-sm-2 col-md-2">
-												<div class="required-field-block">
-													<br>
-													<p>Mercado
-													<input name="serv_comunales" type="checkbox" value="Mercado">
-													Bodega
-													<input name="serv_comunales1" type="checkbox" value="Bodega">
-													Abastos
-													<input name="serv_comunales2" type="checkbox" value="Abastos">
-													Farmacia
-													<input name="serv_comunales3" type="checkbox" value="Farmacia">
-													Plazas y Parques
-													<input name="serv_comunales4" type="checkbox" value="Plazas y Parques">
-													Preescolar
-													<input name="serv_comunales5" type="checkbox" value="Preescolar">
-													Escuelas
-													<input name="serv_comunales6" type="checkbox" value="Escuelas">
-													Liceos
-													<input name="serv_comunales7" type="checkbox" value="Liceos">
-													Centro de salud
-													<input name="serv_comunales8" type="checkbox" value="Centro de Salud">
-													Canchas
-													<input name="serv_comunales9" type="checkbox" value="Canchas">
-													Casa comunal
-													<input name="serv_comunales10" type="checkbox" value="Casa comunal">
-													Iglesia
-													<input name="serv_comunales11" type="checkbox" value="Iglesia">
-													Otros
-													<input name="serv_comunales12" type="checkbox" value="Otros">
-													</p>									
-													<div class="required-icon">
-									                	<div class="text">*</div>
-									            	</div>
-									        	</div>
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Mecanismo de información</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Televisión</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="mecan_informacion" id="">
+															<option value="0">seleccione</option>
+															<option value="Televisión ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Radio</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="mecan_informacion1" id="">
+																<option value="0">seleccione</option>
+																<option value="Radio ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Prensa</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="mecan_informacion2" id="">
+																<option value="0">seleccione</option>
+																<option value="Prensa ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Internet</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="mecan_informacion3" id="">
+																<option value="0">seleccione</option>
+																<option value="Internet ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
 											</div>
-										</div>
-
+											<div class="form-group col-md-12">
+												<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Medios Alternativos</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="mecan_informacion4" id="">
+																<option value="0">seleccione</option>
+																<option value="Medios Alternativos Comunitarios ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+														    	<div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Otros</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="mecan_informacion5" id="">
+																<option value="0">seleccione</option>
+																<option value="Otros ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Servicios Comunales</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Mercado</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="serv_comunales" id="">
+															<option value="0">seleccione</option>
+															<option value="Mercado ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Bodega</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="serv_comunales1" id="">
+																<option value="0">seleccione</option>
+																<option value="Bodega ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Abastos</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="serv_comunales2" id="">
+																<option value="0">seleccione</option>
+																<option value="Abastos ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Farmacia</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="serv_comunales3" id="">
+																<option value="0">seleccione</option>
+																<option value="Farmacia ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>PLazas y Parques</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="serv_comunales4" id="">
+															<option value="0">seleccione</option>
+															<option value="PLazas y Parques ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Preescolar</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="serv_comunales5" id="">
+																<option value="0">seleccione</option>
+																<option value="Preescolar ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Escuelas</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="serv_comunales6" id="">
+																<option value="0">seleccione</option>
+																<option value="Escuelas ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Liceos</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="serv_comunales7" id="">
+																<option value="0">seleccione</option>
+																<option value="Liceos ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Centro de Salud</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="serv_comunales8" id="">
+															<option value="0">seleccione</option>
+															<option value="Centro de Salud ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Canchas</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="serv_comunales9" id="">
+																<option value="0">seleccione</option>
+																<option value="Canchas ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Casa Comunal</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="serv_comunales10" id="">
+																<option value="0">seleccione</option>
+																<option value="Casa Comunal ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Iglesia</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="serv_comunales11" id="">
+																<option value="0">seleccione</option>
+																<option value="Iglesia ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Otros</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="serv_comunales12" id="">
+															<option value="0">seleccione</option>
+															<option value="Otros ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+											</div>
+									</div>
 
 						    	</div><!-- final del panel body -->
 					    	</div>

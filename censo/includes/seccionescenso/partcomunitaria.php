@@ -67,37 +67,109 @@
 									            	</div>
 									        	</div>
 											</div>
-
-											<label for="" class="col-sm-4 col-md-4 control-label" style="text-align:justify;">¿Cuáles misiones estan en la comunidad?</label>
-
-											<div class="col-sm-6">
-												<div class="required-field-block">
-													<p>Ribas
-													<input name="name_mision" type="checkbox" value="Ribas">
-													Sucre
-													<input name="name_mision1" type="checkbox" value="Sucre">
-													Vuelvan caras
-													<input name="name_mision2" type="checkbox" value="Vuelvan caras">
-													Identidad
-													<input name="name_mision3" type="checkbox" value="Identidad">
-													Barrio Adentro
-													<input name="name_mision4" type="checkbox" value="Barrio Adentro">
-													Ezequiel Zamora
-													<input name="name_mision5" type="checkbox" value="Ezequiel Zamora">
-													Mercal
-													<input name="name_mision6" type="checkbox" value="Mercal">
-													Ninguna
-													<input name="name_mision7" type="checkbox" value="Ninguna">
-													</p>
-													
-													<div class="required-icon">
-									                	<div class="text">*</div>
-									            	</div>
-									        	</div>
 											</div>
-
-										</div>
-
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">¿Cuáles misiones estan en la comunidad?</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Ribas</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="name_mision" id="">
+															<option value="0">seleccione</option>
+															<option value="Ribas ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Sucre</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="name_mision1" id="">
+																<option value="0">seleccione</option>
+																<option value="Sucre ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Vuelvan Caras</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="name_mision2" id="">
+																<option value="0">seleccione</option>
+																<option value="Vuelvan Caras ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Identidad</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="name_mision3" id="">
+																<option value="0">seleccione</option>
+																<option value="Identidad ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Barrio Adentro</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="name_mision4" id="">
+															<option value="0">seleccione</option>
+															<option value="Barrio Adentro ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Ezequiel zamora</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="name_mision5" id="">
+																<option value="0">seleccione</option>
+																<option value="Ezequiel zamora ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Mercal</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="name_mision6" id="">
+																<option value="0">seleccione</option>
+																<option value="Mercal ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+											</div>
 										<div class="form-group col-md-12">
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Otra misión</label>
@@ -298,48 +370,149 @@
 											</div>
 
 										</div>
-
 										<div class="form-group col-md-12">
-
-										<label for="" class="col-sm-12 col-md-12 control-label" style="text-align:justify;">De crearse un consejo comunal en su comunidad, 
+											<label for="" class="col-sm-12 col-md-12 control-label" style="text-align:justify;">De crearse un consejo comunal en su comunidad, 
 										¿en cuál área de trabajo le gustaría participar?</label>
-										
-										</div>
-
-										<div class="form-group col-md-12">
-
-											<div class="col-sm-12 col-md-8">
-												<div class="required-field-block">
-													<p>Contraloria y Seguimiento
-													<input name="pueblo_pregunta_final" type="checkbox" value="Contraloria y Seguimiento">
-													Relaciones Publicas y Medios
-													<input name="pueblo_pregunta_final1" type="checkbox" value="Relaciones Publicas y Medios">
-													Seguridad Ciudadana
-													<input name="pueblo_pregunta_final2" type="checkbox" value="Seguridad Ciudadana">
-													Infraestructura, Vivienda y Servicios Publicos
-													<input name="pueblo_pregunta_final3" type="checkbox" value="Infraestructura, Vivienda y Servicios Publicos">
-													Formacion y Conciencia Ideologica
-													<input name="pueblo_pregunta_final4" type="checkbox" value="Formacion y Conciencia Ideologica">
-													Elaboración de Proyectos de Desarrollo Comunitario
-													<input name="pueblo_pregunta_final5" type="checkbox" value="Elaboracion de Proyectos de Desarrollo Comunitario">
-													Alimentación y Nutricion
-													<input name="pueblo_pregunta_final6" type="checkbox" value="Alimentación y Nutricion">
-													Educacion Cultura y Tecnologia
-													<input name="pueblo_pregunta_final7" type="checkbox" value="Educacion Cultura y Tecnologia">
-													Salud, Deporte y Saneamiento Ambiental
-													<input name="pueblo_pregunta_final8" type="checkbox" value="Salud, Deporte y Saneamiento Ambiental">
-													Ejecucion de Programas Sociales y las Misiones
-													<input name="pueblo_pregunta_final9" type="checkbox" value="Ejecucion de Programas Sociales y las Misiones">													
-													</p>
-													
-													<div class="required-icon">
-									                	<div class="text">*</div>
-									            	</div>
-									        	</div>
+												<div class="col-sm-12 col-md-8">
+													<b>Contraloria y Seguimiento</b>
+													<div class="required-field-block">
+														<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final" id="">
+															<option value="0">seleccione</option>
+															<option value="Contraloria y Seguimiento ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+														<div class="required-icon">
+														    <div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Relaciones Publicas y Medios</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final1" id="">
+																<option value="0">seleccione</option>
+																<option value="Relaciones Publicas y Medios ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Seguridad Ciudadana</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final2" id="">
+																<option value="0">seleccione</option>
+																<option value="Seguridad Ciudadana ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Infraestructura, Vivienda y Servicios Publicos</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final3" id="">
+																<option value="0">seleccione</option>
+																<option value="Infraestructura, Vivienda y Servicios Publicos ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Formacion y Conciencia Ideologica</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final4" id="">
+																<option value="0">seleccione</option>
+																<option value="Formacion y Conciencia Ideologica ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Elaboración de Proyectos de Desarrollo Comunitario</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final5" id="">
+																<option value="0">seleccione</option>
+																<option value="Elaboración de Proyectos de Desarrollo Comunitario ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Alimentación y Nutricion</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final6" id="">
+																<option value="0">seleccione</option>
+																<option value="Alimentación y Nutricion ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Educacion Cultura y Tecnologia</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final7" id="">
+																<option value="0">seleccione</option>
+																<option value="Educacion Cultura y Tecnologia ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Salud, Deporte y Saneamiento Ambiental</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final8" id="">
+																<option value="0">seleccione</option>
+																<option value="Salud, Deporte y Saneamiento Ambiental ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Ejecución de Programas Sociales y las Misiones</b>
+														<div class="required-field-block">
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final9" id="">
+																<option value="0">seleccione</option>
+																<option value="Ejecución de Programas Sociales y las Misiones ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+															<div class="required-icon">
+															    <div class="text">*</div>
+															</div>
+														</div>
+													</div>
 											</div>
-
-										</div>
-
 										<div class="form-group col-md-12">
 
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Otra area</label>

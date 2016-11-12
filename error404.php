@@ -2,9 +2,11 @@
 <html>
 <head>
 <title>Error 404</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" href="images/logo_.ico" />
+<link rel="shortcut icon" href="images/ccsantaines.ico" />
 <?php include_once("analyticstracking.php") ?>
 <style type="text/css">
 body{
@@ -72,7 +74,7 @@ body{
 	    <p>Error ocurrido!</p><p>Página no encontrada</p>
 	    
   	      <div class="sub">
-	        <p><a href="index.php">Atras</a></p>
+	        <p><a href="index.php">Inicio</a></p>
 	      </div>
         </div>
 	</div>

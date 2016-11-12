@@ -101,27 +101,68 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 												}//fin del 2do if
 											?>
 											</div>
-
-											<label for="" class="col-sm-4 col-md-4 control-label" style="text-align:justify;">Cuales misiones estan en la comunidad</label>
-
-											<div class="col-sm-4 col-md-4">
-												<select class="form-control selectpicker show-tick" name="name_mision[]" id="" title="<?php
-												for($z=0;$z<count($data_part_comun);$z++){
-												echo $data_part_comun[$z]["MISIONES_COMUNIDAD"]. " ";
-												}
-												?>" multiple>
-													<option value="Ribas">Ribas</option>
-													<option value="Sucre">Sucre</option>
-													<option value="Vuelvan caras">Vuelvan caras</option>
-													<option value="Identidad">Identidad</option>
-													<option value="Barrio Adentro">Barrio Adentro</option>
-													<option value="Ezequiel Zamora">Ezequiel Zamora</option>
-													<option value="Mercal">Mercal</option>
-												</select>
 											</div>
+																						<div class="form-group col-md-12">
 
-										</div>
-
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">¿Cuáles misiones estan en la comunidad?</label>
+												<div class="col-sm-2 col-md-2">
+													<b>Ribas</b>
+														<select class="form-control selectpicker show-tick" name="name_mision" id="" title="<?php for($z=0;$z<count($data_part_comun);$z++){ echo $data_part_comun[$z]["MISIONES_COMUNIDAD"]. " ";}?>">
+															<option value="Ribas ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Sucre</b>
+															<select class="form-control selectpicker show-tick" name="name_mision1" id="" title="<?php for($z=0;$z<count($data_part_comun);$z++){ echo $data_part_comun[$z]["MISIONES_COMUNIDAD1"]. " ";}?>">
+																<option value="Sucre ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Vuelvan Caras</b>
+															<select class="form-control selectpicker show-tick" name="name_mision2" id="" title="<?php for($z=0;$z<count($data_part_comun);$z++){ echo $data_part_comun[$z]["MISIONES_COMUNIDAD2"]. " ";}?>">
+																<option value="Vuelvan Caras ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Identidad</b>
+															<select class="form-control selectpicker show-tick" name="name_mision3" id="" title="<?php for($z=0;$z<count($data_part_comun);$z++){ echo $data_part_comun[$z]["MISIONES_COMUNIDAD3"]. " ";}?>">
+																<option value="Identidad ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+											</div>
+											<div class="form-group col-md-12">
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;"></label>
+												<div class="col-sm-2 col-md-2">
+													<b>Barrio Adentro</b>
+														<select class="form-control selectpicker show-tick" name="name_mision4" id="" title="<?php for($z=0;$z<count($data_part_comun);$z++){ echo $data_part_comun[$z]["MISIONES_COMUNIDAD4"]. " ";}?>">
+															<option value="Barrio Adentro ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Ezequiel zamora</b>
+															<select class="form-control selectpicker show-tick" name="name_mision5" id="" title="<?php for($z=0;$z<count($data_part_comun);$z++){ echo $data_part_comun[$z]["MISIONES_COMUNIDAD5"]. " ";}?>">
+																<option value="Ezequiel zamora ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-2 col-md-2">
+														<b>Mercal</b>
+															<select class="form-control selectpicker show-tick" name="name_mision6" id="" title="<?php for($z=0;$z<count($data_part_comun);$z++){ echo $data_part_comun[$z]["MISIONES_COMUNIDAD6"]. " ";}?>">
+																<option value="Mercal ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+											</div>
 										<div class="form-group col-md-12">
 
 											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Otra misión</label>
@@ -344,37 +385,88 @@ $data_ocho_dos=$obj->obten_censo_por_id_preg_part_comn($_GET["id"]);
 										</div>
 
 										<div class="form-group col-md-12">
-
-										<label for="" class="col-sm-12 col-md-12 control-label" style="text-align:justify;">¿De crearse un consejo comunal en su comunidad, 
-										en cual área de trabajo le gustaría participar?</label>
-										
-										</div>
-
-										<div class="form-group col-md-12">
-
-										<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final[]" title="
-												<?php
-												for($z=0;$z<sizeof($data_ocho_dos);$z++){
-												echo $data_ocho_dos[$z]["P_DOCE"]. " ";
-												}
-												?>
-												" multiple>
-												<option value="Contraloria y Seguimiento">Contraloria y Seguimiento</option>
-												<option value="Relaciones Publicas y Medios">Relaciones Publicas y Medios</option>
-												<option value="Seguridad Ciudadana">Seguridad Ciudadana</option>
-												<option value="Infraestructura, Vivienda y Servicios Publicos">Infraestructura, Vivienda y Servicios Publicos</option>
-												<option value="Formacion y Conciencia Ideologica">Formación y Conciencia Ideológica</option>
-												<option value="Elaboracion de
-												Proyectos de Desarrollo Comunitario (Endogeno)">Elaboración de
-												Proyectos de Desarrollo Comunitario (Endógeno)</option>
-												<option value="Alimentación y Nutricion">Alimentación y Nutrición</option>
-												<option value="Educacion Cultura y Tecnologia">Educación Cultura y Tecnología</option>
-												<option value="Salud, Deporte y Saneamiento Ambiental">Salud, Deporte y Saneamiento Ambiental</option>
-												<option value="Ejecucion de Programas Sociales y las Misiones">Ejecución de Programas Sociales y las Misiones</option>
-												option
-											</select>
-										</div>
-
+											<label for="" class="col-sm-12 col-md-12 control-label" style="text-align:justify;">De crearse un consejo comunal en su comunidad, 
+										¿en cuál área de trabajo le gustaría participar?</label>
+												<div class="col-sm-12 col-md-8">
+													<b>Contraloria y Seguimiento</b>
+														<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE"]. " "; }?>">
+															<option value="Contraloria y Seguimiento ">SI</option>
+															<option value=" ">NO</option>
+														</select>
+												</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Relaciones Publicas y Medios</b>
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final1" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE1"]. " "; }?>">
+																<option value="Relaciones Publicas y Medios ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Seguridad Ciudadana</b>
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final2" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE2"]. " "; }?>">
+																<option value="Seguridad Ciudadana ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Infraestructura, Vivienda y Servicios Publicos</b>
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final3" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE3"]. " "; }?>">
+																<option value="Infraestructura, Vivienda y Servicios Publicos ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Formacion y Conciencia Ideologica</b>
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final4" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE4"]. " "; }?>">
+																<option value="Formacion y Conciencia Ideologica ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Elaboración de Proyectos de Desarrollo Comunitario</b>
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final5" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE5"]. " "; }?>">
+																<option value="Elaboración de Proyectos de Desarrollo Comunitario ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Alimentación y Nutricion</b>
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final6" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE6"]. " "; }?>">
+																<option value="Alimentación y Nutricion ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Educacion Cultura y Tecnologia</b>
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final7" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE7"]. " "; }?>">
+																<option value="Educacion Cultura y Tecnologia ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Salud, Deporte y Saneamiento Ambiental</b>
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final8" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE8"]. " "; }?>">
+																<option value="Salud, Deporte y Saneamiento Ambiental ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+												<label for="" class=".col-xs-6 .col-sm-3"></label>
+													<div class="col-sm-12 col-md-8">
+														<b>Ejecución de Programas Sociales y las Misiones</b>
+															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final9" id="" title="<?php for($z=0;$z<sizeof($data_ocho_dos);$z++){echo $data_ocho_dos[$z]["P_DOCE9"]. " "; }?>">
+																<option value="Ejecución de Programas Sociales y las Misiones ">SI</option>
+																<option value=" ">NO</option>
+															</select>
+													</div>
+											</div>
 										<div class="form-group col-md-12">
 
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Otra area</label>

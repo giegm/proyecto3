@@ -13,7 +13,6 @@
         document.onmousedown=click
         //-->
     </script>   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/logo.png" width="75" height="75">  
     <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">

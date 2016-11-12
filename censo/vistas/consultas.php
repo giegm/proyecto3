@@ -49,6 +49,45 @@ if(isset($_SESSION["sesion_usuario"])){
 		<script src="../diseño/js/jquery-1.11.2.min.js"></script> 
 		<script src = "../diseño/js/bootstrap.min.js"></script>
 		<script src="../diseño/selectstyles/dist/js/bootstrap-select.js"></script>
+
+		<script src="../jquery/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+		<script src="../jquery/jquery-cookie/jquery.cookie.js"></script>
+		<script src="../plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
+		<script src="../js/main.js"></script>
+
+		<script src="../jquery/jquery-ui/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+		<script src="../js/jQRangeSlider/jQAllRangeSliders-min.js"></script>
+		<script src="../jquery/jQuery-Knob/js/jquery.knob.js"></script>
+		<script src="../js/ui-sliders.js"></script>
+		<script src="../jquery/flot/jquery.flot.js"></script>
+		<script src="../jquery/flot/jquery.flot.resize.js"></script>
+		<script src="../jquery/flot/jquery.flot.categories.js"></script>
+		<script src="../jquery/flot/jquery.flot.pie.js"></script>
+		<script>
+			jQuery(document).ready(function() {
+				Main.init();
+				//Charts.init();
+				UISliders.init();
+			$('#Reporte').click(function() {
+			var edadIn = $('#de').val();
+			var edadF = $('#hast').val();
+			/*var sexo = $('input:radio[name=sexo]:checked').val();
+			var pensionado = $('input:radio[name=pensionado]:checked').val();
+			var incapacitado = $('input:radio[name=incapacitado]:checked').val();
+			var trabaja = $('input:radio[name=trabaja]:checked').val();*/
+			var url = '../includes/seccionesconsultas/CensoReporte.php';
+		
+			if (edadIn  >= edadF ) {
+				$("#PanelTitulo").html("<center> la edad final no puede ser menor a la edad inicial</center>");
+				$("#hast").focus();
+			}else{
+				$.post(url,{'edadIn':edadIn,'edadF':edadF},function(respondText){	
+					$("#placeholder82").html(respondText);
+					});
+				};
+			});
+		});
+		</script>
 	 </body>
 </html>
 <?php 

@@ -86,6 +86,17 @@ class Revisiones{
 	}//FIN DEL METODO
 
 	//METODO QUE TRAE FAMILIARES FINANZAS Y SITUACION ECONOMICA
+	public function obten_censo_por_id_cuatro2($id){
+
+		$sql = mysqli_query(Conecta::conx(),"select ff.* from familiar_finanzas as ff where ff.ID_JEFE=$id")or die('problemas al tratar de traer los datos de la tabla :' . $sql . mysqli_errno(Conecta::conx()));
+		
+		while($reg=mysqli_fetch_assoc($sql)){
+			$this->datos_censo_cuatro2[]=$reg;
+		}
+		return $this->datos_censo_cuatro2;
+
+	}//FIN DEL METODO
+	//METODO QUE TRAE FAMILIARES FINANZAS Y SITUACION ECONOMICA
 	public function obten_censo_por_id_cuatro($id){
 
 		$sql = mysqli_query(Conecta::conx(),"select ff.* from situacion_economica as ff where ff.ID_JEFE=$id")or die('problemas al tratar de traer los datos de la tabla :' . $sql . mysqli_errno(Conecta::conx()));

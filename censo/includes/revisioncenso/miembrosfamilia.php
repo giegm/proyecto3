@@ -3,7 +3,7 @@ $total_fam=$obj->obten_total_familiares($_GET["id"]);
 $data_tres=$obj->obten_censo_por_id_tres($_GET["id"]);
 $data_tres_fam=$obj->obten_censo_por_id_tres_familiares($_GET["id"]);
 $data_fam_salud=$obj->obten_censo_por_id_tres_fam_salud($_GET["id"]);
-$data_cuatro=$obj->obten_censo_por_id_cuatro($_GET["id"]);
+$data_cuatro=$obj->obten_censo_por_id_cuatro2($_GET["id"]);
 $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 
 ?>
@@ -35,7 +35,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 
 										<div class="col-sm-2 col-md-2">
 
-											<input value="<?php echo $data_tres[$i]["NOMBRES_F"] ?>" type="text" name="namepaef" class="form-control"  placeholder="" required onkeypress="return soloLetras(event);">
+											<input value="<?php echo $data_tres[$i]["NOMBRES_F"] ?>" type="text" name="namepaef[]" class="form-control"  placeholder="" required onkeypress="return soloLetras(event);">
 										</div>
 
 										
@@ -43,7 +43,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">N° de cedula</label>
 										
 										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_tres[$i]["CEDULA_F"]; ?>" type="text" name="cedf" class="form-control"  placeholder="V/E-00000000" required onKeyPress="return SoloNumeros(event);">
+											<input value="<?php echo $data_tres[$i]["CEDULA_F"]; ?>" type="text" name="cedf[]" class="form-control"  placeholder="V/E-00000000" required onKeyPress="return SoloNumeros(event);">
 										</div>
 
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Sexo</label>
@@ -52,7 +52,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
                                         <?php 
                                         if($data_tres[$i]["SEXO_F"]=="Masculino"){
                                         ?>
-                                            <select name="sexof" class="form-control">
+                                            <select name="sexof[]" class="form-control">
                                                 <option value="<?php echo $data_tres[$i]["SEXO_F"]; ?>"><?php echo $data_tres[$i]["SEXO_F"]; ?></option>
                                                 <option value="Femenino">Femenino</option>
                                             </select>
@@ -61,7 +61,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
                                         } 
                                         if($data_tres[$i]["SEXO_F"]=="Femenino"){
                                         ?>
-                                            <select name="sexof" class="form-control">
+                                            <select name="sexof[]" class="form-control">
                                                 <option value="<?php echo $data_tres[$i]["SEXO_F"]; ?>"><?php echo $data_tres[$i]["SEXO_F"]; ?></option>
                                                 <option value="Masculino">Masculino</option>
                                             </select>
@@ -76,19 +76,19 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 							    			<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Fecha de Nac.</label>
 
 										<div class="col-sm-2 col-md-3">
-											<input value="<?php echo $data_tres[$i]["FECHANAC_F"]; ?>" type="date" name="fchanacf" class="form-control"  placeholder="">
+											<input value="<?php echo $data_tres[$i]["FECHANAC_F"]; ?>" type="date" name="fchanacf[]" class="form-control"  placeholder="">
 										</div>
 
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:center;">Edad</label>
 										
 										<div class="col-sm-2 col-md-1">
-											<input value="<?php echo $data_tres[$i]["EDAD_F"]; ?>" type="text" name="edadf" class="form-control"  placeholder="" required onKeyPress="return SoloNumeros(event);">
+											<input value="<?php echo $data_tres[$i]["EDAD_F"]; ?>" type="text" name="edadf[]" class="form-control"  placeholder="" required onKeyPress="return SoloNumeros(event);">
 										</div>
 										
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Discapacidad/tipo</label>
 										
 										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_fam_salud[$i]["DISCAPACIDAD_F"]; ?>" type="text" name="discpf" class="form-control"  placeholder="">
+											<input value="<?php echo $data_fam_salud[$i]["DISCAPACIDAD_F"]; ?>" type="text" name="discpf[]" class="form-control"  placeholder="">
 										</div>
 
 							    		</div><!-- final del form-group -->
@@ -100,7 +100,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_fam_salud[$i]["EMBARAZO_F"]=="SI"){
 											?>
-											<select class="form-control selectpicker show-tick" name="embrzf" id="">
+											<select class="form-control selectpicker show-tick" name="embrzf[]" id="">
 												<option value="<?php echo $data_fam_salud[$i]["EMBARAZO_F"];?>"><?php echo $data_fam_salud[$i]["EMBARAZO_F"];?></option>
 												<option value="NO">NO</option>
 											</select> 
@@ -110,7 +110,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_fam_salud[$i]["EMBARAZO_F"]=="NO"){
 											?>
-											<select class="form-control selectpicker show-tick" name="embrzf" id="">
+											<select class="form-control selectpicker show-tick" name="embrzf[]" id="">
 												<option value="<?php echo $data_fam_salud[$i]["EMBARAZO_F"];?>"><?php echo $data_fam_salud[$i]["EMBARAZO_F"];?></option>
 												<option value="SI">SI</option>
 											</select> 
@@ -125,7 +125,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Mamá"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Papá">Papá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
@@ -143,7 +143,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Papá"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
 												<option value="Esposo(a)">Esposo(a)</option>
@@ -161,7 +161,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Esposo(a)"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
 												<option value="Papá">Papá</option>
@@ -179,7 +179,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Hijo(a)"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
 												<option value="Papá">Papá</option>
@@ -197,7 +197,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Sobrino(a)"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
 												<option value="Papá">Papá</option>
@@ -215,7 +215,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Hermano(a)"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
 												<option value="Papá">Papá</option>
@@ -233,7 +233,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Tio(a)"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
 												<option value="Papá">Papá</option>
@@ -251,7 +251,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Abuelo(a)"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
 												<option value="Papá">Papá</option>
@@ -269,7 +269,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Nieto(a)"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
 												<option value="Papá">Papá</option>
@@ -287,7 +287,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["PARENTESCO_F"]=="Otro(a)"){
 											?>
-											<select class="form-control selectpicker show-tick" name="parntscf" id="">
+											<select class="form-control selectpicker show-tick" name="parntscf[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["PARENTESCO_F"];?>"><?php echo $data_tres_fam[$i]["PARENTESCO_F"];?></option>
 												<option value="Mamá">Mamá</option>
 												<option value="Papá">Papá</option>
@@ -310,7 +310,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_fam_academ[$i]["GRADO_INSTRUCCION_F"]=="Sin instruccion"){
 											?>
-											<select class="form-control selectpicker show-tick" name="instrcf" >
+											<select class="form-control selectpicker show-tick" name="instrcf[]" >
 											<option value="<?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?>"><?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?></option>
 											<option value="Basica">Basica</option>
 											<option value="Bachiller">Bachiller</option>
@@ -325,7 +325,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_fam_academ[$i]["GRADO_INSTRUCCION_F"]=="Basica"){
 											?>
-											<select class="form-control selectpicker show-tick" name="instrcf" >
+											<select class="form-control selectpicker show-tick" name="instrcf[]" >
 											<option value="<?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?>"><?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?></option>
 											<option value="Sin instruccion">Sin instruccion</option>
 											<option value="Bachiller">Bachiller</option>
@@ -340,7 +340,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_fam_academ[$i]["GRADO_INSTRUCCION_F"]=="Bachiller"){
 											?>
-											<select class="form-control selectpicker show-tick" name="instrcf" >
+											<select class="form-control selectpicker show-tick" name="instrcf[]" >
 											<option value="<?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?>"><?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?></option>
 											<option value="Sin instruccion">Sin instruccion</option>
 											<option value="Basica">Basica</option>
@@ -355,7 +355,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_fam_academ[$i]["GRADO_INSTRUCCION_F"]=="Tecnico Medio"){
 											?>
-											<select class="form-control selectpicker show-tick" name="instrcf" >
+											<select class="form-control selectpicker show-tick" name="instrcf[]" >
 											<option value="<?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?>"><?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?></option>
 											<option value="Sin instruccion">Sin instruccion</option>
 											<option value="Basica">Basica</option>
@@ -370,7 +370,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_fam_academ[$i]["GRADO_INSTRUCCION_F"]=="Tecnico Superior"){
 											?>
-											<select class="form-control selectpicker show-tick" name="instrcf" >
+											<select class="form-control selectpicker show-tick" name="instrcf[]" >
 											<option value="<?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?>"><?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?></option>
 											<option value="Sin instruccion">Sin instruccion</option>
 											<option value="Basica">Basica</option>
@@ -385,7 +385,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_fam_academ[$i]["GRADO_INSTRUCCION_F"]=="Universitario"){
 											?>
-											<select class="form-control selectpicker show-tick" name="instrcf" >
+											<select class="form-control selectpicker show-tick" name="instrcf[]" >
 											<option value="<?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?>"><?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?></option>
 											<option value="Sin instruccion">Sin instruccion</option>
 											<option value="Basica">Basica</option>
@@ -400,7 +400,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_fam_academ[$i]["GRADO_INSTRUCCION_F"]=="Post Grado"){
 											?>
-											<select class="form-control selectpicker show-tick" name="instrcf" >
+											<select class="form-control selectpicker show-tick" name="instrcf[]" >
 											<option value="<?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?>"><?php echo $data_fam_academ[$i]["GRADO_INSTRUCCION_F"];?></option>
 											<option value="Sin instruccion">Sin instruccion</option>
 											<option value="Basica">Basica</option>
@@ -423,7 +423,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["CNE_F"]=="SI"){
 											?>
-											<select class="form-control selectpicker show-tick" name="cnef" id="">
+											<select class="form-control selectpicker show-tick" name="cnef[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["CNE_F"];?>"><?php echo $data_tres_fam[$i]["CNE_F"];?></option>
 												<option value="NO">NO</option>
 											</select>
@@ -433,7 +433,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 										if($data_tres_fam[$i]["CNE_F"]=="NO"){
 											?>
-											<select class="form-control selectpicker show-tick" name="cnef" id="">
+											<select class="form-control selectpicker show-tick" name="cnef[]" id="">
 												<option value="<?php echo $data_tres_fam[$i]["CNE_F"];?>"><?php echo $data_tres_fam[$i]["CNE_F"];?></option>
 												<option value="SI">SI</option>
 											</select>
@@ -448,7 +448,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<?php
 											if($data_fam_academ[$i]["PROFESION_F"]=="Estudiante"){
 												?>
-												<select class="form-control selectpicker show-tick" name="profesf" id="">
+												<select class="form-control selectpicker show-tick" name="profesf[]" id="">
 												<option value="<?php echo $data_fam_academ[$i]["PROFESION_F"];?>"><?php echo $data_fam_academ[$i]["PROFESION_F"];?></option>
 												<option value="Trabajador">Trabajador</option>
 												<option value="Ninguna">Ninguna</option>
@@ -459,7 +459,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<?php
 											if($data_fam_academ[$i]["PROFESION_F"]=="Trabajador"){
 												?>
-												<select class="form-control selectpicker show-tick" name="profesf" id="">
+												<select class="form-control selectpicker show-tick" name="profesf[]" id="">
 												<option value="<?php echo $data_fam_academ[$i]["PROFESION_F"];?>"><?php echo $data_fam_academ[$i]["PROFESION_F"];?></option>
 												<option value="Estudiante">Estudiante</option>
 												<option value="Ninguna">Ninguna</option>
@@ -470,7 +470,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 											<?php
 											if($data_fam_academ[$i]["PROFESION_F"]==">Ninguna"){
 												?>
-												<select class="form-control selectpicker show-tick" name="profesf" id="">
+												<select class="form-control selectpicker show-tick" name="profesf[]" id="">
 												<option value="<?php echo $data_fam_academ[$i]["PROFESION_F"];?>"><?php echo $data_fam_academ[$i]["PROFESION_F"];?></option>
 												<option value="Estudiante">Estudiante</option>
 												<option value="Trabajador">Trabajador</option>
@@ -487,7 +487,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 											if($data_fam_salud[$i]["PENSIONADO_F"]=="SI"){
 												?>
-												<select class="form-control selectpicker show-tick" name="pensf" id="">
+												<select class="form-control selectpicker show-tick" name="pensf[]" id="">
 												<option value="<?php echo $data_fam_salud[$i]["PENSIONADO_F"];?>"><?php echo $data_fam_salud[$i]["PENSIONADO_F"];?></option>
 												<option value="NO">NO</option>
 											</select>
@@ -497,7 +497,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 										<?php
 											if($data_fam_salud[$i]["PENSIONADO_F"]=="NO"){
 												?>
-												<select class="form-control selectpicker show-tick" name="pensf" id="">
+												<select class="form-control selectpicker show-tick" name="pensf[]" id="">
 												<option value="<?php echo $data_fam_salud[$i]["PENSIONADO_F"];?>"><?php echo $data_fam_salud[$i]["PENSIONADO_F"];?></option>
 												<option value="SI">SI</option>
 											</select>
@@ -512,7 +512,7 @@ $data_fam_academ=$obj->obten_censo_por_id_fam_academ($_GET["id"]);
 							    			<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Ingreso mensual</label>
 										
 										<div class="col-sm-2 col-md-2">
-											<input value="<?php echo $data_cuatro[$i]["INGMENSUAL_F"]; ?>" type="text" name="ingmnsf" class="form-control"  placeholder="Cantidad en Bsf" required onKeyPress="return SoloNumeros(event);">
+											<input value="<?php echo $data_cuatro[$i]["INGMENSUAL_F"]; ?>" type="text" name="ingmnsf[]" class="form-control"  placeholder="Cantidad en Bsf" required onKeyPress="return SoloNumeros(event);">
 										</div>
 
 							    		</div><!-- final del form-group -->

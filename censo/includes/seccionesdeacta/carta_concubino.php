@@ -12,10 +12,23 @@
 							    		
 
 										<div class="form-group col-md-12">
-							    			<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">N° C.I. Solicitante</label>
+										<form action="../controlador/creapdf_acta6.php" method="POST" class="form-horizontal" name="form" role="form">
+
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Motivo de la Solicitud</label>
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<input type="text" name="ci" autofocus class="form-control" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+													<input type="text" name="motivo" autofocus class="form-control" placeholder="Indique el motivo">
+													<div class="required-icon">
+										            	<div class="text">*</div>
+										            </div>
+									        	</div>
+											<br/>
+											</div>
+
+											<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Nombre y Apellido Conyugue</label>
+											<div class="col-sm-2 col-md-2">
+												<div class="required-field-block">
+													<input type="text" name="nombre" autofocus class="form-control" placeholder="Indique nombre y apellido" maxlength="50">
 													<div class="required-icon">
 										            	<div class="text">*</div>
 										            </div>
@@ -26,18 +39,18 @@
 											<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">N° C.I. Conyugue</label>
 											<div class="col-sm-2 col-md-2">
 												<div class="required-field-block">
-													<input type="text" name="ci" autofocus class="form-control" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);">
+													<input type="text" name="conyugue" autofocus class="form-control" placeholder="Solo números" required onKeyPress="return SoloNumeros(event);" maxlength="8">
+													<input type="hidden" name="cedula" value="<?php echo $_GET["cedula"]; ?>">
 													<div class="required-icon">
 										            	<div class="text">*</div>
 										            </div>
 									        	</div>
 											<br/>
 											</div>
-
 											<div class="col-sm-2 col-md-2">
-											<a class="btn btn-success" type="button" href="../controlador/creapdf_acta6.php">Imprimir</a>
-											<br/>
+												<button class="btn btn-success" type="submit" value="Imprimir">Imprimir</button>
 											</div>
+										</form>
 										</div>
 							    	</div>
 						    	</div>

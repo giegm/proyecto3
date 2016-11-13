@@ -11,20 +11,22 @@
 							    	<div class="panel-body">
 
 										<div class="form-group col-md-12">
-											<label for="" class="control-label col-sm-2 col-md-2" style="text-align:justify;">Motivo de la Solicitud</label>
 
-											<div class="col-sm-2 col-md-2">
-												<div class="required-field-block">
-													<input type="text" name="ci" autofocus class="form-control" placeholder="Indique el motivo" maxlength="30">
-													<div class="required-icon">
-										            	<div class="text">*</div>
-										            </div>
-									        	</div>
-											</div>
-											<div class="col-sm-2 col-md-2">
-												<a class="btn btn-success" type="button" href="../controlador/creapdf_acta5.php">Imprimir</a>
-											</div>
-
+											<form action="../controlador/creapdf_acta5.php" method="POST" class="form-horizontal" name="form" role="form">
+												<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Motivo de la Solicitud</label>
+												<div class="col-sm-2 col-md-2">
+													<div class="required-field-block">	
+														<input type="text" class="form-control" name="motivo" placeholder="Indique el motivo" maxlength="30">
+														<input type="hidden" name="cedula" value="<?php echo $_GET["cedula"]; ?>">
+														<div class="required-icon">
+														   	<div class="text">*</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-2 col-md-2">
+													<button class="btn btn-success" type="submit" value="Imprimir">Imprimir</button>
+												</div>
+											</form>
 										</div>
 
 						    	</div><!-- final del panel body -->

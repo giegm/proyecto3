@@ -8,13 +8,20 @@
                               </div><!-- final del primer heading -->
 
                                 <div id="collapse5" class="panel-collapse collapse on" role="tabpanel5" aria-labelledby="heading5">
-                                    <div class="panel-body">
+                                    <div class="panel-body">       
 
-                                        <div class="form-group col-md-12">                                            
+                                        <div class="form-group col-md-12">
+                                            <form action="../controlador/creapdf_acta3.php" method="POST" class="form-horizontal" name="form" role="form">
+                                                <div class="col-sm-2 col-md-2">
+                                                    <div class="required-field-block">  
+                                                        <input type="hidden" name="cedula" value="<?php echo $_GET["cedula"]; ?>">                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <button class="btn btn-success" type="submit" value="Imprimir">Imprimir</button>
+                                                </div>
+                                            </form>                                            
 
-                                            <div class="col-sm-2 col-md-2">
-                                                <a class="btn btn-success" type="button" href="../controlador/creapdf_acta3.php">Imprimir</a>   
-                                            </div>
                                         </div>
                                     </div><!-- final del panel body -->
                                 </div>

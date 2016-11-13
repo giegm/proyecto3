@@ -7,118 +7,68 @@ $tra=new Censos();
 
 <html>
 <head>
-
-<style>
-	body{
-		font-family: "Times New Roman", Georgia, Serif
-		font-size: 12px;
-	}
-	.contendor-general-reporte{
-		
-	}
-	#primer_titulo{
-		text-align: center;
-	}
-	.div_uno
-	{
-		width: 98%;
-	}
-	#td-div-uno
-	{
-		padding-left: 5px;		
-		padding-top: 10px; 
-		padding-bottom: 10px;
-	}
-	#td-medio-div-uno
-	{
-		border: none;
-	}
-	.div_uno_derecha 
-	{
-		border: 1px solid black;
-		width: 30%;
-		float: right;
-		margin-top: -30px;
-	}
-	.div_uno p
-	{
-		padding: 1px;
-	}
-	.div_uno_derecha p
-	{
-		padding: 1px;
-	}
-	.div_table table, tr, th{
-		border: 1px solid black;
-		padding: 1px;
-		border-collapse: collapse;
-	}
-	.div_table table, tr, td{
-		border: 1px solid black;
-		padding: 1px;
-		border-collapse: collapse;
-	}
-	#tdes-datos-cc{
-		border-top: none;
-		border-left: none;
-	}
-	#titulos-de-tablas{
-		text-align: center;
-	}
-	#tables-censo{
-		width: 100%;
-		margin: 0 auto; 
-	}
-	.header-pdf{
-		border: 1px solid black;
-	}
-	#imagen.header-pdf{
-
-	}
-</style>
+	<style>
+		body { margin: 60px;}
+	</style>
 </head>
 <body>
 
-	<img id="imagen.header-pdf" src="../../images/logo.png" width="100" height="100" alt="">
-	<div class="col-xs-12 col-sm-8 col-md-3">
-	<center>
-		<p>República Bolivariana de Venezuela<br>
-		Distrito Capital Municipio Libertador<br>
-		Consejo Comunal "Santa Inés"<br>
-		REG: Nº 0101210010228  RIF: J-29967415-0<br>
-		2da Calle de los Frailes de Catia<br>
-		Callejón San Antonio <br>
-		TEL 0412-984-76-84</p>
-	</center>
-	</div>			
+	<table>
+		<thead>
+			<tr>
+				<th><img id="imagen.header-pdf" src="../../images/logo.png" width="100" height="100" alt=""></th>
+				<th><center>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+					</center></th>
+				<th><center>
+						REPÚBLICA BOLIVARIANA DE VENEZUELA<br>
+						DISTRITO CAPITAL MUNICIPIO LIBERTADOR<br>
+						CONSEJO COMUNAL "SANTA INÉS"<br>
+						REG: Nº 0101210010228  RIF: J-29967415-0<br>
+						2da Calle de los Frailes de Catia<br>
+						Callejón San Antonio <br>
+						TEL 0412-984-76-84
+					</center></th>
+			</tr>
+		</thead>
+	</table>		
 	
 	<div class="div_contenido_censo"><br>
-	<h3 id="titulos-de-tablas">CONSTANCIA DE CONCUBINATO</h3>	
+	<center><h3 id="titulos-de-tablas">CONSTANCIA DE CONCUBINATO</h3></center>	
 	
 	<div class="col-xs-12 col-sm-8 col-md-3">
 	<center>
-		<p style="text-align: justify;">El concejo comunal Santa Inés de los frailes de Catia de la parroquia  Sucre, en uso de las atribuciones legales que le confiere la Ley Orgánica de los Concejos Comunales, en concordancia con la ley  de Funcionamiento de los concejos Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano (a): #, titular de la CI. #, residente del sector: URBANIZACION LOS FRAILES SEGUNDA CALLE CALLEJON SAN ANTONIO CASA Nº 06-02,quien en la actualidad forma pareja con la ciudadana #, titular de la cedula de identidad V- #, en condición de CONCUBINOS, en tal sentido agradecemos a las instituciones prestar la mayor colaboración al titular de la presente siempre manteniéndose dentro de las leyes que rigen la materia.
+		<p style="text-align: justify;">El consejo comunal Santa Inés de los frailes de Catia de la parroquia  Sucre, en uso de las atribuciones legales que le confiere la Ley Orgánica de los Concejos Comunales, en concordancia con la ley  de Funcionamiento de los concejos Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano (a): #, titular de la CI. <?php echo $_POST["cedula"]; ?>, residente del sector: RUPERTO LUGO LOS FRAILES, quien en la actualidad forma pareja con la ciudadana(o) <?php echo $_POST['nombre']; ?>, titular de la cedula de identidad CI. <?php echo $_POST['conyugue']; ?>, en condición de CONCUBINOS, en tal sentido agradecemos a las instituciones prestar la mayor colaboración al titular de la presente siempre manteniéndose dentro de las leyes que rigen la materia.
 		</p>
-		<P style="text-align: justify;">MOTIVO DE LA SOLICITUD: #</P>
+		<P style="text-align: justify;">MOTIVO DE LA SOLICITUD: <?php echo $_POST['motivo']; ?></P>
 
-		<p style="text-align: justify;">Sin más a que hacer referencia  y esperando la mayor colaboración se despide  </p>
+		<p style="text-align: justify;">Sin más a que hacer referencia  y esperando la mayor colaboración se despide.  </p>
 
-		<p style="text-align: justify;">CONSTANCIA QUE SE EMITE A PETICION  DE  LA  PARTE  INTERESADA  EN CARACAS A LOS <?php setlocale(LC_TIME, "es-VE"); echo strftime("%A %d DEL MES DE %B DE %Y"); ?> </p>		
+		<p style="text-align: justify;">Constancia que se emite a petición de la parte interesada en Caracas <?php setlocale(LC_TIME, "es-VE"); echo strftime("%A %d del mes de %B de %Y"); ?>.</p>		
 		
 	</center>
 	</div>		
-	<br><br>
-	<hr height="10px" width="50%">
-	<p style="text-align: center;">ATENTAMENTE.<br>YASMIN TORRES<br>CONTRALORIA SOCIAL<br>CI 12.358.170<br>TEL.0414-907-55-34</p>
-	<p style="text-align: center;">
-	ELVIA PEREZ    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	YAILET ROJAS<br>
-     COMITÉ DE SALUD. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     COMITE DE CULTURA<br>
-     CI: 12.561.610    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      CI: 14.015.323<br>
-      TEL. 0212-883-34-32 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      TEL. 0414-180-28-76
+	<br>
+	<p style="text-align: center;">EL EXPONENTE.
+	<br>
+	<p style="text-align: justify;">
+	___________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___________________
+	<br>
+	&nbsp;&nbsp;ELVIA PEREZ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	ULISES ROBLES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	YAILET ROJAS
+	<br>
+	COMITÉ DE SALUD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	UNIDAD DE GESTION  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	COMITE DE CULTURA
+	<br>
+	&nbsp;&nbsp;&nbsp;CI: 12.561.610&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	FINANCIERA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	CI: 14.015.323
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	CI 7.885.515
+    <br>
 </p>
 
 </body>

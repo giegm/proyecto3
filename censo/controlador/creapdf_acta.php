@@ -1,6 +1,7 @@
 <?php 
 ob_start(); 
 require_once("../modelo/clasedeacta/class_censados.php");
+
 $obj=new Personas_censados();
 
 ?>
@@ -53,9 +54,9 @@ $obj=new Personas_censados();
 
 		<p style="text-align: justify;">EL Consejo  Comunal Santa Inés de los frailes de Catia Parroquia Sucre, en uso de las atribucione
 		s legales que le confiere la Ley Orgánica  de los consejos comunales, en concordancia con la Ordenanza de Funcionamiento de los Consejos
-		 Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano(a) xxxxxxxxxxxxxxx, titular de la C.I: xxxxxxxxxxxxxxxxxxxxx, residente del sector: #</p>
+		 Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano(a) XXXXXXXXXX , titular de la C.I: <?php echo $_POST["cedula"]; ?>, residente del sector: Ruperto Lugo-Los Frailes</p>
 		
-		<p style="text-align: left;">MOTIVO DE LA SOLICITUD: xxxxxxxxxxxxxxxxxxxxxxx </p>
+		<p style="text-align: left;">MOTIVO DE LA SOLICITUD: <?php echo $_POST['motivo']; ?></p>
 		<br>
 		<p style="text-align: justify;">Constancia que se expide a petición de la parte interesada en Caracas <?php setlocale(LC_TIME, "es-VE"); echo strftime("%A %d del mes de %B de %Y"); ?> </p>
 	</center>

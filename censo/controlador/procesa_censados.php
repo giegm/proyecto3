@@ -5,5 +5,6 @@ require_once("../modelo/clasedeacta/class_censados.php");
  if($_SERVER["REQUEST_METHOD"]=="POST"){
 $obj = new Personas_censados();             
 $obj->POST_cedula();
+$motivo= $_POST['motivo'];
 }         
  ?>

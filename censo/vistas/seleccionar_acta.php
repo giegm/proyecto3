@@ -46,7 +46,6 @@ $obj2=new Operar();
 					<div class="col-md-10 col-admin-central"><!-- contenedor central admin -->
 						<h1 class="page-header">Emisión de Actas</h1>
 						<div class="col-md-12 well"><!-- contenedor: paneles de registro -->
-							<form action="../controlador/crearcenso.php" method="POST" name="form" enctype="multipart/form-data" class="form-horizontal">
 							<!-- formulario de censar familias -->
 								<div class="form-group col-md-12"><!-- inicio del form-group -->		
 									<!-- comienzo de los paneles agrupados -->
@@ -93,7 +92,6 @@ $obj2=new Operar();
 									</div><!-- fin de los paneles -->
 								
 								</div>
-							</form>
 						</div><!-- fin contenedor: paneles de registro -->
 					</div><!-- fin conteneder central admin -->		
 				</section><!-- fin del section del contenedor central admin -->

@@ -1,126 +1,81 @@
-~<?php 
+<?php 
 ob_start(); 
+require_once("../modelo/clasedeacta/class_censados.php");
 
-require_once("../modelo/clasedecensos/class_listar_censos.php");
-$tra=new Censos();
+$obj=new Personas_censados();
+
 ?>
 
 <html>
 <head>
 
 <style>
-	body{
-		font-family: "Times New Roman", Georgia, Serif
-		font-size: 12px;
-	}
-	.contendor-general-reporte{
-		
-	}
-	#primer_titulo{
-		text-align: center;
-	}
-	.div_uno
-	{
-		width: 98%;
-	}
-	#td-div-uno
-	{
-		padding-left: 5px;		
-		padding-top: 10px; 
-		padding-bottom: 10px;
-	}
-	#td-medio-div-uno
-	{
-		border: none;
-	}
-	.div_uno_derecha 
-	{
-		border: 1px solid black;
-		width: 30%;
-		float: right;
-		margin-top: -30px;
-	}
-	.div_uno p
-	{
-		padding: 1px;
-	}
-	.div_uno_derecha p
-	{
-		padding: 1px;
-	}
-	.div_table table, tr, th{
-		border: 1px solid black;
-		padding: 1px;
-		border-collapse: collapse;
-	}
-	.div_table table, tr, td{
-		border: 1px solid black;
-		padding: 1px;
-		border-collapse: collapse;
-	}
-	#tdes-datos-cc{
-		border-top: none;
-		border-left: none;
-	}
-	#titulos-de-tablas{
-		text-align: center;
-	}
-	#tables-censo{
-		width: 100%;
-		margin: 0 auto; 
-	}
-	.header-pdf{
-		border: 1px solid black;
-	}
-	#imagen.header-pdf{
-
-	}
+	body { margin: 60px;}
 </style>
 </head>
 <body>
+<div class="col-xs-12 col-sm-8 col-md-3">
+	<table>
+		<thead>
+			<tr>
+				<th><img id="imagen.header-pdf" src="../../images/logo.png" width="100" height="100" alt=""></th>
+				<th><center>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+					</center></th>
+				<th><center>
+						REPÚBLICA BOLIVARIANA DE VENEZUELA<br>
+						DISTRITO CAPITAL MUNICIPIO LIBERTADOR<br>
+						CONSEJO COMUNAL "SANTA INÉS"<br>
+						REG: Nº 0101210010228  RIF: J-29967415-0<br>
+						2da Calle de los Frailes de Catia<br>
+						Callejón San Antonio <br>
+						TEL 0412-984-76-84
+					</center></th>
+			</tr>
+		</thead>
+	</table>
 
-	<img id="imagen.header-pdf" src="../../images/logo.png" width="100" height="100" alt="">
-	<div class="col-xs-12 col-sm-8 col-md-3">
-	<center>
-		<p>República Bolivariana de Venezuela<br>
-		Distrito Capital Municipio Libertador<br>
-		Consejo Comunal "Santa Inés"<br>
-		REG: Nº 0101210010228  RIF: J-29967415-0<br>
-		2da Calle de los Frailes de Catia<br>
-		Callejón San Antonio <br>
-		TEL 0412-984-76-84</p>
-	</center>
-	</div>			
-	
-	<div class="div_contenido_censo"><br>
-	<h3 id="titulos-de-tablas">CARTA DE POSTULACIÓN</h3>
+</div>
+	<div class="div_contenido_censo">
+	<center><h3 id="titulos-de-tablas">CARTA DE POSTULACIÓN</h3></center>
 	<p>DE: Consejo Comunal "Santa Inés"</p>
-	<p>Para: #</p>
-	<p>ATENCIÓN: #</p>	
+	<p>Para: <?php echo $_POST['institucion']; ?></p>
+	<p>ATENCIÓN: <?php echo $_POST['atencion']; ?></p>	
 	
 	<div class="col-xs-12 col-sm-8 col-md-3">
 	<center>
 		<p style="text-align: justify;">Ante todo reciba un saludo Bolivariano y Revolucionario enmarcado en este proceso de consolidación de la nueva republica y el socialismo del siglo XXI y en aras de un mundo de inclusión social, cultural, multiétnico y revolucionario.
-		Los voceros y voceras del Concejo Comunal Santa Inés, Tenemos el agrado de dirigirnos a usted, en la oportunidad de manifestarle nuestra voluntad de postular al  ciudadano, #, titular de la cedula de identidad V- #.Para optar por un cupo en esa casa de estudios en el área de #, hemos de hacer notar que esta ciudadano (a) forma parte de este concejo comunal por ser la vocero principal del comité de educación, en tal sentido mucho sabríamos agradecer la receptividad de la presente.
+		Los voceros y voceras del Concejo Comunal Santa Inés, Tenemos el agrado de dirigirnos a usted, en la oportunidad de manifestarle nuestra voluntad de postular al  ciudadano, # titular de la cedula de identidad <?php echo $_POST["cedula"]; ?>. Para optar por un cupo en esa casa de estudios en el área de <?php echo $_POST["area"]; ?>, hemos de hacer notar que esta ciudadano (a) forma parte de este consejo comunal por ser vocero(a) principal de <?php echo $_POST['voceria'];?>, en tal sentido mucho sabríamos agradecer la receptividad de la presente.
 		</p>
-
-		<p style="text-align: justify;">Sin más a que hacer referencia se despide</p>		
+		<p style="text-align: justify;">Sin más a que hacer referencia se despide</p>	
+		<p style="text-align: justify;">Constancia que se expide a petición de la parte interesada en Caracas <?php setlocale(LC_TIME, "es-VE"); echo strftime("%A %d del mes de %B de %Y"); ?> </p>
+	
 		
 	</center>
 	</div>		
-	<br><br>
-	<hr height="10px" width="50%">
-	<p style="text-align: center;">ATENTAMENTE.<br>ULISES ROBLES<br>UNIDAD DE GESTION FINANCIERA<br>CI 7.885.515<br>TEL.0412-984-76-84</p>
-	<p style="text-align: center;">
-	ELVIA PEREZ    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	YAILET ROJAS<br>
-     COMITÉ DE SALUD. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     COMITE DE CULTURA<br>
-     CI: 12.561.610    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      CI: 14.015.323<br>
-      TEL. 0212-883-34-32 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      TEL. 0414-180-28-76
+	<br>
+	<p style="text-align: center;">EL EXPONENTE.
+	<br><br><br>
+	<p style="text-align: justify;">
+	___________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___________________
+	<br>
+	&nbsp;&nbsp;ELVIA PEREZ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	ULISES ROBLES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	YAILET ROJAS
+	<br>
+	COMITÉ DE SALUD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	UNIDAD DE GESTION  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	COMITE DE CULTURA
+	<br>
+	&nbsp;&nbsp;&nbsp;CI: 12.561.610&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	FINANCIERA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	CI: 14.015.323
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	CI 7.885.515
+    <br>
 </p>
+
 
 </body>
 </html>

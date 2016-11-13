@@ -17,15 +17,7 @@ if(isset($_SESSION["sesion_usuario"])){
 		<link rel="shortcut icon" href="../img/ccsantaines.ico">
 	</head>
 	<body>
-		<script language="JavaScript" type="text/javascript">
-			function click(){
-			if(event.button==2){
-			alert('Esta acción no está permitida');
-			}
-			}
-			document.onmousedown=click
-			//-->
-		</script>
+
 		<?php include("../includes/navbaradmin.php"); ?>
 		<div class="container-fluid"><!-- inicio del contenedor general -->
 			<div class="row"><!-- fila principal -->
@@ -49,17 +41,21 @@ if(isset($_SESSION["sesion_usuario"])){
 		<script src="../diseño/js/jquery-1.11.2.min.js"></script> 
 		<script src = "../diseño/js/bootstrap.min.js"></script>
 		<script src="../diseño/selectstyles/dist/js/bootstrap-select.js"></script>
-
+		<script src="../../js/jquery.min.js"></script>
+		<!--<![endif]-->
+		<script src="../js/blockUI/jquery.blockUI.js"></script>
+		<script src="../js/iCheck/jquery.icheck.min.js"></script>
+		<script src="../jquery/perfect-scrollbar/src/jquery.mousewheel.js"></script>
 		<script src="../jquery/perfect-scrollbar/src/perfect-scrollbar.js"></script>
 		<script src="../jquery/jquery-cookie/jquery.cookie.js"></script>
-		<script src="../plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
 		<script src="../js/main.js"></script>
-
+		<!-- fin: MAIN JAVASCRIPTS -->
+		<!-- inicio: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
 		<script src="../jquery/jquery-ui/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-		<script src="../js/jQRangeSlider/jQAllRangeSliders-min.js"></script>
+		<script src="../jquery/jQRangeSlider/jQAllRangeSliders-min.js"></script>
 		<script src="../jquery/jQuery-Knob/js/jquery.knob.js"></script>
 		<script src="../js/ui-sliders.js"></script>
-		<script src="../jquery/flot/jquery.flot.js"></script>
+		<script src="../jquey/flot/jquery.flot.js"></script>
 		<script src="../jquery/flot/jquery.flot.resize.js"></script>
 		<script src="../jquery/flot/jquery.flot.categories.js"></script>
 		<script src="../jquery/flot/jquery.flot.pie.js"></script>

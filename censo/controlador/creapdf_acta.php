@@ -54,15 +54,15 @@ $obj=new Personas_censados();
 
 		<p style="text-align: justify;">EL Consejo  Comunal Santa Inés de los frailes de Catia Parroquia Sucre, en uso de las atribucione
 		s legales que le confiere la Ley Orgánica  de los consejos comunales, en concordancia con la Ordenanza de Funcionamiento de los Consejos
-		 Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano(a) XXXXXXXXXX , titular de la C.I: <?php echo $_POST["cedula"]; ?>, residente del sector: Ruperto Lugo-Los Frailes</p>
+		 Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano(a) <?php echo $_POST['nomape']; ?>, titular de la C.I: <?php echo $_POST["cedula"]; ?>, residente del sector: Ruperto Lugo-Los Frailes</p>
 		
-		<p style="text-align: left;">MOTIVO DE LA SOLICITUD: <?php echo $_POST['motivo']; ?></p>
+		<p style="text-align: left;">Motivo de la Solicitud: <?php echo $_POST['motivo']; ?></p>
 		<br>
 		<p style="text-align: justify;">Constancia que se expide a petición de la parte interesada en Caracas <?php setlocale(LC_TIME, "es-VE"); echo strftime("%A %d del mes de %B de %Y"); ?> </p>
 	</center>
 	</div>
 	<p style="text-align: center;">EL EXPONENTE.
-	<br>
+	<br><br><br>
 	<p style="text-align: justify;">
 	___________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___________________
 	<br>
@@ -95,7 +95,7 @@ $dompdf = new DOMPDF();
 $dompdf->load_html(ob_get_clean());
 $dompdf->render();
 $pdf = $dompdf->output();
-$filename = "Carta de R.".date("Y-m-d").'.pdf';
+$filename = "Carta de R. ".date("Y-m-d").'.pdf';
 file_put_contents($filename, $pdf);
 $dompdf->stream($filename);
 

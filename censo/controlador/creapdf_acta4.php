@@ -56,12 +56,12 @@ $obj=new Personas_censados();
 
 	<div class="col-xs-12 col-sm-8 col-md-3">
 		<center>
-			<p style="text-align: justify;">El Consejo Comunal Santa Inés debidamente registrado bajo el Nº 0101210010228, ante la oficina de fundacomunal, mediante la presente hace del  conocimiento general   que la Sr.(a) #, titular de la CI. <?php echo $_POST["cedula"]; ?>, y residente del sector Ruperto Lugo, quien es parte de este consejo comunal hacemos constar que en la actualidad no pose vivienda y se encuentra habitando la residencia antes mencionada en calidad de Inquilino, por lo tanto se le agradece se sirvan brindar el apoyo necesario en cuanto a las gestiones que por ante esa institución realice la persona previamente  identificada siempre manteniéndose dentro de las  normas  legales.</p>
+			<p style="text-align: justify;">El Consejo Comunal Santa Inés debidamente registrado bajo el Nº 0101210010228, ante la oficina de fundacomunal, mediante la presente hace del  conocimiento general   que la Sr.(a) <?php echo $_POST["nomape"]; ?>, titular de la CI. <?php echo $_POST["cedula"]; ?>, y residente del sector Ruperto Lugo, quien es parte de este consejo comunal hacemos constar que en la actualidad no pose vivienda y se encuentra habitando la residencia antes mencionada en calidad de Inquilino, por lo tanto se le agradece se sirvan brindar el apoyo necesario en cuanto a las gestiones que por ante esa institución realice la persona previamente  identificada siempre manteniéndose dentro de las  normas  legales.</p>
 			<p style="text-align: justify;">Sin más a que hacer referencia  y esperando la mayor colaboración se despide.</p>	
 			<p style="text-align: justify;">Constancia que se expide a petición de la parte interesada en Caracas <?php setlocale(LC_TIME, "es-VE"); echo strftime("%A %d del mes de %B de %Y"); ?>.  </p>
 		</center>
 	</div>		
-	<br><br>
+	<br><br><br>
 	<p style="text-align: center;">EL EXPONENTE. 
 	<br><br>
 	<br>
@@ -96,7 +96,7 @@ $dompdf = new DOMPDF();
 $dompdf->load_html(ob_get_clean());
 $dompdf->render();
 $pdf = $dompdf->output();
-$filename = "Censo ".date("Y-m-d").'.pdf';
+$filename = "CartaNoVivienda ".date("Y-m-d").'.pdf';
 file_put_contents($filename, $pdf);
 $dompdf->stream($filename);
 

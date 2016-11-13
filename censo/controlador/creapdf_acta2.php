@@ -45,7 +45,7 @@ $obj=new Personas_censados();
 	<div class="col-xs-12 col-sm-8 col-md-3">
 	<center>
 		<p style="text-align: justify;">Ante todo reciba un saludo Bolivariano y Revolucionario enmarcado en este proceso de consolidación de la nueva republica y el socialismo del siglo XXI y en aras de un mundo de inclusión social, cultural, multiétnico y revolucionario.
-		Los voceros y voceras del Concejo Comunal Santa Inés, Tenemos el agrado de dirigirnos a usted, en la oportunidad de manifestarle nuestra voluntad de postular al  ciudadano, # titular de la cedula de identidad <?php echo $_POST["cedula"]; ?>. Para optar por un cupo en esa casa de estudios en el área de <?php echo $_POST["area"]; ?>, hemos de hacer notar que esta ciudadano (a) forma parte de este consejo comunal por ser vocero(a) principal de <?php echo $_POST['voceria'];?>, en tal sentido mucho sabríamos agradecer la receptividad de la presente.
+		Los voceros y voceras del Concejo Comunal Santa Inés, Tenemos el agrado de dirigirnos a usted, en la oportunidad de manifestarle nuestra voluntad de postular al  ciudadano <?php echo $_POST["nomape"]; ?> titular de la cedula de identidad <?php echo $_POST["cedula"]; ?>. Para optar por un cupo en esa casa de estudios en el área de <?php echo $_POST["area"]; ?>, hemos de hacer notar que esta ciudadano (a) forma parte de este consejo comunal por ser vocero(a) principal de <?php echo $_POST['voceria'];?>, en tal sentido mucho sabríamos agradecer la receptividad de la presente.
 		</p>
 		<p style="text-align: justify;">Sin más a que hacer referencia se despide</p>	
 		<p style="text-align: justify;">Constancia que se expide a petición de la parte interesada en Caracas <?php setlocale(LC_TIME, "es-VE"); echo strftime("%A %d del mes de %B de %Y"); ?> </p>
@@ -55,7 +55,7 @@ $obj=new Personas_censados();
 	</div>		
 	<br>
 	<p style="text-align: center;">EL EXPONENTE.
-	<br><br><br>
+	<br><br>
 	<p style="text-align: justify;">
 	___________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___________________
 	<br>
@@ -89,7 +89,7 @@ $dompdf = new DOMPDF();
 $dompdf->load_html(ob_get_clean());
 $dompdf->render();
 $pdf = $dompdf->output();
-$filename = "Censo ".date("Y-m-d").'.pdf';
+$filename = "Carta de P ".date("Y-m-d").'.pdf';
 file_put_contents($filename, $pdf);
 $dompdf->stream($filename);
 

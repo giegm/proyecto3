@@ -41,7 +41,7 @@ $tra=new Censos();
 	
 	<div class="col-xs-12 col-sm-8 col-md-3">
 	<center>
-		<p style="text-align: justify;">El Consejo Comunal Santa Inés debidamente registrado bajo el Nº 0101210010228, ante la oficina de fundacomunal, mediante la presente hace del  conocimiento de  quien  pueda Interesar que la Sr.(a) #, titular de la CI. <?php echo $_POST["cedula"]; ?> y residente del sector Ruperto Lugo, como consejo comunal hacemos constar que el mismo(a) en la actualidad no posee un Empleo Conocido y por ser esta cabeza de hogar solicitamos a las instituciones se sirvan brindar el apoyo necesario en cuanto a las gestiones que por ante ellas realice la persona previamente  identificada siempre manteniéndose dentro de las  normas  legales.
+		<p style="text-align: justify;">El Consejo Comunal Santa Inés debidamente registrado bajo el Nº 0101210010228, ante la oficina de fundacomunal, mediante la presente hace del  conocimiento de  quien  pueda Interesar que la Sr.(a) <?php echo $_POST["nomape"]; ?>, titular de la CI. <?php echo $_POST["cedula"]; ?> y residente del sector Ruperto Lugo, como consejo comunal hacemos constar que el mismo(a) en la actualidad no posee un Empleo Conocido y por ser esta cabeza de hogar solicitamos a las instituciones se sirvan brindar el apoyo necesario en cuanto a las gestiones que por ante ellas realice la persona previamente  identificada siempre manteniéndose dentro de las  normas  legales.
 
 		</p>
 
@@ -51,7 +51,7 @@ $tra=new Censos();
 		
 	</center>
 	</div>		
-	<br>	
+	<br><br><br>
 	<p style="text-align: center;">EL EXPONENTE.
 	<br>
 	<p style="text-align: justify;">
@@ -85,7 +85,7 @@ $dompdf = new DOMPDF();
 $dompdf->load_html(ob_get_clean());
 $dompdf->render();
 $pdf = $dompdf->output();
-$filename = "Censo ".date("Y-m-d").'.pdf';
+$filename = "CartaNoEmpleo ".date("Y-m-d").'.pdf';
 file_put_contents($filename, $pdf);
 $dompdf->stream($filename);
 

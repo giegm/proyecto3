@@ -1,5 +1,20 @@
 <?php
-require_once ('../../modelo/clasesdeconsulta/class_edades.php');
+require_once("../../modelo/clasesdeconsulta/class_sexo_femenino.php");
+require_once("../../modelo/clasesdeconsulta/class_sexo_masculino.php");
+require_once("../../modelo/clasesdeconsulta/class_estudiantes.php");
+require_once("../../modelo/clasesdeconsulta/class_menores_de_edad.php");
+require_once("../../modelo/clasesdeconsulta/class_mayor_de_edad.php");
+require_once("../../modelo/clasesdeconsulta/class_mayor_a_sesenta.php");
+require_once("../../modelo/clasesdeconsulta/class_edades.php");
+require_once("../../modelo/clasesdeconsulta/class_alquilados.php"); 
+require_once("../../modelo/clasesdeconsulta/class_desempleados.php");
+require_once("../../modelo/clasesdeconsulta/class_discapacitados.php");
+require_once("../../modelo/clasesdeconsulta/class_pensionados.php");
+require_once("../../modelo/clasesdeconsulta/class_propietarios.php");
+require_once("../../modelo/clasesdeconsulta/class_trabajo_cuenta_propia.php");
+require_once("../../modelo/clasesdeconsulta/class_enfermedades_graves.php");
+require_once("../../modelo/clasesdeconsulta/class_asalariados.php");
+require_once("../../modelo/clasesdeconsulta/class_total_censados.php");
 $censo = new edades;
 $General = $censo->GeneralReportefecha($_POST["edadIn"],$_POST["edadF"]);
 ?>

@@ -41,9 +41,9 @@ $tra=new Censos();
 	
 	<div class="col-xs-12 col-sm-8 col-md-3">
 	<center>
-		<p style="text-align: justify;">EL Consejo Comunal Santa Inés, en uso de las atribuciones legales que le confiere la  Ley  Orgánica de los Concejos Comunales, en concordancia con la Ordenanza de Funcionamiento de los Consejos Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el sr (a) # , titular de la CI. <?php echo $_POST["cedula"]; ?>, residente del sector: RUPERTO LUGO LOS FRAILES PARROQUIA SUCRE MUNICIPIO LIBERTADOR DISTRITO LIBERTADOR, durante el tiempo que ha vivido en este sector ha mantenido una conducta intachable, y ha cumplido con todas las normas de convivencias establecidas en esta comunidad, por lo cual damos fe de su buena conducta.
+		<p style="text-align: justify;">EL Consejo Comunal Santa Inés, en uso de las atribuciones legales que le confiere la  Ley  Orgánica de los Concejos Comunales, en concordancia con la Ordenanza de Funcionamiento de los Consejos Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el sr (a) <?php echo $_POST["nomape"]; ?>, titular de la CI. <?php echo $_POST["cedula"]; ?>, residente del sector: Ruperto Lugo Los Frailes Parroquia Sucre Municipio Libertador Distrito Capital, durante el tiempo que ha vivido en este sector ha mantenido una conducta intachable, y ha cumplido con todas las normas de convivencias establecidas en esta comunidad, por lo cual damos fe de su buena conducta.
 		</p>
-		<P style="text-align: justify;">MOTIVO DE LA SOLICITUD: <?php echo $_POST['motivo']; ?></P>
+		<P style="text-align: justify;">Motivo de la Solicitud: <?php echo $_POST['motivo']; ?></P>
 
 		<p style="text-align: justify;">Sin más a que hacer referencia  y esperando la mayor colaboración se despide  </p>
 
@@ -51,7 +51,7 @@ $tra=new Censos();
 		
 	</center>
 	</div>		
-	<br>
+	<br><br><br>
 		<p style="text-align: center;">EL EXPONENTE.
 	<br>
 	<p style="text-align: justify;">
@@ -86,7 +86,7 @@ $dompdf = new DOMPDF();
 $dompdf->load_html(ob_get_clean());
 $dompdf->render();
 $pdf = $dompdf->output();
-$filename = "Censo ".date("Y-m-d").'.pdf';
+$filename = "BuenaConducta ".date("Y-m-d").'.pdf';
 file_put_contents($filename, $pdf);
 $dompdf->stream($filename);
 

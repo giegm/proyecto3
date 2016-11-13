@@ -38,9 +38,9 @@ $tra=new Censos();
 	
 	<div class="col-xs-12 col-sm-8 col-md-3">
 	<center>
-		<p style="text-align: justify;">El consejo comunal Santa Inés de los frailes de Catia de la parroquia  Sucre, en uso de las atribuciones legales que le confiere la Ley Orgánica de los Concejos Comunales, en concordancia con la ley  de Funcionamiento de los concejos Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano (a): #, titular de la CI. <?php echo $_POST["cedula"]; ?>, residente del sector: RUPERTO LUGO LOS FRAILES, quien en la actualidad forma pareja con la ciudadana(o) <?php echo $_POST['nombre']; ?>, titular de la cedula de identidad CI. <?php echo $_POST['conyugue']; ?>, en condición de CONCUBINOS, en tal sentido agradecemos a las instituciones prestar la mayor colaboración al titular de la presente siempre manteniéndose dentro de las leyes que rigen la materia.
+		<p style="text-align: justify;">El consejo comunal Santa Inés de los frailes de Catia de la parroquia  Sucre, en uso de las atribuciones legales que le confiere la Ley Orgánica de los Concejos Comunales, en concordancia con la ley  de Funcionamiento de los concejos Comunales del Municipio Bolivariano Libertador, por medio de la presente hacemos constar que el ciudadano (a): <?php echo $_POST["nomape"]; ?>, titular de la CI. <?php echo $_POST["cedula"]; ?>, residente del sector: Ruperto Lugo Los Frailes, quien en la actualidad forma pareja con la ciudadana(o) <?php echo $_POST['nombre']; ?>, titular de la cedula de identidad CI. <?php echo $_POST['conyugue']; ?>, en condición de CONCUBINOS, en tal sentido agradecemos a las instituciones prestar la mayor colaboración al titular de la presente siempre manteniéndose dentro de las leyes que rigen la materia.
 		</p>
-		<P style="text-align: justify;">MOTIVO DE LA SOLICITUD: <?php echo $_POST['motivo']; ?></P>
+		<P style="text-align: justify;">Motivo de la Solicitud: <?php echo $_POST['motivo']; ?></P>
 
 		<p style="text-align: justify;">Sin más a que hacer referencia  y esperando la mayor colaboración se despide.  </p>
 
@@ -83,7 +83,7 @@ $dompdf = new DOMPDF();
 $dompdf->load_html(ob_get_clean());
 $dompdf->render();
 $pdf = $dompdf->output();
-$filename = "Censo ".date("Y-m-d").'.pdf';
+$filename = "CartaConcubino ".date("Y-m-d").'.pdf';
 file_put_contents($filename, $pdf);
 $dompdf->stream($filename);
 

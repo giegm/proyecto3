@@ -12,6 +12,15 @@
 
 										<div class="form-group col-md-12">
 											<form action="../controlador/creapdf_acta4.php" method="POST" class="form-horizontal" name="form" role="form">
+												<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Nombre y Apellido del Solicitante</label>
+                                                <div class="col-sm-2 col-md-2">
+                                                    <div class="required-field-block">
+                                                        <input type="text" class="form-control" name="nomape" placeholder="Nombre y Apellido" maxlength="30">
+                                                        <div class="required-icon">
+                                                            <div class="text">*</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 												<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Dirigido a</label>
 												<div class="col-sm-2 col-md-2">
 													<div class="required-field-block">

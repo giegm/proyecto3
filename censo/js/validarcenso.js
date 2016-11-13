@@ -1100,10 +1100,10 @@ function Validar_censo(){
 	}
 
 	//validamos la recoleccion_basura
-	/*
+
 	if(form.recoleccion_basura.value ==0 || form.recoleccion_basura.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique el tipo de recolección de basura.');
+		alert('Indique si tiene como recolección de basura el aseo urbano.');
 		form.recoleccion_basura.value=" ";
 		form.recoleccion_basura.focus();
 		return false;
@@ -1111,12 +1111,78 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-	*/
+
+	if(form.recoleccion_basura1.value ==0 || form.recoleccion_basura1.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si tiene como recolección de basura un container.');
+		form.recoleccion_basura1.value=" ";
+		form.recoleccion_basura1.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.recoleccion_basura2.value ==0 || form.recoleccion_basura2.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si tiene como recolección de basura por bajante.');
+		form.recoleccion_basura2.value=" ";
+		form.recoleccion_basura2.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.recoleccion_basura3.value ==0 || form.recoleccion_basura3.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si tiene como recolección de basura el camión del aseo.');
+		form.recoleccion_basura3.value=" ";
+		form.recoleccion_basura3.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.recoleccion_basura4.value ==0 || form.recoleccion_basura4.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si tiene como recolección de basura al aire libre.');
+		form.recoleccion_basura4.value=" ";
+		form.recoleccion_basura4.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.recoleccion_basura5.value ==0 || form.recoleccion_basura5.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si tiene como recolección de basura al aire libre.');
+		form.recoleccion_basura5.value=" ";
+		form.recoleccion_basura5.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.recoleccion_basura6.value ==0 || form.recoleccion_basura6.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si tiene como recolección de basura otro método.');
+		form.recoleccion_basura6.value=" ";
+		form.recoleccion_basura6.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
 	//validamos la telefonia
-	/*
+
 	if(form.telefonia.value ==0 || form.telefonia.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique el tipo de servicio telefónico.');
+		alert('Indique tiene telefonia domiciliaria.');
 		form.telefonia.value=" ";
 		form.telefonia.focus();
 		return false;
@@ -1124,7 +1190,51 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-*/
+
+	if(form.telefonia1.value ==0 || form.telefonia1.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique tiene telefonia célular.');
+		form.telefonia1.value=" ";
+		form.telefonia1.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.telefonia2.value ==0 || form.telefonia2.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique tiene telefonia prepagada.');
+		form.telefonia2.value=" ";
+		form.telefonia2.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.telefonia3.value ==0 || form.telefonia3.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique tiene telefonia centro de conexión.');
+		form.telefonia3.value=" ";
+		form.telefonia3.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.telefonia4.value ==0 || form.telefonia4.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si tiene otra telefonia.');
+		form.telefonia4.value=" ";
+		form.telefonia4.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
 	//validamos el medio de transporte
 	if(form.transporte.value ==0 || form.transporte.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -1138,10 +1248,10 @@ function Validar_censo(){
 	}
 
 	//validamos el mecan_informacion
-	/*
+
 	if(form.mecan_informacion.value ==0 || form.mecan_informacion.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique el medio información.');
+		alert('Indique si usa la televisión como un mecanismo de información.');
 		form.mecan_informacion.value=" ";
 		form.mecan_informacion.focus();
 		return false;
@@ -1149,12 +1259,67 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-	*/
+
+	if(form.mecan_informacion1.value ==0 || form.mecan_informacion1.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si usa la radio como un mecanismo de información.');
+		form.mecan_informacion1.value=" ";
+		form.mecan_informacion1.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.mecan_informacion2.value ==0 || form.mecan_informacion2.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si usa la prensa como un mecanismo de información.');
+		form.mecan_informacion2.value=" ";
+		form.mecan_informacion2.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.mecan_informacion3.value ==0 || form.mecan_informacion3.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si usa el internet como un mecanismo de información.');
+		form.mecan_informacion3.value=" ";
+		form.mecan_informacion3.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.mecan_informacion4.value ==0 || form.mecan_informacion4.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si usa medios alternativos como mecanismo de información.');
+		form.mecan_informacion4.value=" ";
+		form.mecan_informacion4.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.mecan_informacion5.value ==0 || form.mecan_informacion5.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si usa otros medios como mecanismo de información.');
+		form.mecan_informacion5.value=" ";
+		form.mecan_informacion5.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
 	//validamos los serv_comunales
-	/*
+	
 	if(form.serv_comunales.value ==0 || form.serv_comunales.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique los servicios comunales.');
+		alert('Indique en servicios comunales si o no hay mercado.');
 		form.serv_comunales.value=" ";
 		form.serv_comunales.focus();
 		return false;
@@ -1162,7 +1327,140 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-	*/
+	
+	if(form.serv_comunales1.value ==0 || form.serv_comunales1.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay bodega.');
+		form.serv_comunales1.value=" ";
+		form.serv_comunales1.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales2.value ==0 || form.serv_comunales2.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay abastos.');
+		form.serv_comunales2.value=" ";
+		form.serv_comunales2.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales3.value ==0 || form.serv_comunales3.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay farmacia.');
+		form.serv_comunales3.value=" ";
+		form.serv_comunales3.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales4.value ==0 || form.serv_comunales4.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay plaza y parques.');
+		form.serv_comunales4.value=" ";
+		form.serv_comunales4.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales5.value ==0 || form.serv_comunales5.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay preescolar.');
+		form.serv_comunales5.value=" ";
+		form.serv_comunales5.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales6.value ==0 || form.serv_comunales6.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay escuelas.');
+		form.serv_comunales6.value=" ";
+		form.serv_comunales6.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales7.value ==0 || form.serv_comunales7.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay liceos.');
+		form.serv_comunales7.value=" ";
+		form.serv_comunales7.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales8.value ==0 || form.serv_comunales8.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay centro de salud.');
+		form.serv_comunales8.value=" ";
+		form.serv_comunales8.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales9.value ==0 || form.serv_comunales9.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay canchas.');
+		form.serv_comunales9.value=" ";
+		form.serv_comunales9.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales10.value ==0 || form.serv_comunales10.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay casa comunal.');
+		form.serv_comunales10.value=" ";
+		form.serv_comunales10.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales11.value ==0 || form.serv_comunales11.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay iglesia.');
+		form.serv_comunales11.value=" ";
+		form.serv_comunales11.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+	
+	if(form.serv_comunales12.value ==0 || form.serv_comunales12.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique en servicios comunales si o no hay otros.');
+		form.serv_comunales12.value=" ";
+		form.serv_comunales12.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	
 	//AHORA VALIDAMOS LA Partcipación comunitaria
 
 	//validamos si existen org_comunitarias
@@ -1214,10 +1512,10 @@ function Validar_censo(){
 	}
 
 	//validamos el name_mision
-	/*
+
 	if(form.name_mision.value ==0 || form.name_mision.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique que misión esta en su comunidad.');
+		alert('Indique si esta misión Ribas en su comunidad.');
 		form.name_mision.value=" ";
 		form.name_mision.focus();
 		return false;
@@ -1225,7 +1523,73 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-	*/
+
+	if(form.name_mision1.value ==0 || form.name_mision1.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si esta misión Sucre en su comunidad.');
+		form.name_mision1.value=" ";
+		form.name_mision1.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.name_mision2.value ==0 || form.name_mision2.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si esta misión Vuelvan Caras en su comunidad.');
+		form.name_mision2.value=" ";
+		form.name_mision2.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.name_mision3.value ==0 || form.name_mision3.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si esta misión Identidad en su comunidad.');
+		form.name_mision3.value=" ";
+		form.name_mision3.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.name_mision4.value ==0 || form.name_mision4.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si esta misión Barrio Adentro en su comunidad.');
+		form.name_mision4.value=" ";
+		form.name_mision4.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.name_mision5.value ==0 || form.name_mision5.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si esta misión Ezequiel Zamora en su comunidad.');
+		form.name_mision5.value=" ";
+		form.name_mision5.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.name_mision6.value ==0 || form.name_mision6.value ==null){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si esta Mercal en su comunidad.');
+		form.name_mision6.value=" ";
+		form.name_mision6.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
 	//validamos si hay otra_mision
 	/*if(form.otra_mision.value==0 || form.otra_mision.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -1241,7 +1605,7 @@ function Validar_censo(){
 	//validamos las preguntas
 	if(form.pueblo_pregunta1.value ==0 || form.pueblo_pregunta1.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 1 de la sección participación comunitaria.');
+		alert('Responda ¿Cree Ud. que en la actualidad el pueblo está interviniendo en las decisiones sobre cómo deben gastarse los recursos de su comunidad?');
 		form.pueblo_pregunta1.value=" ";
 		form.pueblo_pregunta1.focus();
 		return false;
@@ -1253,7 +1617,7 @@ function Validar_censo(){
 	//validamos la pregunta2
 	if(form.pueblo_pregunta2.value ==0 || form.pueblo_pregunta2.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 2 de la sección participación comunitaria.');
+		alert('Responda ¿Está de acuerdo, que según la Constitución, es ahora el Pueblo organizado quien debe tener el protagonismo y el Poder para decidir sobre como invertir el presupuesto en su comunidad?');
 		form.pueblo_pregunta2.value=" ";
 		form.pueblo_pregunta2.focus();
 		return false;
@@ -1265,7 +1629,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta3
 	if(form.pueblo_pregunta3.value ==0 || form.pueblo_pregunta3.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 3 de la sección participación comunitaria.');
+		alert('Responda ¿Tiene información sobre la propuesta de creación de consejos comunales?');
 		form.pueblo_pregunta3.value=" ";
 		form.pueblo_pregunta3.focus();
 		return false;
@@ -1277,7 +1641,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta4
 	if(form.pueblo_pregunta4.value ==0 || form.pueblo_pregunta4.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 4 de la sección participación comunitaria.');
+		alert('Responda ¿Estaría dispuesto(a) a apoyar y participar en la creación de un consejo comunal en su comunidad?');
 		form.pueblo_pregunta4.value=" ";
 		form.pueblo_pregunta4.focus();
 		return false;
@@ -1289,7 +1653,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta5
 	if(form.pueblo_pregunta5.value ==0 || form.pueblo_pregunta5.value ==null){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 5 de la sección participación comunitaria.');
+		alert('Responda Participa Ud. o asiste a las asambleas de Ciudadanos(as).');
 		form.pueblo_pregunta5.value=" ";
 		form.pueblo_pregunta5.focus();
 		return false;
@@ -1301,7 +1665,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta6
 	if(form.pueblo_pregunta6.value==null || form.pueblo_pregunta6.value.length == 0){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 6 de la sección participación comunitaria.');
+		alert('Responda Como cree Ud. Que se van a resolver los problemas del sector.');
 		form.pueblo_pregunta6.value=" ";
 		form.pueblo_pregunta6.focus();
 		return false;
@@ -1313,7 +1677,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta7
 	if(form.pueblo_pregunta7.value==null || form.pueblo_pregunta7.value.length == 0){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 7 de la sección participación comunitaria.');
+		alert('Responda Quien cree que va a a resolver los problemas del sector.');
 		form.pueblo_pregunta7.value=" ";
 		form.pueblo_pregunta7.focus();
 		return false;
@@ -1325,7 +1689,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta8
 	if(form.pueblo_pregunta8.value==null || form.pueblo_pregunta8.value.length == 0){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 8 de la sección participación comunitaria.');
+		alert('Responda Que tipo de proyectos le gustaría que se ejecutaran o que se desarrollaran en su comunidad.');
 		form.pueblo_pregunta8.value=" ";
 		form.pueblo_pregunta8.focus();
 		return false;
@@ -1337,7 +1701,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta9
 	if(form.pueblo_pregunta9.value==null || form.pueblo_pregunta9.value.length == 0){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 9 de la sección participación comunitaria.');
+		alert('Responda Como apoyaría Ud. A que se realicen y ejecuten los proyectos.');
 		form.pueblo_pregunta9.value=" ";
 		form.pueblo_pregunta9.focus();
 		return false;
@@ -1349,7 +1713,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta10
 	if(form.pueblo_pregunta10.value==null || form.pueblo_pregunta10.value.length == 0){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 10 de la sección participación comunitaria.');
+		alert('Responda Que tipo de compromiso tiene Ud. con su sector para el mejoramiento.');
 		form.pueblo_pregunta10.value=" ";
 		form.pueblo_pregunta10.focus();
 		return false;
@@ -1361,7 +1725,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta11
 	if(form.pueblo_pregunta11.value==null || form.pueblo_pregunta11.value.length == 0){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 11 de la sección participación comunitaria.');
+		alert('Responda Que opina Ud. del censo energético.');
 		form.pueblo_pregunta11.value=" ";
 		form.pueblo_pregunta11.focus();
 		return false;
@@ -1371,10 +1735,10 @@ function Validar_censo(){
 	}
 
 	//validamos pregunta12
-	/*
+
 	if(form.pueblo_pregunta_final.value ==0 || form.pueblo_pregunta_final.value ==null || form.pueblo_pregunta_final.value ==" "){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Indique al menu un área de trabajo  que le gustaría participar de la sección participación comunitaria.');
+		alert('Indique si le gustaria trabajar en el area de Contraloria y Seguimiento.');
 		form.pueblo_pregunta_final.value=" ";
 		form.pueblo_pregunta_final.focus();
 		return false;
@@ -1382,7 +1746,107 @@ function Validar_censo(){
 	{
 		//document.getElementById("mensaje_error").innerHTML="";
 	}
-	*/
+
+	if(form.pueblo_pregunta_final1.value ==0 || form.pueblo_pregunta_final1.value ==null || form.pueblo_pregunta_final1.value ==" "){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si le gustaria trabajar en el area de Relaciones Publicas y Medios.');
+		form.pueblo_pregunta_final1.value=" ";
+		form.pueblo_pregunta_final1.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.pueblo_pregunta_final2.value ==0 || form.pueblo_pregunta_final2.value ==null || form.pueblo_pregunta_final2.value ==" "){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si le gustaria trabajar en el area de Seguridad Ciudadana.');
+		form.pueblo_pregunta_final2.value=" ";
+		form.pueblo_pregunta_final2.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.pueblo_pregunta_final3.value ==0 || form.pueblo_pregunta_final3.value ==null || form.pueblo_pregunta_final3.value ==" "){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si le gustaria trabajar en el area de Infraestructura, Vivienda y Servicios Publicos.');
+		form.pueblo_pregunta_final3.value=" ";
+		form.pueblo_pregunta_final3.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.pueblo_pregunta_final4.value ==0 || form.pueblo_pregunta_final4.value ==null || form.pueblo_pregunta_final4.value ==" "){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si le gustaria trabajar en el area de Formacion y Conciencia Ideologica.');
+		form.pueblo_pregunta_final4.value=" ";
+		form.pueblo_pregunta_final4.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.pueblo_pregunta_final5.value ==0 || form.pueblo_pregunta_final5.value ==null || form.pueblo_pregunta_final5.value ==" "){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si le gustaria trabajar en el area de Elaboración de Proyectos de Desarrollo Comunitario.');
+		form.pueblo_pregunta_final5.value=" ";
+		form.pueblo_pregunta_final5.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.pueblo_pregunta_final6.value ==0 || form.pueblo_pregunta_final6.value ==null || form.pueblo_pregunta_final6.value ==" "){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si le gustaria trabajar en el area de Alimentación y Nutricion.');
+		form.pueblo_pregunta_final6.value=" ";
+		form.pueblo_pregunta_final6.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.pueblo_pregunta_final7.value ==0 || form.pueblo_pregunta_final7.value ==null || form.pueblo_pregunta_final7.value ==" "){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si le gustaria trabajar en el area de Educacion Cultura y Tecnologia.');
+		form.pueblo_pregunta_final7.value=" ";
+		form.pueblo_pregunta_final7.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
+	if(form.pueblo_pregunta_final8.value ==0 || form.pueblo_pregunta_final8.value ==null || form.pueblo_pregunta_final8.value ==" "){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si le gustaria trabajar en el area de Salud, Deporte y Saneamiento Ambiental.');
+		form.pueblo_pregunta_final8.value=" ";
+		form.pueblo_pregunta_final8.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}	
+
+
+	if(form.pueblo_pregunta_final9.value ==0 || form.pueblo_pregunta_final9.value ==null || form.pueblo_pregunta_final9.value ==" "){
+		//document.getElementById("mensaje_error").innerHTML="";
+		alert('Indique si le gustaria trabajar en el area de Ejecución de Programas Sociales y las Misiones.');
+		form.pueblo_pregunta_final9.value=" ";
+		form.pueblo_pregunta_final9.focus();
+		return false;
+	}else
+	{
+		//document.getElementById("mensaje_error").innerHTML="";
+	}
+
 	//validamos si hay otra_area
 	if(form.otra_area.value==null || form.otra_area.value ==0 || form.otra_area.value ==" "){
 		//document.getElementById("mensaje_error").innerHTML="";
@@ -1398,7 +1862,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta14
 	if(form.pueblo_pregunta14.value ==0 || form.pueblo_pregunta14.value ==null || form.pueblo_pregunta14.value ==" "){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 14 de la sección Situación de la comunidad.');
+		alert('Responda ¿Cuáles cree Ud. que son las principales potencialidades y aspectos ventajosos que tiene su comunidad?');
 		form.pueblo_pregunta14.value=" ";
 		form.pueblo_pregunta14.focus();
 		return false;
@@ -1410,7 +1874,7 @@ function Validar_censo(){
 	//validamos pueblo_pregunta15
 	if(form.pueblo_pregunta15.value ==0 || form.pueblo_pregunta15.value ==null || form.pueblo_pregunta15.value ==" " ){
 		//document.getElementById("mensaje_error").innerHTML="";
-		alert('Responda la pregunta 15 de la sección Situación de la comunidad.');
+		alert('Responda ¿Cuáles cree Ud. que son los principales problemas y debilidades de su comunidad?');
 		form.pueblo_pregunta15.value=" ";
 		form.pueblo_pregunta15.focus();
 		return false;

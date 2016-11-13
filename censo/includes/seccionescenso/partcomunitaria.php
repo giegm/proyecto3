@@ -373,7 +373,7 @@
 										<div class="form-group col-md-12">
 											<label for="" class="col-sm-12 col-md-12 control-label" style="text-align:justify;">De crearse un consejo comunal en su comunidad, 
 										¿en cuál área de trabajo le gustaría participar?</label>
-												<div class="col-sm-12 col-md-8">
+												<div class="col-sm-12 col-md-8"><br>
 													<b>Contraloria y Seguimiento</b>
 													<div class="required-field-block">
 														<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final" id="">
@@ -387,7 +387,7 @@
 													</div>
 												</div>
 												<label for="" class=".col-xs-6 .col-sm-3"></label>
-													<div class="col-sm-12 col-md-8">
+													<div class="col-sm-12 col-md-8"><br>
 														<b>Relaciones Publicas y Medios</b>
 														<div class="required-field-block">
 															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final1" id="">
@@ -401,7 +401,7 @@
 														</div>
 													</div>
 												<label for="" class=".col-xs-6 .col-sm-3"></label>
-													<div class="col-sm-12 col-md-8">
+													<div class="col-sm-12 col-md-8"><br>
 														<b>Seguridad Ciudadana</b>
 														<div class="required-field-block">
 															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final2" id="">
@@ -415,7 +415,7 @@
 														</div>
 													</div>
 												<label for="" class=".col-xs-6 .col-sm-3"></label>
-													<div class="col-sm-12 col-md-8">
+													<div class="col-sm-12 col-md-8"><br>
 														<b>Infraestructura, Vivienda y Servicios Publicos</b>
 														<div class="required-field-block">
 															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final3" id="">
@@ -429,7 +429,7 @@
 														</div>
 													</div>
 												<label for="" class=".col-xs-6 .col-sm-3"></label>
-													<div class="col-sm-12 col-md-8">
+													<div class="col-sm-12 col-md-8"><br>
 														<b>Formacion y Conciencia Ideologica</b>
 														<div class="required-field-block">
 															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final4" id="">
@@ -443,7 +443,7 @@
 														</div>
 													</div>
 												<label for="" class=".col-xs-6 .col-sm-3"></label>
-													<div class="col-sm-12 col-md-8">
+													<div class="col-sm-12 col-md-8"><br>
 														<b>Elaboración de Proyectos de Desarrollo Comunitario</b>
 														<div class="required-field-block">
 															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final5" id="">
@@ -457,7 +457,7 @@
 														</div>
 													</div>
 												<label for="" class=".col-xs-6 .col-sm-3"></label>
-													<div class="col-sm-12 col-md-8">
+													<div class="col-sm-12 col-md-8"><br>
 														<b>Alimentación y Nutricion</b>
 														<div class="required-field-block">
 															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final6" id="">
@@ -471,7 +471,7 @@
 														</div>
 													</div>
 												<label for="" class=".col-xs-6 .col-sm-3"></label>
-													<div class="col-sm-12 col-md-8">
+													<div class="col-sm-12 col-md-8"><br>
 														<b>Educacion Cultura y Tecnologia</b>
 														<div class="required-field-block">
 															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final7" id="">
@@ -485,7 +485,7 @@
 														</div>
 													</div>
 												<label for="" class=".col-xs-6 .col-sm-3"></label>
-													<div class="col-sm-12 col-md-8">
+													<div class="col-sm-12 col-md-8"><br>
 														<b>Salud, Deporte y Saneamiento Ambiental</b>
 														<div class="required-field-block">
 															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final8" id="">
@@ -499,7 +499,7 @@
 														</div>
 													</div>
 												<label for="" class=".col-xs-6 .col-sm-3"></label>
-													<div class="col-sm-12 col-md-8">
+													<div class="col-sm-12 col-md-8"><br>
 														<b>Ejecución de Programas Sociales y las Misiones</b>
 														<div class="required-field-block">
 															<select class="form-control selectpicker show-tick" name="pueblo_pregunta_final9" id="">
@@ -518,10 +518,14 @@
 										<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Otra area</label>
 
 											<div class="col-sm-4 col-md-4">
-												<input type="text" name="otra_area" id="" placeholder="Solo el nombre" class="form-control" maxlength="20" required onkeypress="return soloLetras(event);">
+												<div class="required-field-block">
+													<input type="text" name="otra_area" id="" placeholder="Solo el nombre" class="form-control" maxlength="20" required onkeypress="return soloLetras(event);">
+													<div class="required-icon">
+									           			<div class="text">*</div>
+									        		</div>
+									        	</div>
 											</div>
-
-										</div>
+											</div>
 										
 						    	</div><!-- final del panel body -->
 					    	</div>

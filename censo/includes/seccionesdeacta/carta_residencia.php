@@ -9,18 +9,20 @@
 	<div id="collapseprincipal" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingprincipal">			     
 		<div class="panel-body">
 			<div class="form-group col-md-12"><!-- segundo form-group -->
-				<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Motivo de la Solicitud</label>
+				<form action="../controlador/procesa_censados.php" method="POST" class="form-horizontal" name="form" role="form">
+					<label for="" class="col-sm-2 col-md-2 control-label" style="text-align:justify;">Motivo de la Solicitud</label>
 					<div class="col-sm-2 col-md-2">
 						<div class="required-field-block">	
 							<input type="text" class="form-control" name="motivo" placeholder="Indique el motivo" maxlength="30">
-								<div class="required-icon">
-								   	<div class="text">*</div>
-								</div>
+							<div class="required-icon">
+							   	<div class="text">*</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-sm-2 col-md-2">
 						<a class="btn btn-success" type="button" href="../controlador/creapdf_acta.php">Imprimir</a>
 					</div>
+				</form>
 			</div><!-- fin del 2do form-group -->
 		</div>
 	</div>

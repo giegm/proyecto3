@@ -3,7 +3,11 @@
  <?php 
      require_once('head.php'); ?>
 
-  <body class="homepage"> 
+  <body class="homepage">
+    <script type="text/javascript">
+        Help help = new Help();
+        help.setVisible(true);
+    </script>
   <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">
@@ -30,15 +34,9 @@
         </nav><!--/nav-->
         
     </header><!--/header-->
-        <script language="JavaScript" type="text/javascript">
-            function click(){
-            if(event.button==2){
-            alert('Esta acción no está permitida');
-            }
-            }
-            document.onmousedown=click
-            //-->
-        </script>
+    <script language="JavaScript" type="text/javascript">
+        document.oncontextmenu = function(){return false}
+    </script>
 	<div class="slider">
         <div class="container">
             <div id="about-slider">

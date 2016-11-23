@@ -3,7 +3,10 @@
    <?php 
      require_once('head.php'); ?>
 
-  <body class="homepage">   
+<body class="homepage">
+    <script language="JavaScript" type="text/javascript">
+        document.oncontextmenu = function(){return false}
+    </script>
 <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">

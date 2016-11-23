@@ -17,7 +17,9 @@ if(isset($_SESSION["sesion_usuario"])){
 		<link rel="shortcut icon" href="../img/ccsantaines.ico">
 	</head>
 	<body>
-
+		<script language="JavaScript" type="text/javascript">
+        	document.oncontextmenu = function(){return false}
+    	</script>
 		<?php include("../includes/navbaradmin.php"); ?>
 		<div class="container-fluid"><!-- inicio del contenedor general -->
 			<div class="row"><!-- fila principal -->
